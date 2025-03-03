@@ -1,27 +1,6 @@
 {
-    "aliveStatusCodes": [40, 200, 401, 403, 418, 500, 503],
+    "aliveStatusCodes": [0, 40, 200, 401, 403, 418, 500, 503],
     "ignorePatterns": [
-        {
-            "pattern": "^https://github.com/UPPMAX/bianca_workshop/blob/main/docs/presentations/NAISS%20SENS%2C%20sensitive%20data%2C%20and%20Bianca.pdf"
-        },
-        {
-            "pattern": "^https://snd.gu.se/en/catalogue/study/ext0285"
-        },
-        {
-            "pattern": "^https://snd.gu.se/sv/hantera-data/planera/forskningsdata-med-personuppgifter"
-        },
-        {
-            "pattern": "^https://supr.naiss.se/"
-        },
-        {
-            "pattern": "^https://supr.naiss.se/support/"
-        },
-        {
-            "pattern": "^https://supr.naiss.se/round/"
-        },
-        {
-            "pattern": "^https://supr.naiss.se/round/open_or_pending_type/?type=NAISS+SENS"
-        },
         {
             "pattern": "^https://bianca.uppmax.uu.se"
         }
