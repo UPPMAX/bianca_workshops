@@ -45,3 +45,5 @@ template: home.html
 <br/><br/>
 
 </center>
+
+[![DOI](https://zenodo.org/badge/604663392.svg)](https://doi.org/10.5281/zenodo.14673552)
