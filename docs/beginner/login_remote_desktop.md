@@ -51,25 +51,19 @@ tags:
 
 ## Why?
 
-There are multiple ways to log in to Bianca, each having its own features:
+There are multiple ways to log in to Bianca, each having its own features.
+These are the two we teach in this course:
 
-```mermaid
-flowchart TD
-  you[You]
-  bianca[Bianca]
-  you --> |1.Using the remote desktop website| bianca
-  you --> |2.Using SSH| bianca
-  you --> |3.Via Rackham| bianca
+<!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
 
-```
+Way                                                  |Location    |Setup     |Environment|User experience|Same environment everywhere?|Other
+-----------------------------------------------------|------------|----------|-----------|---------------|----------------------------|--------------------------
+Using the remote desktop website                     |Within SUNET|None      |Desktop    |Clunky         |No, but similar             |Limited amount of licenses
+Using the console environment                        |Within SUNET|SSH client|Console    |Powerful       |Identical                   |.
 
-Way                                                  |Location    |Setup     |Environment|Other
------------------------------------------------------|------------|----------|-----------|----------------------------------
-Using the remote desktop website                     |Within SUNET|None      |Graphical  |Clunky, limited amount of licenses
-Using the console environment                        |Within SUNET|SSH client|Console    |Powerful
-Using the console environment from Rackham           |Everywhere  |SSH client|Console    |Powerful
+<!-- markdownlint-enable MD013 -->
 
-Here we focus on the environment that most of us are familiar with:
+First, we focus on the environment that most of us are familiar with:
 a (remote) desktop environment.
 
 ## Exercises
