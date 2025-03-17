@@ -10,8 +10,8 @@ The [course evaluation](evaluation.md) measures how well we taught
 these.
 
 - I can log in to the Bianca remote desktop using the website
-- I can log in to the Bianca console environment using SSH
-- I can log in to Bianca via Rackham
+- :rocket: I can log in to the Bianca console environment using SSH
+- :rocket: I can log in to Bianca via Rackham
 - I can navigate to the wharf folder using a graphical file manager
 - I can manage my files and folders using a graphical file manager
 - I can navigate to the wharf folder using a terminal
@@ -22,3 +22,5 @@ these.
 - I can start an interactive session
 - I can submit jobs to the scheduler
 - I understand the legal aspects of sensitive data
+
+The items with :rocket: are optional.

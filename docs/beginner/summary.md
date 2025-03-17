@@ -3,14 +3,20 @@
 Learning outcomes of this course:
 
 - I can log in to the Bianca remote desktop using the website
-- (optional) I can log in to the Bianca console environment using SSH
-- (optional) I can log in to the Bianca via Rackham
+- :rocket: I can log in to the Bianca console environment using SSH
+- :rocket: I can log in to Bianca via Rackham
+- I can navigate to the wharf folder using a graphical file manager
+- I can manage my files and folders using a graphical file manager
+- I can navigate to the wharf folder using a terminal
+- I can manage my files and folders using a terminal
 - I can create a minimal executable bash script
 - I can use modules
 - I can transfer files to/from Bianca using FileZilla
 - I can start an interactive session
 - I can submit jobs to the scheduler
 - I understand the legal aspects of sensitive data
+
+The items with :rocket: are optional.
 
 This course and its relation to the Bianca Intermediate course:
 
