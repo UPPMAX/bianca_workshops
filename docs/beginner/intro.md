@@ -48,8 +48,7 @@ handling sensitive data on the UPPMAX cluster, Bianca!
 You will learn how to login to Bianca, upload and download files,
 using pre-installed software and how to run your code.
 
-## Useful pages
-
+- [Learning outcomes](learning_outcomes.md)
 - [The course schedule](schedule.md)
 - [The course dates](course_dates.md)
 - [The project name](../misc/project.md)

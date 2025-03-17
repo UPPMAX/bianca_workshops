@@ -8,6 +8,7 @@ nav:
   - Prerequisites: prereqs.md
   - Beginner: 
     - Introduction: beginner/intro.md
+    - Learning outcomes: beginner/learning_outcomes.md
     - Course dates: beginner/course_dates.md
     - Schedule: beginner/schedule.md
     - Login: beginner/login.md
