@@ -18,11 +18,11 @@ When  | Who  | What
 ------|------|-----------------------------
 9:00  | R    | [Introduction](intro.md) (this page), [login](login.md), [log in to remote desktop](login_remote_desktop.md), [use the remote desktop](use_remote_desktop.md)
 10:00 | .    | Break
-10:15 | R    | [Log in to console environment](login_console.md), [command line](commandline.md)
+10:15 | R    | :rocket: [Log in to console environment](login_console.md), :rocket: [command line](commandline.md)
 11:00 | .    | Break
 11:15 | R    | [Create an executable script](create_script.md), [use modules](modules.md)
 12:00 | .    | Lunch
-13:00 | P    | Transferring files to and from Bianca
+13:00 | P    | [Transferring files to and from Bianca using FileZilla](file_transfer_using_gui.md)
 13:55 | .    | Break
 14:05 | B    | Compute nodes and SLURM, including interactive nodes
 14:55 | .    | Break
