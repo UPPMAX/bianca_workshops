@@ -77,8 +77,6 @@ theme:
     - content.tabs.link
     - content.action.edit
     - content.action.view
-
-  custom_dir: mkdocs_uppmax/
     
 extra_css:
   - stylesheets/extra.css
