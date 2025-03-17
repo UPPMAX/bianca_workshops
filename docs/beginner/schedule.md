@@ -12,6 +12,8 @@ tags:
 
 The next intro/basic course will take place March 19th.
 
+<!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
+
 When  | Who  | What
 ------|------|-----------------------------
 9:00  | R    | [Introduction](intro.md) (this page), [login](login.md), [log in to remote desktop](login_remote_desktop.md), [use the remote desktop](use_remote_desktop.md)
@@ -27,5 +29,7 @@ When  | Who  | What
 15:10 | L    | Legal aspects of sensitive data
 15:30 | R    | [Summary](summary.md) and anonymous [evaluation](evaluation.md)
 15:45 | All  | Optional Q&A
+
+<!-- markdownlint-enable MD013 -->
 
 - Who: `B`: Björn, `L`: Lars, `P`: Pavlin, `R`: Richèl
