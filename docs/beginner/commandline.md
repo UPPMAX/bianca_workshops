@@ -143,24 +143,6 @@ Use the materials shown above to answer the questions below.
 
     The video, however, follows a different order.
 
-```mermaid
-flowchart TD
-
-  classDef minimal_node fill:#fdd,color:#000,stroke:#f00
-  classDef extra_node fill:#ffd,color:#000,stroke:#ff0
-
-  exercise_1[1.file navigation]:::minimal_node
-  exercise_2[2.view help]:::extra_node
-  exercise_3[3.folder management]:::extra_node
-  exercise_4[4.file management]:::extra_node
-
-  exercise_1 --> exercise_2 --> exercise_3 --> exercise_4
-```
-
-> Exercises for this session.
-> Red nodes: minimal, needed in other sessions.
-> Yellow nodes: extra, useful in general.
-
 ### Exercise 1: file navigation
 
 - Navigate to your home folder
