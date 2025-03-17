@@ -320,4 +320,13 @@ lftp
 Rclone
 prevaluations
 prereqs
-
+CyberDuck
+focussed
+Hmmm
+interactiveness
+Kolmogorov
+mins
+plenarily
+Smirnov
+timespan
+Yay
