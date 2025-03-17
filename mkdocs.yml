@@ -56,7 +56,47 @@ nav:
       - Reflections: reflections/README.md
       - Shared document: misc/shared_document.md
       - Shared documents: shared_documents/README.md
- 
+
+not_in_nav: |
+  assets/empty.md
+  beginner/exercises.md
+  beginner/linux.md
+  beginner/start_interactive_node.md
+  beginner/img/empty.md
+  evaluations/20230911/README.md
+  evaluations/20231211/README.md
+  evaluations/20240419/README.md
+  evaluations/20240524/README.md
+  evaluations/20240925/README.md
+  evaluations/20241111/README.md
+  evaluations/20241111/stats.md
+  extra/jupyter.md
+  intermediate/compute_nodes.md
+  intermediate/practicalities.md
+  lesson_plans/20230911/20230911_richel.md
+  lesson_plans/20231211/20231211_richel.md
+  lesson_plans/20231214/20231214_richel.md
+  lesson_plans/20240419/20240419_richel.md
+  lesson_plans/20240524/20240524_richel.md
+  lesson_plans/20240524/indicators_of_engagement.md
+  lesson_plans/20240925/20240925_richel.md
+  lesson_plans/20241111/20241111_richel.md
+  lesson_plans/20250319/20250319_richel.md
+  lesson_plans/20250523/20250523_richel.md
+  prevaluations/20241111/README.md
+  reflections/20230911/20230911_richel.md
+  reflections/20231211/20231211_richel.md
+  reflections/20231214/20231214_richel.md
+  reflections/20240419/20240419_richel.md
+  reflections/20240524/README.md
+  reflections/20240524/20240524_richel.md
+  reflections/20240925/20240925_richel.md
+  reflections/20241111/20241111_richel.md
+  reflections/20250319/20250319_richel.md
+  reflections/20250523/20250523_richel.md
+  shared_documents/20240419.md
+  shared_documents/20240524.md
+
 theme:
   name: material
   greetings: Welcome to Bianca workshop
