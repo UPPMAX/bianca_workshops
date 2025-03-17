@@ -63,11 +63,11 @@ flowchart TD
 
 ```
 
-Way                                                  |Features
------------------------------------------------------|--------------------------------------------------------------------------------------------------
-Using the remote desktop website                     |Must be within SUNET, requires no setup, visual, clunky to work with
-Using the console environment                        |Must be within SUNET, requires an SSH client, terminal, powerful to work with (if you know how)
-Using the console environment from Rackham           |Can be done everywhere, requires an SSH client, terminal, powerful to work with (if you know how)
+Way                                                  |Location    |Setup     |Environment|Other
+-----------------------------------------------------|------------|----------|-----------|----------------------------------
+Using the remote desktop website                     |Within SUNET|None      |Graphical  |Clunky, limited amount of licenses
+Using the console environment                        |Within SUNET|SSH client|Console    |Powerful
+Using the console environment from Rackham           |Everywhere  |SSH client|Console    |Powerful
 
 Here we focus on the environment that most of us are familiar with:
 a (remote) desktop environment.

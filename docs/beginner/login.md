@@ -60,7 +60,7 @@ tags:
 
 ![Bianca or Rackham](./img/bianca_or_rackham.jpg)
 
-> A human taking care of the Bianca (or Rackham) UPPMAX HPC cluster
+> A human taking care of an UPPMAX HPC cluster
 
 ## Why?
 
