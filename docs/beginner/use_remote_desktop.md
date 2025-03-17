@@ -86,25 +86,6 @@ as maybe you'll be too afraid to ask a colleague later.
 
 It is assumed you are logged in to the remote desktop environment of Bianca.
 
-```mermaid
-flowchart TD
-
-  classDef minimal_node fill:#fdd,color:#000,stroke:#f00
-  classDef extra_node fill:#ffd,color:#000,stroke:#ff0
-
-  exercise_1[1.copy-paste text]:::minimal_node
-  exercise_2[2.starting a terminal]:::minimal_node
-  exercise_3[3.file navigation, can find wharf]:::minimal_node
-  exercise_4[4.starting a text editor]:::extra_node
-  exercise_5[5.file management]:::extra_node
-
-  exercise_1 --> exercise_2 --> exercise_3 --> exercise_4 --> exercise_5
-```
-
-> Exercises for this session.
-> Red nodes: minimal, needed in other sessions.
-> Yellow nodes: extra, useful in general.
-
 For the extra exercises: no need to read the documentation here,
 these are mostly finding out where to click.
 
@@ -270,7 +251,7 @@ its name will be useful to know:
 
     The file navigator is called Thunar.
 
-### Extra: Exercise 4: starting a text editor
+### Exercise 4: starting a text editor
 
 - Create a file called `my_file.txt` (the `.txt` at the end is important),
   if not already present
@@ -338,7 +319,7 @@ its name will be useful to know:
     ![The gedit hamburger menu](./img/gedit_hamburger_menu.png)
 
 
-### Extra: Exercise 5: file management
+### Exercise 5: file management
 
 In Thunar:
 
