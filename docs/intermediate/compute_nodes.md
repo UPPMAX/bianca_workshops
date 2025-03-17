@@ -173,9 +173,9 @@ We recommend using at least two cores for RStudio, and to get those resources, y
     - If you don't find it, do
         squeue
     - find your session, ssh to it, like:
-        ssh sens2023598-b9
+        ssh sens2025560-b9
 
-- ``$ interactive -A sens2023598 -p core -n 2 -t 60:00``
+- ``$ interactive -A sens2025560 -p core -n 2 -t 60:00``
 
 
 - Once the interactive job has begun you need to load needed modules, even if you had loaded them before in the login node
@@ -184,9 +184,9 @@ We recommend using at least two cores for RStudio, and to get those resources, y
     `$ hostname`
 
 - If the name before ``.bianca.uppmax.uu.se`` is ending with bXX you are on a compute node!
-- The login node has ``sens2023598-bianca``
+- The login node has ``sens2025560-bianca``
 - You can also probably see this information in your prompt, like:
-    ``[bjornc@sens2023598-b9 ~]$``
+    ``[bjornc@sens2025560-b9 ~]$``
 
 - Load an RStudio module and an R_packages module (if not loading R you will have to stick with R/3.6.0) and run "rstudio" from there.
 
@@ -222,7 +222,7 @@ We recommend using at least two cores for RStudio, and to get those resources, y
 ```bash
 #!/bin/bash
 
-#SBATCH -A sens2023598  # Project ID
+#SBATCH -A sens2025560  # Project ID
 
 #SBATCH -p devcore  # Asking for cores (for test jobs and as opposed to multiple nodes)
 
@@ -234,7 +234,7 @@ We recommend using at least two cores for RStudio, and to get those resources, y
 
 # go to some directory
 
-cd /proj/sens2023598/
+cd /proj/sens2025560/
 pwd -P
 
 # load software modules
@@ -348,7 +348,7 @@ Examine the jobs run by user `douglas`. The relevant job numbers are the jobs wi
 
 - This generates two PNG image files, one for each job. These are named `cluster-project-user-jobid.png`. Examine them both using an image viewer.
 
-    ``eog bianca-sens2023598-douglas-18.png bianca-sens2023598-douglas-19.png``
+    ``eog bianca-sens2025560-douglas-18.png bianca-sens2025560-douglas-19.png``
 
 !!! "See also"
 
@@ -387,19 +387,19 @@ Examine the jobs run by user `douglas`. The relevant job numbers are the jobs wi
 ???+ question "Submit a Slurm job"
 
     - Make a batch job to run the [demo](https://uppmax.github.io/bianca_workshops/extra/slurm/) "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff". Ask for 2 cores for 1h.
-        - You can copy the my_bio_workflow.sh file in ``/proj/sens2023598/workshop/slurm`` to your home folder and make the necessary changes.
+        - You can copy the my_bio_workflow.sh file in ``/proj/sens2025560/workshop/slurm`` to your home folder and make the necessary changes.
 
     ??? tip "Answer"
 
         - edit a file using you preferred editor, named `my_bio_worksflow.sh`, for example, with the content
-        - alternatively copy the ``/proj/sens2023598/workshop/slurm/my_bio_workflow.sh`` file and modify it
+        - alternatively copy the ``/proj/sens2025560/workshop/slurm/my_bio_workflow.sh`` file and modify it
           ``cd ~``
-          ``cp /proj/sens2023598/workshop/slurm/my_bio_workflow.sh .``
+          ``cp /proj/sens2025560/workshop/slurm/my_bio_workflow.sh .``
             - edit ``my_bio_workflow.sh`` and add the SBATCH commands
 
         ```bash
         #!/bin/bash
-        #SBATCH -A sens2023598
+        #SBATCH -A sens2025560
         #SBATCH -J workflow
         #SBATCH -t 01:00:00
         #SBATCH -p core
@@ -416,7 +416,7 @@ Examine the jobs run by user `douglas`. The relevant job numbers are the jobs wi
         module load samtools/1.17
 
         # copy and example BAM file
-        cp -a /proj/sens2023598/workshop/data/ERR1252289.subset.bam .
+        cp -a /proj/sens2025560/workshop/data/ERR1252289.subset.bam .
 
         # index the BAM file
         samtools index ERR1252289.subset.bam

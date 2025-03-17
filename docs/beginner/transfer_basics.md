@@ -42,7 +42,7 @@ tags:
 
     `/proj/<projid>/nobackup/wharf/<username>/<username>-<projid>`
 E.g.
-    `/proj/sens2023598/nobackup/wharf/myuser/myuser-sens2023598`
+    `/proj/sens2025560/nobackup/wharf/myuser/myuser-sens2025560`
 
 - To transfer data from Bianca, copy the files you want to transfer here.
 - To get the files transferred to the `wharf` area from outside, move the files to you project folder or home folder.
@@ -50,7 +50,7 @@ E.g.
 - Please note that in the `wharf` you only have access to upload your files to the directory that is named:
    `<username>-<projid>`
    e.g.
-   `myuser-sens2023598`
+   `myuser-sens2025560`
 
 ## Methods
 
@@ -100,7 +100,7 @@ $ sftp -q <username>-<projid>@bianca-sftp.uppmax.uu.se
 Ex.
 
 ```bash
-$ sftp -q myuser-sens2023598@bianca-sftp.uppmax.uu.se
+$ sftp -q myuser-sens2025560@bianca-sftp.uppmax.uu.se
 ```
 
 The `-q` flag is to be quiet (not showing the banner intended to help someone trying to ``ssh`` to the host), if your client does not support it, you can just skip it.
@@ -114,18 +114,18 @@ Once connected you will have to type the sftp commands to upload/download files.
 
 Please note that in the wharf you only have access to upload your files to the directory that is named:
 
-`<username>-<projid>` e.g. `myuser-sens2023598`
+`<username>-<projid>` e.g. `myuser-sens2025560`
 
 Example:
 
 ```bash
-$ sftp -q  pmitev-sens2023598@bianca-sftp.uppmax.uu.se
-pmitev-sens2023598@bianca-sftp.uppmax.uu.se's password:
+$ sftp -q  pmitev-sens2025560@bianca-sftp.uppmax.uu.se
+pmitev-sens2025560@bianca-sftp.uppmax.uu.se's password:
 
 sftp> ls
-pmitev-sens2023598
+pmitev-sens2025560
 
-sftp> cd pmitev-sens2023598
+sftp> cd pmitev-sens2025560
 sftp>
 ```
 
@@ -138,7 +138,7 @@ $ sftp -q <username>-<projid>@bianca-sftp.uppmax.uu.se:<username>-<projid>
 E.g.
 
 ```bash
-`$ sftp -q myuser-sens2023598@bianca-sftp.uppmax.uu.se:myuser-sens2023598
+`$ sftp -q myuser-sens2025560@bianca-sftp.uppmax.uu.se:myuser-sens2025560
 ```
 
 - `sftp` supports a recursive flag `-r` to upload (`put -r folder_name`) or download (`get -r folder_name`) entire folders and subfolders.

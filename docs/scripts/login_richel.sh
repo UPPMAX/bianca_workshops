@@ -1,2 +1,2 @@
 #!/bin/bash
-ssh richel-sens2023598@bianca.uppmax.uu.se
+ssh richel-sens2025560@bianca.uppmax.uu.se

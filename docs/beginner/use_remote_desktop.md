@@ -234,8 +234,8 @@ where `[project_code]` is the project code.
 
 ???- question "Don't know the project code?"
 
-    In our case, the project code is `sens2023598`,
-    hence the project folder is `/proj/sens2023598`.
+    In our case, the project code is `sens2025560`,
+    hence the project folder is `/proj/sens2025560`.
 
 The `wharf` is an important folder: it is the only folder where files
 can be transferred to/from.
@@ -249,9 +249,9 @@ can be transferred to/from.
 ???- question "Still cannot find it?"
 
     It is at `/proj/nobackup/[project_id]/wharf/[user_name]/[user_name]-[project_id]`,
-    hence, `/proj/nobackup/sens2023598/wharf/[user_name]/[user_name]-sens2023598`,
+    hence, `/proj/nobackup/sens2025560/wharf/[user_name]/[user_name]-sens2025560`,
     or, for a user with username `sven`, at
-    `/proj/nobackup/sens2023598/wharf/sven/sven-sens2023598`
+    `/proj/nobackup/sens2025560/wharf/sven/sven-sens2025560`
 
 To be able to search the web for questions on this file explorer,
 its name will be useful to know:

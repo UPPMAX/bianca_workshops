@@ -10,9 +10,9 @@ I can transfer files to/from Bianca using `rsync`
 
 ```bash
 ssh sven@transit.uppmax.uu.se
-mount_wharf sens2023598
-rsync my_local_file.txt sven@transit.uppmax.uu.se:sens2023598
-rsync --recursive my_folder sven@transit.uppmax.uu.se:sens2023598
+mount_wharf sens2025560
+rsync my_local_file.txt sven@transit.uppmax.uu.se:sens2025560
+rsync --recursive my_folder sven@transit.uppmax.uu.se:sens2025560
 ```
 
 I can see the CPU and memory usage of jobs
@@ -30,7 +30,7 @@ I understand how to set up jobs efficiently
 I can schedule a simple workflow of jobs that depend on each other using Slurm
 
 ```bash
-sbatch --A sens2023598 --dependency=afterok:5000000,5000001 do_c.sh
+sbatch --A sens2025560 --dependency=afterok:5000000,5000001 do_c.sh
 ```
 
 I can schedule a simple workflow of jobs that depend on each other using Nextflow
@@ -72,7 +72,7 @@ I understand how to build from source
 I can can run the voted-for IDE on Bianca
 
 ```bash
-nteractive -A sens2023598 -n 2 -t 8:00:00
+nteractive -A sens2025560 -n 2 -t 8:00:00
 module load R/4.3.1 R_packages/4.3.1 RStudio/2023.06.2-561
 rstudio
 ```

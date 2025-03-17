@@ -52,10 +52,10 @@ Use `cd` to change directory:
 Where to                           |Example command
 -----------------------------------|---------------------
 The root folder                    |`cd /`
-The project folder                 |`cd /proj/sens2023598`
+The project folder                 |`cd /proj/sens2025560`
 Your home folder, using full path  |`cd /home/richel`
 Your home folder, using tilde      |`cd ~`
-The wharf                          |`cd /proj/sens2023598/nobackup/wharf`
+The wharf                          |`cd /proj/sens2025560/nobackup/wharf`
 Up one folder                      |`cd ..`
 Into a folder, using relative path |`cd myfolder`
 The previous location              |`cd -`
@@ -190,13 +190,13 @@ flowchart TD
 
 ???- question "Don't know the project code?"
 
-    In our case, the project code is `sens2023598`,
-    hence the project folder is `/proj/sens2023598`.
+    In our case, the project code is `sens2025560`,
+    hence the project folder is `/proj/sens2025560`.
 
     To go there:
 
     ```bash
-    cd /proj/sens2023598
+    cd /proj/sens2025560
     ```
 
 The `wharf` is an important folder: it is the only folder where files
@@ -211,14 +211,14 @@ can be transferred to/from.
 ???- question "Still cannot find it?"
 
     It is at `/proj/nobackup/[project_id]/wharf/[user_name]/[user_name]-[project_id]`,
-    hence, `/proj/nobackup/sens2023598/wharf/[user_name]/[user_name]-sens2023598`,
+    hence, `/proj/nobackup/sens2025560/wharf/[user_name]/[user_name]-sens2025560`,
     or, for a user with username `sven`, at
-    `/proj/nobackup/sens2023598/wharf/sven/sven-sens2023598`
+    `/proj/nobackup/sens2025560/wharf/sven/sven-sens2025560`
 
     To go there:
 
     ```bash
-    cd /proj/nobackup/sens2023598/wharf/sven/sven-sens2023598
+    cd /proj/nobackup/sens2025560/wharf/sven/sven-sens2025560
     ```
 
 ### Extra: Exercise 2: view help
@@ -237,19 +237,19 @@ View the help of the command `cd`
 
 ### Extra: Exercise 3: folder management
 
-- Create a folder `/proj/sens2023598/workshop/[your_login_name]`,
-  for example, `/proj/sens2023598/workshop/richel`"
+- Create a folder `/proj/sens2025560/workshop/[your_login_name]`,
+  for example, `/proj/sens2025560/workshop/richel`"
 
 ???- question "Answer"
 
     ```bash
-    mkdir /proj/sens2023598/workshop/richel
+    mkdir /proj/sens2025560/workshop/richel
     ```
 
     Or navigate there first:
 
     ```bash
-    cd /proj/sens2023598/workshop/
+    cd /proj/sens2025560/workshop/
     mkdir richel
     ```
 
@@ -344,10 +344,10 @@ that will simplify navigation:
 
 ```bash
 cd Desktop
-ln -s /proj/sens2023598/ proj
-ln -s /proj/sens2023598/nobackup nobackup
-ln -s /proj/sens2023598/nobackup/wharf/richel/richel-sens2023598 wharf`
+ln -s /proj/sens2025560/ proj
+ln -s /proj/sens2025560/nobackup nobackup
+ln -s /proj/sens2025560/nobackup/wharf/richel/richel-sens2025560 wharf`
 ```
 
-- Replace `sens2023598` by your project
+- Replace `sens2025560` by your project
 - Replace `richel` by your username

@@ -44,7 +44,7 @@ The SLURM script `run_good.sh` runs an efficient job, which requests 8 cores and
 ```bash
 #!/bin/bash -l
 
-#SBATCH -A sens2023598
+#SBATCH -A sens2025560
 #SBATCH -t 8:00:00
 #SBATCH -n 8
 #SBATCH -o run_good.out
@@ -63,7 +63,7 @@ The SLURM script `run_poor.sh` runs an inefficient job, which also requests 8 co
 ```bash
 #!/bin/bash -l
 
-#SBATCH -A sens2023598
+#SBATCH -A sens2025560
 #SBATCH -t 12:00:00
 #SBATCH -n 8
 #SBATCH -o run_poor.out
@@ -87,7 +87,7 @@ We find these are job numbers 18 for `run_good.sh` and 19 for `run_poor.sh`. Gen
 
 This generates two PNG image files, one for each job. These are named `cluster-project-user-jobid.png`. Examine them both using an image viewer.
 
-    eog bianca-sens2023598-douglas-18.png bianca-sens2023598-douglas-19.png
+    eog bianca-sens2025560-douglas-18.png bianca-sens2025560-douglas-19.png
 
 
 ??? "Extra: How compute nodes are moved between project clusters"

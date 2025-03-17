@@ -27,7 +27,7 @@ We have mirrored all major non-proprietary Conda repositories (not ``main``, ``a
 !!! warning
 
     - Good to change ``CONDA_ENVS_PATH`` to project folder, because of many small files.
-    - Example: ``CONDA_ENVS_PATH=/proj/sens2023598/bjornc/conda``
+    - Example: ``CONDA_ENVS_PATH=/proj/sens2025560/bjornc/conda``
 
 ???+ question "Read [Conda user guide](http://docs.uppmax.uu.se/software/conda/)"
 
@@ -43,7 +43,7 @@ We have mirrored all major non-proprietary Conda repositories (not ``main``, ``a
 
     - You may want to have the same path for all conda environments in the present project
     - ``echo "export CONDA_ENVS_PATH=/a/path/to/a/place/in/your/project/" >> ~/.bashrc``
-        - Example: ``echo "export CONDA_ENVS_PATH=/proj/sens2023598/bjornc/conda" >> ~/.bashrc``
+        - Example: ``echo "export CONDA_ENVS_PATH=/proj/sens2025560/bjornc/conda" >> ~/.bashrc``
 
 !!! warning
 
@@ -63,12 +63,12 @@ We have mirrored all major non-proprietary Conda repositories (not ``main``, ``a
 
     - Make sure you have a folder in the project directory (`$USER` will automatically fill in you username. Handy!!)
 
-    - ``mkdir /proj/sens2023598/$USER``
+    - ``mkdir /proj/sens2025560/$USER``
 
-    - ``mkdir /proj/sens2023598/$USER/conda``
+    - ``mkdir /proj/sens2025560/$USER/conda``
 
     - Set a CONDA_ENVS_PATH
-        - Example: ``echo "export CONDA_ENVS_PATH=/proj/sens2023598/$USER/conda" >> ~/.bashrc``
+        - Example: ``echo "export CONDA_ENVS_PATH=/proj/sens2025560/$USER/conda" >> ~/.bashrc``
 
 
     - Use the ``conda`` module on Bianca and the ``conda-forge`` channel to create an environment with name `bianca-course` with `python 3.7` and `numpy 1.15`
@@ -92,7 +92,7 @@ We have mirrored all major non-proprietary Conda repositories (not ``main``, ``a
 
     ``` sh
     $ module load conda
-    ($ export CONDA_ENVS_PATH=/proj/sens2023598/$USER)
+    ($ export CONDA_ENVS_PATH=/proj/sens2025560/$USER)
     $ conda create -c conda-forge --prefix $CONDA_ENVS_PATH/bianca-course python=3.7 numpy=1.15
     $ source activate bianca-course
     $ pip list

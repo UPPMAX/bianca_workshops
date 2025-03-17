@@ -101,8 +101,8 @@ tar cfvz julia_pkg.tar.gz .julia/packages
 Transfer to the ``wharf``
 
 ``` console
-sftp sftp bjornc-sens2023598@bianca-sftp
-sftp> cd bjornc-sens2023598/
+sftp sftp bjornc-sens2025560@bianca-sftp
+sftp> cd bjornc-sens2025560/
 sftp> dir
 sftp>
 ```
@@ -138,7 +138,7 @@ sftp> put -r .julia/packages/<package name 2>
 On Bianca
 
 ``` bash
-cd /proj/sens2023598/nobackup/wharf/bjornc/bjornc-sens2023598/
+cd /proj/sens2025560/nobackup/wharf/bjornc/bjornc-sens2025560/
 mv –a  <file(s)> ~/.julia/packages/
 ```
 

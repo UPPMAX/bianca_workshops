@@ -193,7 +193,7 @@ After installation, the next step is to copy the contents of this directory over
 Make sure you are in your **home directory**. Then connect to the bianca wharf.  Replace the name and project with your bianca user name and project.
 
 ``` bash
-sftp douglas-sens2023598@bianca-sftp
+sftp douglas-sens2025560@bianca-sftp
 ```
 
 You log in here like you log into bianca: the first password is your **password followed by the 6-digit authenticator code**, the second password (if required for you) is only your password.
@@ -207,12 +207,12 @@ dir
 It should look like this:
 
     sftp> dir
-    douglas-sens2023598
+    douglas-sens2025560
 
 Now ``cd`` to this directory, which is your wharf directory within your project.
 
 ``` bash
-sftp> cd douglas-sens2023598/
+sftp> cd douglas-sens2025560/
 sftp> dir
 sftp>
 ```
@@ -235,13 +235,13 @@ sftp> quit
 - Once you have a bianca shell, **change to your wharf directory** within your project.  Replace my user and project with yours.
 
 ``` bash
-cd /proj/sens2023598/nobackup/wharf/douglas/douglas-sens2023598
+cd /proj/sens2025560/nobackup/wharf/douglas/douglas-sens2025560
 ```
 
 Within this directory should be your R directory.
 
 ``` bash
-[douglas@sens2023598-bianca douglas-sens2023598]$ ls -l
+[douglas@sens2025560-bianca douglas-sens2025560]$ ls -l
 total 1892
 drwxrwxr-x  3 douglas douglas    4096 Mar  2 14:27 R
 ```
@@ -251,7 +251,7 @@ drwxrwxr-x  3 douglas douglas    4096 Mar  2 14:27 R
 - Now sync this to your home directory:
 
 ``` bash
-[douglas@sens2023598-bianca douglas-sens2023598]$ rsync -Pa R ~/
+[douglas@sens2025560-bianca douglas-sens2025560]$ rsync -Pa R ~/
 ```
 
 ### Start an R session and load the new package
@@ -261,14 +261,14 @@ Because R_packages/4.2.1 was loaded when you installed/updated the packages in y
 Simply change to the directory you want to work in, load the R_packages/4.2.1 module, and get to work.
 
 ``` bash
-[douglas@sens2023598-bianca douglas-sens2023598]$ cd /proj/sens2023598/nobackup/douglas/
-    [douglas@sens2023598-bianca douglas]$ module load R_packages/4.2.1
+[douglas@sens2025560-bianca douglas-sens2025560]$ cd /proj/sens2025560/nobackup/douglas/
+    [douglas@sens2025560-bianca douglas]$ module load R_packages/4.2.1
 ```
 
 Then start R, and load the new package.
 
 ``` bash
-[douglas@sens2023598-bianca douglas]$ R
+[douglas@sens2025560-bianca douglas]$ R
 ```
 
 ``` R

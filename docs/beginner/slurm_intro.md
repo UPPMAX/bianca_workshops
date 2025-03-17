@@ -93,19 +93,19 @@ flowchart TD
 
 - 1 mandatory setting for jobs:
     - Which compute project? (`-A`)
-    - Example: ``interactive -A sens2023598``
+    - Example: ``interactive -A sens2025560``
 - 3 settings you really should set:
     - Type of queue or partition? (`-p`)
         - ``core``  for most jobs and **default**!
         - ``node``  for larger jobs
         - for short development jobs and tests: ``devcore``, ``devel``)
-        - Example: ``interactive -A sens2023598 -p core``
+        - Example: ``interactive -A sens2025560 -p core``
     - How many cores? (`-n`)
         - up to 16 for core job (default 1)
-        - Example: ``interactive -A sens2023598 -p core -n 4``
+        - Example: ``interactive -A sens2025560 -p core -n 4``
     - How long at most? (`-t`)
         - Example: ask for 30 minutes of 4 cores
-            - ``interactive -A sens2023598 -p core -n 4 -t 0:30:0``
+            - ``interactive -A sens2025560 -p core -n 4 -t 0:30:0``
         - Default is 1 min so set it if the job requires more time!
 - If in doubt:
     - `-p core`
@@ -190,10 +190,10 @@ interactive -A [project name] -p core -n [number_of_cores] -t [session_duration]
 For example:
 
 ```bash
-interactive -A sens2023598 -p core -n 2 -t 8:0:0
+interactive -A sens2025560 -p core -n 2 -t 8:0:0
 ```
 
-This starts an interactive session using project `sens2023598`
+This starts an interactive session using project `sens2025560`
 that uses 2 cores and has a maximum duration of 8 hours.
 
 ### Try interactive and run RStudio
@@ -217,11 +217,11 @@ We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/sof
 
             - find your session, ssh to it, like:
 
-                ``$ ssh sens2023598-b9``
+                ``$ ssh sens2025560-b9``
 
     - Otherwise start a new one with:
 
-        ``$ interactive -A sens2023598 -p devcore -n 2 -t 30:00 --mail-type=BEGIN``
+        ``$ interactive -A sens2025560 -p devcore -n 2 -t 30:00 --mail-type=BEGIN``
 
     - You will get an email wghen started so you don't miss some compute time!
 
@@ -233,7 +233,7 @@ We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/sof
 
 
     - When session is started, you can check which node you are from the information in your prompt, like:
-        ``[bjornc@sens2023598-b9 ~]$``
+        ``[bjornc@sens2025560-b9 ~]$``
 
     - Once the interactive job has begun after a while you need to **load needed modules**, even if you had loaded them before in the login node
     - Load an RStudio module and an R_packages module (if not loading R you will have to stick with R/3.6.0) and run "rstudio" from there.
@@ -309,7 +309,7 @@ We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/sof
 ```bash
 #!/bin/bash -l
 
-#SBATCH -A sens2023598  # Project ID
+#SBATCH -A sens2025560  # Project ID
 
 #SBATCH -p devcore  # Asking for cores (for test jobs and as opposed to multiple nodes)
 
@@ -321,7 +321,7 @@ We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/sof
 
 # go to some directory
 
-cd /proj/sens2023598/
+cd /proj/sens2025560/
 pwd -P
 
 # load software modules
@@ -449,19 +449,19 @@ srun echo Hello world!
 ???+ question "Extra: Submit a complex Slurm job"
 
     - Make a batch job to run the [demo](https://uppmax.github.io/bianca_workshops/extra/slurm/) "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff". Ask for 2 cores for 1h.
-        - You can copy the my_bio_workflow.sh file in ``/proj/sens2023598/workshop/slurm`` to your home folder and make the necessary changes.
+        - You can copy the my_bio_workflow.sh file in ``/proj/sens2025560/workshop/slurm`` to your home folder and make the necessary changes.
 
     ??? tip "Answer"
 
         - edit a file using you preferred editor, named `my_bio_worksflow.sh`, for example, with the content
-        - alternatively copy the ``/proj/sens2023598/workshop/slurm/my_bio_workflow.sh`` file and modify it
+        - alternatively copy the ``/proj/sens2025560/workshop/slurm/my_bio_workflow.sh`` file and modify it
           ``cd ~``
-          ``cp /proj/sens2023598/workshop/slurm/my_bio_workflow.sh .``
+          ``cp /proj/sens2025560/workshop/slurm/my_bio_workflow.sh .``
         - edit ``my_bio_workflow.sh`` and add the SBATCH commands
 
         ```bash
         #!/bin/bash
-        #SBATCH -A sens2023598
+        #SBATCH -A sens2025560
         #SBATCH -J workflow
         #SBATCH -t 01:00:00
         #SBATCH -p core
@@ -477,7 +477,7 @@ srun echo Hello world!
         module load samtools/1.17
 
         # copy and example BAM file
-        cp -a /proj/sens2023598/workshop/data/ERR1252289.subset.bam .
+        cp -a /proj/sens2025560/workshop/data/ERR1252289.subset.bam .
 
         # index the BAM file
         samtools index ERR1252289.subset.bam

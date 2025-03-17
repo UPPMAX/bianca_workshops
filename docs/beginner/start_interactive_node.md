@@ -37,6 +37,6 @@ then do these exercises.
 
     In the terminal, type `hostname`
 
-    - the login node has `[project]-bianca`, where `[project]` is the name of the project, e.g. `sens2023598`
+    - the login node has `[project]-bianca`, where `[project]` is the name of the project, e.g. `sens2025560`
     - the interactive node has `b[number]` in it, where `[number]` is the compute node number
 

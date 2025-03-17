@@ -15,7 +15,7 @@
 09:25:10 From Pavlin Mitev To Everyone:
 	https://docs.uppmax.uu.se/software/bianca_file_transfer_using_rsync/
 09:25:54 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
-	Course project: sens2023598
+	Course project: sens2025560
 10:21:01 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
 	ssh -X sven@rackham3.uppmax.uu.se
 10:26:48 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:

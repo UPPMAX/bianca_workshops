@@ -36,7 +36,7 @@ tags:
 
             1. Connect to transit
             2. Mount the projects with mount_wharf
-            3. Move/copy the file(s) from sens2023598 to your other project
+            3. Move/copy the file(s) from sens2025560 to your other project
             4. Log in to the other Sens project on Bianca and move the file from the wharf to a good place
 
 ## Using the compute nodes
@@ -51,14 +51,14 @@ tags:
 
         ```bash
         #!/bin/bash
-        #SBATCH -A sens2023598
+        #SBATCH -A sens2025560
         #SBATCH -J workflow
         #SBATCH -t 01:00:00
         #SBATCH -p core
         #SBATCH -n 2
 
 
-        cd /proj/sens2023598/workshop/slurm/
+        cd /proj/sens2025560/workshop/slurm/
 
         module load bioinfo-tools
 
@@ -66,7 +66,7 @@ tags:
         module load samtools/1.17
 
         # copy and example BAM file****
-        cp -a /proj/sens2023598/workshop/data/ERR1252289.subset.bam .
+        cp -a /proj/sens2025560/workshop/data/ERR1252289.subset.bam .
 
         # index the BAM file
         samtools index ERR1252289.subset.bam

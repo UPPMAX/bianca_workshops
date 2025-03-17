@@ -114,7 +114,7 @@ It may look like below, where there is a preference for Jupyter:
 
     ```console
     $ cd ~   # just 'cd' will work as well
-    $ ln -s /proj/sens2023598/ proj
+    $ ln -s /proj/sens2025560/ proj
     ```
 
     - Start jupyter from your $HOME folder
@@ -177,5 +177,5 @@ It may look like below, where there is a preference for Jupyter:
 
     In the terminal, type `hostname`
 
-    - the login node has `[project]-bianca`, where `[project]` is the name of the project, e.g. `sens2023598`
+    - the login node has `[project]-bianca`, where `[project]` is the name of the project, e.g. `sens2025560`
     - the interactive node has `b[number]` in it, where `[number]` is the compute node number
