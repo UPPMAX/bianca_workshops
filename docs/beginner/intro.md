@@ -151,4 +151,3 @@ flowchart TD
 > Red nodes: Intro to Bianca.
 > Yellow node: Intro to Bianca extra material.
 > Green node: Intermediate Bianca.
-
