@@ -9,11 +9,12 @@ tags:
 !!! info "Learning outcomes"
 
     - This is a short introduction in how to reach the calculation/compute/worker nodes
-    - The learners should be able to:
-        - Run simple jobs in the batch system
-        - Run interactively on compute nodes
-        - See when to run interactive and when to use batch system
-        - Check the progress of their jobs
+    - Use the UPPMAX documentation
+    - Run simple jobs in the batch system
+    - Run interactively on compute nodes
+    - Know when to run interactive and when to use batch system
+    - Plan your jobs
+    - Check the progress of your jobs
 
 ???- info "Notes for teachers"
 
@@ -27,7 +28,7 @@ tags:
     Schedule (50 minutes):
 
     - 10 minutes: lecturing
-    - 15 minutes type-alongs x 2
+    - 5 minutes type-alongs ??
     - 20 minutes: exercise + quiz
     - 5 minutes: discuss answers
 
@@ -90,6 +91,8 @@ flowchart TD
 ```
 
 ### Allocation flags/Slurm parameters
+
+**TODO** just have the cheat sheet?
 
 - 1 mandatory setting for jobs:
     - Which compute project? (`-A`)
