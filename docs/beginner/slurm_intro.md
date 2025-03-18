@@ -140,8 +140,6 @@ flowchart TD
         - ``core`` is default and works for jobs narrower than 16 cores
         - ``node`` can be used if you need the whole node and its memory
 
-
-
 ## Interactive jobs
 
 !!! tip
@@ -339,8 +337,6 @@ srun echo Hello world!
 - `jobstats` — efficiency of booked resources
     - use ``eog`` to watch the ``png`` output files
 - `bianca_combined_jobinfo`
-
-
 
 ## Exercises 30 minutes
 
