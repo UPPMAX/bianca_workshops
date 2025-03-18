@@ -59,7 +59,7 @@ tags:
 
 Type        |Purpose
 ------------|--------------------------
-Login node  | <pre> Start jobs for worker nodes and do easy things. <br> You share 2 cores and 15 GB RAM with active users within your SENS project </pre>
+Login node  | Start jobs for worker nodes and do easy things. \n You share 2 cores and 15 GB RAM with active users within your SENS project.
 Compute nodes | Do hard calculations, either from scripts or an interactive session
 
 ???- info  "Principle"
@@ -166,7 +166,7 @@ flowchart TD
         - Limited to 12 hours (?) and 2 nodes (32 cores)
         - CPU hours are ticking all the time the session is active, even if you do not perform any work
 
-### Procedure
+### Procedure for interactive jobs
 
 - Log in to compute node via the terminal:
 
@@ -227,19 +227,19 @@ that uses 2 cores and has a maximum duration of 8 hours.
     - Cons
         - You have no interaction
 
-### Procedure
+### Procedure for batch jobs
 
 - Batch scripts can be written in any scripting language. We will use **bash**
 - Therefor, let the first line be  `#!/bin/bash -l`
 
 ???- question "Why ``-l``"
- 
+
     - It is good practice to end the line with ``-l`` to reload a fresh environment with no modules loaded.
     - This makes you sure that you don't enable other software or versions that may interfere with what you want to do in the job.
     
 - Before the job content, add the batch flags starting the lines with the keyword `#SBATCH`, like:
     - ``#SBATCH -A sens2025560``
- 
+
 ???- question "Why initial``#``"
 
     - `#` will be ignored by `bash` and can run as an ordinary bash script
@@ -285,7 +285,7 @@ that uses 2 cores and has a maximum duration of 8 hours.
     - Like allocating 4 cores (instead 2 defined in the script)
 
     - ``$ sbatch -n 4 jobscript.sh``
- 
+
 ???- info "Documentation"
 
     [sbatch a script with command-line Slurm parameters](https://docs.uppmax.uu.se/cluster_guides/slurm_on_bianca/#sbatch-a-script-with-command-line-slurm-parameters)
@@ -357,7 +357,7 @@ that uses 2 cores and has a maximum duration of 8 hours.
 
 !!! example "Demo/type-along"
 
-   - We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/software/rstudio/), and to get those resources, you must should start an interactive job.
+    - We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/software/rstudio/), and to get those resources, you must should start an interactive job.
 
 
     Use **ThinLinc**
