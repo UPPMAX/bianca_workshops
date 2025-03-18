@@ -145,7 +145,7 @@ flowchart TD
 !!! tip
 
     - When to use?
-        - Development and programs that nees responiveness
+        - For development and programs that need responsiveness
     - Pros
         - Interactive jobs are high-priority
         - Quickly gives you a job and logs you in to the compute node
@@ -160,12 +160,15 @@ flowchart TD
         - Limited to 12 hours (?) and 2 nodes (32 cores)
         - CPU hours are ticking all the time the session is active, even if you do not perform any work
 
+### Procedure
+
 - Log in to compute node via the terminal:
 
 ```bash
 interactive -A [project name] -p core -n [number_of_cores] -t [session_duration]
 ```
-
+- Do some work!
+- 
 - Log out with `<Ctrl>-D` or `logout`
 
 For example:
@@ -177,56 +180,10 @@ interactive -A sens2025560 -p core -n 2 -t 8:0:0
 This starts an interactive session using project `sens2025560`
 that uses 2 cores and has a maximum duration of 8 hours.
 
-### Try interactive and run RStudio (just exercise)
+!!! info "Documentation"
 
-We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/software/rstudio/), and to get those resources, you must should start an interactive job.
+    [Starting an interactive session on Bianca](https://docs.uppmax.uu.se/cluster_guides/start_interactive_node_on_bianca/)
 
-!!! example "Demo/type-along"
-
-    !!! tip
-
-        - Try to start  the interactive session but if it takes a while, just listen.
-        - It may have started by the time for exercises
-
-    Use **ThinLinc**
-
-    - If you already have an interactive session going on, use that.
-
-            - If you don't find it, do
-
-                ``$ squeue``
-
-            - find your session, ssh to it, like:
-
-                ``$ ssh sens2025560-b9``
-
-    - Otherwise start a new one with:
-
-        ``$ interactive -A sens2025560 -p devcore -n 2 -t 30:00 --mail-type=BEGIN``
-
-    - You will get an email wghen started so you don't miss some compute time!
-
-    !!! tip
-
-        - Try to start  the interactive session but if it takes a while, just listen.
-        - It may have started by the time for exercises.
-        - We may all also return to this after some time!
-
-
-    - When session is started, you can check which node you are from the information in your prompt, like:
-        ``[bjornc@sens2025560-b9 ~]$``
-
-    - Once the interactive job has begun after a while you need to **load needed modules**, even if you had loaded them before in the login node
-    - Load an RStudio module and an R_packages module (if not loading R you will have to stick with R/3.6.0) and run "rstudio" from there.
-
-        `$ ml RStudio/2023.06.2-561`
-
-    - **Start rstudio**, keeping terminal active (`&`)
-
-      `$ rstudio &`
-
-    - **Quit RStudio**!
-    - **Log out** from interactive session with `<Ctrl>-D` or `logout` or `exit`
 
 !!! tip
 
@@ -327,7 +284,7 @@ srun echo Hello world!
 
 !!! warning
 
-    Do we need to go back and test the interactive?
+    - Do we need to go back and test the interactive?
 
 ## Check the jobs
 
@@ -339,6 +296,18 @@ srun echo Hello world!
 - `bianca_combined_jobinfo`
 
 ## Exercises 30 minutes
+
+
+
+??? question "Start an interactive session"
+
+    - Ask for like 30 minutes only
+    - The goal of this exercise is to make sure you know how to start an interactive session.
+    - Since it may take a while, continue with the other exercises!!
+
+    !!! info "Documentation"
+
+        [Starting an interactive session on Bianca](https://docs.uppmax.uu.se/cluster_guides/start_interactive_node_on_bianca/)
 
 ???+ question "You are developing code on Bianca."
 
@@ -374,17 +343,64 @@ srun echo Hello world!
         1. interactive
         1. interactive
 
-??? question "Start an interactive session"
-
-    - Ask for like 15 minutes only
-    - The goal of this exercise is to make sure you know how to start an interactive session.
-    - Try to reproduce the steps in the Demo above, if we did not manage!
 
 ???+ question "Play with some changes in the submit script used in the Type-along"
 
     - Examples:
         - more cores
         - other things to do
+
+We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/software/rstudio/), and to get those resources, you must should start an interactive job.
+
+**MERGE INTO EXERCISE**
+
+!!! example "Demo/type-along"
+
+    !!! tip
+
+        - Try to start  the interactive session but if it takes a while, just listen.
+        - It may have started by the time for exercises
+
+    Use **ThinLinc**
+
+    - If you already have an interactive session going on, use that.
+
+            - If you don't find it, do
+
+                ``$ squeue``
+
+            - find your session, ssh to it, like:
+
+                ``$ ssh sens2025560-b9``
+
+    - Otherwise start a new one with:
+
+        ``$ interactive -A sens2025560 -p devcore -n 2 -t 30:00 --mail-type=BEGIN``
+
+    - You will get an email wghen started so you don't miss some compute time!
+
+    !!! tip
+
+        - Try to start  the interactive session but if it takes a while, just listen.
+        - It may have started by the time for exercises.
+        - We may all also return to this after some time!
+
+
+    - When session is started, you can check which node you are from the information in your prompt, like:
+        ``[bjornc@sens2025560-b9 ~]$``
+
+    - Once the interactive job has begun after a while you need to **load needed modules**, even if you had loaded them before in the login node
+    - Load an RStudio module and an R_packages module (if not loading R you will have to stick with R/3.6.0) and run "rstudio" from there.
+
+        `$ ml RStudio/2023.06.2-561`
+
+    - **Start rstudio**, keeping terminal active (`&`)
+
+      `$ rstudio &`
+
+    - **Quit RStudio**!
+    - **Log out** from interactive session with `<Ctrl>-D` or `logout` or `exit`
+
 
 ???+ question "Extra: Submit a complex Slurm job"
 
