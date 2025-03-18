@@ -115,7 +115,7 @@ If you have not uploaded anything to your ``wharf``, this will be empty. It migh
 sftp> put -r .julia
 ```
 
-- That may take a while since you are sending thousands of files. Consider archiving the .julia directory (a copy) and then tranfer it with the ``put`` command.
+- That may take a while since you are sending thousands of files. Consider archiving the .julia directory (a copy) and then transfer it with the ``put`` command.
 
 - **Alt 2: Just transfer the latest installed julia package(s)**
 
