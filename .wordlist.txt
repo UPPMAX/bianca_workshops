@@ -171,7 +171,6 @@ Thinlinc
 ThinLink
 Tidycmprsk
 tidycmprsk
-tranfer
 Transfering
 txt
 unallocated
@@ -200,6 +199,7 @@ xNVIDIA
 yaml
 Yhm
 zH
+
 alongs
 type-alongs
 repo
@@ -244,7 +244,7 @@ bclaremar
 dec
 openMP
 lmod
-snic
+
 supr
 md
 VSCodium
@@ -296,7 +296,7 @@ dataset
 microdata
 Prevaluation
 prevaluation
-th
+
 intel
 Fortran
 Nextlabs
@@ -321,7 +321,7 @@ Rclone
 prevaluations
 prereqs
 CyberDuck
-focussed
+focused
 Hmmm
 interactiveness
 Kolmogorov
@@ -331,4 +331,3 @@ Smirnov
 timespan
 Yay
 DOI
-
