@@ -113,7 +113,7 @@ flowchart TD
     - Run program(s)
     - (Collect output)
     - ... and more
- 
+
 ### Allocation flags/Slurm parameters
 
 **TODO** just have the cheat sheet?
@@ -358,9 +358,9 @@ srun echo Hello world!
         - more cores
         - other things to do
 
-We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/software/rstudio/), and to get those resources, you must should start an interactive job.
+- We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/software/rstudio/), and to get those resources, you must should start an interactive job.
 
-**MERGE INTO EXERCISE**
+- **TODO**: MERGE INTO EXERCISE
 
 !!! example "Demo/type-along"
 
