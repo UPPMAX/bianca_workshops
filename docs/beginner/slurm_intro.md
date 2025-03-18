@@ -2,6 +2,13 @@
 tags:
   - lesson
   - session
+  - beginner
+  - slurm
+  - batch
+  - interactive
+  - compute
+  - node
+  - core
 ---
 
 # Introduction to compute nodes
@@ -167,8 +174,8 @@ flowchart TD
 ```bash
 interactive -A [project name] -p core -n [number_of_cores] -t [session_duration]
 ```
+
 - Do some work!
-- 
 - Log out with `<Ctrl>-D` or `logout`
 
 For example:
@@ -296,8 +303,6 @@ srun echo Hello world!
 - `bianca_combined_jobinfo`
 
 ## Exercises 30 minutes
-
-
 
 ??? question "Start an interactive session"
 
