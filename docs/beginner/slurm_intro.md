@@ -42,7 +42,7 @@ tags:
 ## Why?
 
 - You would want to use the compute capabilities on an HPC cluster
-- You may on one hand wnat to work interactively with your data
+- You may on one hand want to work interactively with your data
 - You may need to use much compute resources but can let this be done in the background
 
 ## Nodes and cores
@@ -376,7 +376,7 @@ that uses 2 cores and has a maximum duration of 8 hours.
 
         ``$ interactive -A sens2025560 -p devcore -n 2 -t 30:00 --mail-type=BEGIN``
 
-    - You will get an email wghen started so you don't miss some compute time!
+    - You will get an email when started so you don't miss some compute time!
 
     !!! tip
 
