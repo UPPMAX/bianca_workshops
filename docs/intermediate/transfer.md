@@ -44,7 +44,7 @@ tags:
 
     ```mermaid
     gantt
-      title File tranfer to/from Bianca
+      title File transfer to/from Bianca
       dateFormat X
       axisFormat %s
       section First hour
