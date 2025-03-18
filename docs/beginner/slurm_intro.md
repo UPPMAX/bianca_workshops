@@ -140,26 +140,6 @@ flowchart TD
         - ``core`` is default and works for jobs narrower than 16 cores
         - ``node`` can be used if you need the whole node and its memory
 
-### The queue
-
-!!! tip
-
-    - You don't see the queue graphically.
-    - But, overall:
-        - short and narrow jobs will start fast
-        - test and development jobs can get use of specific development nodes if they are shorter than 1 hour and uses up to two nodes.
-        - waste of resources unless you have a parallel program or need all the memory, e.g. 128 GB per node
-
-!!! note "See also"
-
-    - [The job scheduler graphically](https://docs.uppmax.uu.se/cluster_guides/slurm_scheduler/){:target="_blank"}
-
-### Core-hours
-
-- Remember that you are charged CPU-hours according to booked #cores x hours
-- Example 1: 60 hours with 2 cores = 120 CPU-hours
-- Example 2: 12 hours with a full node = 192 hours
-    - Waste of resources unless you have a parallel program using all cores or need all the memory, e.g. 128 GB per node
 
 
 ## Interactive jobs
@@ -199,7 +179,7 @@ interactive -A sens2025560 -p core -n 2 -t 8:0:0
 This starts an interactive session using project `sens2025560`
 that uses 2 cores and has a maximum duration of 8 hours.
 
-### Try interactive and run RStudio
+### Try interactive and run RStudio (just exercise)
 
 We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/software/rstudio/), and to get those resources, you must should start an interactive job.
 
@@ -360,48 +340,9 @@ srun echo Hello world!
     - use ``eog`` to watch the ``png`` output files
 - `bianca_combined_jobinfo`
 
-!!! admonition "See also"
-
-    Intermediate workshop material on Slurm:
-
-    - [complex jobs](../intermediate/complex_jobs.md)
-    - [efficient jobs](../intermediate/efficient_jobs.md)
-    - [replicate jobs](../intermediate/complex_jobs.md)
-
-!!! admonition "Slurm Cheat Sheet"
-
-    - ``-A``    project number
-    - ``-t``    wall time
-    - ``-n``    number of cores
-    - ``-N``    number of nodes (can only be used if your code is parallelized with MPI)
-    - ``-p``    partition
-        - ``core`` is default and works for jobs narrower than 16 cores
-        - ``node`` can be used if you need the whole node and its memory
-            - must be used when allocating the fat nodes, see below
-    - ``-C mem256GB`` allocate a fat node with 256 GB RAM
-    - ``-C mem512GB`` allocate a fat node with 512 GB RAM
-    - ``-C gpu``
-
-    - **Batch jobs**
-
-    - Two alternatives
-        - ``sbatch <jobscript with all #SBATCH options>``
-        - ``sbatch <options that will be prioritized over the options within the jobs script> <jobscript>``
-            - can for instance be used if you just want to test with, for instance, fewer cores and shorter time
-            - Example: ``sbatch -t  60:00 -p devcore -n 2 job.sh``
-
-    - **Interactive**
-
-    - ``interactive -A <project> <other options if not using default settings>``
-    - load your modules when session starts
-
-!!! admonition "Check and cancel jobs"
-
-    - ``squeue``    see the pending and running jobs with their job IDs
-    - ``scancel [job ID]``
 
 
-## Exercises 20 minutes
+## Exercises 30 minutes
 
 ???+ question "You are developing code on Bianca."
 
@@ -520,6 +461,67 @@ srun echo Hello world!
     - [The job scheduler graphically](https://docs.uppmax.uu.se/cluster_guides/slurm_scheduler/){:target="_blank"}
 
     - Which jobs will start faster?
+
+### The queue
+
+!!! tip
+
+    - You don't see the queue graphically.
+    - But, overall:
+        - short and narrow jobs will start fast
+        - test and development jobs can get use of specific development nodes if they are shorter than 1 hour and uses up to two nodes.
+        - waste of resources unless you have a parallel program or need all the memory, e.g. 128 GB per node
+
+!!! note "See also"
+
+    - [The job scheduler graphically](https://docs.uppmax.uu.se/cluster_guides/slurm_scheduler/){:target="_blank"}
+
+### Core-hours
+
+- Remember that you are charged CPU-hours according to booked #cores x hours
+- Example 1: 60 hours with 2 cores = 120 CPU-hours
+- Example 2: 12 hours with a full node = 192 hours
+    - Waste of resources unless you have a parallel program using all cores or need all the memory, e.g. 128 GB per node
+!!! admonition "See also"
+
+    Intermediate workshop material on Slurm:
+
+    - [complex jobs](../intermediate/complex_jobs.md)
+    - [efficient jobs](../intermediate/efficient_jobs.md)
+    - [replicate jobs](../intermediate/complex_jobs.md)
+
+!!! admonition "Slurm Cheat Sheet"
+
+    - ``-A``    project number
+    - ``-t``    wall time
+    - ``-n``    number of cores
+    - ``-N``    number of nodes (can only be used if your code is parallelized with MPI)
+    - ``-p``    partition
+        - ``core`` is default and works for jobs narrower than 16 cores
+        - ``node`` can be used if you need the whole node and its memory
+            - must be used when allocating the fat nodes, see below
+    - ``-C mem256GB`` allocate a fat node with 256 GB RAM
+    - ``-C mem512GB`` allocate a fat node with 512 GB RAM
+    - ``-C gpu``
+
+    - **Batch jobs**
+
+    - Two alternatives
+        - ``sbatch <jobscript with all #SBATCH options>``
+        - ``sbatch <options that will be prioritized over the options within the jobs script> <jobscript>``
+            - can for instance be used if you just want to test with, for instance, fewer cores and shorter time
+            - Example: ``sbatch -t  60:00 -p devcore -n 2 job.sh``
+
+    - **Interactive**
+
+    - ``interactive -A <project> <other options if not using default settings>``
+    - load your modules when session starts
+
+!!! admonition "Check and cancel jobs"
+
+    - ``squeue``    see the pending and running jobs with their job IDs
+    - ``scancel [job ID]``
+    
 
 ## Links
 
