@@ -39,10 +39,15 @@ tags:
     - 20 minutes: exercise + quiz
     - 5 minutes: discuss answers
 
+## Why?
+
+- You would want to use the compute capabilities on an HPC cluster
+- You may on one hand wnat to work interactively with your data
+- You may need to use much compute resources but can let this be done in the background
 
 ## Nodes and cores
 
-???- info "What are those?"
+???- question "What are those?"
 
     - Bianca contains hundreds of **nodes**.
     - Each node is like a ordinary **computer** without a screen.
@@ -54,8 +59,8 @@ tags:
 
 Type        |Purpose
 ------------|--------------------------
-Login node  | Start jobs for worker nodes, do easy things. You share 2 cores and 15 GB RAM with active users within your Sens project
-Compute nodes | Do hard calculations, either from scripts of an interactive session
+Login node  | <pre> Start jobs for worker nodes and do easy things. <br> You share 2 cores and 15 GB RAM with active users within your SENS project </pre>
+Compute nodes | Do hard calculations, either from scripts or an interactive session
 
 ???- info  "Principle"
 
@@ -78,10 +83,11 @@ Compute nodes | Do hard calculations, either from scripts of an interactive sess
 
 - Work **interactively** with your data or develop or test
     - Run an **Interactive session**
-    - Typical use cases:
-        - Run RStudio
+    - Typical use cases: Run RStudio/matlab/stata
 - If you _don't_ need any live interaction with your workflow/analysis/simulation
     - Send your job to the slurm job **batch** (sbatch)
+
+???- tip "Decision maker"
 
 ```mermaid
 flowchart TD
@@ -99,20 +105,10 @@ flowchart TD
     interaction_type-->|Indirect|calculation_node
 ```
 
-### Jobs
+???- info "What is a job"
 
-- Job = what happens during booked time
-- In interactive session = what you do "live"
-- Otherwise (batch described in)
-    - a script file or
-    - the command-line (priority over script)
-- Content of batch script :
-    - Slurm parameters (**flags**)
-    - Load software modules
-    - (Navigate in file system)
-    - Run program(s)
-    - (Collect output)
-    - ... and more
+    - Job = what happens during booked time
+
 
 ### Allocation flags/Slurm parameters
 
@@ -194,7 +190,6 @@ that uses 2 cores and has a maximum duration of 8 hours.
 
     [Starting an interactive session on Bianca](https://docs.uppmax.uu.se/cluster_guides/start_interactive_node_on_bianca/)
 
-
 !!! tip
 
     - (Re-)load modules in an interactive session
@@ -202,11 +197,19 @@ that uses 2 cores and has a maximum duration of 8 hours.
 
 ## Job scripts (batch)
 
+- A batch job is an instruction you give the computer to perform.
+- The instruction is settled when it has been sent to the job scheduler.
+    - you can though ``cancel`` the job, if you find out that you missed anything
+
 !!! info
 
-    - A batch job is an instruction you give the computer to perform.
-    - The instruction is settled when it has been sent to the job scheduler.
-        - you can though ``cancel`` the job, if you find out that you missed anything
+    - Content of batch script :
+    - Slurm parameters (**flags**)
+    - Load software modules
+    - (Navigate in file system)
+    - Run program(s)
+    - (Collect output)
+    - ... and more
 
 !!! tip
 
@@ -239,56 +242,39 @@ that uses 2 cores and has a maximum duration of 8 hours.
         - run the tool in a login session from the terminal.
         - and do possible modification to allow for use of more cores
 
-### Try batch job
+!!! example "A (very) simple job script template"
 
-!!! example "Type-along"
+    ```bash
+    #!/bin/bash -l
+    #SBATCH -A sens2025560  # Project ID
+    #SBATCH -p devcore  # Asking for cores (for test jobs and as opposed to multiple nodes)
+    #SBATCH -n 2  # Number of cores
+    #SBATCH -t 00:1:00  # One minute
+    #SBATCH -J Test  # Name of the job
 
-    - Write a bash script called ``jobscript.sh``
-        - You can be in your `~` folder
-    - To make it faster Copy-paste the code below.
+    # go to some directory
 
-!!! tip
+    cd /proj/sens2025560/
+    pwd -P
 
-    ![copy-paste](./img/copy_paste.PNG)
+    # load software modules
+    module load bioinfo-tools
+    module list
 
-
-#### A (very) simple job script template
-
-```bash
-#!/bin/bash -l
-
-#SBATCH -A sens2025560  # Project ID
-
-#SBATCH -p devcore  # Asking for cores (for test jobs and as opposed to multiple nodes)
-
-#SBATCH -n 2  # Number of cores
-
-#SBATCH -t 00:1:00  # One minute
-
-#SBATCH -J Test  # Name of the job
-
-# go to some directory
-
-cd /proj/sens2025560/
-pwd -P
-
-# load software modules
-module load bioinfo-tools
-module list
-
-# do something
-hostname
-echo Hello world!
-echo Using the srun command: Running the same commands using the available cores
-srun hostname
-srun echo Hello world!
-```
+    # do something
+    hostname
+    echo Hello world!
+    echo Using the srun command: Running the same commands using the available cores
+    srun hostname
+    srun echo Hello world!
+    ```
 
 - Run it:
 
     - ``$ sbatch jobscript.sh``
 
 - We _can_ modify the slurm parameters for tests from the command-line.
+    - Like allocating 4 cores (instead 2 defined in the script)
 
     - ``$ sbatch -n 4 jobscript.sh``
 
@@ -354,20 +340,21 @@ srun echo Hello world!
 
 ???+ question "Play with some changes in the submit script used in the Type-along"
 
+    - Write a bash script called ``jobscript.sh``
+        - You can be in your `~` folder
+    - To make it faster Copy-paste the code above.
     - Examples:
         - more cores
         - other things to do
 
-- We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/software/rstudio/), and to get those resources, you must should start an interactive job.
+!!! tip
 
-- **TODO**: MERGE INTO EXERCISE
+    ![copy-paste](./img/copy_paste.PNG)
 
 !!! example "Demo/type-along"
 
-    !!! tip
+   - We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/software/rstudio/), and to get those resources, you must should start an interactive job.
 
-        - Try to start  the interactive session but if it takes a while, just listen.
-        - It may have started by the time for exercises
 
     Use **ThinLinc**
 
