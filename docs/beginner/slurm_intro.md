@@ -16,12 +16,12 @@ tags:
 !!! info "Learning outcomes"
 
     - This is a short introduction in how to reach the calculation/compute/worker nodes
-    - Use the UPPMAX documentation
-    - Run simple jobs in the batch system
-    - Run interactively on compute nodes
     - Know when to run interactive and when to use batch system
+    - Run interactively on compute nodes
+    - Run simple jobs
     - Plan your jobs
     - Check the progress of your jobs
+    - Use the UPPMAX documentation
 
 ???- info "Notes for teachers"
 
@@ -39,28 +39,33 @@ tags:
     - 20 minutes: exercise + quiz
     - 5 minutes: discuss answers
 
+
 ## Nodes and cores
 
-- Bianca contains hundreds of nodes.
-- Each node is like a ordinary computer without a screen.
-- One Bianca node consists of 16 cores.
-- Each core can do work more or less independently.
+???- info "What are those?"
 
-There are two types of nodes:
+    - Bianca contains hundreds of **nodes**.
+    - Each node is like a ordinary **computer** without a screen.
+    - One Bianca node consists of 16 **cores**.
+    - Each core can do work more or less independently.
+        - On a cluster, like Bianca, a _thread_ (sequence of programmed instructions) typically occupies one core.
+
+    There are two types of nodes:
 
 Type        |Purpose
 ------------|--------------------------
 Login node  | Start jobs for worker nodes, do easy things. You share 2 cores and 15 GB RAM with active users within your Sens project
 Compute nodes | Do hard calculations, either from scripts of an interactive session
 
+???- info  "Principle"
 
-- **Our nodes on Bianca have this principle**
+    - Our nodes on Bianca have this principle
 
-![node principle](./img/node.png)
+    ![node principle](./img/node.png)
 
-- **Our clusters (like Bianca) have this principle**
-
-![nodes principle](./img/nodes.png)
+    - Bianca have this principle
+    
+    ![nodes principle](./img/nodes.png)
 
 ## Slurm schedules and allocates compute resources for you
 
@@ -73,13 +78,10 @@ Compute nodes | Do hard calculations, either from scripts of an interactive sess
 
 - Work **interactively** with your data or develop or test
     - Run an **Interactive session**
-    - ``$ interactive <flags> ...``
     - Typical use cases:
         - Run RStudio
 - If you _don't_ need any live interaction with your workflow/analysis/simulation
     - Send your job to the slurm job **batch** (sbatch)
-    - `$ sbatch <flags> <program>` or
-    - `$ sbatch <job script>`
 
 ```mermaid
 flowchart TD
@@ -97,6 +99,21 @@ flowchart TD
     interaction_type-->|Indirect|calculation_node
 ```
 
+### Jobs
+
+- Job = what happens during booked time
+- In interactive session = what you do "live"
+- Otherwise (batch described in)
+    - a script file or
+    - the command-line (priority over script)
+- Content of batch script :
+    - Slurm parameters (**flags**)
+    - Load software modules
+    - (Navigate in file system)
+    - Run program(s)
+    - (Collect output)
+    - ... and more
+ 
 ### Allocation flags/Slurm parameters
 
 **TODO** just have the cheat sheet?
@@ -122,20 +139,6 @@ flowchart TD
     - `-n 1`, for Rstudio `-n 2`
     - `-t 10-00:00:00` (10 days)
 
-### Jobs
-
-- Job = what happens during booked time
-- In interactive session = what you do "live"
-- Otherwise (batch described in)
-    - a script file or
-    - the command-line (priority over script)
-- Content of batch script :
-    - Slurm parameters (**flags**)
-    - Load software modules
-    - (Navigate in file system)
-    - Run program(s)
-    - (Collect output)
-    - ... and more
 
 !!! admonition "Slurm Cheat Sheet"
 
