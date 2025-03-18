@@ -186,7 +186,7 @@ interactive -A sens2025560 -p core -n 2 -t 8:0:0
 This starts an interactive session using project `sens2025560`
 that uses 2 cores and has a maximum duration of 8 hours.
 
-!!! info "Documentation"
+???- info "Documentation"
 
     [Starting an interactive session on Bianca](https://docs.uppmax.uu.se/cluster_guides/start_interactive_node_on_bianca/)
 
@@ -197,19 +197,19 @@ that uses 2 cores and has a maximum duration of 8 hours.
 
 ## Job scripts (batch)
 
-- A batch job is an instruction you give the computer to perform.
-- The instruction is settled when it has been sent to the job scheduler.
-    - you can though ``cancel`` the job, if you find out that you missed anything
+- A batch job is an instruction you give the job scheduler to perform.
+- when submitted you will get a "job-id"
+- The instruction is settled/finally defined when it has been sent to the job scheduler.
+    - you can though ``cancel <job-id>`` the job, if you find out that you missed anything
 
-!!! info
+!!! info "Typical content of batch script"
 
-    - Content of batch script :
     - Slurm parameters (**flags**)
     - Load software modules
     - (Navigate in file system)
     - Run program(s)
     - (Collect output)
-    - ... and more
+    - (... and more)
 
 !!! tip
 
@@ -222,21 +222,29 @@ that uses 2 cores and has a maximum duration of 8 hours.
 
 !!! warning
 
-    - When to not use?
+    - When not to use?
         - When you need to interact or adjust settings during run
     - Cons
         - You have no interaction
 
-- Batch scripts can be written in any scripting language. We will use BASH
-- Make first line be  `#!/bin/bash -l` in the top line
+### Procedure
+
+- Batch scripts can be written in any scripting language. We will use **bash**
+- Therefor, let the first line be  `#!/bin/bash -l`
+
+???- question "Why ``-l``"
+ 
     - It is good practice to end the line with ``-l`` to reload a fresh environment with no modules loaded.
     - This makes you sure that you don't enable other software or versions that may interfere with what you want to do in the job.
+    
 - Before the job content, add the batch flags starting the lines with the keyword `#SBATCH`, like:
-    - ``#SBATCH -t 0:30:00``
-    - ``#SBATCH -p core``
-    - ``#SBATCH -n 3``
-- `#` will be ignored by `bash` and can run as an ordinary bash script
-- If running the script with the command `sbatch <script>` the `#SBATCH` lines will be interpreted as slurm flags
+    - ``#SBATCH -A sens2025560``
+ 
+???- question "Why initial``#``"
+
+    - `#` will be ignored by `bash` and can run as an ordinary bash script
+    - If running the script with the command `sbatch <script>` the `#SBATCH` lines will be interpreted as slurm flags
+
 - Then add your workflow: An algorithm of the steps to be done from the terminal point of view.
     - Think about what you would have to do yourself in the terminal to:
         - run the tool in a login session from the terminal.
@@ -277,26 +285,22 @@ that uses 2 cores and has a maximum duration of 8 hours.
     - Like allocating 4 cores (instead 2 defined in the script)
 
     - ``$ sbatch -n 4 jobscript.sh``
+ 
+???- info "Documentation"
 
-!!! warning
+    [sbatch a script with command-line Slurm parameters](https://docs.uppmax.uu.se/cluster_guides/slurm_on_bianca/#sbatch-a-script-with-command-line-slurm-parameters)
 
-    - Do we need to go back and test the interactive?
 
 ## Check the jobs
 
-- `squeue` — quick info about jobs in queue
-- `jobinfo` — detailed info about jobs
-- `finishedjobinfo` — summary of finished jobs
-- `jobstats` — efficiency of booked resources
-    - use ``eog`` to watch the ``png`` output files
-- `bianca_combined_jobinfo`
+- `squeue` — quick info about jobs in (your project) in queue
+- ``squeue --me`` — quick info about your jobs
 
 ## Exercises 30 minutes
 
 ??? question "Start an interactive session"
 
     - Ask for like 30 minutes only
-    - The goal of this exercise is to make sure you know how to start an interactive session.
     - Since it may take a while, continue with the other exercises!!
 
     !!! info "Documentation"
@@ -395,6 +399,15 @@ that uses 2 cores and has a maximum duration of 8 hours.
 
     - **Quit RStudio**!
     - **Log out** from interactive session with `<Ctrl>-D` or `logout` or `exit`
+
+???- question "Monitor all the jobs in the project"
+
+
+???+ question "Submit the slurm job above Slurm job"
+
+    !!! info "Documentation"
+
+        [sbatch a script with command-line Slurm parameters](https://docs.uppmax.uu.se/cluster_guides/slurm_on_bianca/#sbatch-a-script-with-command-line-slurm-parameters)
 
 
 ???+ question "Extra: Submit a complex Slurm job"
