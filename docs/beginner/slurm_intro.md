@@ -53,7 +53,7 @@ tags:
     - Each node is like a ordinary **computer** without a screen.
     - One Bianca node consists of 16 **cores**.
     - Each core can do work more or less independently.
-        - On a cluster, like Bianca, a _thread_ (sequence of programmed instructions) typically occupies one core.
+        - On a cluster, like Bianca, a [_thread_](https://en.wikipedia.org/wiki/Thread_(computing)) (sequence of programmed instructions) typically occupies one core.
 
     There are two types of nodes:
 
@@ -112,39 +112,25 @@ flowchart TD
 
 ### Allocation flags/Slurm parameters
 
-**TODO** just have the cheat sheet?
+Example
 
-- 1 mandatory setting for jobs:
-    - Which compute project? (`-A`)
-    - Example: ``interactive -A sens2025560``
-- 3 settings you really should set:
-    - Type of queue or partition? (`-p`)
-        - ``core``  for most jobs and **default**!
-        - ``node``  for larger jobs
-        - for short development jobs and tests: ``devcore``, ``devel``)
-        - Example: ``interactive -A sens2025560 -p core``
-    - How many cores? (`-n`)
-        - up to 16 for core job (default 1)
-        - Example: ``interactive -A sens2025560 -p core -n 4``
-    - How long at most? (`-t`)
-        - Example: ask for 30 minutes of 4 cores
-            - ``interactive -A sens2025560 -p core -n 4 -t 0:30:0``
-        - Default is 1 min so set it if the job requires more time!
-- If in doubt:
-    - `-p core`
-    - `-n 1`, for Rstudio `-n 2`
-    - `-t 10-00:00:00` (10 days)
-
+- ``interactive -A sens2025560 -p core -n 4 -t 0:30:0``
 
 !!! admonition "Slurm Cheat Sheet"
 
-    - ``-A``    project number
-    - ``-t``    wall time
-    - ``-n``    number of cores
+    - ``-A``    project number (**mandatory**)
+    - ``-t``    wall time (estimated maximum time of job) (**Default is 1 min only**)
+    - ``-n``    number of cores (**Default is 1**)
     - ``-N``    number of nodes (can only be used if your code is parallelized with MPI)
     - ``-p``    partition
         - ``core`` is default and works for jobs narrower than 16 cores
         - ``node`` can be used if you need the whole node and its memory
+        - for short development jobs and tests: ``devcore``, ``devel``)
+
+- If in doubt:
+    - `-p core`
+    - `-n 1`, for Rstudio `-n 2`
+    - `-t 10-00:00:00` (10 days)
 
 ## Interactive jobs
 
@@ -230,7 +216,7 @@ that uses 2 cores and has a maximum duration of 8 hours.
 ### Procedure for batch jobs
 
 - Batch scripts can be written in any scripting language. We will use **bash**
-- Therefor, let the first line be  `#!/bin/bash -l`
+- Therefore, let the first line be  `#!/bin/bash -l`
 
 ???- question "Why ``-l``"
 
@@ -300,12 +286,20 @@ that uses 2 cores and has a maximum duration of 8 hours.
 
 ??? question "Start an interactive session"
 
-    - Ask for like 30 minutes only
+    - Ask for like 30 minutes and 2 cores and add ``--mail-type=BEGIN``
+
+    - You will get an email when started so you don't miss some compute time!
+
     - Since it may take a while, continue with the other exercises!!
 
     !!! info "Documentation"
 
         [Starting an interactive session on Bianca](https://docs.uppmax.uu.se/cluster_guides/start_interactive_node_on_bianca/)
+
+     ???- tip "Answer"
+    
+         ``$ interactive -A sens2025560 -p devcore -n 2 -t 30:00 --mail-type=BEGIN``
+
 
 ???+ question "You are developing code on Bianca."
 
@@ -342,48 +336,12 @@ that uses 2 cores and has a maximum duration of 8 hours.
         1. interactive
 
 
-???+ question "Play with some changes in the submit script used in the Type-along"
+!!!+ question "Use the interactive session"
 
-    - Write a bash script called ``jobscript.sh``
-        - You can be in your `~` folder
-    - To make it faster Copy-paste the code above.
-    - Examples:
-        - more cores
-        - other things to do
-
-!!! tip
-
-    ![copy-paste](./img/copy_paste.PNG)
-
-!!! example "Demo/type-along"
-
-    - We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/software/rstudio/), and to get those resources, you must should start an interactive job.
-
-
-    Use **ThinLinc**
-
-    - If you already have an interactive session going on, use that.
-
-            - If you don't find it, do
-
-                ``$ squeue``
-
-            - find your session, ssh to it, like:
-
-                ``$ ssh sens2025560-b9``
-
-    - Otherwise start a new one with:
-
-        ``$ interactive -A sens2025560 -p devcore -n 2 -t 30:00 --mail-type=BEGIN``
-
-    - You will get an email when started so you don't miss some compute time!
-
+    
     !!! tip
 
-        - Try to start  the interactive session but if it takes a while, just listen.
-        - It may have started by the time for exercises.
-        - We may all also return to this after some time!
-
+        - Wait with this if you have not got your resources yet!
 
     - When session is started, you can check which node you are from the information in your prompt, like:
         ``[bjornc@sens2025560-b9 ~]$``
@@ -400,22 +358,48 @@ that uses 2 cores and has a maximum duration of 8 hours.
     - **Quit RStudio**!
     - **Log out** from interactive session with `<Ctrl>-D` or `logout` or `exit`
 
-???- question "Monitor all the jobs in the project"
+???- question "Submit the slurm job above 'Example Slurm job'"
 
+    - Create the script ``exampleBatch.sh`` by copy-pasting the content in 'A (very) simple job script template'
+    - Send it to the queue 
+    
+    !!! tip
 
-???+ question "Submit the slurm job above Slurm job"
+    ![copy-paste](./img/copy_paste.PNG)
 
     !!! info "Documentation"
 
         [sbatch a script with command-line Slurm parameters](https://docs.uppmax.uu.se/cluster_guides/slurm_on_bianca/#sbatch-a-script-with-command-line-slurm-parameters)
 
+    ???- tip "Answer"
 
-???+ question "Extra: Submit a complex Slurm job"
+        - ``nano exampleBatch.sh`` in a personal directory (home or in project)
+        - insert the text above and save
+        - ``sbatch exampleBatch.sh``
+
+???- question "Monitor jobs"
+
+     - Monitor all jobs with ``squeue`` command.
+     - Monitor your jobs!
+     - Do you find both the interactive session and the batch job?
+     - Are they pending or active?
+
+
+???- question "EXTRA: Play with some changes in the submit script used in the Type-along"
+
+    - Write a bash script called ``jobscript.sh``
+        - You can be in your `~` folder
+    - To make it faster Copy-paste the code above.
+    - Examples:
+        - more cores
+        - other things to do
+
+???- question "EXTRA: Submit a complex Slurm job"
 
     - Make a batch job to run the [demo](https://uppmax.github.io/bianca_workshops/extra/slurm/) "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff". Ask for 2 cores for 1h.
         - You can copy the my_bio_workflow.sh file in ``/proj/sens2025560/workshop/slurm`` to your home folder and make the necessary changes.
 
-    ??? tip "Answer"
+    ???- tip "Answer"
 
         - edit a file using you preferred editor, named `my_bio_worksflow.sh`, for example, with the content
         - alternatively copy the ``/proj/sens2025560/workshop/slurm/my_bio_workflow.sh`` file and modify it
