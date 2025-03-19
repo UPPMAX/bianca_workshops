@@ -336,7 +336,7 @@ that uses 2 cores and has a maximum duration of 8 hours.
         1. interactive
 
 
-!!!+ question "Use the interactive session"
+???- question "Use the interactive session"
 
     
     !!! tip
@@ -465,7 +465,14 @@ that uses 2 cores and has a maximum duration of 8 hours.
 
     - Which jobs will start faster?
 
-### The queue
+## Ending remarks
+
+!!! example "Discussion"
+
+    - Discuss the exercise
+    - Any further thoughts?
+
+## The queue
 
 !!! tip
 
@@ -525,7 +532,6 @@ that uses 2 cores and has a maximum duration of 8 hours.
     - ``squeue``    see the pending and running jobs with their job IDs
     - ``scancel [job ID]``
     
-
 ## Links
 
 - [New Slurm user guide](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/slurm/){:target="_blank"}
@@ -534,10 +540,6 @@ that uses 2 cores and has a maximum duration of 8 hours.
 - [The job scheduler graphically](https://docs.uppmax.uu.se/cluster_guides/slurm_scheduler/){:target="_blank"}
 - [Official slurm documentation](https://slurm.schedmd.com/){:target="_blank"}
 
-!!! example "Discussion"
-
-    - Discuss the exercise
-    - Any further thoughts?
 
 !!! abstract "Keypoints"
 
