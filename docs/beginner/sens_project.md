@@ -70,7 +70,7 @@ then answer these questions:
 - Apply for a project, **except for actually submitting it**;
   we will cancel the proposal in the end.
   Take the time to actually read the text.
-  Keep track of the extra documents you need. 
+  Keep track of the extra documents you need.
   Follow the procedure described at the UPPMAX documentation.
 
 - Which documents do you need? Who to contact for questions?
