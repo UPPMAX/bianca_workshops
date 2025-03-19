@@ -60,4 +60,38 @@ ggplot2::ggsave(filename = "confidences_per_question.png", width = 6, height = 7
 
 names(t_tidy)
 
-readr::write_csv(x = dplyr::tally(dplyr::group_by(t_tidy, question, answer)), file = "tally.csv")
+average_confidences <- dplyr::group_by(t_tidy, question) |> dplyr::summarise(mean = mean(answer))
+  
+readr::write_csv(average_confidences, file = "average_confidences.csv")
+
+ggplot2::ggplot(average_confidences, ggplot2::aes(y = question, x = mean)) +
+  ggplot2::geom_bar(stat = "identity") 
+
+ggplot2::ggsave(filename = "average_confidences_per_question.png", width = 6, height = 7)
+
+t_sessions_taught <- c(
+  "I can log in to the Bianca remote desktop using the website",
+  "I can log in to the Bianca console environment using SSH",
+  # "I can log in to Bianca via Rackham",        
+  "I can navigate to the wharf folder using a graphical file manager",
+  "I can manage my files and folders using a graphical file manager", 
+  "I can navigate to the wharf folder using a terminal",
+  "I can manage my files and folders using a terminal",
+  "I can create a minimal executable bash script",              
+  "I can use modules",                   
+  "I can transfer files to/from Bianca using FileZilla",
+  "I can start an interactive session",             
+  "I can submit jobs to the scheduler",                              
+  "I understand the legal aspects of sensitive data"
+)
+
+testthat::expect_true(all(t_sessions_taught %in% unique(t_tidy$question)))
+
+confidences_on_taught_sessions <- t_tidy |> dplyr::filter(question %in% t_sessions_taught)
+
+confidences_on_taught_sessions <- confidences_on_taught_sessions$answer
+confidences_on_taught_sessions <- confidences_on_taught_sessions[!is.na(confidences_on_taught_sessions)]
+
+success_score <- mean(confidences_on_taught_sessions) / 5.0
+readr::write_lines(x = success_score, "success_score.txt")
+

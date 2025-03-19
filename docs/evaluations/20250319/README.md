@@ -1,4 +1,22 @@
-# 
+---
+tags:
+  - evaluation
+  - 2025-03-19
+---
+
+# Evaluation
+
+- Raw data: [survey.csv](survey.csv)
+- Analysis script: [analyse.R](analyse.R)
+- [Success score](success_score.txt): 85% 
+
+![All confidences](all_confidences.png)
+
+![Average confidences](average_confidences.csv)
+
+![Average confidences per question](average_confidences_per_question.png)
+
+![Confidences per question](confidences_per_question.png)
 
 ## Anonymous feedback
 
