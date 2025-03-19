@@ -334,3 +334,8 @@ DOI
 th
 stata
 matlab
+MobaXterm
+gui
+myuser
+nobackup
+sven
