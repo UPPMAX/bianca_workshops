@@ -40,9 +40,9 @@ tags:
 
 - The path to this folder, once you are logged into your project's cluster, is:
 
-    `/proj/<projid>/nobackup/wharf/<username>/<username>-<projid>`
+    `/proj/nobackup/<projid>/wharf/<username>/<username>-<projid>`
 E.g.
-    `/proj/sens2025560/nobackup/wharf/myuser/myuser-sens2025560`
+    `/proj/nobackup/sens2025560/wharf/myuser/myuser-sens2025560`
 
 - To transfer data from Bianca, copy the files you want to transfer here.
 - To get the files transferred to the `wharf` area from outside, move the files to you project folder or home folder.
