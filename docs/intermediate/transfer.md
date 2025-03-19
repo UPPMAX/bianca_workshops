@@ -44,7 +44,7 @@ tags:
 
     ```mermaid
     gantt
-      title File tranfer to/from Bianca
+      title File transfer to/from Bianca
       dateFormat X
       axisFormat %s
       section First hour
@@ -148,7 +148,7 @@ As Bianca is a sensitive data cluster, we need to know:
 
 ## Software
 
-There are many ways to [tranfer files to/from Bianca](http://docs.uppmax.uu.se/cluster_guides/transfer_bianca/).
+There are many ways to [transfer files to/from Bianca](http://docs.uppmax.uu.se/cluster_guides/transfer_bianca/).
 
 In this session, we use:
 
