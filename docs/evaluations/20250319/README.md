@@ -9,10 +9,13 @@ tags:
 - Raw data: [survey.csv](survey.csv)
 - Analysis script: [analyse.R](analyse.R)
 - [Success score](success_score.txt): 85% 
+- Number of registrations: 24
+- Number of learners: 11
+- Number of evaluations: 11 (100%)
+- Success score: 85%
+- [Average confidences (.csv)](average_confidences.csv)
 
 ![All confidences](all_confidences.png)
-
-![Average confidences](average_confidences.csv)
 
 ![Average confidences per question](average_confidences_per_question.png)
 
