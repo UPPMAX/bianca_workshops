@@ -8,11 +8,10 @@ tags:
 
 - Raw data: [survey.csv](survey.csv)
 - Analysis script: [analyse.R](analyse.R)
-- [Success score](success_score.txt): 85% 
 - Number of registrations: 24
-- Number of learners: 11
-- Number of evaluations: 11 (100%)
-- Success score: 85%
+- Number of learners: 11 (46% of registered participants showed up)
+- Number of evaluations: 11 (100% of learners filled in an evaluation form)
+- [Success score](success_score.txt): 85% 
 - [Average confidences (.csv)](average_confidences.csv)
 
 ![All confidences](all_confidences.png)
