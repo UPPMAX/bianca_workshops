@@ -241,7 +241,7 @@ that uses 2 cores and has a maximum duration of 8 hours.
     ```bash
     #!/bin/bash -l
     #SBATCH -A sens2025560  # Project ID
-    #SBATCH -p devcore  # Asking for cores (for test jobs and as opposed to multiple nodes)
+    #SBATCH -p core  # Asking for cores (for test jobs and as opposed to multiple nodes)
     #SBATCH -n 2  # Number of cores
     #SBATCH -t 00:1:00  # One minute
     #SBATCH -J Test  # Name of the job
@@ -361,7 +361,7 @@ that uses 2 cores and has a maximum duration of 8 hours.
 ???- question "Submit the slurm job above 'Example Slurm job'"
 
     - Create the script ``exampleBatch.sh`` by copy-pasting the content in 'A (very) simple job script template'
-    - Send it to the queue 
+    - Send it to the queue
     
     !!! tip
 
@@ -379,11 +379,10 @@ that uses 2 cores and has a maximum duration of 8 hours.
 
 ???- question "Monitor jobs"
 
-     - Monitor all jobs with ``squeue`` command.
-     - Monitor your jobs!
-     - Do you find both the interactive session and the batch job?
-     - Are they pending or active?
-
+    - Monitor all jobs with ``squeue`` command.
+    - Monitor your jobs!
+    - Do you find both the interactive session and the batch job?
+    - Are they pending or active?
 
 ???- question "EXTRA: Play with some changes in the submit script used in the Type-along"
 
