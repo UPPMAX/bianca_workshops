@@ -64,7 +64,7 @@ then answer these questions:
 
     Search for 'Bianca project'.
 
-    The page is at 
+    The page is at
     <https://docs.uppmax.uu.se/getting_started/project_apply_bianca/>
 
 - Apply for a project, **except for actually submitting it**;
