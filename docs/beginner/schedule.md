@@ -26,7 +26,7 @@ When  | Who  | What
 13:55 | .    | Break
 14:05 | B    | Compute nodes and SLURM, including interactive nodes
 14:55 | .    | Break
-15:10 | R    | [Legal aspects of sensitive data](project_short.md)
+15:10 | R    | [Legal aspects of sensitive data](sens_project.md)
 15:30 | R    | [Summary](summary.md) and anonymous [evaluation](evaluation.md)
 15:45 | All  | Optional Q&A
 
