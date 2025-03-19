@@ -2,6 +2,10 @@
 tags:
   - lesson
   - session
+  - NAISS
+  - sens
+  - legal
+  - sensitive
 ---
 
 # Intro to NAISS-SENS
@@ -75,7 +79,6 @@ Sensitive data can be made FAIR. Even though you cannot publish it freely and op
 
 - Publish **open** metadata, with clear access conditions to the underlying data.
 
-
 ## Apply for project
 
 - [Detailed instructions for project application](https://www.uu.se/en/centre/uppmax/get-started/create-account-and-apply-for-project/apply-for-projects/applying-for-naiss-sens-project)
@@ -90,7 +93,6 @@ Sensitive data can be made FAIR. Even though you cannot publish it freely and op
     - Allocation: The amount of resources a project may consume before hitting a limit.
 
 - Take home message: follow the above instructions, be as complete as detailed as you reasonably can. Submit requests early in the month.
-
 
 ## Bianca
 
