@@ -13,6 +13,8 @@ tags:
 - Number of evaluations: 11 (100% of learners filled in an evaluation form)
 - [Success score](success_score.txt): 85% 
 - [Average confidences (.csv)](average_confidences.csv)
+- Lesson plan: [Richel](../../lesson_plans/20250319/20250319_richel.md)
+- Reflections: [Richel](../../reflections/20250319/20250319_richel.md)
 
 ![All confidences](all_confidences.png)
 
