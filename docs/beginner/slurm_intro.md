@@ -267,6 +267,12 @@ that uses 2 cores and has a maximum duration of 8 hours.
 
     - ``$ sbatch jobscript.sh``
 
+- Note the job id!
+
+- When job is done, depending on settings, there will be an output file called ``slurm-<job-id>.out``
+- You can check the content with ``nano`` or ``cat``
+
+
 - We _can_ modify the slurm parameters for tests from the command-line.
     - Like allocating 4 cores (instead 2 defined in the script)
 
