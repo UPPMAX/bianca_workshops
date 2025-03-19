@@ -344,7 +344,7 @@ that uses 2 cores and has a maximum duration of 8 hours.
 
 ???- question "Use the interactive session"
 
-    
+
     !!! tip
 
         - Wait with this if you have not got your resources yet!
