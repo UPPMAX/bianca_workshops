@@ -21,23 +21,6 @@ tags:
 
     - The learners have heard the topics of this course
 
-    Schedule:
-
-    ```mermaid
-    gantt
-      title Lesson plan Introduction and Logging in
-      dateFormat X
-      axisFormat %s
-      section Introduction
-      Prior knowledge: prior_1, 0, 5s
-      Theory : theory_1, after prior_1, 5s
-      section Logging In
-      Prior knowledge: prior_2, after theory_1, 5s
-      Theory: theory, after prior_2, 5s
-      Exercises: crit, exercise, after theory, 30s
-      Feedback: feedback, after exercise, 10s
-    ```
-
 ## Introduction
 
 Are you starting to work with your sensitive data in your research?
@@ -52,4 +35,3 @@ using pre-installed software and how to run your code.
 - [The evaluation](evaluation.md)
 - [The course schedule](schedule.md)
 - [The course dates](course_dates.md)
-- [The project name](../misc/project.md)

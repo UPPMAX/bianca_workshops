@@ -17,5 +17,4 @@ tags:
 
 Iteration|Course date
 ---------|---------------
-4        |March 19th 2025
-5        |.
+5        |[To be scheduled](https://github.com/UPPMAX/bianca_workshops/issues/66)
