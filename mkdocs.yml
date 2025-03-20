@@ -49,7 +49,7 @@ nav:
     - extra/containers.md
     - extra/devel.md
   - Misc: 
-      - Exercise procedure: misc/exercise_procedure.md
+      - Communication: communication/README.md
       - Evaluations: evaluations/README.md
       - Lesson plans: lesson_plans/README.md
       - Prevaluations: prevaluations/README.md
