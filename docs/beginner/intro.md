@@ -53,5 +53,3 @@ using pre-installed software and how to run your code.
 - [The course schedule](schedule.md)
 - [The course dates](course_dates.md)
 - [The project name](../misc/project.md)
-- [The shared document](../misc/shared_document.md)
-
