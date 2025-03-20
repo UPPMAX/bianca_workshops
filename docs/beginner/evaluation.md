@@ -7,7 +7,7 @@ tags:
 
 ???- question "Where are the earlier course evaluations?"
 
-    They are at [the 'Evaluations' (plural) page](evaluations/README.md).
+    They are at [the 'Evaluations' (plural) page](../evaluations/README.md).
 
 - [Any feedback during the day](https://docs.google.com/forms/d/e/1FAIpQLSfClfgYhxa8ldsC41HhvLBNBRgHx_7XKJhvkErQJdX883pvfA/viewform?usp=header)
 
