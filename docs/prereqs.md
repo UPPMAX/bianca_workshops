@@ -9,6 +9,7 @@ tags:
 # Prerequisites
 
 - Have a good Zoom setup
+- Download and install FileZilla
 - SUPR/course project
 - set up 2FA
     - [2-factor authentication](https://www.uu.se/en/staff/service-and-tools/tools-and-guides/log-in-securely)
