@@ -6,10 +6,9 @@ tags:
   - preparation
 ---
 
-# Practicalities
+# Prerequisites
 
-## Prerequisites
-
+- Have a good Zoom setup
 - SUPR/course project
 - set up 2FA
     - [2-factor authentication](https://www.uu.se/en/staff/service-and-tools/tools-and-guides/log-in-securely)
