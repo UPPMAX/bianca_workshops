@@ -6,6 +6,7 @@ tags:
 # Evaluation 2024-05-24
 
 - Course: Bianca intermediate workshop
+- Reflections: [Richel](../../reflections/20240524/README.md)
 
 ![Confidence per session](20240524_confidence.png)
 

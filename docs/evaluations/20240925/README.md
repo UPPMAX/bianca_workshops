@@ -1,6 +1,8 @@
 ---
 tags:
   - evaluation
+  - 20240925
+  - 2024-09-25
 ---
 
 # Evaluation
@@ -8,6 +10,7 @@ tags:
 - Raw data: [20240925.csv](20240925.csv)
 - Raw data with 'Any other suggestions?' put on same line for analysis: [20240925_fixed.csv](20240925_fixed.csv)
 - Script to create images and tally: [analyse.R](analyse.R)
+- Reflections: [Richel](../../reflections/20240925/README.md)
 
 ![Raw data in Google Forms](2024-09-25_16-04-23.png)
 

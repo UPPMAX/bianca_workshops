@@ -6,6 +6,7 @@ tags:
 # Evaluation 2024-04-19
 
 - Course: Intro to Bianca
+- Reflections: [Richel](../../reflections/20240419/README.md)
 
 ## Text on shared document
 

@@ -1,12 +1,15 @@
 ---
 tags:
   - evaluation
+  - 20241111
+  - 2024-11-11
 ---
 
 # Evaluation Bianca Intermediate
 
 - [results.csv](results.csv)
 - [results.ods](results.ods)
+- Reflections: [Richel](../../reflections/20241111/README.md)
 
 ## Missing before
 

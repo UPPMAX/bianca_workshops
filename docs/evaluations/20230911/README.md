@@ -1,9 +1,13 @@
 ---
 tags:
   - evaluation
+  - 2023-09-23
+  - 20230923
 ---
 
 # Evaluation 2023-09-23
+
+- Reflections: [Richel](../../reflections/20230923/README.md)
 
 ## Results
 
