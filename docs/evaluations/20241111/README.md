@@ -58,6 +58,14 @@ Now per learning objective:
 > All confidences per question, where blue is the prevaliation
 > and red is the post/evaluation
 
+
+Now the average learning objectives:
+
+![Average confidences per question](average_confidences_per_question.png)
+
+> Average confidencess per question, where blue is the prevaliation
+> and red is the post/evaluation
+
 Copied from [stats.md](stats.md):
 
 |question                                                                          | mean_pre| mean_post|   p_value|different |

@@ -114,9 +114,10 @@ names(t)
 
 # Get the average
 t_averages <- t |> dplyr::group_by(question, when) |> dplyr::summarise(mean = mean(answer))
-ggplot2::ggplot(t_averages, ggplot2::aes(x = mean, fill = when)) +
-  ggplot2::geom_histogram(position = "dodge", binwidth = 0.25) + 
-  ggplot2::facet_grid(rows = "question", scales = "free_y") +
+ggplot2::ggplot(
+  t_averages, 
+  ggplot2::aes(x = question, y = mean, fill = when)) +
+  ggplot2::geom_col(position = "dodge") + 
   ggplot2::theme(
     strip.text.y = ggplot2::element_text(angle = 0),
     legend.position = "none"
