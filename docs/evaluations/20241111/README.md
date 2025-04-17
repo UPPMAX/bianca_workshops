@@ -58,6 +58,10 @@ Now per learning objective:
 > All confidences per question, where blue is the prevaliation
 > and red is the post/evaluation
 
+![Confidences per question as a boxplot](confidences_per_question_boxplot.png)
+
+> All confidences per question as a boxplot, where blue is the prevaliation
+> and red is the post/evaluation
 
 Now the average learning objectives:
 

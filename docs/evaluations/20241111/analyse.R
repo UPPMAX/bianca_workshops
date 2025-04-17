@@ -112,6 +112,19 @@ ggplot2::ggsave(filename = "confidences_per_question.png", width = 6, height = 7
 
 names(t)
 
+ggplot2::ggplot(
+  t, 
+  ggplot2::aes(x = question, y = answer, fill = when)) +
+  ggplot2::geom_boxplot(position = "dodge") + 
+  ggplot2::theme(
+    axis.text.x = ggplot2::element_text(angle = 90, vjust = 0.5, hjust = 1),
+    legend.position = "none"
+  ) +
+  ggplot2::labs(
+    title = "Confidences per question"
+  )
+ggplot2::ggsave(filename = "confidences_per_question_boxplot.png", width = 6, height = 7)
+
 # Get the average
 t_averages <- t |> dplyr::group_by(question, when) |> dplyr::summarise(mean = mean(answer))
 ggplot2::ggplot(
@@ -119,12 +132,13 @@ ggplot2::ggplot(
   ggplot2::aes(x = question, y = mean, fill = when)) +
   ggplot2::geom_col(position = "dodge") + 
   ggplot2::theme(
-    strip.text.y = ggplot2::element_text(angle = 0),
+    axis.text.x = ggplot2::element_text(angle = 90, vjust = 0.5, hjust = 1),
     legend.position = "none"
   ) +
   ggplot2::labs(
     title = "Confidences per question"
   )
+ggplot2::ggsave(filename = "average_confidences_per_question.png", width = 6, height = 7)
 
 # Per question, has the distribution changed?
 t_stats <- tibble::tibble(question = unique(t$question), mean_pre = NA, mean_post = NA, p_value = NA, different = NA)
