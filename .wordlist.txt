@@ -355,3 +355,5 @@ ToDos
 transferrable
 XFCE
 ZOOMLINK
+SciComp
+
