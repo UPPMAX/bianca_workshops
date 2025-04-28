@@ -10,7 +10,7 @@ tags:
 
     See [course dates](course_dates.md)
 
-???- warning "For teachers: suggested new schedule"
+???- warning "For teachers"
 
     Below is a new suggested schedule
     based on [these meeting notes](../meeting_notes/20250417.md).
