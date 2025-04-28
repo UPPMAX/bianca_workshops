@@ -9,11 +9,13 @@ on:
       - 'docs/**'
       - .github/workflows/check_links.yaml
       - mlc_config.json
+      - mkdocs.yml
   pull_request:
     paths:
       - 'docs/**'
       - .github/workflows/check_links.yaml
       - mlc_config.json
+      - mkdocs.yml
   schedule:
   - cron: "0 0 2 * *"
 
