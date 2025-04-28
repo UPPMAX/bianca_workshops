@@ -28,12 +28,13 @@ jobs:
       - uses: actions/checkout@v4
 
       # Remove folders that do not need to have their links checked
-      - name: Remove folders that do not need to have their links checked
-        run: |
-          rm -rf docs/evaluations
-          rm -rf docs/lesson_plans
-          rm -rf docs/reflections
-          rm -rf docs/shared_documents
+      #- name: Remove folders that do not need to have their links checked
+      #  run: |
+      #    rm -rf docs/evaluations
+      #    rm -rf docs/lesson_plans
+      #    rm -rf docs/meeting_notes
+      #    rm -rf docs/reflections
+      #    rm -rf docs/shared_documents
 
       # The link checker will only work if mlc_config.json is a valid JSON
       - name: Validate JSON
