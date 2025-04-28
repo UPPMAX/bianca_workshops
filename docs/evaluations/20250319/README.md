@@ -11,7 +11,7 @@ tags:
 - Number of registrations: 24
 - Number of learners: 11 (46% of registered participants showed up)
 - Number of evaluations: 11 (100% of learners filled in an evaluation form)
-- [Success score](success_score.txt): 85% 
+- [Success score](success_score.txt): 85%
 - [Average confidences (.csv)](average_confidences.csv)
 - Lesson plan: [Richel](../../lesson_plans/20250319/20250319_richel.md)
 - Reflections: [Richel](../../reflections/20250319/20250319_richel.md)
@@ -29,11 +29,11 @@ tags:
   creating the uppmax documentation,
   which is the real helper for me in the future,
   since I will probably not recall much from the course in a few months!
-- The schedule and efficiency of the program was great. 
+- The schedule and efficiency of the program was great.
 - Some of the instructions we follow were a bit unclear
   for someone who knows just a little bit.
   For example, Like creating a text file, it didn't say where you should do it.
-  So i guessed. But overall I really liekd the course 
+  So i guessed. But overall I really liekd the course
 - The lectures were very informative,
   and I will be able to use a lot of the things I learned in my projects.
 - Improving titles of Subsections would facilitate going through the
@@ -66,11 +66,11 @@ tags:
   but have some hope of managing this at some point.
   I think it worked out rather well -all in all- for me as a beginner
   and as such also a person without no prior knowledge
-  or skills when it comes to scripts etc. 
+  or skills when it comes to scripts etc.
 - The course was amazing, thank you so much for this!
   Just a couple of corrections to the course material.
   On page:
-  https://uppmax.github.io/bianca_workshops/beginner/file_transfer_using_gui/ 
+  https://uppmax.github.io/bianca_workshops/beginner/file_transfer_using_gui/
   You say, under section '3b. Locate that file on Bianca using the graphical
   file explorer': "Its location is at
   /home/[user_name]/[project_name]/nobackup/wharf/[user_name]/[user_name]-[project_name],
@@ -78,7 +78,7 @@ tags:
   There is no such directory.
   Then you repeat that same information under section
   '3c. Locate that file on Bianca using the terminal':
-  "Its location is at 
+  "Its location is at
   /home/[user_name]/[project_name]/nobackup/wharf/[user_name]/[user_name]-[project_name],
   for example, at /home/sven/sens123456/nobackup/wharf/sven/sven-sens123456."
   Again, there is no such directory.
@@ -87,5 +87,5 @@ tags:
   "The path to this folder, once you are logged into your project's cluster, is:
   /proj/<projid>/nobackup/wharf/<username>/<username>-<projid>
   E.g. /proj/sens2025560/nobackup/wharf/myuser/myuser-sens2025560"
-  But the real path is actually: 
+  But the real path is actually:
   "/proj/**nobackup**/<projid>/wharf/<username>/<username>-<projid>/"

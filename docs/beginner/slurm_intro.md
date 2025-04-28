@@ -69,7 +69,7 @@ Compute nodes | Do hard calculations, either from scripts or an interactive sess
     ![node principle](./img/node.png)
 
     - Bianca have this principle
-    
+
     ![nodes principle](./img/nodes.png)
 
 ## Slurm schedules and allocates compute resources for you
@@ -222,7 +222,7 @@ that uses 2 cores and has a maximum duration of 8 hours.
 
     - It is good practice to end the line with ``-l`` to reload a fresh environment with no modules loaded.
     - This makes you sure that you don't enable other software or versions that may interfere with what you want to do in the job.
-    
+
 - Before the job content, add the batch flags starting the lines with the keyword `#SBATCH`, like:
     - ``#SBATCH -A sens2025560``
 
@@ -303,7 +303,7 @@ that uses 2 cores and has a maximum duration of 8 hours.
         [Starting an interactive session on Bianca](https://docs.uppmax.uu.se/cluster_guides/start_interactive_node_on_bianca/)
 
      ???- tip "Answer"
-    
+
          ``$ interactive -A sens2025560 -p devcore -n 2 -t 30:00 --mail-type=BEGIN``
 
 
@@ -368,7 +368,7 @@ that uses 2 cores and has a maximum duration of 8 hours.
 
     - Create the script ``exampleBatch.sh`` by copy-pasting the content in 'A (very) simple job script template'
     - Send it to the queue
-    
+
     !!! tip
 
     ![copy-paste](./img/copy_paste.PNG)
@@ -537,7 +537,7 @@ that uses 2 cores and has a maximum duration of 8 hours.
 
     - ``squeue``    see the pending and running jobs with their job IDs
     - ``scancel [job ID]``
-    
+
 ## Links
 
 - [New Slurm user guide](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/slurm/){:target="_blank"}
