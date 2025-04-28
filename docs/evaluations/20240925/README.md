@@ -7,10 +7,12 @@ tags:
 
 # Evaluation
 
+- Lesson plans: [Richel](../../lesson_plans/20240925/20240925_richel.md)
+- [Evaluation](../../evaluations/20240925/README.md)
+- Reflections: [Richel](../../reflections/20240925/20240925_richel.md)
 - Raw data: [20240925.csv](20240925.csv)
 - Raw data with 'Any other suggestions?' put on same line for analysis: [20240925_fixed.csv](20240925_fixed.csv)
 - Script to create images and tally: [analyse.R](analyse.R)
-- Reflections: [Richel](../../reflections/20240925/README.md)
 
 ![Raw data in Google Forms](2024-09-25_16-04-23.png)
 

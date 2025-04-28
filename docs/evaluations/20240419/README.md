@@ -6,7 +6,9 @@ tags:
 # Evaluation 2024-04-19
 
 - Course: Intro to Bianca
-- Reflections: [Richel](../../reflections/20240419/README.md)
+- Lesson plans: [Richel](../../lesson_plans/20240419/20240419_richel.md)
+- [Evaluation](../../evaluations/20240419/README.md)
+- Reflections: [Richel](../../reflections/20240419/20240419_richel.md)
 
 ## Text on shared document
 

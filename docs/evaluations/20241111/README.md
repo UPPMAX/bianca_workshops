@@ -7,9 +7,11 @@ tags:
 
 # Evaluation Bianca Intermediate
 
+- Lesson plans: [Richel](../../lesson_plans/20241111/20241111_richel.md)
+- [Evaluation](../../evaluations/20241111/README.md)
+- Reflections: [Richel](../../reflections/20241111/20241111_richel.md)
 - [results.csv](results.csv)
 - [results.ods](results.ods)
-- Reflections: [Richel](../../reflections/20241111/README.md)
 
 ## Missing before
 

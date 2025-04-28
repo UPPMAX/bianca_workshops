@@ -7,7 +7,11 @@ tags:
 
 # Evaluation 2023-09-23
 
-- Reflections: [Richel](../../reflections/20230923/README.md)
+- Lesson plan: [Richel](../../lesson_plans/20230923/20230923_richel.md)
+- Evaluation: [Richel](../../evaluations/20230923/README.md)
+- Reflections: [Richel](../../reflections/20230923/20230923_richel.md)
+- Number of learners present: 18
+- Number of surveys filled in: 5 (28% fill-in rate)
 
 ## Results
 
