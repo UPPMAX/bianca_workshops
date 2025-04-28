@@ -18,7 +18,7 @@ tags:
     Changes:
 
     - We start at 9:00 sharp again, even though we voted for an academic
-      quarter: I needed those 15 extra minutes. 
+      quarter: I needed those 15 extra minutes.
       I used the BC `50 + 15` mins approach to do so.
     - GPUs is added, with 35 mins, by JY
     - File transfer, went down 20 minutes, from 70 to 50, by PM.
