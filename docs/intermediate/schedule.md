@@ -15,6 +15,18 @@ tags:
     Below is a new suggested schedule
     based on [these meeting notes](../meeting_notes/20250417.md).
 
+    Changes:
+
+    - We start at 9:00 sharp again, even though we voted for an academic
+      quarter: I needed those 15 extra minutes. 
+      I used the BC `50 + 15` mins approach to do so.
+    - GPUs is added, with 35 mins, by JY
+    - File transfer, went down 20 minutes, from 70 to 50, by PM.
+      If this is too short, he can get 10 minutes extra after the break;
+      the break is annoyingly in the way...
+    - Efficient jobs, went up 5 mins, from 45 to 50 mins, by RB
+    - After lunch: I used the BC `50 + 15` mins approach to get the time needed
+
 When | Who  | What
 -----|------|-------------------------
 9:00 | R    | [Introduction](intro.md)
