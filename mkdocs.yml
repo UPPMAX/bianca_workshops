@@ -62,8 +62,12 @@ not_in_nav: |
   assets/empty.md
   beginner/exercises.md
   beginner/linux.md
+  beginner/slurm_intro_old.md
   beginner/start_interactive_node.md
   beginner/img/empty.md
+  communication/beginner_welcome_email.md
+  data/README.md
+  data/counts/20250319/README.md
   evaluations/20230911/README.md
   evaluations/20231211/README.md
   evaluations/20240419/README.md
@@ -71,6 +75,8 @@ not_in_nav: |
   evaluations/20240925/README.md
   evaluations/20241111/README.md
   evaluations/20241111/stats.md
+  evaluations/20250319/README.md
+  evaluations/20250523/README.md
   extra/jupyter.md
   intermediate/compute_nodes.md
   intermediate/practicalities.md
@@ -84,6 +90,11 @@ not_in_nav: |
   lesson_plans/20241111/20241111_richel.md
   lesson_plans/20250319/20250319_richel.md
   lesson_plans/20250523/20250523_richel.md
+  lesson_plans/20250523/README.md
+  meeting_notes/20241010.md
+  meeting_notes/20241108.md
+  meeting_notes/20250417.md
+  misc/exercise_procedure.md
   prevaluations/20241111/README.md
   reflections/20230911/20230911_richel.md
   reflections/20231211/20231211_richel.md
@@ -97,6 +108,7 @@ not_in_nav: |
   reflections/20250523/20250523_richel.md
   shared_documents/20240419.md
   shared_documents/20240524.md
+
 
 theme:
   name: material
