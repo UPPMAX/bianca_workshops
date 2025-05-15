@@ -10,15 +10,16 @@ The hackathon will consist of short lectures and the content will be driven by q
 You may find the tentative schedule on the workshop webpage: <https://uppmax.github.io/bianca_workshops/intermediate/intro/>
 
 Important: Start preparing right away to be ready when workshop starts!
--	You need to have an account on Bianca and 2FA enabled before the workshop starts. Please follow the instructions in the Google document a couple of days before the workshop starts:
--	8-step guide: <https://docs.google.com/document/d/1yEwICcGTrqm663QinYkbUsTHn7nMKxna-gOcXQtCvD4>.
+
+- You need to have an account on Bianca and 2FA enabled before the workshop starts. Please follow the instructions in the Google document a couple of days before the workshop starts:
+- 8-step guide: <https://docs.google.com/document/d/1yEwICcGTrqm663QinYkbUsTHn7nMKxna-gOcXQtCvD4>.
 - Note: the account creation is automatic and it takes a couple of hours for changes to be propagated through the system after you asked for the account in SUPR (step 3).
--	Please make sure that you have accepted the NAISS user agreement.
--	Instruction also at: <https://uppmax.github.io/bianca_workshops/prereqs/>
+- Please make sure that you have accepted the NAISS user agreement.
+- Instruction also at: <https://uppmax.github.io/bianca_workshops/prereqs/>
 
-If you are new to command-line, it is recommended you go through part of the material taught during the UPPMAX introductory course: >https://uppmax.github.io/uppmax_intro_day_1/sessions/introduction_terminal/> .
+If you are new to command-line, it is recommended you go through part of the material taught during the UPPMAX introductory course: <https://uppmax.github.io/uppmax_intro_day_1/sessions/introduction_terminal/>.
 
-If you encounter any issues in setting up your account, please contact UPPMAX support via <https://supr.naiss.se/>support/ or email support[at]uppmax.uu.se. For general questions about the workshop, please email bjorn.clarema[at]uppmax.uu.se.
+If you encounter any issues in setting up your account, please contact UPPMAX support via <https://supr.naiss.se/>support/ or email support[at]uppmax.uu.se. For general questions about the workshop, please email bjorn.claremar[at]uppmax.uu.se.
 
 The hackathon will be held via Zoom:
 Meeting ID: 686 4255 3099
