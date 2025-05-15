@@ -26,4 +26,4 @@ Meeting ID: 686 4255 3099
 Passcode to join the meeting: 595131
 
 Best regards,
-Björn 
+Björn Claremar and teacher team
