@@ -1,8 +1,6 @@
 # Communication
 
-Communication with our learners
+Communication with our learners.
 
-## Beginner course
-
-- [Welcome email](beginner_welcome_email.md)
-- [Preparation document (.odt)](beginner_bianca_login.odt)
+- [Beginner course](beginner/README.md)
+- [Intermediate course](intermediate/README.md)
