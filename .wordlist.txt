@@ -363,3 +363,11 @@ yEwICcGTrqm
 bjorn
 claremar
 iusan
+SWAMID
+Eduroam
+OSX
+WinUsers
+Cygwin
+GitBash
+behaviour
+passwd
