@@ -1,14 +1,14 @@
 # PLEASE COMPLETE THE FOLLOWING STEPS BEFORE THE WORKSHOP STARTS
 
-See more details about each point below.  
+See more details about each point below.
 
-- `1.` **Create an account in SUPR.**  
-- `2.` **Apply for membership in the workshop project.**  
-- `3.` **Apply for an UPPMAX account.**  
-- `4.` **Wait for an email from UPPMAX with your UPPMAX account details.**  
-- `5.` **Set up two factor authentication (2FA) for UPPMAX (can be done while waiting for earlier steps).**  
-- `6.` **Optional step for login outside of SUNET**  
-- `7.` **Log in with your new UPPMAX account**  
+- `1.` **Create an account in SUPR.**
+- `2.` **Apply for membership in the workshop project.**
+- `3.` **Apply for an UPPMAX account.**
+- `4.` **Wait for an email from UPPMAX with your UPPMAX account details.**
+- `5.` **Set up two factor authentication (2FA) for UPPMAX (can be done while waiting for earlier steps).**
+- `6.` **Optional step for login outside of SUNET**
+- `7.` **Log in with your new UPPMAX account**
 - `8.` **Create a new file with your username in the designated folder. This way we will know who has completed these steps.**
 
 Please complete these steps before the workshop starts in order to avoid having to waste time with account issues during the actual workshop.
@@ -54,15 +54,15 @@ Please complete these steps before the workshop starts in order to avoid having 
 
   **If your computer is not connected to a university network, SUNET, you will need to log in via a VPN.**
 
-  You need to use the **VPN connected to your affiliated university.**  
-  **As an example here is a [Link to VPN for UU](https://www.uu.se/en/staff/service-and-tools/it-and-telephony-services/it-services/network-and-vpn)**  
+  You need to use the **VPN connected to your affiliated university.**
+  **As an example here is a [Link to VPN for UU](https://www.uu.se/en/staff/service-and-tools/it-and-telephony-services/it-services/network-and-vpn)**
   You may find instructions at web pages of the IT office of your university.
 
   **If you are a student you may not be allowed to use a VPN. Instead you may need to use the Eduroam connection or similar at Campus.**
 
   **When you’re finished setting up your VPN:**
 
-    - **Click Connect using VPN**  
+    - **Click Connect using VPN**
     - **You can get VPN credentials from all Swedish universities. Choose the one you are affiliated to.**
 
 - `7.` **Log in with your new UPPMAX account.**
@@ -75,7 +75,7 @@ Please complete these steps before the workshop starts in order to avoid having 
 
     **ssh *your\_uppmax\_username*@bianca.uppmax.uu.se**
 
-          where *your\_uppmax\_username* should be replaced by your UPPMAX username 
+          where *your\_uppmax\_username* should be replaced by your UPPMAX username
 
         - You will be asked for which project you would like to use, choose **sens2025560**
 
@@ -84,15 +84,15 @@ Please complete these steps before the workshop starts in order to avoid having 
         - If you provided the correct password and 2FA number, you should see
 
   ```bash
-  ****************************************************************************  
-  * Login node up and running. Redirecting now\!                             *  
-  * Notice\! No second factor if you use password.                           *  
-  * If you use ssh keys, you can get rid of this (second) prompt.            *  
-  ****************************************************************************  
+  ****************************************************************************
+  * Login node up and running. Redirecting now!                              *
+  * Notice! No second factor if you use password.                            *
+  * If you use ssh keys, you can get rid of this (second) prompt.            *
+  ****************************************************************************
   ```
 
-    - You will be prompted to input your password again. This time only the  
-      UPPMAX password is required, without the 2FA number.  
+    - You will be prompted to input your password again. This time only the
+      UPPMAX password is required, without the 2FA number.
 
     - You may change your password by typing: **passwd**
 
