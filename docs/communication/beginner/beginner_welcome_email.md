@@ -15,6 +15,7 @@ Passcode to join the meeting: `[zoom_passcode]`
 
 Important: Start preparing right away to be ready when workshop starts!
 You need to have an account on Bianca and 2FA enabled before the workshop starts. Please follow the instructions in the Google document a couple of days before the workshop starts:
+
 - [8-step guide](beginner_bianca_login.odt).
 Note: the account creation is automatic and it takes a couple of hours for changes to be propagated through the system after you asked for the account in SUPR (step 3).
 Please make sure that you have accepted the NAISS user agreement.
