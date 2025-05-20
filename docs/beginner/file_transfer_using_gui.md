@@ -33,10 +33,10 @@ then do these exercises.
 
     This is described in the text above.
 
-    There is also a video [here](https://youtu.be/V-iPQLjvByc).
+    There is also a YouTube video
+    ['Transfer files to/from the Bianca UPPMAX HPC cluster using FileZilla'](https://youtu.be/V-iPQLjvByc).
 
 ???- question "2b. Locate that file on Bianca using the graphical file explorer"
-
 
     Its location is at `/proj/nobackup/[project_name]/wharf/[user_name]/[user_name]-[project_name]`,
     for example, at `/proj/nobackup/sens123456/wharf/sven/sven-sens123456`.

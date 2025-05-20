@@ -100,8 +100,8 @@ then answer these questions:
 
 ???- question "Answer"
 
-    The page is
-    [here](http://docs.uppmax.uu.se/getting_started/login_bianca_remote_desktop_website/).
+    The UPPMAX documentation page
+    ['Log in to the Bianca remote desktop environment website'](http://docs.uppmax.uu.se/getting_started/login_bianca_remote_desktop_website/).
 
 - On that page, find where to find information on how to use the
   remote desktop

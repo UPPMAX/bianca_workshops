@@ -117,7 +117,7 @@ then answer these questions:
 
 ???- question "Answer"
 
-    A video can be found [here](https://youtu.be/eSn0kLkU5Dc)
+    See [the 'Get your UPPMAX 2FA' YouTube video](https://youtu.be/eSn0kLkU5Dc)
 
 Note that it takes 15 minutes before you can use this 2FA.
 

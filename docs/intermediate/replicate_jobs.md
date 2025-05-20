@@ -13,7 +13,8 @@ tags:
 
 ???- question "Want to see this session as a video?"
 
-    Watch it on YouTube [here](https://youtu.be/frGUu8Hhr-g).
+    Watch the YouTube video
+    ['Intermediate Bianca workshop: replicate jobs'](https://youtu.be/frGUu8Hhr-g).
 
 ???- question "For teachers"
 

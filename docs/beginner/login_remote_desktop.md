@@ -115,10 +115,11 @@ Log in to the Bianca remote desktop.
 
 ???- question "Answer"
 
-    The UPPMAX documentation can be found
-    [here](https://docs.uppmax.uu.se/getting_started/login_bianca_remote_desktop_website/).
+    It is in the UPPMAX documentation page
+    ['Log in to the Bianca remote desktop environment website'](https://docs.uppmax.uu.se/getting_started/login_bianca_remote_desktop_website/).
 
-    You can see [a YouTube video here](https://youtu.be/UpNI5OUlIo8).
+    You can watch the YouTube video
+    ['Log in to the Bianca remote desktop environment website'](https://youtu.be/UpNI5OUlIo8).
 
 ### Exercise 4: start a terminal in the Bianca remote desktop environment
 

@@ -16,7 +16,8 @@ tags:
 
 ## Exercises
 
-Read the UPPMAX documentation [here](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/start_interactive_node_on_bianca),
+Read the UPPMAX documentation
+['Starting an interactive session on Bianca'](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/start_interactive_node_on_bianca),
 then do these exercises.
 
 ???- question "Exercise: Start an interactive session"

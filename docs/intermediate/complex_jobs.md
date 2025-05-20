@@ -23,7 +23,8 @@ tags:
 
 ???- question "Want to see this session as a video?"
 
-    Watch it on YouTube [here](https://youtu.be/GzkknvVl4Mo).
+    Watch the YouTube video
+    ['Intermediate Bianca workshop: complex workflows'](https://youtu.be/GzkknvVl4Mo).
 
 ???- question "For teachers"
 

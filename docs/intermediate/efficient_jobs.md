@@ -16,7 +16,8 @@ tags:
 
 ???- question "Want to see this session as a video?"
 
-    Watch it on YouTube [here](https://youtu.be/0FcREXUcOHc).
+    Watch the YouTube video
+    ['Intermediate Bianca workshop: efficient jobs'](https://youtu.be/0FcREXUcOHc).
 
 ???- question "For teachers"
 
