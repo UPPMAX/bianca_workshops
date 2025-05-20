@@ -101,13 +101,15 @@ Please complete these steps before the workshop starts in order to avoid having 
 
     - You should now be logged in and ready to create the file that tells us that you have completed the steps. Type the command:
 
-     **touch  /proj/sens2025560/workshop/completed/$USER**
+      ```bash
+      touch  /proj/sens2025560/workshop/completed/$USER
+      ```
 
-           Please note that you will get the error “Permission denied” if you
+      Please note that you will get the error “Permission denied” if you
 
-            have not completed step 2\. Also, re-login to UPPMAX if you were added to the
+      have not completed step 2\. Also, re-login to UPPMAX if you were added to the
 
-            workshop project after you logged in to the Bianca cluster.
+      workshop project after you logged in to the Bianca cluster.
 
     - Unless you got some kind of error message you should now be finished. To make sure the file was created you can type (NOW CORRECT PATH )
 
