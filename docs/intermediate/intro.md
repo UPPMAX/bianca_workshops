@@ -18,29 +18,11 @@ tags:
 
     - Link to shared document
 
-    Preparations are:
-
-    - Shared document must contain:
-        - a proper header with specifics: Zoom room, Bianca project, etc.
-        - already redirect to evaluation at bottom
-        - evaluation at the bottom
-
     Teaching goals are:
 
     - Learners know where to find an overview of topics discussed today
     - Learners know where to find the link to the shared document
     - Learners know where to find the schedule
-
-    Lesson plan:
-
-    ```mermaid
-    gantt
-      title Introduction
-      dateFormat X
-      axisFormat %s
-      Prior: prior, 0, 5s
-      Introduction: after prior, 5s
-    ```
 
     Prior questions:
 
