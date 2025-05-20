@@ -37,8 +37,8 @@ nav:
     - Summary: intermediate/summary.md
     - Evaluation: intermediate/evaluation_intermediate.md
   - Extra material:
-    - Complex jobs: intermediate/complex_jobs.md
-    - Replicate jobs: intermediate/replicate_jobs.md
+    - intermediate/complex_jobs.md
+    - intermediate/replicate_jobs.md
     - extra/slurm.md
     - extra/source_install.md
     - extra/conda.md
