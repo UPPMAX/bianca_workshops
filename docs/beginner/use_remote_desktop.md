@@ -81,8 +81,9 @@ as maybe you'll be too afraid to ask a colleague later.
 
 ???- question "Need a video?"
 
-    [Here](https://youtu.be/XiPoHNs2SDQ) is a video that shows
-    the solution of these exercises
+    The ['Intro to UPPMAX Day 1: Use the remote desktop environment'](https://youtu.be/XiPoHNs2SDQ)
+    YouTube video shows
+    the solution of these exercises.
 
 It is assumed you are logged in to the remote desktop environment of Bianca.
 

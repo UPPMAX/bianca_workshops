@@ -245,8 +245,8 @@ are restricted in some ways:
 
     Techniques how to run custom software is *not* part of this course.
     Instead, one technique is part of the intermediate Bianca course
-    and can be found described [here](../extra/containers.md),
-    which is about using containers
+    and can be found
+    [in the extra course materials on containers](../extra/containers.md).
 
 These restrictions apply to most general-purpose clusters.
 However, Bianca is a **sensitive data** cluster, to which

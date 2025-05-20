@@ -85,8 +85,9 @@ Only after loading it will some other tools appear.
 
 ???- question "Need a video?"
 
-    [Here](https://youtu.be/ZuLMoZkGsZk) is a video that shows
-    the solution of these exercises
+    The YouTube video
+    ['Intro to UPPMAX Day 1: The module system'](https://youtu.be/ZuLMoZkGsZk) 
+    shows the solution of these exercises
 
 ### Exercise 1: work with modules
 

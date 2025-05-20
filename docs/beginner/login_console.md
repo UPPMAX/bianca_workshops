@@ -73,8 +73,9 @@ Some SSH clients can run from a terminal or vice versa.
 
 ???- question "Need a video?"
 
-    [Here](https://youtu.be/FUNPZHEMC2s) is a video that shows
-    the solution of these exercises
+    The YouTube video
+    ['Intro to UPPMAX Day 1: Login via a terminal'](https://youtu.be/FUNPZHEMC2s)
+    shows the solution of these exercises
 
 Here, we log in to Bianca's console environment via a terminal.
 
