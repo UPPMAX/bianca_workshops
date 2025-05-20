@@ -1,8 +1,8 @@
 **PLEASE COMPLETE THE FOLLOWING STEPS BEFORE THE WORKSHOP STARTS**  
-   
-   
+
+
 See more details about each point below.  
- 
+
 
 1. **Create an account in SUPR.**  
 2. **Apply for membership in the workshop project.**  
@@ -13,9 +13,9 @@ See more details about each point below.
 7. **Log in with your new UPPMAX account**  
 8. **Create a new file with your username in the designated folder. This way we will know who has completed these steps.**
 
-   
-Please complete these steps before the workshop starts in order to avoid having to waste time with account issues during the actual workshop.   
- 
+
+Please complete these steps before the workshop starts in order to avoid having to waste time with account issues during the actual workshop.
+
 
 1. **Create an account in SUPR.**
 
@@ -27,7 +27,6 @@ Please complete these steps before the workshop starts in order to avoid having 
 
    ●      Check your email for the confirmation mail and click the link in it.
 
-    
 
 2. **Apply for membership in the workshop project.**
 
@@ -39,7 +38,6 @@ Please complete these steps before the workshop starts in order to avoid having 
 
    ●      Press the “**Request**” button to apply for membership in the project. The workshop instructor will approve it within one working day. Please note that step 6 will fail unless the project membership request has been approved.
 
-    
 
 3. **Apply for an UPPMAX account.**
 
@@ -49,7 +47,6 @@ Please complete these steps before the workshop starts in order to avoid having 
 
    ●      If you already have an UPPMAX account, wait until your project membership is processed (it may take up to a few hours even after you receive the email confirmation) and continue to step 5\.
 
-    
 
 4. **Wait for an email from UPPMAX with your UPPMAX account details.**
 
@@ -69,18 +66,17 @@ You may find instructions at web pages of the IT office of your university.
 
 **If you are a student you may not be allowed to use a VPN. Instead you may need to use the Eduroam connection or similar at Campus.**
 
-**When you’re finished setting up your VPN:** 
+**When you’re finished setting up your VPN:**
 
 * **Click Connect using VPN**  
 * **You can get VPN credentials from all Swedish universities. Choose the one you are affiliated to.**
 
-	
-
+ 
 7. **Log in with your new UPPMAX account.**
 
    ●      Open your terminal program (Terminal in OSX and Linux, otherwise download [MobaXterm](http://mobaxterm.mobatek.net/download-home-edition.html) (portable edition) if you have Windows). For more *Linux Tools for Windows*, please refer to this page: [https://hackmd.io/@pmitev/Linux4WinUsers](https://hackmd.io/@pmitev/Linux4WinUsers).
 
-- Windows: If you have GitBash or Cygwin it will work nicely as well.
+* Windows: If you have GitBash or Cygwin it will work nicely as well.
 
   ●      Type this command in your terminal program (TRY THIS INSTEAD OF THE EARLIER):
 
@@ -103,7 +99,6 @@ You may find instructions at web pages of the IT office of your university.
       UPPMAX password is required, without the 2FA number.  
 ●      You may change your password by typing: **passwd**
 
- 
 
 8. **Create a new file with your username in the designated folder.**
 
@@ -121,9 +116,8 @@ You may find instructions at web pages of the IT office of your university.
 
    **ls  /proj/sens2025560/workshop/completed/$USER**
 
-         
 
          It should print out the name of the file if the file exists.
 
-   
+
 If you encounter any issues in setting up your account, please contact UPPMAX support via [https://supr.naiss.se/support/](https://supr.naiss.se/support/) or email [support@uppmax.uu.se](mailto:support@uppmax.uu.se). For general questions about the workshop, please email [bjorn.claremar@uppmax.uu.se](mailto:bjorn.claremar@uppmax.uu.se).
