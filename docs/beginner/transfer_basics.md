@@ -61,7 +61,7 @@ E.g.
 
 ## GUI sftp clients
 
-!!! info "A step-by-step explanation can be found [here](file_transfer_using_gui.md)"
+!!! info "[A step-by-step explanation](file_transfer_using_gui.md)"
 
 - Please notice that **SFTP is NOT the same as SCP**.
 

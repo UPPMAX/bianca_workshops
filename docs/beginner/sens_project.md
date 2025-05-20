@@ -78,7 +78,6 @@ then answer these questions:
 ???- question "Answer"
 
     For non-Uppsala researchers, they need a
-    Data Processing Agreement/`Personuppgiftsbiträdesavtal`/PUBA
-    as described [here](https://www.uu.se/en/centre/uppmax/get-started/create-account-and-apply-for-project/apply-for-projects/applying-for-naiss-sens-project/puba).
+    [Data Processing Agreement/`Personuppgiftsbiträdesavtal`/PUBA](https://www.uu.se/en/centre/uppmax/get-started/create-account-and-apply-for-project/apply-for-projects/applying-for-naiss-sens-project/puba).
     If you are lucky, there is a general Data Processing Agreement,
     else you need to contact the person at the bottom

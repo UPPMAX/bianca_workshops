@@ -150,7 +150,7 @@ Is this OK and why?
     This is usually done by an email from the UPPMAX staff.
 
     Requesting a calculation to run is part of this course
-    and is described [here](slurm_intro.md).
+    and is described [in the 'Slurm' session](slurm_intro.md).
     This is done by using the SLURM scheduler.
 
 ### Exercise 6: A user develops code
