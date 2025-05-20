@@ -4,7 +4,7 @@ Hi!
 
 Welcome to the workshop Bianca In-Depth Workshop/Hackathon: Improve Your Handling of Sensitive Research Data, to be held 23 May.
 
-The lectures are scheduled 09:00-12.00 and 13:00-16:00.
+The lectures are scheduled 09:00-12:00 and 13:00-16:00.
 
 The hackathon will consist of short lectures and the content will be driven by questions from the participants.
 
