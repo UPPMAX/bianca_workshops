@@ -31,14 +31,14 @@ nav:
     - Prevaluation: intermediate/prevaluation_intermediate.md
     - Transferring files to/from Bianca: intermediate/transfer.md
     - Efficient jobs: intermediate/efficient_jobs.md
-    - Complex jobs: intermediate/complex_jobs.md
-    - Replicate jobs: intermediate/replicate_jobs.md
     - Software and package installation: intermediate/install.md
-    - IDEs: intermediate/ides.md
+    - IDEs: intermediate/ides/README.md
     - Overview: intermediate/overview.md
     - Summary: intermediate/summary.md
     - Evaluation: intermediate/evaluation_intermediate.md
   - Extra material:
+    - Complex jobs: intermediate/complex_jobs.md
+    - Replicate jobs: intermediate/replicate_jobs.md
     - extra/slurm.md
     - extra/source_install.md
     - extra/conda.md
