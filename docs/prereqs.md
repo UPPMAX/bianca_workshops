@@ -8,8 +8,11 @@ tags:
 
 # Prerequisites
 
+These are the **five** prerequisites for following this course:
+
 - Have a good Zoom setup
-- Download and install FileZilla
+
+- (Basic course only) Have FileZilla installed
 - SUPR/course project
 - set up 2FA
     - [2-factor authentication](https://www.uu.se/en/staff/service-and-tools/tools-and-guides/log-in-securely)
@@ -27,4 +30,14 @@ tags:
     - [Linux](https://uppmax.github.io/uppmax_intro/linux.html)
     - [Basic toolkit](https://uppmax.github.io/uppmax_intro/linux_basics.html)
 
-- HackMD page: [https://hackmd.io/@UPPMAX/Bianca_Intro_QaA](https://hackmd.io/@UPPMAX/Bianca_Intro_QaA/edit)
+???- question "Any questions about this?"
+
+    See [the 'Prerequisites' section of the Frequently Asked Questions](../faq/README.md#prerequisites)
+
+???- question "How can I check this?"
+
+    See [the 'Prerequisites' section of the Frequently Asked Questions](../faq/README.md#prerequisites)
+
+???- question "What if I have another question?"
+
+    See the [Frequently Asked Questions](../faq/README.md)
