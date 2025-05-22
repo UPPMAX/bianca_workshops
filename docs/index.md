@@ -4,9 +4,10 @@ template: home.html
 
 <center>
 
+![NAISS logo](assets/naiss_logo_white.png)
+
 <br/><br/>
 
-<img src="assets/naiss_logo_white.png" width="200"/>
 <img src="assets/UU_logo_color.svg" alt="drawing" width="200"/>
 
 <br/><br/>
