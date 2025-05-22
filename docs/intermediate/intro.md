@@ -86,6 +86,7 @@ flowchart TD
       can_run_jobs_on_gpu(Can run jobs on GPU)
       can_use_ide(Can use an IDE)
       can_tranfer_files_using_rsync2(Can transfer files using rsync)
+      can_install(Can install software and packages)
     end
 
     subgraph sub_non_goal["Not in courses"]
@@ -121,7 +122,7 @@ flowchart TD
     can_schedule_jobs ~~~ can_use_command_line_2
 
     %% Intermediate
-    can_use_command_line_2 --> can_use_custom_software
+    can_use_command_line_2 --> can_install
 
     %% Basic -> None
     %% can_login_to_remove_desktop ---> can_tranfer_files_using_gui
@@ -131,7 +132,7 @@ flowchart TD
 
     %% Make sure Non-goals is below Intermediat,
     %% using invisible nodes
-    can_use_custom_software ~~~ can_tranfer_files_using_gui
+    can_install ~~~ can_tranfer_files_using_gui
 ```
 
 ## Exercises
