@@ -18,12 +18,12 @@ These are the **five** prerequisites for following this course:
 
 ???- question "Any questions about this?"
 
-    See [the 'Prerequisites' section of the Frequently Asked Questions](../faq/README.md#prerequisites)
+    See [the 'Prerequisites' section of the Frequently Asked Questions](./faq/README.md/#prerequisites)
 
 ???- question "How can I check this?"
 
-    See [the 'Prerequisites' section of the Frequently Asked Questions](../faq/README.md#prerequisites)
+    See [the 'Prerequisites' section of the Frequently Asked Questions](./faq/README.md/#prerequisites)
 
 ???- question "What if I have another question?"
 
-    See the [Frequently Asked Questions](../faq/README.md)
+    See the [Frequently Asked Questions](./faq/README.md)
