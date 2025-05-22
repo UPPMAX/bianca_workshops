@@ -6,7 +6,7 @@ tags:
 # Learning outcomes
 
 These are the learning outcomes of this course.
-The [course evaluation](evaluation.md) measures how well we taught
+The [course evaluation](evaluation_intermediate.md) measures how well we taught
 these.
 
 - I can transfer files to/from Bianca using `rsync`
