@@ -1,7 +1,7 @@
 # Welcome to the Bianca workshop!
 
 ![NAISS logo](assets/naiss_logo_inverted.png)
-![UU logo](UU_logo_color_116_x_109.png)
+![UU logo](assets/UU_logo_color_116_x_109.png)
 
 !!! info "Introduction to Bianca: Handling Sensitive Research Data"
 
