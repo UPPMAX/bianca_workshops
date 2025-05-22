@@ -28,7 +28,6 @@ nav:
     - Introduction: intermediate/intro.md
     - Course dates: intermediate/course_dates.md
     - Schedule: intermediate/schedule.md
-    - Prevaluation: intermediate/prevaluation_intermediate.md
     - GPUs: intermediate/gpu.md
     - Transferring files to/from Bianca: intermediate/transfer.md
     - Efficient jobs: intermediate/efficient_jobs.md

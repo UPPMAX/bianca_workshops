@@ -8,9 +8,9 @@ tags:
 
 !!!- info "Learning outcomes"
 
-    - Know where to find an overview of topics discussed today
-    - Know where to find the link to the shared document
-    - Know where to find the schedule
+    - I have read the topics discussed today
+    - I can find the link to the shared document
+    - I can find the schedule
 
 ???- question "For teachers"
 
@@ -20,9 +20,9 @@ tags:
 
     Teaching goals are:
 
-    - Learners know where to find an overview of topics discussed today
-    - Learners know where to find the link to the shared document
-    - Learners know where to find the schedule
+    - Learners have read the topics discussed today
+    - Learners can find the link to the shared document
+    - Learners can find the schedule
 
     Prior questions:
 
@@ -138,3 +138,45 @@ flowchart TD
     %% using invisible nodes
     can_use_custom_software ~~~ can_tranfer_files_using_gui
 ```
+
+## Exercises
+
+### Exercise 1: today's topic
+
+In this exercise, we will find out today's learning objectives.
+
+The goal of these questions is to introduce what is taught
+today, as well as measuring how much knowledge is gained at the end
+of the day.
+
+The form can be found `[not here anymore]`.
+
+???- question "What is in that form?"
+
+    In this exercise, we will find out today's learning objectives.
+
+    The goal of these questions is to introduce what is taught
+    today, as well as measuring how much knowledge is gained at the end
+    of the day.
+
+    Give you confidence levels of the following statements,
+    using this scale:
+
+    - 0: I don't know even what this is about ...?
+    - 1: I have no confidence I can do this
+    - 2: I have low confidence I can do this
+    - 3: I have some confidence I can do this
+    - 4: I have good confidence I can do this
+    - 5: I absolutely can do this!
+
+    Give you confidence levels of the following statements below:
+
+    ```code
+    [Learning outcomes from the evaluation here]
+    ```
+
+    Is there a learning objective you think is missing? What is it?
+
+    ```code
+    [Free text paragraph]
+    ```
