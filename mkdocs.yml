@@ -26,6 +26,7 @@ nav:
     - Evaluation: beginner/evaluation.md
   - Intermediate: 
     - Introduction: intermediate/intro.md
+    - Learning outcomes: intermediate/learning_outcomes.md
     - Course dates: intermediate/course_dates.md
     - Schedule: intermediate/schedule.md
     - GPUs: intermediate/gpu.md
