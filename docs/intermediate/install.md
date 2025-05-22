@@ -28,7 +28,7 @@ tags:
         - R packages
         - Julia packages
     - understand what containers are
-    - The learners have explored the UPPMAX documentation
+    - learners have explored the UPPMAX documentation
 
     - (optional) can install software using a container
     - (optional) can build software from source
@@ -40,18 +40,6 @@ tags:
     - See above
     Lesson plan:
 
-    ```mermaid
-    gantt
-      title IDEs
-      dateFormat X
-      axisFormat %m
-      Introduction: intro, 0, 10m
-      Vote on wih IDE: vote, after intro, 5m
-      Exercise with personal favorite package: crit, exercise, after vote, 20m
-      Feedback: feedback, after exercise, 10m
-      Installing software and developing: monologue, after feedback, 5m
-      Break: milestone, after monologue
-    ```
 
 ## The module system
 
@@ -62,10 +50,13 @@ tags:
 - **Lots of programs and tools installed as modules** on Bianca.
     - You can **request installations** but that **may take several days or weeks** to be handled by the application experts at UPPMAX.
     - Workflow: Application expert installs on Rackham and it is synced over to Bianca within a day.
-- **Installations yourself**.
-    - Workflow: use the **``wharf`` to transfer installation files and packages to Bianca from Rackham or other place**. Here the use of Rackham comes handy because
-        - of the internet connection.
-        - the computer architecture is somewhat similar such that precompiled binaries or compiled programs (x86_64) on Rackham will most often work also on Bianca.
+- **Install yourself**.
+    - Workflow: use the **``wharf`` to transfer installation files and packages to Bianca from other place**.
+
+!!! warning
+
+    Procedures may change for Maja system, but probably to the simpler way.
+
 
 ## Content
 
@@ -85,9 +76,10 @@ tags:
 ## Packages and libraries to scripting programs
 
 - Python, R and Julia all have some **centrally installed packages** that are available from the modules.
-- R has a special module called ``R_packages``, and some Machine Learning python packages are included in the ``python_ml_packages`` module.
+  - R has a special module called ``R_packages``,
+  - Python has many packages already in the Python module
+      - Machine Learning python packages are included in the ``python_ml_packages`` module.
 - If not found there you can try to install those by yourself.
-
 
 ### Check packages
 
@@ -111,14 +103,14 @@ tags:
             - from **Python shell** with the ``import`` command
             - from **BASH shell** with the ``pip list`` command
 
-!!! admonition "Julia"
+???- admonition "Julia"
 
     - At UPPMAX there is a central library with installed packages.
     - This is good, especially when working on Bianca, since you then do not need to install via the ``wharf``.
-    - It is often better to install you own, see below, or ask the support to install centrally.
+    - It is often better to install your own, see below, or ask the support to install centrally.
 
     - Check **julia versions**: ``ml avail julia``
-    - Check **julia packages/modules**
+    - Check **julia packages/modules**:
 
         1. **help** output from: ``ml help julia/1.9.3``
         2. In a loaded julia
@@ -134,7 +126,7 @@ tags:
     - Sync to ``wharf``
     - Move the files on Bianca to a place in the path used for packages of R, Python (pip) or julia
 
-!!! admonition "R"
+???- admonition "R"
 
     - Typical place to put R packages: ``~/R``
     - Otherwise you may have to update your ``R_LIBS_USER="<path>"``
@@ -145,7 +137,7 @@ tags:
     - [From R course: packages](https://uppmax.github.io/R-python-julia-matlab-HPC/r/packagesR.html){:target="_blank"}
     - [From R course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/r/isolatedR.html){:target="_blank"}
 
-!!! admonition "pip (PyPI)"
+???- admonition "pip (PyPI)"
 
     - Typical place to put python packages: ``~/.local/lib/python<version>/site-packages/``
     - Otherwise you may have to update ``PYTHONPATH="<path>"``
@@ -162,7 +154,7 @@ tags:
     - Try Conda first directly on Bianca. We have mirrored all _major_ Conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
     - If you want to keep number of files down, use PyPI (pip), but then you need to use Rackham and the ``wharf``.
 
-!!! admonition "Conda"
+???- admonition "Conda"
 
     - We have mirrored the non-proprietary Conda repositories (not ``main``, ``anaconda`` and ``r``) directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
     - Good to change ``CONDA_ENVS_PATH`` to project folder, because of many small files.
@@ -173,7 +165,7 @@ tags:
     - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshops/extra/conda/)
     - [Conda user guide](http://docs.uppmax.uu.se/software/conda/)
 
-!!! admonition "Julia"
+???- admonition "Julia"
 
     - Typical place to put julia packages: ``~/.julia/packages``
     - Otherwise you may have to update ``export JULIA_LOAD_PATH="path1:path2:..."``
@@ -215,7 +207,7 @@ tags:
         - _source_ code or
         - _binary_ (Linux on x86 and 64-bit)
     - **Transfer** to the ``wharf``
-    - Move file(s) to either
+    - **Move file(s)** to either
         - ``$HOME`` directory.
             - Handy for personal needs and low numbers of files — i.e. not Conda.
             - Example python/R/julia packages.
@@ -223,8 +215,8 @@ tags:
             - This way the project contains both data and software
             - Good for reproducibility, collaboration, and everyone's general sanity.
     - Then, either:
-        - Binaries for Linux on x86 and 64-bit should be able to be run directly as they are.
-        - Install program following instructions from documentation of the software.
+        - **Binaries** for Linux on x86 and 64-bit **should be able to be run directly** as they are.
+        - Install program from source code, following instructions from documentation of the software.
 
 ### Build from source (C/C++ and Fortran)
 
@@ -238,7 +230,6 @@ tags:
 !!! info "More info"
 
     - [Extra material: Build from source](../extra/source_install.md)
-    - [Singularity course](https://pmitev.github.io/UPPMAX-Singularity-workshop/)
 
 ### Containers
 
