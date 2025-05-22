@@ -12,7 +12,7 @@ tags:
   - docker
   - apptainer
   - singularity
-  - 
+  - container
 ---
 
 # Package and software installation on Bianca
@@ -22,7 +22,7 @@ tags:
     Learners
 
     - understand _principles_ how to install software and packages yourself
-    - can install packages of *one or several* types
+    - can install packages of _one or several_ types
         - Python packages using conda
         - Python packages using pip
         - R packages
