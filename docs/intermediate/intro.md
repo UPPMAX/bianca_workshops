@@ -82,11 +82,8 @@ flowchart TD
 
     subgraph sub_intermediate_use["Intermediate use of Bianca"]
       can_use_command_line_2(Can use the command line 2)
-      can_use_custom_software(Can use custom software)
       can_run_efficient_jobs(Can run efficient jobs)
-      can_run_complex_jobs(Can run complex jobs)
       can_run_jobs_on_gpu(Can run jobs on GPU)
-      can_run_replicate_jobs(Can run replicate jobs)
       can_use_ide(Can use an IDE)
       can_tranfer_files_using_rsync2(Can transfer files using rsync)
     end
@@ -113,10 +110,8 @@ flowchart TD
 
     %% Basic -> Intermediate
     can_tranfer_files_using_rsync --> can_tranfer_files_using_rsync2
-    can_schedule_jobs --> can_run_complex_jobs
     can_schedule_jobs --> can_run_efficient_jobs
-    can_schedule_jobs --> can_run_replicate_jobs
-    can_schedule_jobs -.-> can_run_jobs_on_gpu
+    can_schedule_jobs ---> can_run_jobs_on_gpu
     can_use_interactive_node --> can_use_ide
     can_use_modules --> can_use_ide
     can_tranfer_files_using_rsync2 -.-> |extra| can_tranfer_files_using_gui
