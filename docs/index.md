@@ -1,20 +1,7 @@
----
-template: home.html
----
-
-<center>
-
-<br/><br/>
-
-<img src="assets/UU_logo_color.svg" alt="drawing" width="200"/>
-
-<br/><br/>
-
-</center>
-
 # Welcome to the Bianca workshop!
 
 ![NAISS logo](assets/naiss_logo_white.png)
+![UU logo](assets/UU_logo_color.svg)
 
 !!! info "Introduction to Bianca: Handling Sensitive Research Data"
 
