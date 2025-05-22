@@ -372,3 +372,9 @@ GitBash
 behaviour
 passwd
 docx
+CUDA
+gpu
+gpus
+Nodelist
+nvidia
+smi
