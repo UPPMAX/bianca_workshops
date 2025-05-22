@@ -6,7 +6,16 @@ tags:
 
 # Summary
 
-I can transfer files to/from Bianca using `rsync`
+I can submit jobs that use a GPU.
+
+```bash
+#SBATCH -p node
+#SBATCH -N 1
+#SBATCH -C gpu
+#SBATCH --gpus-per-node=2
+```
+
+I can transfer files to/from Bianca using `rsync`.
 
 ```bash
 ssh sven@transit.uppmax.uu.se
@@ -27,52 +36,54 @@ I understand how to set up jobs efficiently
 - CPU limited? Consider adding more until CPU usage is around 80% on average
 - Consider adding 1 core for safety
 
-I can schedule a simple workflow of jobs that depend on each other using Slurm
-
-```bash
-sbatch --A sens2025560 --dependency=afterok:5000000,5000001 do_c.sh
-```
-
-I can schedule a simple workflow of jobs that depend on each other using Nextflow
-
-```text
-[not discussed much]
-```
-
-I can run replicate jobs using Slurm job arrays
-
-```bash
-#SBATCH --array=0-10
-```
-
 I understand how to install software myself
 
-```bash
-[many steps]
-```
+- Julia:
+    - install locally with `using <package-name>`
+    - copy `~/.julia/packages` to Bianca
+- Python `pip`
+    - install locally with `pip install`
+    - copy `~/.local/lib/python<version>/site-packages/` to Bianca
+- Python `conda`
 
-I understand how to use packages and libraries for scripts
+    ```bash
+    module load conda
+    export CONDA_ENVS_PATH=/proj/sens2025560/$USER
+    conda create -c conda-forge --prefix $CONDA_ENVS_PATH/bianca-course python=3.7 numpy=1.15
+    source activate bianca-course
+    pip list
+    python -V
+    conda deactivate
+- R:    ```
+    - install locally with `install.packages`
+    - copy `~/R/x86_64-pc-linux-gnu-library/4.2` to Bianca
 
-```bash
-[many steps]
-```
+I understand what containers are.
 
-I understand what containers are
-
-```bash
-[many steps]
-```
-
-I understand how to build from source
-
-```bash
-[many steps]
-```
+- Apptainer
+- Docker
+- Singularity
 
 I can can run the voted-for IDE on Bianca
 
-```bash
-nteractive -A sens2025560 -n 2 -t 8:00:00
-module load R/4.3.1 R_packages/4.3.1 RStudio/2023.06.2-561
-rstudio
-```
+- Jupyter:
+
+  ```bash
+  module load python/3.11.4
+  jupyter-notebook --ip 0.0.0.0 --no-browser
+  ```
+
+- RStudio:
+
+  ```bash
+  nteractive -A sens2025560 -n 2 -t 8:00:00
+  module load R/4.3.1 R_packages/4.3.1 RStudio/2023.06.2-561
+  rstudio
+  ```
+
+- VSCodium:
+
+  ```bash
+  module load VSCodium/latest
+  code
+  ```
