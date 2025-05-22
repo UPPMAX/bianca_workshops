@@ -65,9 +65,9 @@ OR check by loading torch:
 ```bash
 module load python_ML_packages/3.9.5-gpu
 python -c "import torch; print(torch.__version__); print(torch.version.cuda); print(torch.cuda.get_device_properties(0)); print(torch.randn(1).cuda())"
-``` 
+```
 
-output: 
+output:
 
 ```bash
 1.9.0+cu111

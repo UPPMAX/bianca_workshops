@@ -15,9 +15,9 @@ When you want to be able to work with the Bianca HPC cluster.
 
 ### When should I consider to **not** follow the basic course?
 
-These are the reasons to consider to **not** follow this course:
+These are the reasons to consider to **not** follow the basic course:
 
-#### Reason 1: you want to learn advanced things
+#### Basic: Reason 1: you want to learn advanced things
 
 When you already work with Bianca and
 expect to learn new and more advanced things.
@@ -29,7 +29,7 @@ to help out other learners.
 If you like to test your own knowledge by teaching others,
 you will likely thrive in the course.
 
-#### Reason 2: you have social anxiety
+#### Basic: Reason 2: you have social anxiety
 
 When you have social anxiety.
 
@@ -51,11 +51,11 @@ when you leave early :-)
 
 When you want to be able to work better with the Bianca HPC cluster.
 
-### When should I consider to **not** follow the basic course?
+### When should I consider to **not** follow the intermediate course?
 
 These are the reasons to consider to **not** follow this course:
 
-#### Reason 1: you want to learn the basics
+#### Intermediate: Reason 1: you want to learn the basics
 
 When you have never worked with Bianca,
 you want to learn the basics.
@@ -64,7 +64,7 @@ In this case, the course will be unsuitable for you.
 
 Consider following the basis Bianca course.
 
-#### Reason 2: you have social anxiety
+#### Intermediate: Reason 2: you have social anxiety
 
 When you have social anxiety.
 
@@ -123,8 +123,8 @@ Also, these videos may be useful:
 
 HPC cluster|Login method |Documentation |Video
 -----------|-------------|--------------|------
-Bianca     |Website      |[Documentation](https://docs.uppmax.uu.se/getting_started/login_bianca_remote_desktop_website/) [Video](https://youtu.be/Ni9nyCf7me8)
-Bianca     |SSH          |[Documentation](https://docs.uppmax.uu.se/getting_started/login_bianca_console_password/) [Video](https://youtu.be/7mKDxnXqi_M)
+Bianca     |Website      |[Documentation](https://docs.uppmax.uu.se/getting_started/login_bianca_remote_desktop_website/) | [Video](https://youtu.be/Ni9nyCf7me8)
+Bianca     |SSH          |[Documentation](https://docs.uppmax.uu.se/getting_started/login_bianca_console_password/)       | [Video](https://youtu.be/7mKDxnXqi_M)
 
 ## How to install MobaXterm?
 
