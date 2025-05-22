@@ -33,7 +33,7 @@ tags:
 nvidia-smi
 ```
 
-You can also ask for 1 gpu per node and few cores inorder to use 2 gpus for different jobs:
+You can also ask for 1 gpu per node and few cores in order to use 2 gpus for different jobs:
 
 ```bash
 #SBATCH -A sens2025xxx
