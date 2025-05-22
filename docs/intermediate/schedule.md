@@ -13,7 +13,7 @@ tags:
 When | Who  | What
 -----|------|-------------------------
 9:00 | R    | [Introduction](intro.md)
-9:15 | J    | GPUs
+9:15 | J    | [GPUs](gpu.md)
 9:50 | .    | Break
 10:05| P    | [Transferring files](transfer.md)
 10:55| .    | Break
