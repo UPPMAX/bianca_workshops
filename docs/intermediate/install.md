@@ -11,23 +11,22 @@ tags:
     Learners
 
     - understand _principles_ how to install software and packages yourself
-    - can install packages of one or several types
+    - can install packages of *one or several* types
         - Python packages using conda
         - Python packages using pip
         - R packages
         - Julia packages
     - understand what containers are
-    - can install software using a container
-    - can build software from source
+    - The learners have explored the UPPMAX documentation
+
+    - (optional) can install software using a container
+    - (optional) can build software from source
 
 ???- info "Notes for teachers"
 
     Teaching goals:
 
-    - The learners have explored the UPPMAX documentation
-    - The learners have installed a package (R, python or julia)
-    - The learners understand how to install own software
-
+    - See above
     Lesson plan:
 
     ```mermaid
@@ -59,90 +58,18 @@ tags:
 
 ## Content
 
-- Principles of software installation on Bianca
-    - From source
-    - From binary
-    - Containers
-- Principles of packages on Bianca
+- Principles of installing packages on Bianca
 - Exercise: test yourself in EITHER
     - R
     - Conda
     - Python/pip
     - Julia
 - Feedback
+- Principles of software installation on Bianca
+    - From source
+    - From binary
+    - Containers
 - Development and Git on Bianca
-
-## Install software yourself
-
-- If not available on Bianca already (like Conda repositories) --> use the ``wharf`` to install your tools
-
-!!! note "Typical workflow for installation"
-
-    - **Download** the
-        - _source_ code or
-        - _binary_ (Linux on x86 and 64-bit)
-    - **Transfer** to the ``wharf``
-    - Move file(s) to either
-        - ``$HOME`` directory.
-            - Handy for personal needs and low numbers of files — i.e. not Conda.
-            - Example python/R/julia packages.
-        - Usually better to install in project directory.
-            - This way the project contains both data and software
-            - Good for reproducibility, collaboration, and everyone's general sanity.
-    - Then, either:
-        - Binaries for Linux on x86 and 64-bit should be able to be run directly as they are.
-        - Install program following instructions from documentation of the software.
-
-### Build from source (C/C++ and Fortran)
-
-- To build from source use a **compiler module**
-- We have several compiler versions from GNU and INTEL
-- ``make`` is installed on the system
-    - :warning: It could happen that the "Makefile" contains web fetching, which will not work from Bianca.
-    - Usually it is not a problem to build on Rackham and move to Bianca.
-- ``cmake`` is available as module
-
-!!! info "More info"
-
-    - [Extra material: Build from source](../extra/source_install.md)
-    - [Singularity course](https://pmitev.github.io/UPPMAX-Singularity-workshop/)
-
-### Containers
-
-- Containers let you install programs without needing to think about the computer environment, like
-    - operative system
-    - dependencies (libraries and other programs) with correct versions
-
-
-![Containerization](img/Containerization_nextlabs.png)
-
-> From [Nextlabs](https://www.nextlabs.com/what-is-containerization/)
-
-!!! info
-
-    - 2(3) types
-
-        1. Singularity/Apptainer perfect for HPC systems
-        2. Docker that does not work on HPC-systems
-
-            - But docker images can be used by Singularity and Apptainer
-
-    - Everything is included
-    - Workflow:
-
-        - Download on Rackham or local computer
-        - Transfer to Bianca
-        - Move to from wharf to any place in your working folders on Bianca
-
-    - Draw-backs
-
-        - you install also things that may be already installed
-        - therefore, probably more disk space is needed
-
-!!! info "More info"
-
-    - [Extra material: Containers](https://uppmax.github.io/bianca_workshops/extra/containers/)
-    - [Singularity course](https://docs.uppmax.uu.se/courses_workshops/singularity/)
 
 ## Packages and libraries to scripting programs
 
@@ -266,6 +193,78 @@ tags:
     - Did it work out well?
     - Any questions?
     - Any input?
+
+## Install software yourself
+
+- If not available on Bianca already (like Conda repositories) --> use the ``wharf`` to install your tools
+
+!!! note "Typical workflow for installation"
+
+    - **Download** the
+        - _source_ code or
+        - _binary_ (Linux on x86 and 64-bit)
+    - **Transfer** to the ``wharf``
+    - Move file(s) to either
+        - ``$HOME`` directory.
+            - Handy for personal needs and low numbers of files — i.e. not Conda.
+            - Example python/R/julia packages.
+        - Usually better to install in project directory.
+            - This way the project contains both data and software
+            - Good for reproducibility, collaboration, and everyone's general sanity.
+    - Then, either:
+        - Binaries for Linux on x86 and 64-bit should be able to be run directly as they are.
+        - Install program following instructions from documentation of the software.
+
+### Build from source (C/C++ and Fortran)
+
+- To build from source use a **compiler module**
+- We have several compiler versions from GNU and INTEL
+- ``make`` is installed on the system
+    - :warning: It could happen that the "Makefile" contains web fetching, which will not work from Bianca.
+    - Usually it is not a problem to build on Rackham and move to Bianca.
+- ``cmake`` is available as module
+
+!!! info "More info"
+
+    - [Extra material: Build from source](../extra/source_install.md)
+    - [Singularity course](https://pmitev.github.io/UPPMAX-Singularity-workshop/)
+
+### Containers
+
+- Containers let you install programs without needing to think about the computer environment, like
+    - operative system
+    - dependencies (libraries and other programs) with correct versions
+
+
+![Containerization](img/Containerization_nextlabs.png)
+
+> From [Nextlabs](https://www.nextlabs.com/what-is-containerization/)
+
+!!! info
+
+    - 2(3) types
+
+        1. Singularity/Apptainer perfect for HPC systems
+        2. Docker that does not work on HPC-systems
+
+            - But docker images can be used by Singularity and Apptainer
+
+    - Everything is included
+    - Workflow:
+
+        - Download on Rackham or local computer
+        - Transfer to Bianca
+        - Move to from wharf to any place in your working folders on Bianca
+
+    - Draw-backs
+
+        - you install also things that may be already installed
+        - therefore, probably more disk space is needed
+
+!!! info "More info"
+
+    - [Extra material: Containers](https://uppmax.github.io/bianca_workshops/extra/containers/)
+    - [Singularity course](https://docs.uppmax.uu.se/courses_workshops/singularity/)
 
 ## Own development and Git
 
