@@ -1,7 +1,7 @@
 # Welcome to the Bianca workshop!
 
-![NAISS logo](assets/naiss_logo_white.png)
-![UU logo](assets/UU_logo_color.svg)
+![NAISS logo](assets/naiss_logo_inverted.png)
+![UU logo](UU_logo_color_116_x_109.png)
 
 !!! info "Introduction to Bianca: Handling Sensitive Research Data"
 
@@ -21,17 +21,8 @@
         - using pre-installed software (intermediate workshop)
         - installing your own software (intermediate workshop)
 
-<center>
-<br>
-
-<br/><br/>
-
-[Prerequisites](prereqs.md){ .md-button .md-button--primary }
-[Beginner workshop](beginner/intro.md){ .md-button .md-button--primary }
-[Intermediate workshop](intermediate/intro.md){ .md-button .md-button--primary }
-
-<br/><br/>
-
-</center>
+- [Prerequisites](prereqs.md)
+- [Beginner workshop](beginner/intro.md)
+- [Intermediate workshop](intermediate/intro.md)
 
 [![DOI](https://zenodo.org/badge/604663392.svg)](https://doi.org/10.5281/zenodo.14673552)
