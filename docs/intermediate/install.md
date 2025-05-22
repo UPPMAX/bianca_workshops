@@ -2,9 +2,20 @@
 tags:
   - lesson
   - session
+  - package
+  - software
+  - installation
+  - conda
+  - pip
+  - R
+  - python
+  - docker
+  - apptainer
+  - singularity
+  - 
 ---
 
-# Software and package installation on Bianca
+# Package and software installation on Bianca
 
 !!! info "Learning Objectives"
 
