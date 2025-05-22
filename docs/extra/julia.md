@@ -166,9 +166,6 @@ mv –a  <file(s)> ~/.julia/packages/
 
     - On the new machine
 
-
-
-
 !!! info "More info"
 
     - Julia course: isolated environments  <!-- link to https://uppmax.github.io/R-python-julia-matlab-HPC/julia/isolatedJulia.html is broken and hence removed -->
