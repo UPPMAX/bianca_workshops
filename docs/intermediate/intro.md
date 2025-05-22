@@ -171,9 +171,18 @@ The form can be found `[not here anymore]`.
 
     Give you confidence levels of the following statements below:
 
-    ```code
-    [Learning outcomes from the evaluation here]
-    ```
+    - I can transfer files to/from Bianca using `rsync`
+    - I can see the GPU and memory usage of jobs
+    - I know the correct flags to utilize GPUs
+    - I understand the GPU configuration on Bianca
+    - I can see the CPU and memory usage of jobs
+    - I understand how to set up jobs efficiently
+    - I understand how to install software myself
+    - I understand how to use packages and libraries for scripts
+    - I understand what containers are
+    - I understand how to build from source
+    - I can can run the voted-for IDE on Bianca
+    - I understand how to deal with sensitive data
 
     Is there a learning objective you think is missing? What is it?
 
