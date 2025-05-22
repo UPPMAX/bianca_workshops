@@ -173,10 +173,9 @@ The form can be found `[not here anymore]`.
     - I understand the GPU configuration on Bianca
     - I can see the CPU and memory usage of jobs
     - I understand how to set up jobs efficiently
-    - I understand how to install software myself
-    - I understand how to use packages and libraries for scripts
+    - I understand the principles how to install software and packages myself
+    - I can install a Julia/Python/R packages myself
     - I understand what containers are
-    - I understand how to build from source
     - I can can run the voted-for IDE on Bianca
     - I understand how to deal with sensitive data
 
