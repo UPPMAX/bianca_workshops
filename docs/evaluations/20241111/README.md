@@ -12,6 +12,7 @@ tags:
 - Reflections: [Richel](../../reflections/20241111/20241111_richel.md)
 - [results.csv](results.csv)
 - [results.ods](results.ods)
+- Success score: 66%
 
 ## Missing before
 

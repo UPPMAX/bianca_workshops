@@ -13,6 +13,7 @@ tags:
 - Raw data: [20240925.csv](20240925.csv)
 - Raw data with 'Any other suggestions?' put on same line for analysis: [20240925_fixed.csv](20240925_fixed.csv)
 - Script to create images and tally: [analyse.R](analyse.R)
+- Success score = 3.89/5.0 = 78%
 
 ![Raw data in Google Forms](2024-09-25_16-04-23.png)
 
