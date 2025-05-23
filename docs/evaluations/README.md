@@ -21,7 +21,7 @@ Intermediate|I4        |[20250523](20250523/README.md)|.
 Iteration|Registrations|Learners present|Filled-in evaluations
 ---------|-------------|----------------|---------------------
 B1       |?            |18              |5 (28%)
-I1       |?            |~12             |?
+I1       |?            |12              |?
 B2       |?            |9               |8 (89%)
 I2       |?            |5               |4 (80%)
 B3       |?            |6               |5 (83%)
