@@ -85,4 +85,8 @@ tensor([0.1014], device='cuda:0')
     nvidia-smi dmon -o DT
     nvidia-smi --format=noheader,csv --query-compute-apps=timestamp,gpu_name,pid,name,used_memory --loop=1 -f sample_run.log
     ```
+## Tips
 
+- Use `--nv` flag while running your apptainer containers to use GPU on a GPU node
+- Correct CUDA modules gets automatically loaded if you use `python_ML_packages/3.9.5-gpu`
+- Various CUDA libraries are available in `module spider cuda`
