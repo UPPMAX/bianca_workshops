@@ -14,10 +14,10 @@ tags:
 
     - Log in to Transit
     - (If not done already) Mount the wharf of your project.
-    - Go to project directory 
+    - Go to project directory
     - Download package
         - ``pip download <package name>``
-    - You will get a zip file for each package    
+    - You will get a zip file for each package
     - From Bianca session move the file(s) to correct place
     - Typical place to put python packages: ``~/.local/lib/python<version>/site-packages/``
 
@@ -38,7 +38,7 @@ tags:
     - Install it on Rackham. Perhaps you need it here as well! Then transfer to ``wharf`` and Bianca local python library.
     - Make a virtual environment with one or several packages on Rackham. Then transfer to ``wharf`` and Bianca (any place).
 
-## Only download on Transfer and install on Bianca
+## Only download on Rackham/Transit and install on Bianca
 
 ### Rackham
 
@@ -46,7 +46,31 @@ tags:
 $ pip download <package-name>
 ```
 
-### Transfer to the ``wharf``
+### Transit
+
+- **Log in to transit**: ``ssh <username>@transit.uppmax.uu.se``
+    - [Documentation](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/transfer_bianca/#transit-server)
+- (If not done already) Mount the wharf of your project.
+
+```bash
+user@transit:~$ mount_wharf sens2025560
+Mounting wharf (accessible for you only) to /home/<user>/sens2025560
+<user>-sens2025560@bianca-sftp.uppmax.uu.se's password:
+```
+
+- Navigate to your wharf folder
+
+```bash
+cd sens2023531
+```
+
+- Download!
+
+``` sh
+$ pip download <package-name>
+```
+
+### Transfer to the ``wharf`` (only if Rackham)
 
 ```bash
 sftp douglas-sens2017625@bianca-sftp
@@ -68,12 +92,12 @@ sftp> put -r <package-name>
 On Bianca
 install it (Yes, you can do it from this place) by telling pip where to look for packages and dependencies
 
+- In this case i should have ended up in: ``/proj/sens2025560/nobackup/wharf/$USER/$USER-sens2025560``
+
 ``` sh
 $ ml python
-$ pip install --user --no-index --find-links <path-to-packages> <package-name>
+$ pip install --user --no-index --find-links /proj/sens2025560/nobackup/wharf/$USER/$USER-sens2025560 <package-name>
 ```
-
-`<path-to-packages>` is where your packages are, if in present working directory it is `.`
 
 **Then the package ends up in ``~/.local/lib/python<version>/site-packages/`` .**
 
@@ -97,7 +121,7 @@ $ pip install --user --no-index --find-links <path-to-packages> <package-name>
 !!! tip
 
     - We HIGHLY recommend using a virtual environment during installation, since this makes it easier to install for different versions of Python.
-    - However you can also create virtual environments on Bianca from downloaded packages, see above
+    - However you can also create virtual environments on Bianca from downloaded packages, see above.
 
 !!! note
 
