@@ -16,7 +16,7 @@ tags:
 
 ## Hardware and flags
 
-- 10 Nodes with Nvidia A100 40 GB and 80 GB.
+- 10 Nodes with Nvidia A100 40 GB.
 - Nodelist : sens2025xxx-b\[201-2010\]
 - All GPU nodes have at least 256 GB RAM (fat nodes) with 16 CPU cores and 2 GPUs per node.
 - In order to avoid GPU misuse, a project cannot request more than 7 GPU nodes, in total.
