@@ -66,7 +66,7 @@ Perfect!
 
 - **Log in to transit**: ``ssh <username>@transit.uppmax.uu.se``
     - [Documentation](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/transfer_bianca/#transit-server)
-- (If not doen already) Mount the wharf of your project.
+- (If not done already) Mount the wharf of your project.
 
 ```bash
 user@transit:~$ mount_wharf sens2025560
