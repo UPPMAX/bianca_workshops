@@ -43,6 +43,7 @@ You can also ask for 1 gpu per node and few cores in order to use 2 gpus for dif
 #SBATCH --gpus-per-node=1
 #SBATCH -t 1:00:00
 ```
+
 - Similarly for interactive session on GPU node, use the same `-C gpu --gpus-per-node=` flag.
   
 ## GPU accessibility check
@@ -86,6 +87,7 @@ tensor([0.1014], device='cuda:0')
     nvidia-smi dmon -o DT
     nvidia-smi --format=noheader,csv --query-compute-apps=timestamp,gpu_name,pid,name,used_memory --loop=1 -f sample_run.log
     ```
+
 ## Tips
 
 - Use `--nv` flag while running your apptainer containers to use GPU on a GPU node
