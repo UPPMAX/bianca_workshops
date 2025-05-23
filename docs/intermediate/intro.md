@@ -145,7 +145,7 @@ The goal of these questions is to introduce what is taught
 today, as well as measuring how much knowledge is gained at the end
 of the day.
 
-The form can be found `[not here anymore]`.
+- Fill in [this form](https://docs.google.com/forms/d/e/1FAIpQLSeXGoGlfFZpdmLEvfxlBq82IjaVwhz3kowXRT4ijsZe1bOWDA/viewform?usp=header)
 
 ???- question "What is in that form?"
 
