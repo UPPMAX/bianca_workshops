@@ -78,7 +78,7 @@ learner had to say on this:
 You are welcome to try and leave anytime you want.
 The course material is made for self-study too, with videos
 for all exercises.
-Do fill in [the evaluation](../intermediate/evaluation_intermediate.md)
+Do fill in [the evaluation](../intermediate/evaluation.md)
 when you leave early :-)
 
 ## Prerequisites

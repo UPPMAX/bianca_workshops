@@ -15,7 +15,7 @@ tags:
 
 ## Missing before
 
-From the [prevaluation](../../prevaluations/20241111/README.md):
+From the [start results](start_results.csv):
 
 > Installation of packages on Bianca (without internet connection)
 

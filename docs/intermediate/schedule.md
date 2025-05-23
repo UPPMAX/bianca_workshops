@@ -25,7 +25,7 @@ When | Who  | What
 14:55| .    | Break
 15:10| R    | [IDEs on Bianca](ides/README.md)
 15:50| R    | [Summary](summary.md)
-15:55| R    | [Evaluation](evaluation_intermediate.md)
+15:55| R    | [Evaluation](evaluation.md)
 16:00| .    | END
 
 - Who: `B`: Björn, `J`: Jayant, `P`: Pavlin, `R`: Richèl

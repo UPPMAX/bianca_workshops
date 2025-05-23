@@ -36,7 +36,7 @@ nav:
     - IDEs: intermediate/ides/README.md
     - Overview: intermediate/overview.md
     - Summary: intermediate/summary.md
-    - Evaluation: intermediate/evaluation_intermediate.md
+    - Evaluation: intermediate/evaluation.md
   - Extra material:
     - intermediate/complex_jobs.md
     - intermediate/replicate_jobs.md
