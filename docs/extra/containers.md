@@ -53,8 +53,6 @@ Well. It is there but broadinstitute is not there. Let's look for alternatives, 
 
 - Continue to Dockerhub.
 
-Dockerhub
-
 - <https://hub.docker.com>
 
 - Search for ``gatk``
@@ -67,7 +65,7 @@ Perfect!
 |---|---|
 
 - **Note that `apptainer` is not a module but available like a system tool!**
-`apptainer pull gatk_4.3.0.0.sif docker://broadinstitute/gatk:4.3.0.0`
+`apptainer pull gatk_4.6.2.0.sif docker://broadinstitute/gatk:4.6.2.0`
 
 ![apptainer_pull](./img/apptainer_pull.png)
 
@@ -75,19 +73,21 @@ Perfect!
 
 ![sftp_gatk](./img/sftp_gatk.png)
 
-`apptainer exec gatk_4.3.0.0.sif gatk`
+`apptainer exec gatk_4.6.2.0.sif gatk`
 
 ![apptainer_gatk](./img/apptainer_gatk.png)
 
-## Set the Apptainer cache dirs to /proj/proj-id to prevent quota issues
+## Set the Apptainer cache directories to ``/proj/<proj-id>`` to prevent quota issues
+
+(change the project name)
 
 ```bash
-mkdir -p /proj/staff/bjornv/apptainer_cache_dir/{cache,tmp,localcache}
-export APPTAINER_CACHEDIR=/proj/staff/bjornv/apptainer_cache_dir/cache
-export APPTAINER_TMPDIR=/proj/staff/bjornv/apptainer_cache_dir/tmp
-export APPTAINER_LOCALCACHEDIR=/proj/staff/bjornv/apptainer_cache_dir/localcache
+mkdir -p /proj/sens2025560/$USER/apptainer_cache_dir/{cache,tmp,localcache}
+export APPTAINER_CACHEDIR=/proj/sens2025560/$USER/apptainer_cache_dir/cache
+export APPTAINER_TMPDIR=/proj/sens2025560/$USER/apptainer_cache_dir/tmp
+export APPTAINER_LOCALCACHEDIR=/proj/sens2025560/$USER/apptainer_cache_dir/localcache
 ```
 
 !!! info "More info"
 
-    Singularity course <!-- link was broken and hence removed -->
+    [Singularity course](https://docs.uppmax.uu.se/courses_workshops/singularity/)
