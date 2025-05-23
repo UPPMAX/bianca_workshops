@@ -12,14 +12,14 @@ tags:
 
 !!! info "Installation principle"
 
-    - install on Rackham
-        - ``pip install --user <package>``
-        - ``python setup.py install --user or --prefix=<path>``
-    - sync to ``wharf``
-    - move the files on Bianca to correct place
-    - you may have to update ``$PYTHONPATH``
+    - Log in to Transit
+    - (If not done already) Mount the wharf of your project.
+    - Go to project directory
+    - Download package
+        - ``pip download <package name>``
+    - You will get a zip file for each package
+    - From Bianca session move the file(s) to correct place
     - Typical place to put python packages: ``~/.local/lib/python<version>/site-packages/``
-    - Otherwise you may have to update ``PYTHONPATH="<path>"``
 
 ## Check for packages
 
@@ -38,7 +38,7 @@ tags:
     - Install it on Rackham. Perhaps you need it here as well! Then transfer to ``wharf`` and Bianca local python library.
     - Make a virtual environment with one or several packages on Rackham. Then transfer to ``wharf`` and Bianca (any place).
 
-## Only download on Rackham and install on Bianca
+## Only download on Rackham/Transit and install on Bianca
 
 ### Rackham
 
@@ -46,7 +46,31 @@ tags:
 $ pip download <package-name>
 ```
 
-### Transfer to the ``wharf``
+### Transit
+
+- **Log in to transit**: ``ssh <username>@transit.uppmax.uu.se``
+    - [Documentation](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/transfer_bianca/#transit-server)
+- (If not done already) Mount the wharf of your project.
+
+```bash
+user@transit:~$ mount_wharf sens2025560
+Mounting wharf (accessible for you only) to /home/<user>/sens2025560
+<user>-sens2025560@bianca-sftp.uppmax.uu.se's password:
+```
+
+- Navigate to your wharf folder
+
+```bash
+cd sens2023531
+```
+
+- Download!
+
+``` sh
+$ pip download <package-name>
+```
+
+### Transfer to the ``wharf`` (only if Rackham)
 
 ```bash
 sftp douglas-sens2017625@bianca-sftp
@@ -68,78 +92,14 @@ sftp> put -r <package-name>
 On Bianca
 install it (Yes, you can do it from this place) by telling pip where to look for packages and dependencies
 
+- In this case i should have ended up in: ``/proj/sens2025560/nobackup/wharf/$USER/$USER-sens2025560``
+
 ``` sh
 $ ml python
-$ pip install --user --no-index --find-links <path-to-packages> <package-name>
+$ pip install --user --no-index --find-links /proj/sens2025560/nobackup/wharf/$USER/$USER-sens2025560 <package-name>
 ```
-
-`<path-to-packages>` is where your packages are, if in present working directory it is `.`
 
 **Then the package ends up in ``~/.local/lib/python<version>/site-packages/`` .**
-
-## Install on Rackham and then transfer to Bianca
-
-!!! info
-
-    **The package ends up on Rackham in ``~/.local/lib/python<version>/site-packages/`` .**
-
-    - Note that `python<version>` is omitting the last number (bug fix), like `3.8` for `python-3.8.7`.
-
-
-### Install on Rackham
-
-``` sh
-$ ml python/<version>        # this is to make use the correct python version and possible dependencies already available
-$ pip install --user <package-name>
-```
-
-- If there is a requirements.txt file with the content of packages to be installed:
-
-```bash
-pip install --user -r requirements.txt
-```
-
-**Then the package(s) ends up in ``~/.local/lib/python<version>/site-packages/`` .**
-
-**Transfer to the ``wharf``**
-
-``` bash
-sftp douglas-sens2017625@bianca-sftp
-sftp> cd douglas-sens2017625/
-sftp> dir
-sftp>
-```
-
-If you have not uploaded anything to your ``wharf``, this will be empty. It might have a few things in it.
-
-- **Alt1: If you would like all your locally installed packages:**
-
-``` bash
-sftp> put -r .local/lib/python<version>/site-packages/
-```
-
-- **Alt 2: Just transfer the latest installed python package(s)**
-
-- Check what was installed. It may have been several dependency packages as well. Look at the times!
-
-``` bash
-sftp>  lls -lrt .local/lib/python<version>/site-packages/
-```
-
-``` bash
-sftp> put -r .local/lib/python<version>/site-packages/<package name 1>
-# and if several packages
-sftp> put -r .local/lib/python<version>/site-packages/<package name 2>
-# and so on...
-```
-
-**Move to site-packages folder**
-On Bianca
-
-``` bash
-cd /proj/sens2023531/nobackup/wharf/bjornc/bjornc-sens2023531/
-mv –a  <file(s)> ~/.local/lib/python<version>/site-packages/
-```
 
 !!! info "If many files or packages"
 
@@ -156,10 +116,12 @@ mv –a  <file(s)> ~/.local/lib/python<version>/site-packages/
     $ mv –a  <file(s)> ~/.local/lib/python<version>/site-packages/
     ```
 
-
 ## Isolated/virtual environments
 
-- We HIGHLY recommend using a virtual environment during installation, since this makes it easier to install for different versions of Python.
+!!! tip
+
+    - We HIGHLY recommend using a virtual environment during installation, since this makes it easier to install for different versions of Python.
+    - However you can also create virtual environments on Bianca from downloaded packages, see above.
 
 !!! note
 
@@ -220,6 +182,75 @@ On Bianca
 cd /proj/sens2023531/nobackup/wharf/bjornc/bjornc-sens2023531/
 mv –a  projectB <path to any place, like project folder>
 ```
+
+
+???- note "(Not tested for Transit) Install on Rackham/Transit and then transfer to Bianca"
+
+    !!! info
+        
+        **The package ends up on  in ``~/.local/lib/python<version>/site-packages/`` .**
+
+        - Note that `python<version>` is omitting the last number (bug fix), like `3.8` for `python-3.8.7`.
+
+    !!! warning
+
+        - If you don't have Rackham, try with Transit and tweak accoring to instruction for the download part above
+
+
+    Install on Rackham/Transit
+
+    ``` sh
+    $ ml python/<version>        # this is to make use the correct python version and possible dependencies already available
+    $ pip install --user <package-name>
+    ```
+
+    - If there is a requirements.txt file with the content of packages to be installed:
+
+    ```bash
+    pip install --user -r requirements.txt
+    ```
+
+    **Then the package(s) ends up in ``~/.local/lib/python<version>/site-packages/`` .**
+
+    **Transfer to the ``wharf``**
+
+    ``` bash
+    sftp douglas-sens2017625@bianca-sftp
+    sftp> cd douglas-sens2017625/
+    sftp> dir
+    sftp>
+    ```
+
+    If you have not uploaded anything to your ``wharf``, this will be empty. It might have a few things in it.
+
+    - **Alt1: If you would like all your locally installed packages:**
+
+    ``` bash
+    sftp> put -r .local/lib/python<version>/site-packages/
+    ```
+
+    - **Alt 2: Just transfer the latest installed python package(s)**
+
+    - Check what was installed. It may have been several dependency packages as well. Look at the times!
+
+    ``` bash
+    sftp>  lls -lrt .local/lib/python<version>/site-packages/
+    ```
+
+    ``` bash
+    sftp> put -r .local/lib/python<version>/site-packages/<package name 1>
+    # and if several packages
+    sftp> put -r .local/lib/python<version>/site-packages/<package name 2>
+    # and so on...
+    ```
+
+    **Move to site-packages folder**
+    On Bianca
+
+    ``` bash
+    cd /proj/sens2023531/nobackup/wharf/bjornc/bjornc-sens2023531/
+    mv –a  <file(s)> ~/.local/lib/python<version>/site-packages/
+    ```
 
 !!! error
 

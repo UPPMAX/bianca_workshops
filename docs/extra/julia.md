@@ -14,7 +14,7 @@ tags:
 
     Installation principle:
 
-    - install on Rackham
+    - install on Transit
     - sync to ``wharf``
     - move the files on Bianca
     - Typical place to put julia packages: ``~/.julia/packages``
@@ -86,9 +86,9 @@ If you have started Julia once you will get the folders like this in the `~/.jul
    └── scratchspaces
 ```
 
-The plan is that what you install on Rackham should be moved here in the same manner
+The plan is that what you install on Transit should be moved here in the same manner
 
-- Make an installation of the package on Rackham in the Julia package manager
+- Make an installation of the package on Transit in the Julia package manager
 - Use a transfer method to move the package files to the ``wharf``
     - To be certain to include all files, you may transfer the whole ``.julia`` dir. However, that can grow rather big with time.
 

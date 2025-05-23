@@ -380,3 +380,10 @@ nvidia
 smi
 timeslots
 broadinstitute
+NXF
+TMPDIR
+dev
+mkdir
+shm
+sif
+cd
