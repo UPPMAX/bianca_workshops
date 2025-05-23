@@ -1,84 +1,17 @@
 #!/bin/env Rscript
 
 read_data <- function() {
-  readr::read_csv("evaluation_20250428_day_3.csv", show_col_types = FALSE)
+  readr::read_csv("responses.csv", show_col_types = FALSE)
 }
 
 t <- read_data()
-#####################################################
-# Course rating
-#####################################################
-ratings <- t |> dplyr::select("Overall, how would you rate this training event?")
-names(ratings) <- "rating"
-ggplot2::ggplot(
-  ratings, 
-  ggplot2::aes(x = rating)
-) + ggplot2::geom_histogram() +
-  ggplot2::scale_x_continuous(
-    limits = c(1, 10),
-    breaks = seq(1, 10)
-  ) +
-  ggplot2::scale_y_continuous(
-    name = "Frequency"
-  ) +  
-  ggplot2::labs(
-    title = "Course rating",
-    caption = paste0(
-      "#individuals: ", nrow(ratings), ". ",
-      "#ratings: ", nrow(ratings), ". ",
-      "Mean rating: ", round(mean(ratings$rating), digits = 2)
-    )
-  )
-ggplot2::ggsave("course_rating.png", width = 7, height = 7)
-
-#####################################################
-# Pace
-#####################################################
-
-pace <- t |> dplyr::select(starts_with("What do you think about the pace of teaching overall today?"))
-names(pace) <- "pace"
-readr::write_lines(pace$pace, "pace.txt")
-
-#####################################################
-# Recommend
-#####################################################
-
-recommend <- t |> dplyr::select(starts_with("Would you recommend this course to your colleagues"))
-names(recommend) <- "recommend"
-recommend$recommend <- as.factor(recommend$recommend)
-
-ggplot2::ggplot(recommend, ggplot2::aes(x = recommend)) + 
-  ggplot2::geom_bar() +
-  ggplot2::scale_y_continuous(
-    name = "Number of learners"
-  ) +
-  ggplot2::labs(
-    title = "Would you recommend the course?",
-    caption = paste0(
-      "#individuals: ", nrow(recommend), ". ",
-      "#ratings: ", nrow(recommend), ". ",
-      "%yes: ", 100 * round(mean(recommend$recommend == "Yes"), digits = 2)
-    )
-  )
-
-ggplot2::ggsave("recommend.png", width = 7, height = 7)
-
-#####################################################
-# Future topics
-#####################################################
-
-future_topics <- t |> 
-  dplyr::select(starts_with("Which future training topics would you like to be provided by the training host"))
-names(future_topics) <- "future_topic"
-future_topics <- future_topics |> dplyr::filter(!is.na(future_topic))
-readr::write_lines(future_topics$future_topic, "future_topics.txt")
 
 #####################################################
 # Other feedback
 #####################################################
 
 comments <- t |> 
-  dplyr::select(starts_with("Do you have any additional comments?"))
+  dplyr::select(starts_with("An other feedback?"))
 names(comments) <- "comment"
 comments <- comments |> dplyr::filter(!is.na(comment))
 readr::write_lines(comments$comment, "comments.txt")
@@ -89,8 +22,13 @@ readr::write_lines(comments$comment, "comments.txt")
 
 t <- read_data()
 
+names(t)
+
+
 # Select confidence questions
-t <- t |> dplyr::select(dplyr::starts_with("I "))
+t <- t |> dplyr::select(dplyr::starts_with("Give you confidence levels of the following statements below"))
+
+names(t) <- stringr::str_sub(stringr::str_extract(names(t), "\\[.*\\]"), 2, -2)
 
 t <- t |> 
   dplyr::mutate_all(~ replace(., . == "I can absolutely do this!", 5)) |>
