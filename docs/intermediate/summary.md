@@ -41,10 +41,10 @@ I understand how to install software myself
 - Julia:
     - install locally with `using <package-name>`
     - copy `~/.julia/packages` to Bianca
-- Python `pip`
+- Python `pip`:
     - install locally with `pip install`
     - copy `~/.local/lib/python<version>/site-packages/` to Bianca
-- Python `conda`
+- Python `conda`:
 
     ```bash
     module load conda
@@ -54,7 +54,9 @@ I understand how to install software myself
     pip list
     python -V
     conda deactivate
-- R:    ```
+    ```
+
+- R:
     - install locally with `install.packages`
     - copy `~/R/x86_64-pc-linux-gnu-library/4.2` to Bianca
 
