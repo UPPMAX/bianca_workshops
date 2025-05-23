@@ -72,7 +72,9 @@ Running efficient jobs allows you to run more jobs that start running faster.
 ### Exercise 1: reading a `jobstats` plot
 
 - Read [the UPPMAX `jobstats` documentation](https://docs.uppmax.uu.se/software/jobstats/)
-  especially [the 'effective use' section](https://docs.uppmax.uu.se/software/jobstats/#efficient-use)
+  to know enough to be able to (practice) read a `jobstats` plot.
+  Especially [the 'effective use' section](https://docs.uppmax.uu.se/software/jobstats/#efficient-use)
+  is important.
 
 #### Exercise 1.1: `jobstats plot 1`
 
