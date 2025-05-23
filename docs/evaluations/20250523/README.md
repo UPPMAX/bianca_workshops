@@ -22,5 +22,14 @@ tags:
 
 ## [comments.txt](comments.txt)
 
-- I understand that sometimes there is not time to check that instructions/code for exercises still work before giving the course. But, I would still like to learn how to install python packages onto Bianca. Would it be possible to notify us when the instructions have been updated? Overall, I thought the teaching was great. All teachers were enthusiastic and knowledgable. Maybe there could be more time for questions during each section?
-- It would be good if more students were involved in courses like this. All the instructors did an excellent job. However, during the course, Bianca was not working, so we were unable to complete our exercises.
+- I understand that sometimes there is not time to check that
+  instructions/code for exercises still work before giving the course.
+  But, I would still like to learn how to install python packages onto Bianca.
+  Would it be possible to notify us when the instructions have been updated?
+  Overall, I thought the teaching was great.
+  All teachers were enthusiastic and knowledgable.
+  Maybe there could be more time for questions during each section?
+- It would be good if more students were involved in courses like this.
+  All the instructors did an excellent job.
+  However, during the course, Bianca was not working,
+  so we were unable to complete our exercises.
