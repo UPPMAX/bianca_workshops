@@ -5,7 +5,7 @@ tags:
 
 # Evaluation
 
-The evaluation form can be found `[not here anymore]`.
+- [The evaluation form](https://docs.google.com/forms/d/e/1FAIpQLScLc6vOsNcjSTDpEiTzFLNrLbIBnSwObOjdMdgjGGrM1hQqSQ/viewform?usp=header)
 
 It takes into account that one may need to leave early too.
 
