@@ -16,7 +16,7 @@ tags:
 
 ## Hardware and flags
 
-- 10 Nodes with Nvidia A100 40 GB and 80 GB.
+- 10 Nodes with Nvidia A100 40 GB.
 - Nodelist : sens2025xxx-b\[201-2010\]
 - All GPU nodes have at least 256 GB RAM (fat nodes) with 16 CPU cores and 2 GPUs per node.
 - In order to avoid GPU misuse, a project cannot request more than 7 GPU nodes, in total.
@@ -85,4 +85,8 @@ tensor([0.1014], device='cuda:0')
     nvidia-smi dmon -o DT
     nvidia-smi --format=noheader,csv --query-compute-apps=timestamp,gpu_name,pid,name,used_memory --loop=1 -f sample_run.log
     ```
+## Tips
 
+- Use `--nv` flag while running your apptainer containers to use GPU on a GPU node
+- Correct CUDA modules gets automatically loaded if you use `python_ML_packages/3.9.5-gpu`
+- Various CUDA libraries are available in `module spider cuda`

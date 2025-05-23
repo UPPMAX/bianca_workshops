@@ -177,17 +177,16 @@ tags:
     - [Julia course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/julia/isolatedJulia.html){:target="_blank"}
     - :warning: contact [NAISS support](javascript:void(window.open('https://supr.naiss.se/support/?centre_resource=c4%27,%27_blank%27,%27toolbar=1,location=1,status=1,menubar=1,scrollbars=1,resizable=1%27));) for individual help!
 
-## Exercise 20 min
+## Exercise ~20 min
 
 ???+ question "Pick one of the following topics!"
 
     - Read the introduction with a demo and use it to solve the exercise in the end.
     - "Containers" contains less material but may take time to install.
 
-    - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshops/extra/conda/){:target="_blank"}
-    - [Extra material: Installing pip packages](https://uppmax.github.io/bianca_workshops/extra/pip/){:target="_blank"}
-    - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshops/extra/rpackages/){:target="_blank"}
-    - [Extra material: Containers](https://uppmax.github.io/bianca_workshops/extra/containers/){:target="_blank"}
+    - [Installing Conda packages](https://uppmax.github.io/bianca_workshops/extra/conda/){:target="_blank"}
+    - [Installing pip packages](https://uppmax.github.io/bianca_workshops/extra/pip/){:target="_blank"}
+    - [Installing R packages](https://uppmax.github.io/bianca_workshops/extra/rpackages/){:target="_blank"}
 
     - One breakout room per topic: Help each-other!
 
@@ -268,6 +267,23 @@ tags:
     - [Extra material: Containers](https://uppmax.github.io/bianca_workshops/extra/containers/)
     - [Singularity course](https://docs.uppmax.uu.se/courses_workshops/singularity/)
 
+## Exercise ~10 min
+
+???+ question "Learn and try out containers"
+
+    - Read the introduction with a demo and use it to solve the exercise in the end.
+    - "Containers" contains less material but may take time to install.
+
+    - [Containers](https://uppmax.github.io/bianca_workshops/extra/containers/){:target="_blank"}
+
+    - Help each-other!
+
+!!! discussion
+
+    - Did it work out well?
+    - Any questions?
+    - Any input?
+    
 ## Own development and Git
 
 - [Own development and git](https://uppmax.github.io/bianca_workshops/extra/devel/)
