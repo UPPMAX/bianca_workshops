@@ -40,21 +40,28 @@ Read more on the Uppmax singularity workshop:
 
 ## Example: I want gatk on Bianca
 
-Remember, no internet on Bianca. Build on Rackham and then transfer the container to the ``wharf``.
+Remember, no internet on Bianca. Build on other computer and then transfer the container to the ``wharf``.
+
+- Gatk is developed by Broad institute
 
 Can I find it on sylabs.io?
 
-- <https://cloud.sylabs.io/library/search?q=gatk>
+- <https://cloud.sylabs.io/>
+- Search for ``gatk``
 
-No.
+Well. It is there but broadinstitute is not there. Let's look for alternatives, otherwise we get back here!
 
 - Continue to Dockerhub.
 
-Dockerhub?
+Dockerhub
 
-    - <https://hub.docker.com/r/broadinstitute/gatk/>
+- <https://hub.docker.com>
 
-Perfect.
+- Search for ``gatk``
+- Several ones  show up. the latest (and official "Broad institute" one) would be the best!
+- <https://hub.docker.com/r/broadinstitute/gatk/>
+
+Perfect!
 
 | ![gatk_syslabs](./img/gatk_syslabs.png) | ![gatk_dockerhub](./img/gatk_dockerhub.png) |
 |---|---|
