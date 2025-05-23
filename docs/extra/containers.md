@@ -64,29 +64,59 @@ Perfect!
 | ![gatk_syslabs](./img/gatk_syslabs.png) | ![gatk_dockerhub](./img/gatk_dockerhub.png) |
 |---|---|
 
-- **Note that `apptainer` is not a module but available like a system tool!**
-`apptainer pull gatk_4.6.2.0.sif docker://broadinstitute/gatk:4.6.2.0`
+- **Log in to transit**: ``ssh <username>@transit.uppmax.uu.se``
+    - [Documentation](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/transfer_bianca/#transit-server)
+- (If not doen already) Mount the wharf of your project.
 
-![apptainer_pull](./img/apptainer_pull.png)
+    user@transit:~$ mount_wharf sens2025560
+    Mounting wharf (accessible for you only) to /home/<user>/sens2025560
+    <user>-sens2025560@bianca-sftp.uppmax.uu.se's password:
+  
+- Navigate to your wharf folder
+ 
+    cd sens2023531
+  
+- Disable Singularity cache
 
-`sftp` to the ``wharf``:
+    export APPTAINER_DISABLE_CACHE=true
+    export APPTAINER_TMPDIR=/dev/shm/$USER
+    mkdir -p $APPTAINER_TMPDIR
+    unset ${!NXF_*}
+  
+- You can get the container here directly with the "pull" command
+- Run the command:
 
-![sftp_gatk](./img/sftp_gatk.png)
+    apptainer pull gatk_4.6.2.0.sif docker://broadinstitute/gatk:4.6.2.0
 
-`apptainer exec gatk_4.6.2.0.sif gatk`
+- In a Bianca session, navigate to the wharf
+
+    cd /proj/sens2025560/nobackup/wharf/$USER/$USER-sens2025560
+
+- Move it to the project folder (good practice)
+
+    mv gatk_4.6.2.0.sif /proj/sens2025560/$USER/
+
+- Go there
+
+    cd /proj/sens2025560/$USER/
+   
+- Run it:
+ 
+    `apptainer exec gatk_4.6.2.0.sif gatk`
+
+It should give some output but it may give some warnings
 
 ![apptainer_gatk](./img/apptainer_gatk.png)
 
-## Set the Apptainer cache directories to ``/proj/<proj-id>`` to prevent quota issues
 
-(change the project name)
+???- Set the Apptainer cache directories to ``/proj/<proj-id>`` to prevent quota issues
 
-```bash
-mkdir -p /proj/sens2025560/$USER/apptainer_cache_dir/{cache,tmp,localcache}
-export APPTAINER_CACHEDIR=/proj/sens2025560/$USER/apptainer_cache_dir/cache
-export APPTAINER_TMPDIR=/proj/sens2025560/$USER/apptainer_cache_dir/tmp
-export APPTAINER_LOCALCACHEDIR=/proj/sens2025560/$USER/apptainer_cache_dir/localcache
-```
+    ```bash
+    mkdir -p /proj/sens2025560/$USER/apptainer_cache_dir/{cache,tmp,localcache}
+    export APPTAINER_CACHEDIR=/proj/sens2025560/$USER/apptainer_cache_dir/cache
+    export APPTAINER_TMPDIR=/proj/sens2025560/$USER/apptainer_cache_dir/tmp
+    export APPTAINER_LOCALCACHEDIR=/proj/sens2025560/$USER/apptainer_cache_dir/localcache
+    ```
 
 !!! info "More info"
 
