@@ -155,7 +155,16 @@ mv –a  <file(s)> ~/.julia/packages/
     ``` bash
     $ tar xfz <tarfile.tar.gz> #if there is a tar file!
     $ mv –a  <file(s)> .julia/packages/
+    
     ```
+
+???- admonition "Move environments"
+
+    - Identify the environment files
+    
+    - Copy the files:
+
+    - On the new machine
 
 !!! info "More info"
 
