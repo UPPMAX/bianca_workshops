@@ -109,7 +109,7 @@ It should give some output but it may give some warnings
 ![apptainer_gatk](./img/apptainer_gatk.png)
 
 
-???- Set the Apptainer cache directories to ``/proj/<proj-id>`` to prevent quota issues
+???- tip "Set the Apptainer cache directories to ``/proj/<proj-id>`` to prevent quota issues"
 
     ```bash
     mkdir -p /proj/sens2025560/$USER/apptainer_cache_dir/{cache,tmp,localcache}
