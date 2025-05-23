@@ -16,7 +16,7 @@ tags:
 
 ## Hardware and flags
 
-- 10 Nodes with Nvidia A100 40 GB.
+- 10 Nodes with 2 Nvidia A100 40 GB each.
 - Nodelist : sens2025xxx-b\[201-2010\]
 - All GPU nodes have at least 256 GB RAM (fat nodes) with 16 CPU cores and 2 GPUs per node.
 - In order to avoid GPU misuse, a project cannot request more than 7 GPU nodes, in total.
@@ -43,7 +43,8 @@ You can also ask for 1 gpu per node and few cores in order to use 2 gpus for dif
 #SBATCH --gpus-per-node=1
 #SBATCH -t 1:00:00
 ```
-
+- Similarly for interactive session on GPU node, use the same `-C gpu --gpus-per-node=` flag.
+  
 ## GPU accessibility check
 
 - Sanity check if CUDA is loaded properly by checking CUDA environment variable:
