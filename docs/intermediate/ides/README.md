@@ -76,23 +76,12 @@ we can show: Jupyter, RStudio or VSCodium.
 We will practice and discuss one, and briefly talk about the others.
 
 
-## Procedure
-
-We pick the winning IDE democratically:
-
-- In the shared document, add a character before each IDE you'd be interested
-  in, between the `[ ]` of each option. This will be messy.
-  You can vote for 0, 1, 2 or 3 IDEs.
-
-It may look like below, where there is a preference for Jupyter:
-
-```text
-- [,a/b*efgh!] Jupyter
-- [a/d,h] RStudio
-- [cd!h]VSCodium
-```
-
 ## Exercises
+
+### Exercise 0: determine which IDE
+
+Determine which IDE(s) we'll practice in which way
+(e.g. all following the same sequence, or using simultaneous sessions).
 
 ### Exercise 1: Start the favorite IDE
 
