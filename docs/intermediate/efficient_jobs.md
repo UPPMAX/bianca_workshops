@@ -165,19 +165,9 @@ We are going to create a `jobstats` plot. For that, we need a job
 to plot. Here we first look for a job, after which we plot it.
 
 - Scan [the UPPMAX `finishedjobinfo` documentation](https://docs.uppmax.uu.se/software/finishedjobinfo/)
-- Log in to **Rackham**.
-- Why do we need to log in to Rackham to find jobs?
-
-???- question "Answer"
-
-    On Bianca, all projects are part of an independent, isolated virtual
-    cluster, for security reasons. When working in a Bianca project,
-    one cannot see anything of other projects.
-
-    Rackham does not have this: we can see all jobs submitted by all users.
-    Hence, there are more visible jobs for us to look at.
-
-- Find a job that has finished successfully that took longer than one hour.
+- Log in to **your ownn Bianca project**.
+- Find a job that has finished successfully that took longer than one hour
+  (if there is none, use the job the ran longest)
 
 ???- question "Answer"
 
