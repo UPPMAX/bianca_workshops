@@ -1,0 +1,44 @@
+# Check that correct style is followed
+name: Check all style
+
+# This job only concerns changes to a limited set of files.
+# Thanks to https://stackoverflow.com/a/63822945
+#
+# Check spelling on the 21st day of the month.
+# 21st as the first letter of this repository is the 21st letter in the alphabet.
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 0 21 * *"
+
+permissions: {}
+
+jobs:
+  build:
+    name: check_all_style
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: read
+      # To report GitHub Actions status checks
+      statuses: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          # super-linter needs the full git history to get the
+          # list of files that changed across commits
+          fetch-depth: 0
+
+      - name: Remove files that need no checking
+        run: rm -rf exercises
+
+      - name: Super-linter
+        uses: super-linter/super-linter@v7.4.0 # x-release-please-version
+        env:
+          # To report GitHub Actions status checks
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_CHECKOV: false
