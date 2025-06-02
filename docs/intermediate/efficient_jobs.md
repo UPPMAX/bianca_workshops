@@ -165,7 +165,7 @@ We are going to create a `jobstats` plot. For that, we need a job
 to plot. Here we first look for a job, after which we plot it.
 
 - Scan [the UPPMAX `finishedjobinfo` documentation](https://docs.uppmax.uu.se/software/finishedjobinfo/)
-- Log in to **your ownn Bianca project**.
+- Log in to **your own Bianca project**.
 - Find a job that has finished successfully that took longer than one hour
   (if there is none, use the job the ran longest)
 
