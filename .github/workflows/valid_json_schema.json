@@ -1,6 +1,6 @@
 {
-    "properties": {
-        "foo": { "type": "string" },
-        "bar": { "type": "number" }
-    }
+  "properties": {
+    "foo": { "type": "string" },
+    "bar": { "type": "number" }
+  }
 }

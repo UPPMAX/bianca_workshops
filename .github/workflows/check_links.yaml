@@ -6,18 +6,18 @@ name: Check links
 on:
   push:
     paths:
-      - 'docs/**'
+      - "docs/**"
       - .github/workflows/check_links.yaml
       - mlc_config.json
       - mkdocs.yml
   pull_request:
     paths:
-      - 'docs/**'
+      - "docs/**"
       - .github/workflows/check_links.yaml
       - mlc_config.json
       - mkdocs.yml
   schedule:
-  - cron: "0 0 2 * *"
+    - cron: "0 0 2 * *"
 
 jobs:
   check-links:
@@ -47,7 +47,6 @@ jobs:
       - name: Internal links must checked, do not allow '400' in the 'aliveStatusCodes' of mlc_config.json
         run: if [[ $(grep --regexp "[^0-9]400[^0-9]" mlc_config.json | wc --lines) == "1" ]]; then echo "FOUND"; exit 42; fi
 
-
       # For an indented block, a link to a broken image is ignored, as the link checker assumes it to be code.
       # In our case, it is not: for us, it is usually an admonition (i.e. a 'question' or 'info' block)
       # Here all indented text is unindented
@@ -57,7 +56,6 @@ jobs:
 
       - uses: gaurav-nelson/github-action-markdown-link-check@v1
         with:
-          config-file: 'mlc_config.json'
-          use-quiet-mode: 'yes'
-          use-verbose-mode: 'no'
-
+          config-file: "mlc_config.json"
+          use-quiet-mode: "yes"
+          use-verbose-mode: "no"

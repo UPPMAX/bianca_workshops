@@ -7,16 +7,14 @@ on:
   push:
   pull_request:
   schedule:
-  - cron: "0 0 21 * *"
+    - cron: "0 0 21 * *"
 
 jobs:
   check_markdown:
-
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
-
       - name: Set up Git repository
         uses: actions/checkout@v4
 
@@ -48,4 +46,3 @@ jobs:
       # this is the linter whose documentation to look into :-)
       - name: Linter is at https://github.com/DavidAnson/markdownlint
         run: echo "Linter is at https://github.com/DavidAnson/markdownlint"
-

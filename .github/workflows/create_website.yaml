@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - .github/workflows/create_website.yaml
-      - 'docs/**'
+      - "docs/**"
       - mkdocs.yml
 
 jobs:
