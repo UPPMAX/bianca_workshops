@@ -17,4 +17,4 @@ tags:
 
 Iteration|Course dates
 ---------|---------------------------------
-5        |To be scheduled around 2025-11-23
+5        |To be scheduled around 2025-11-23, e.g. 2025-11-17
