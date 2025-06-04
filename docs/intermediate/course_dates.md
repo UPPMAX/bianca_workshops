@@ -16,6 +16,5 @@ tags:
     - [Shared document for teaching dates](https://hackmd.io/@UPPMAX/uppmax-training-events)
 
 Iteration|Course dates
----------|-------------
-4        |May 23rd 2025
-5        |.
+---------|---------------------------------
+5        |To be scheduled around 2025-11-23
