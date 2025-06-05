@@ -15,8 +15,8 @@ Beginner    |B3        |[Lesson plan](20240925/20240925_richel.md)
 Intermediate|I3        |[Lesson plan](20241111/20241111_richel.md)
 Beginner    |B4        |[Lesson plan](20250319/20250319_richel.md)
 Intermediate|I4        |[Lesson plan](20250523/20250523_richel.md)
-Beginner    |B5        |[Lesson plan](20250915/20250915_richel/README.md)
-Intermediate|I5        |[Lesson plan](20251117/20251117_richel/README.md)
+Beginner    |B5        |[Lesson plan](20250915/20250915_richel.md)
+Intermediate|I5        |[Lesson plan](20251117/20251117_richel.md)
 
 - Note that the first iteration is only the first documented iteration.
   It is unknown how many iterations came before it
