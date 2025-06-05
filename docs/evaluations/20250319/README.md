@@ -1,11 +1,7 @@
----
-tags:
-  - evaluation
-  - 2025-03-19
----
-
 # Evaluation
 
+- Course: Basic
+- Date: 2025-03-19
 - Raw data: [survey.csv](survey.csv)
 - Analysis script: [analyse.R](analyse.R)
 - Number of registrations: 24
