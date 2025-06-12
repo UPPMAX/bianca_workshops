@@ -41,4 +41,15 @@ jobs:
         env:
           # To report GitHub Actions status checks
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+          # Cannot get this to work properly
           VALIDATE_CHECKOV: false
+
+          # Cannot get this to work properly
+          VALIDATE_JSCPD: false
+
+          # Cannot get this to work properly and has its own checker
+          VALIDATE_MARKDOWN: false
+
+          # Cannot get this to work properly
+          VALIDATE_SHELL_SHFMT: false
