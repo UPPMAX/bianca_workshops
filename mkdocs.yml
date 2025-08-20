@@ -127,6 +127,7 @@ theme:
     - navigation.footer
     - search.suggest
     - content.code.annotate
+    - content.code.copy
     - content.tabs.link
     - content.action.edit
     - content.action.view
