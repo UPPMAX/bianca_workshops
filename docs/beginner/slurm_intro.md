@@ -57,9 +57,9 @@ tags:
 
     There are two types of nodes:
 
-Type        |Purpose
-------------|--------------------------
-Login node  | Start jobs for worker nodes and do easy things. \n You share 2 cores and 15 GB RAM with active users within your SENS project.
+Type          |Purpose
+--------------|--------------------------
+Login node    | Start jobs for worker nodes and do easy things. \n You share 2 cores and 15 GB RAM with active users within your SENS project.
 Compute nodes | Do hard calculations, either from scripts or an interactive session
 
 ???- info  "Principle"
@@ -95,7 +95,7 @@ flowchart TD
     operation_type{What type of operation/calculation?}
     interaction_type{What type of interaction?}
     login_node(Work on login node)
-    interactive_node(Work on interactive node)
+    interactive_node(Use on interactive session)
     calculation_node(Schedule for calculation node)
 
     UPPMAX-->operation_type
@@ -174,7 +174,7 @@ that uses 2 cores and has a maximum duration of 8 hours.
 
 ???- info "Documentation"
 
-    [Starting an interactive session on Bianca](https://docs.uppmax.uu.se/cluster_guides/start_interactive_node_on_bianca/)
+    [Starting an interactive session on Bianca](https://docs.uppmax.uu.se/cluster_guides/start_interactive_session_on_bianca/)
 
 !!! tip
 

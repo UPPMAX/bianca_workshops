@@ -17,7 +17,7 @@ tags:
 ## Exercises
 
 Read the UPPMAX documentation
-['Starting an interactive session on Bianca'](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/start_interactive_node_on_bianca),
+['Starting an interactive session on Bianca'](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/start_interactive_session_on_bianca),
 then do these exercises.
 
 ???- question "Exercise: Start an interactive session"
@@ -34,10 +34,12 @@ then do these exercises.
     However, the number of core hours are registered as if the node is used
     at full capacity, as it is *reserved* to be used at that capacity.
 
-???- question "How to find out if you are on a login or interactive node"
+???- question "How to find out if you are on a login or compute node"
 
     In the terminal, type `hostname`
 
-    - the login node has `[project]-bianca`, where `[project]` is the name of the project, e.g. `sens2025560`
-    - the interactive node has `b[number]` in it, where `[number]` is the compute node number
+    - the login node has `[project]-bianca`,
+      where `[project]` is the name of the project, e.g. `sens2025560`
+    - a compute node has `b[number]` in it,
+      where `[number]` is the compute node number
 

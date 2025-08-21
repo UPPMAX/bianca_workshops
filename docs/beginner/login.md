@@ -107,12 +107,6 @@ then answer these questions:
 
     At <https://docs.uppmax.uu.se/getting_started/get_uppmax_2fa/>
 
-- Which page does it link to?
-
-???- question "Answer"
-
-    To <https://www.uu.se/en/centre/uppmax/get-started/2-factor>
-
 - Setup your UPPMAX 2FA
 
 ???- question "Answer"
