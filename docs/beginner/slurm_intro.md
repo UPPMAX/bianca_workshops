@@ -300,7 +300,7 @@ that uses 2 cores and has a maximum duration of 8 hours.
 
     !!! info "Documentation"
 
-        [Starting an interactive session on Bianca](https://docs.uppmax.uu.se/cluster_guides/start_interactive_node_on_bianca/)
+        [Starting an interactive session on Bianca](https://docs.uppmax.uu.se/cluster_guides/start_interactive_session_on_bianca/)
 
      ???- tip "Answer"
 
