@@ -74,7 +74,7 @@ $ pip download <package-name>
 
 ```bash
 sftp douglas@bianca-sftp
-sftp> cd douglas-sens2017625/
+sftp> cd sens2017625/
 sftp> dir
 sftp>
 ```
@@ -164,7 +164,7 @@ $ deactivate
 
 ``` bash
 sftp douglas@bianca-sftp
-sftp> cd douglas-sens2017625/
+sftp> cd sens2017625/
 sftp> dir
 sftp>
 ```
@@ -215,8 +215,8 @@ mv –a  projectB <path to any place, like project folder>
     **Transfer to the ``wharf``**
 
     ``` bash
-    sftp douglas-sens2017625@bianca-sftp
-    sftp> cd douglas-sens2017625/
+    sftp douglas@bianca-sftp
+    sftp> cd sens2017625/
     sftp> dir
     sftp>
     ```

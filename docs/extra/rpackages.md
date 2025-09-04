@@ -207,12 +207,12 @@ dir
 It should look like this:
 
     sftp> dir
-    douglas-sens2025560
+    sens2025560
 
 Now ``cd`` to this directory, which is your wharf directory within your project.
 
 ``` bash
-sftp> cd douglas-sens2025560/
+sftp> cd sens2025560/
 sftp> dir
 sftp>
 ```

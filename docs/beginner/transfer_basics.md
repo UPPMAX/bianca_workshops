@@ -114,7 +114,7 @@ Once connected you will have to type the sftp commands to upload/download files.
 
 Please note that in the wharf you only have access to upload your files to the directory that is named:
 
-`<username>-<projid>` e.g. `myuser-sens2025560`
+`<projid>` e.g. `sens2025560`
 
 Example:
 
@@ -128,9 +128,9 @@ Connected to bianca-sftp.uppmax.uu.se.
 sftp>
 
 sftp> ls
-pmitev-sens2025560
+sens2025560
 
-sftp> cd pmitev-sens2025560
+sftp> cd sens2025560
 sftp>
 ```
 
