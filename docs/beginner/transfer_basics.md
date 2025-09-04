@@ -73,7 +73,7 @@ Be sure to really use a SFTP client -- not just a SCP client.
 
 - An example command line for LFTP would be
 
-`lftp sftp://<username>-<projname>@bianca-sftp.uppmax.uu.se/<username>-<projname>/`
+`lftp sftp://<username>@bianca-sftp.uppmax.uu.se`
 
 ### WinSCP (Windows)
 
@@ -94,13 +94,13 @@ Be sure to really use a SFTP client -- not just a SCP client.
 <http://docs.uppmax.uu.se/software/bianca_file_transfer_using_sftp/>
 
 ```bash
-$ sftp -q <username>-<projid>@bianca-sftp.uppmax.uu.se
+$ sftp -q <username>@bianca-sftp.uppmax.uu.se
 ```
 
 Ex.
 
 ```bash
-$ sftp -q myuser-sens2025560@bianca-sftp.uppmax.uu.se
+$ sftp -q myuser@bianca-sftp.uppmax.uu.se
 ```
 
 The `-q` flag is to be quiet (not showing the banner intended to help someone trying to ``ssh`` to the host), if your client does not support it, you can just skip it.
@@ -119,7 +119,7 @@ Please note that in the wharf you only have access to upload your files to the d
 Example:
 
 ```bash
-$ sftp -q  pmitev-sens2025560@bianca-sftp.uppmax.uu.se
+$ sftp -q  pmitev@bianca-sftp.uppmax.uu.se
 pmitev-sens2025560@bianca-sftp.uppmax.uu.se's password:
 
 sftp> ls
@@ -132,13 +132,13 @@ sftp>
 Alternatively, you can specify this at the end of the sftp command, so that you will always end up in the correct folder directly.
 
 ```bash
-$ sftp -q <username>-<projid>@bianca-sftp.uppmax.uu.se:<username>-<projid>
+$ sftp -q <username>@bianca-sftp.uppmax.uu.se
 ```
 
 E.g.
 
 ```bash
-`$ sftp -q myuser-sens2025560@bianca-sftp.uppmax.uu.se:myuser-sens2025560
+`$ sftp -q myuser@bianca-sftp.uppmax.uu.se
 ```
 
 - `sftp` supports a recursive flag `-r` to upload (`put -r folder_name`) or download (`get -r folder_name`) entire folders and subfolders.

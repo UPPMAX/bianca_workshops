@@ -193,7 +193,7 @@ After installation, the next step is to copy the contents of this directory over
 Make sure you are in your **home directory**. Then connect to the bianca wharf.  Replace the name and project with your bianca user name and project.
 
 ``` bash
-sftp douglas-sens2025560@bianca-sftp
+sftp douglas@bianca-sftp
 ```
 
 You log in here like you log into bianca: the first password is your **password followed by the 6-digit authenticator code**, the second password (if required for you) is only your password.

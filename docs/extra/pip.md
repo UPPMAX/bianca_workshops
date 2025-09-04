@@ -73,7 +73,7 @@ $ pip download <package-name>
 ### Transfer to the ``wharf`` (only if Rackham)
 
 ```bash
-sftp douglas-sens2017625@bianca-sftp
+sftp douglas@bianca-sftp
 sftp> cd douglas-sens2017625/
 sftp> dir
 sftp>
@@ -163,7 +163,7 @@ $ deactivate
 **Transfer to the ``wharf``**
 
 ``` bash
-sftp douglas-sens2017625@bianca-sftp
+sftp douglas@bianca-sftp
 sftp> cd douglas-sens2017625/
 sftp> dir
 sftp>
