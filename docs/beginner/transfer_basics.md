@@ -120,7 +120,12 @@ Example:
 
 ```bash
 $ sftp -q  pmitev@bianca-sftp.uppmax.uu.se
-pmitev-sens2025560@bianca-sftp.uppmax.uu.se's password:
+Provide your normal UPPMAX password. You will supply the TOTP code separately, in the next step.
+
+(pmitev@bianca-sftp.uppmax.uu.se) Password: 
+(pmitev@bianca-sftp.uppmax.uu.se) Second factor (TOTP UPPMAX): 
+Connected to bianca-sftp.uppmax.uu.se.
+sftp>
 
 sftp> ls
 pmitev-sens2025560
