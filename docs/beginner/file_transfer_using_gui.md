@@ -34,7 +34,7 @@ then do these exercises.
     This is described in the text above.
 
     There is also a YouTube video
-    ['Transfer files to/from the Bianca UPPMAX HPC cluster using FileZilla'](https://youtu.be/V-iPQLjvByc).
+    ['Transfer files to/from the Bianca UPPMAX HPC cluster using FileZilla'](https://youtu.be/DYPWawyK5UE).
 
 ???- question "2b. Locate that file on Bianca using the graphical file explorer"
 
