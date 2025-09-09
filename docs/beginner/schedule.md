@@ -24,11 +24,11 @@ When  | Who  | What
 13:55 | .    | Break
 14:05 | J    | Compute nodes and SLURM, including interactive nodes
 14:55 | .    | Break
-15:10 | R    | RStudio
+15:10 | B    | RStudio
 15:30 | R    | [Summary](summary.md) and anonymous [evaluation](evaluation.md)
 15:45 | All  | Optional Q&A
 
 <!-- markdownlint-enable MD013 -->
 
-- Who: `B`: Björn, `L`: Lars, `P`: Pavlin, `R`: Richèl
+- Who: `B`: Björn, `J`: Jayant, `P`: Pavlin, `R`: Richèl
 - :rocket:: for those that are (even) faster
