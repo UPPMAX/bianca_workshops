@@ -239,7 +239,7 @@ tags:
 
 ![Containerization](img/Containerization_nextlabs.png)
 
-> From [Nextlabs](https://www.nextlabs.com/what-is-containerization/)
+> From Nextlabs (broken link to `https://www.nextlabs.com/what-is-containerization/`):
 
 !!! info
 
