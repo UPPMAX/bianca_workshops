@@ -56,7 +56,7 @@ tags:
     - I can transfer files to/from Bianca using FileZilla
     - I can start an interactive session
     - I can submit jobs to the scheduler
-    - I understand the legal aspects of sensitive data
+    - I can start RStudio
 
     Any other feedback?
 
