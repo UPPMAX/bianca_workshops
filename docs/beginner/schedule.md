@@ -25,8 +25,8 @@ When  | Who  | What
 14:05 | J    | Compute nodes and SLURM, including interactive nodes
 14:55 | .    | Break
 15:10 | B    | RStudio
-15:30 | R    | [Summary](summary.md) and anonymous [evaluation](evaluation.md)
-15:45 | All  | Optional Q&A
+15:45 | R    | [Summary](summary.md) and anonymous [evaluation](evaluation.md)
+16:00 | .    | Done!
 
 <!-- markdownlint-enable MD013 -->
 
