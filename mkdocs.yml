@@ -20,8 +20,6 @@ nav:
       - Transferring files to/from Bianca using a GUI: beginner/file_transfer_using_gui.md
       - Transferring files to/from Bianca: beginner/transfer_basics.md
       - Introduction to compute nodes: beginner/slurm_intro.md
-      - Intro to NAISS-SENS and sensitive data: beginner/sens_project.md
-      - Intro to NAISS-SENS and sensitive data (Lars or Marcus): beginner/sens_project_short.md
       - Summary: beginner/summary.md
       - Evaluation: beginner/evaluation.md
   - Intermediate:
