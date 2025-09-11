@@ -10,7 +10,7 @@ Learning outcomes of this course:
 - :rocket: I can manage my files and folders using a terminal
 - I can create a minimal executable bash script
 - I can use modules
-- I can transfer files to/from Bianca using FileZilla
+- I can transfer files to/from Bianca using a graphical tool
 - I can start an interactive session
 - I can submit jobs to the scheduler
 - I understand the legal aspects of sensitive data
@@ -100,7 +100,14 @@ flowchart TD
 
 Possible next steps:
 
-- [Bianca Intermediate course](https://uppmax.github.io/bianca_workshops/intermediate/intro/):
-  work better with Bianca
-- [Programming Formalisms](https://uppmax.github.io/programming_formalisms/):
-  formal aspects of software development
+<!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
+
+I want to ...                   |Solution
+--------------------------------|-------------------------------
+work smarter with Bianca        |Attend [the 'Bianca Intermediate' course](https://uppmax.github.io/bianca_workshops/intermediate/intro/)
+do my computational work smarter|Attend [the 'Programming Formalisms' course](https://uppmax.github.io/programming_formalisms/)
+transfer files smarter          |Attend [the NAISS 'File Transfer' course](https://uppmax.github.io/naiss_file_transfer_course/)
+work smarter on the command line|Attend [the NAISS 'Command line 101' course](https://nbisweden.github.io/SCoRe_user_doc/courses/)
+find out what courses there are |See [the SCoRe overview of courses](https://nbisweden.github.io/SCoRe_user_doc/courses/)
+
+<!-- markdownlint-enable MD013 -->
