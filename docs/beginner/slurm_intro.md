@@ -371,7 +371,7 @@ that uses 2 cores and has a maximum duration of 8 hours.
 
     !!! tip
 
-    ![copy-paste](./img/copy_paste.PNG)
+    ![copy-paste](./img/copy_paste.png)
 
     !!! info "Documentation"
 

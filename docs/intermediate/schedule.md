@@ -23,7 +23,7 @@ When | Who  | What
 13:50| .    | Break
 14:05| B    | [Packages and software installation](https://uppmax.github.io/bianca_workshops/intermediate/install/) 2/2
 14:55| .    | Break
-15:10| R    | [IDEs on Bianca](ides/README.md)
+15:10| R    | Empty slot
 15:50| R    | [Summary](summary.md)
 15:55| R    | [Evaluation](evaluation.md)
 16:00| .    | END
