@@ -78,7 +78,7 @@
   /home/[user_name]/[project_name]/nobackup/wharf/[user_name]/[user_name]-[project_name],
   for example, at /home/sven/sens123456/nobackup/wharf/sven/sven-sens123456."
   Again, there is no such directory.
-  On page: https://uppmax.github.io/bianca_workshops/beginner/transfer_basics/
+  On page: [Transfer basics](../../extra/transfer_basics.md)
   You say under section '#the-wharf-location-on-bianca':
   "The path to this folder, once you are logged into your project's cluster, is:
   /proj/<projid>/nobackup/wharf/<username>/<username>-<projid>

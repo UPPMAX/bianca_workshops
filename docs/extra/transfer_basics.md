@@ -22,7 +22,7 @@ tags:
 
 ## How does it work?
 
-![Bianca](./img/Bianca-transfer.png)
+![Bianca](img/Bianca-transfer.png)
 
 ### The `wharf`
 
@@ -61,7 +61,7 @@ E.g.
 
 ## GUI sftp clients
 
-!!! info "[A step-by-step explanation](file_transfer_using_gui.md)"
+!!! info "[A step-by-step explanation](../beginner/file_transfer_using_gui.md)"
 
 - Please notice that **SFTP is NOT the same as SCP**.
 
