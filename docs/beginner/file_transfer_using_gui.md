@@ -10,9 +10,9 @@ tags:
 
 > FileZilla connected to Bianca
 
-!!! info "Objectives"
+!!! info "Learning outcomes"
 
-    - [Transfer files to/from Bianca using FileZilla](https://github.com/UPPMAX/bianca_workshops/issues/35)
+    - [Transfer files to/from Bianca using a graphical tool](https://github.com/UPPMAX/bianca_workshops/issues/35)
 
 ## Exercises
 
