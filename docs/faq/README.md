@@ -89,15 +89,12 @@ See [prerequisites](../prereqs.md).
 
 ### How can I check if I have registered?
 
-```bash
-TODO
-```
+Contact the course coordinator,
+[Diana Iusan](https://www.uu.se/en/contact-and-organisation/staff?query=N5-245)
 
 ### How to find the course's Zoom room?
 
-```bash
-TODO
-```
+It will be emailed to you.
 
 ### How can I check if I have a NAISS account?
 
@@ -122,10 +119,14 @@ or [the UPPMAX instruction](https://docs.uppmax.uu.se/getting_started/login_rack
 
 Also, these videos may be useful:
 
+<!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
+
 HPC cluster|Login method |Documentation |Video
 -----------|-------------|--------------|------
 Bianca     |Website      |[Documentation](https://docs.uppmax.uu.se/getting_started/login_bianca_remote_desktop_website/) | [Video](https://youtu.be/Ni9nyCf7me8)
 Bianca     |SSH          |[Documentation](https://docs.uppmax.uu.se/getting_started/login_bianca_console_password/)       | [Video](https://youtu.be/7mKDxnXqi_M)
+
+<!-- markdownlint-enable MD013 -->
 
 ## How to install MobaXterm?
 
@@ -137,7 +138,7 @@ Install MobaXterm from [the MobaXterm website](https://mobaxterm.mobatek.net/).
 
 Run it. If it shows up, you've installed MobaXterm.
 
-## How to install rsync?
+## How to install `rsync`?
 
 This is for Linux and Mac users only.
 
@@ -193,9 +194,19 @@ If you see the `rsync` version displayed, you've installed `rsync`.
 
 ## Should I install FileZilla or WinSCP?
 
+FileZilla.
+
+However, if you are not allowed to install FileZilla
+and WinSCP is available, use WinSCP.
+
 ## What if I cannot install FileZilla nor WinSCP?
 
-TODO
+Then you cannot do the exercises in
+session [File transfer using a graphical tool](../beginner/file_transfer_using_gui.md).
+
+Instead, pick among
+[the multiple Bianca file transfer methods](https://docs.uppmax.uu.se/cluster_guides/transfer_bianca/#file-transfer-methods).
+that works on your computer.
 
 ## How to install FileZilla?
 
@@ -220,15 +231,18 @@ For non-Ubuntu users, search the web, download and install.
 
     Download the file, maybe unzip it and run the installer
 
-## How to install WinSCP?
-
-TODO
-
-
-
 ## How to check that I've installed FileZilla?
 
 Run it. If it shows up, you've installed FileZilla.
+
+## How to install WinSCP?
+
+Go to [the WinSCP download page](https://winscp.net/eng/download.php),
+download it and run the installer
+
+## How to check that I've installed WinSCP?
+
+Run it. If it shows up, you've installed WinSCP.
 
 ### How can I check if I have a good Zoom setup?
 
