@@ -32,31 +32,24 @@ tags:
 
     Lesson plan:
 
-    ```mermaid
-    gantt
-      title Login
-      dateFormat X
-      axisFormat %s
-      section First hour
-      Prior : prior, 0, 5s
-      Present: present, after prior, 2s
-      %% It took me 14 mins, here I do that time x2
-      Challenge: crit, challenge, after present, 28s
-      %% Here I use the same time it took me to give feedback
-      Feedback: feedback, after challenge, 14s
-    ```
+    - 5 mins: Prior
+    - 2 mins: Present
+    - 28 mins: Challenge
+    - 14 mins: Feedback
 
-    Prior questions:
+    Priors:
 
     - What is 'HPC' in 'HPC cluster'?
     - What is 'cluster' in 'HPC cluster'?
-    - Where are the UPPMAX HPC clusters?
-    - When does one use an HPC cluster?
-    - How does using an HPC clusters look like?
-    - How does one tell the UPPMAX HPC clusters what to do?
-    - Who has already logged in to an HPC cluster?
-    - What does one need to be allowed to login to Bianca?
-    - Who has already logged in to Bianca?
+    - How are things different when working on an HPC cluster?
+
+    Feedback:
+
+    - How many environments are there to login to?
+    - When would you recommend a colleague to use the remote desktop environment?
+    - When would you recommend a colleague to use the console environment?
+    - What is a login node?
+    - How to behave on a login node?
 
 ![Bianca or Rackham](./img/bianca_or_rackham.jpg)
 
@@ -86,7 +79,6 @@ called Bianca. Here we introduce the first terms, such as 'HPC cluster'.
 We will practice using the UPPMAX documentation,
 so that you are confident that you can find what you need
 and understand what is written.
-Also, it helps UPPMAX staff find out how good our documentation is :-)
 
 ## Exercises
 
@@ -122,15 +114,13 @@ Go to the UPPMAX documentation at
 then answer these questions:
 
 - Where is it is described how to get inside the university networks?
-  The formal name of these university networks is SUNET.
+  Tip: the formal name of these university networks is SUNET.
 
 ???- question "Answer"
 
     At <https://docs.uppmax.uu.se/getting_started/get_inside_sunet/>
 
 - From that page, determine if you are inside the university networks.
-
-???- question "How do I know if I am inside the university networks?"
 
 ???- question "Answer"
 
@@ -140,20 +130,18 @@ then answer these questions:
 
     ![A user that is outside of the university network sees nothing](./img/login_uppmax_bianca_website_outside_sunet_browser_short.png)
 
-    - If you so a login screen, you are inside of the university networks
+    - If you see a login screen, you are inside of the university networks
 
     ![A user that is outside of the university network sees a login screen](./img/bianca_gui_login_1st.png)
 
     > A user that is outside of the university network sees a login screen
 
-- If you are outside of the university networks, setup your VPN
+- If you are outside of the university networks, setup your VPN.
+  Having a VPN setup was a [prerequisite](../prereqs.md)...
 
 ???- question "Answer"
 
-    This is described at
-    ['Get inside the university networks' at the section 'Use a virtual private network'](https://docs.uppmax.uu.se/getting_started/get_inside_sunet/#use-a-virtual-private-network).
-
-    Beyond this, it differs for users from different universities.
+    See [this course's prerequisites](../prereqs.md).
 
 ### Exercise 3: general understanding
 
