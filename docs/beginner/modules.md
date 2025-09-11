@@ -14,7 +14,6 @@ tags:
     - Can load a module
     - Practice loading the `bioinfo-tools` module first
     - Extra: Can find pre-installed software from the documentation
-    - Extra: Can find pre-installed databases from the documentation
 
 ???- question "For teachers"
 
@@ -27,7 +26,6 @@ tags:
     - Learners can unload a module
     - Learners understand to load the `bioinfo-tools` module first
     - Extra: Learners have found pre-installed software from the documentation
-    - Extra: Learners have found pre-installed databases from the documentation
 
     Lesson plan:
 
@@ -54,9 +52,11 @@ tags:
     - How can one run different versions of the same software
       on a same computer?
     - How can we have users use different versions of the same software?
-    - What is the UPPMAX software module system?
-    - What is a module?
-    - Has anyone already used the UPPMAX module system?
+
+    Feedback:
+
+    - What is a software module?
+    - Why does Bianca use software modules?
 
 ## Why use the module system?
 
@@ -272,18 +272,3 @@ then answer these questions:
 
     One can find the answer at <https://docs.uppmax.uu.se/software/software-table/>,
     where one can find around 800 pieces of software installed
-
-### Extra: Exercise 4: find the databases
-
-Go to the UPPMAX documentation at
-[https://docs.uppmax.uu.se](https://docs.uppmax.uu.se),
-then answer these questions:
-
-- Find to list of databases.
-  Estimate how many collections of databases are installed on Bianca
-
-???- question "Answer"
-
-    One can find the answer at <http://docs.uppmax.uu.se/databases/overview/>,
-    where one can find around 7 collections of databases installed.
-

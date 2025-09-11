@@ -41,13 +41,15 @@ tags:
       Feedback: feedback, after exercise, 10s
     ```
 
-    Prior questions:
+    Prior:
 
-    - How many different environment are available on Bianca?
-    - How many ways are there to access Bianca?
-    - What kind of problems would you expect when accessing Bianca?
     - What is a desktop environment?
-    - What is a remote desktop environment?
+
+    Feedback:
+
+    - Your colleague visits [https://bianca.uppmax.uu.se/](https://bianca.uppmax.uu.se/)
+      and nothing appears in his/her browser. What can be wrong?
+    - What is a desktop environment?
 
 ## Why login to a remote desktop environment?
 
@@ -133,70 +135,3 @@ Start a terminal in the Bianca remote desktop environment.
 
     > The terminal icon at the bottom of the screen
 
-### Exercise 5: A user enjoys the login node
-
-Your colleague finds out that one can run scripts with calculations directly
-on the login node.
-This saves him/her much time waiting for a calculation to start.
-Is this OK and why?
-
-???- question "Answer"
-
-    For that colleague, there seems to be no problem.
-    However, for everyone else this is a problem,
-    as the login node is a *shared* node.
-
-    The colleague will be asked to *schedule* his/her jobs instead.
-    This is usually done by an email from the UPPMAX staff.
-
-    Requesting a calculation to run is part of this course
-    and is described [in the 'Slurm' session](slurm_intro.md).
-    This is done by using the SLURM scheduler.
-
-### Exercise 6: A user develops code
-
-Your colleague is developing code on Bianca.
-She writes the code line-by-line and
-schedules a job to test the new code after each addition.
-However, each job takes some minutes to start
-and hence it takes a couple of minutes
-before she knows if her code worked yes/no.
-
-How could your colleague develop her code quicker?
-
-???- question "Answer"
-
-    This is the typical use-case to use an interactive node.
-    One could also consider to develop code on a local computer
-    instead (which uses nonsensitive/simulated/fake testing data)
-    and upload the final code instead.
-
-    Requesting an interactive node is part of this course
-    and is described [in the session on Slurm](slurm_intro.md).
-
-### Exercise 7: A user develops code on his own
-
-Your colleague is developing code on Bianca.
-He writes the code line-by-line and
-works directly on the login node.
-
-You colleague argues correctly that he is the only user of
-login node of his project, hence nobody else is hindered by this.
-
-Is this a good practice?
-
-???- question "Answer"
-
-    Yes, this is fine, if indeed the user works alone on the login node.
-
-    The login node, however, does have limited computing power,
-    so some programs will not work smoothly on it. In that case,
-    an interactive node with more resources can be booked.
-
-    But if the login node has enough computing power for a user
-    that is indeed the only user, then this is fine.
-
-???- question "How do I find out that I am the only user?"
-
-    You can do so by running the command-line tool `top`:
-    this will display how many users there are.

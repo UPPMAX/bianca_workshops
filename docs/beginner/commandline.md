@@ -35,7 +35,10 @@ tags:
 
 ## Why use the command-line?
 
-You need the command-line to start calculations.
+You always need the command-line to start your calculations.
+
+Besides that, whatever you type in the command-line
+can be put in a program and you can start automating your work.
 
 ## Introduction
 
@@ -283,9 +286,7 @@ View the help of the command `cd`
     rm richel_again.txt
     ```
 
-## Extra material
-
-### Other useful commands
+## (optional) Other useful commands
 
 These are some commands that we enjoy,
 but are not part of the learning objectives.
@@ -301,35 +302,10 @@ Command name|Purpose
 `>`         |Write to file (removes existing content if any)
 `>>`        |Append to file
 
-A command that cannot be put in a Markdown table:
+A command that cannot be put in a (Markdown) table:
 
 - `|`: [pipe](https://en.wikipedia.org/wiki/Pipeline_(Unix)),
   the output of one command to serve as input for the next
 
 With `ls /usr/bin | wc --lines` one can see that there are more than 1700
 commands on Bianca.
-
-### The terminal and the GUI are friends
-
-If you are using the Bianca remote desktop environment,
-you can see that its file browser and terminal are friends.
-
-On a clean terminal, try typing `cd`
-and then drag a folder from the GUI to the terminal.
-
-It types the absolute path for you!
-
-### Commonly used symbolic links
-
-These are some commonly used symbolic links,
-that will simplify navigation:
-
-```bash
-cd Desktop
-ln -s /proj/sens2025560/ proj
-ln -s /proj/sens2025560/nobackup nobackup
-ln -s /proj/sens2025560/nobackup/wharf/richel/richel-sens2025560 wharf`
-```
-
-- Replace `sens2025560` by your project
-- Replace `richel` by your username

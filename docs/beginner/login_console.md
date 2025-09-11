@@ -54,13 +54,18 @@ tags:
     - What is a terminal?
     - What is SSH?
     - What is an SSH client?
-    - Do you know any SSH clients?
+
+    Feedback:
+
+    - What is an SSH client?
 
 ## Why login via a terminal?
 
-Using a terminal is powerful, where a remote desktop is clumsy.
-Copy-pasting text to a terminal on the remote desktop
-will quickly make you wonder if it cannot be done in a smarter way.
+It is useful to have multiple ways to login,
+as these allow you to use different tools.
+
+In general, a remote desktop is clumsy,
+where a terminal is powerful.
 
 ## A terminal and SSH clients
 
@@ -153,8 +158,7 @@ then answer these questions:
 
     Your ouput will look similar to this:
 
-    <!-- Indeed, line lengths beyond 80 characters -->
-    <!-- markdownlint-disable MD013 -->
+    <!-- markdownlint-disable MD013 --><!-- Indeed, line lengths beyond 80 characters -->
 
     ```bash
     sven@richel-N141CU:~/GitHubs/uppmax_intro_day_1/docs/sessions$ ssh -X sven@Bianca.uppmax.uu.se
@@ -180,15 +184,3 @@ then answer these questions:
 
 
 Welcome on a login node!
-
-### Extra: Exercise 4: Using SSH via Rackham
-
-???- question "(optional) 7. Exercise: login into the Bianca console environment from Bianca"
-
-    Read [the UPPMAX documentation's 'Login to the Rackham (yes, Rackham) console environment with a password'](https://docs.uppmax.uu.se/getting_started/login_rackham_console_password/).
-
-    Then, log in to the Rackham console environment.
-    From there, log in to the Bianca console environment.
-
-    Do this after having logged in to the Bianca console environment,
-    as most troubleshooting occurs in that exercise.

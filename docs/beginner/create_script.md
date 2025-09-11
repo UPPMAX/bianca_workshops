@@ -29,11 +29,26 @@ tags:
       Feedback: feedback, after exercise, 10s
     ```
 
+    Prior:
+
+    - What is a script?
+    - What is a scripting language?
+    - What is an executable script?
+    - Why use executable scripts?
+
+    Feedback:
+
+    - What is a script?
+    - When would you use an executable script?
+
 ## Why use scripts?
 
-Instead of typing commands in the terminal all the time,
-you can put these in a file.
-Such a file, called a script, can then be shared.
+You absolutely need a script to let your calculations be run on Bianca.
+
+Besides that,
+instead of typing commands in the terminal all the time,
+you can put these in a file,
+with the goal of automatic and/or sharing your work.
 
 ## Procedure
 
@@ -42,13 +57,17 @@ Creating an executable script has two steps:
 - Create a script
 - Allow the script to execute
 
-As an example, we create a script, called `do_it.sh`:
+Both steps are typically done on Bianca, in any folder.
+
+As an example, from a terminal on Bianca,
+we create a script, called `do_it.sh`:
 
 ```bash
 nano do_it.sh
 ```
 
 !!! info "Why use a `.sh` file extension?"
+
     Using `.sh` as a file extension a social convention
     for how a Bash script is called,
     as (1) `sh` is short for 'shell',
@@ -93,7 +112,7 @@ chmod +x do_it.sh
 
 ### Exercise 1: create an executable script
 
-- Create a file called `do_it.sh` using `nano`
+- On Bianca, create a file called `do_it.sh` using `nano`
 
 ???- question "Answer"
 

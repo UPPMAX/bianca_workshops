@@ -18,12 +18,12 @@ tags:
     - Can start a terminal
     - Can navigate the file system
     - Can find the wharf
-    - Extra: Can find the name of the file explorer
-    - Extra: Can do basic file management: create, copy, move and delete
+    - Can start a visual text editor
+    - (optional) Can find the name of the visual text editor
+    - Can do basic things in the visual text editor: edit, save, close
+    - (optional) Can do basic file management: create, copy, move and delete
       a file and folder
-    - Extra: Can start a visual text editor
-    - Extra: Can find the name of the visual text editor
-    - Extra: Can do basic things in the visual text editor: edit, save, close
+    - (optional) Can find the name of the file explorer
 
 ???- question "For teachers"
 
@@ -31,14 +31,14 @@ tags:
 
     - Learners have copy-pasted text between local computer
       and the remote desktop (in both directions)
-    - Learners have used Thunar
-    - Learners have found out that the file explorer is called Thunar
+    - Learners have used the file manager
     - Learners have started a terminal
-    - Extra: Learners have done basic file management:
+    - Learners have started `gedit`
+    - Learners have done basic things in gedit: edit a files, save, close
+    - (optional) Learners have found out that the file explorer is called Thunar
+    - (optional) Learners have found that the text editor is called gedit
+    - (optional) Learners have done basic file management:
       create, copy, move and delete a file and folder
-    - Extra: Learners have started `gedit`
-    - Extra: Learners have found that the text editor is called gedit
-    - Extra: Learners have done basic things in gedit: edit a files, save, close
 
     Lesson plan:
 
@@ -58,13 +58,12 @@ tags:
 
     Prior questions:
 
-    - Do you expect it to be hard to use a remote desktop environment?
     - Do you expect there to be much different behavior
       when using a remote desktop environment?
-    - Does someone have already tried to copy-past text between
-      local computer and remote desktop?
-    - Can you already name some folders that are special, either
-      for Linux or on Bianca?
+
+    Feedback questions:
+
+    - None
 
 ## Why practice using a remote desktop?
 
@@ -163,10 +162,9 @@ then answer these questions:
 
     These are some of the more conventional ways to close a terminal:
 
-    - Click on the `x` at the top-right of the terminal. When asked to really do
-      it, say 'Yes'
-    - Click the terminal and Press `CTRL + C` to stop `xeyes`. Type `exit`
-      and press enter
+    - Click on the `x` at the top-right of the terminal.
+      When asked to really do it, say 'Yes'
+    - Type `exit`
     - Many more: any solution that worked is fine
 
 ### Exercise 3: file navigation
@@ -235,10 +233,10 @@ can be transferred to/from.
     or, for a user with username `sven`, at
     `/proj/nobackup/sens2025560/wharf/sven/sven-sens2025560`
 
-To be able to search the web for questions on this file explorer,
+(optional) To be able to search the web for questions on this file explorer,
 its name will be useful to know:
 
-- What is the name of the file explorer?
+- (optional) What is the name of the file explorer?
 
 ???- question "Answer"
 
@@ -256,7 +254,8 @@ its name will be useful to know:
 
 - Create a file called `my_file.txt` (the `.txt` at the end is important),
   if not already present
-- Edit a file by start a visual text editor from Thunar. There are many ways!
+- Edit a file by starting a visual text editor from the file explorer.
+  There are many ways!
 
 ???- question "Answer"
 
@@ -274,10 +273,10 @@ its name will be useful to know:
 
     ![A file opened with a text editor](./img/opened_file.png)
 
-To be able to search the web for questions on this graphical text editor,
+(Optional) To be able to search the web for questions on this graphical text editor,
 its name will be useful to know:
 
-- What is the name of the graphical text editor?
+- (optional) What is the name of the graphical text editor?
 
 ???- question "Answer"
 
@@ -308,27 +307,28 @@ its name will be useful to know:
 
     ![There is a 'Save' button at the top menu bar of gedit](./img/opened_file.png)
 
-- Close gedit. There are multiple ways!
+- Close the graphical text editor. There are multiple ways!
 
 ???- question "Answer"
 
-    These are some of the more conventional ways to close gedit:
+    These are some of the more conventional ways to close the text
+    editor:
 
     - Click on the `x` at the top-right of the terminal
-    - In the gedit hamburger menu, click 'Quit'
+    - In the hamburger menu, click 'Quit'
 
     ![The gedit hamburger menu](./img/gedit_hamburger_menu.png)
 
 
-### Exercise 5: file management
+### (optional) Exercise 5: file management
 
-In Thunar:
+In the file manager:
 
 - create a file
 
 ???- question "Answer"
 
-    In Thunar, click on the white space next/under the files with
+    In the file manager, click on the white space next/under the files with
     the right mouse button. In this pop-up menu, click 'Create a new file':
 
     ![Popup menu to create a new file](./img/create_a_new_file.png)
