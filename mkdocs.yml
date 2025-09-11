@@ -18,6 +18,7 @@ nav:
       - Create an exectable script: beginner/create_script.md
       - Module system: beginner/modules.md
       - Transferring files to/from Bianca using a graphical tool: beginner/file_transfer_using_gui.md
+      - IDEs: beginner/ides/README.md
       - Summary: beginner/summary.md
       - Evaluation: beginner/evaluation.md
   - Intermediate:
@@ -35,7 +36,6 @@ nav:
   - Extra material:
       - Transferring files to/from Bianca: extra/transfer_basics.md
       - Introduction to compute nodes: extra/slurm_intro.md
-      - IDEs: intermediate/ides/README.md
       - intermediate/complex_jobs.md
       - intermediate/replicate_jobs.md
       - extra/slurm.md
