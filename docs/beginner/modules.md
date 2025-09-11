@@ -58,7 +58,7 @@ tags:
     - What is a module?
     - Has anyone already used the UPPMAX module system?
 
-## Why?
+## Why use the module system?
 
 The module system allows you to run your software,
 of your favorite version, installed by us :-)

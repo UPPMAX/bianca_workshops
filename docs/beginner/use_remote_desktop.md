@@ -66,7 +66,7 @@ tags:
     - Can you already name some folders that are special, either
       for Linux or on Bianca?
 
-## Why?
+## Why practice using a remote desktop?
 
 After [logging in to the remote desktop](login_remote_desktop.md),
 we can work with Bianca. Let's make sure we can do so :-)

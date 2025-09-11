@@ -56,7 +56,7 @@ tags:
     - What is an SSH client?
     - Do you know any SSH clients?
 
-## Why?
+## Why login via a terminal?
 
 Using a terminal is powerful, where a remote desktop is clumsy.
 Copy-pasting text to a terminal on the remote desktop

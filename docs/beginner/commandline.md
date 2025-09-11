@@ -33,7 +33,7 @@ tags:
       Feedback: feedback, after exercise, 10s
     ```
 
-## Why?
+## Why use the command-line?
 
 You need the command-line to start calculations.
 

@@ -62,7 +62,7 @@ tags:
 
 > A human taking care of an UPPMAX HPC cluster
 
-## Why?
+## Why login to Bianca?
 
 To use any UPPMAX cluster, one needs to log in.
 In this session, we learn there are multiple ways to login.

@@ -49,7 +49,7 @@ tags:
     - What is a desktop environment?
     - What is a remote desktop environment?
 
-## Why?
+## Why login to a remote desktop environment?
 
 There are multiple ways to log in to Bianca, each having its own features.
 These are the two we teach in this course:

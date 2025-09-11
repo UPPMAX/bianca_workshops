@@ -29,7 +29,7 @@ tags:
       Feedback: feedback, after exercise, 10s
     ```
 
-## Why?
+## Why use scripts?
 
 Instead of typing commands in the terminal all the time,
 you can put these in a file.
