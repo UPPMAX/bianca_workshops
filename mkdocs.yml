@@ -19,6 +19,7 @@ nav:
       - Module system: beginner/modules.md
       - Transferring files to/from Bianca using a graphical tool: beginner/file_transfer_using_gui.md
       - IDEs: beginner/ides/README.md
+      - SLURM:  beginner/slurm_intro.md
       - Summary: beginner/summary.md
       - Evaluation: beginner/evaluation.md
   - Intermediate:

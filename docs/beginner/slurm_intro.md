@@ -11,7 +11,7 @@ tags:
   - core
 ---
 
-# Introduction to compute nodes
+# Introduction to SLURM
 
 !!! info "Learning outcomes"
 
@@ -55,12 +55,12 @@ tags:
     - Each core can do work more or less independently.
         - On a cluster, like Bianca, a [_thread_](https://en.wikipedia.org/wiki/Thread_(computing)) (sequence of programmed instructions) typically occupies one core.
 
-    There are two types of nodes:
+There are two types of nodes:
 
 Type          |Purpose
 --------------|--------------------------
-Login node    | Start jobs for worker nodes and do easy things. \n You share 2 cores and 15 GB RAM with active users within your SENS project.
-Compute nodes | Do hard calculations, either from scripts or an interactive session
+Login node    | Start jobs for worker nodes and do easy things/calculations. You share 2 cores and 15 GB RAM with active users within your SENS project.
+Compute nodes | Do big calculations, either from scripts or an interactive session
 
 ???- info  "Principle"
 
@@ -89,48 +89,25 @@ Compute nodes | Do hard calculations, either from scripts or an interactive sess
 
 ???- tip "Decision maker"
 
-```mermaid
-flowchart TD
-    UPPMAX(What to run on which node?)
-    operation_type{What type of operation/calculation?}
-    interaction_type{What type of interaction?}
-    login_node(Work on login node)
-    interactive_node(Use on interactive session)
-    calculation_node(Schedule for calculation node)
+    ```mermaid
+    flowchart TD
+        UPPMAX(What to run on which node?)
+        operation_type{What type of operation/calculation?}
+        interaction_type{What type of interaction?}
+        login_node(Work on login node)
+        interactive_node(Use on interactive session)
+        calculation_node(Schedule for calculation node)
 
-    UPPMAX-->operation_type
-    operation_type-->|light,short|login_node
-    operation_type-->|heavy,long|interaction_type
-    interaction_type-->|Direct|interactive_node
-    interaction_type-->|Indirect|calculation_node
-```
+        UPPMAX-->operation_type
+        operation_type-->|light,short|login_node
+        operation_type-->|heavy,long|interaction_type
+        interaction_type-->|Direct|interactive_node
+        interaction_type-->|Indirect|calculation_node
+    ```
 
 ???- info "What is a job"
 
     - Job = what happens during booked time
-
-
-### Allocation flags/Slurm parameters
-
-Example
-
-- ``interactive -A sens2025560 -p core -n 4 -t 0:30:0``
-
-!!! admonition "Slurm Cheat Sheet"
-
-    - ``-A``    project number (**mandatory**)
-    - ``-t``    wall time (estimated maximum time of job) (**Default is 1 min only**)
-    - ``-n``    number of cores (**Default is 1**)
-    - ``-N``    number of nodes (can only be used if your code is parallelized with MPI)
-    - ``-p``    partition
-        - ``core`` is default and works for jobs narrower than 16 cores
-        - ``node`` can be used if you need the whole node and its memory
-        - for short development jobs and tests: ``devcore``, ``devel``)
-
-- If in doubt:
-    - `-p core`
-    - `-n 1`, for Rstudio `-n 2`
-    - `-t 10-00:00:00` (10 days)
 
 ## Interactive jobs
 
@@ -171,6 +148,28 @@ interactive -A sens2025560 -p core -n 2 -t 8:0:0
 
 This starts an interactive session using project `sens2025560`
 that uses 2 cores and has a maximum duration of 8 hours.
+
+### Allocation flags/Slurm parameters
+
+Example
+
+ - ``interactive -A sens2025560 -p core -n 4 -t 0:30:0``
+
+!!! admonition "Slurm Cheat Sheet"
+
+    - ``-A``    project number (**mandatory**)
+    - ``-t``    estimated maximum time of job (**Default is 12 hrs for interactive session**)
+    - ``-n``    number of cores (**Default is 1**)
+    - ``-N``    number of nodes (can only be used if your code is parallelized with MPI)
+    - ``-p``    partition
+        - ``core`` is default and works for jobs narrower than 16 cores
+        - ``node`` can be used if you need the whole node and its memory
+        - for short development jobs and tests: ``devcore``, ``devel``)
+
+- If in doubt:
+    - `-p core`
+    - `-n 1`, for Rstudio `-n 2`
+    - `-t 10-00:00:00` (10 days)
 
 ???- info "Documentation"
 
@@ -235,6 +234,25 @@ that uses 2 cores and has a maximum duration of 8 hours.
     - Think about what you would have to do yourself in the terminal to:
         - run the tool in a login session from the terminal.
         - and do possible modification to allow for use of more cores
+
+
+    ??? admonition "Slurm Cheat Sheet"
+
+        Example
+
+        - ``-A``    project number (**mandatory**)
+        - ``-t``    estimated maximum time of job (**Default is 1 min only for batch**)
+        - ``-n``    number of cores (**Default is 1**)
+        - ``-N``    number of nodes (can only be used if your code is parallelized with MPI)
+        - ``-p``    partition
+            - ``core`` is default and works for jobs narrower than 16 cores
+            - ``node`` can be used if you need the whole node and its memory
+            - for short development jobs and tests: ``devcore``, ``devel``)
+
+        - If in doubt:
+            - `-p core`
+            - `-n 1`, for Rstudio `-n 2`
+            - `-t 10-00:00:00` (10 days)
 
 !!! example "A (very) simple job script template"
 
