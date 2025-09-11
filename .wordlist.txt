@@ -388,3 +388,5 @@ mkdir
 shm
 sif
 cd
+todo's
+exe
