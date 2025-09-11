@@ -191,6 +191,12 @@ If you see the `rsync` version displayed, you've installed `rsync`.
     General Public Licence for details.
     ```
 
+## Should I install FileZilla or WinSCP?
+
+## What if I cannot install FileZilla nor WinSCP?
+
+TODO
+
 ## How to install FileZilla?
 
 Under Ubuntu, you can can use the Ubuntu App Center.
@@ -213,6 +219,12 @@ For non-Ubuntu users, search the web, download and install.
     [https://filezilla-project.org/download.php?type=client](https://filezilla-project.org/download.php?type=client).
 
     Download the file, maybe unzip it and run the installer
+
+## How to install WinSCP?
+
+TODO
+
+
 
 ## How to check that I've installed FileZilla?
 
