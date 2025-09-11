@@ -17,7 +17,7 @@ these.
 - :rocket: I can manage my files and folders using a terminal
 - I can create a minimal executable bash script
 - I can use modules
-- I can transfer files to/from Bianca using FileZilla
+- I can transfer files to/from Bianca using a graphical tool
 - I can start an interactive session
 - I can submit jobs to the scheduler
 - I can start RStudio
