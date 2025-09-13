@@ -153,7 +153,7 @@ that uses 2 cores and has a maximum duration of 8 hours.
 
 Example
 
- - ``interactive -A sens2025560 -p core -n 4 -t 0:30:0``
+- ``interactive -A sens2025560 -p core -n 4 -t 0:30:0``
 
 !!! admonition "Slurm Cheat Sheet"
 
