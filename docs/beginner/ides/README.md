@@ -69,7 +69,7 @@ such as code completion, code hints and interactive debugging.
 Using an IDE on Bianca is cumbersome and
 there are superior ways to develop code on Bianca,
 as -for example- taught in the
-[UPPMAX 'Programming Formalisms' course](https://github.com/UPPMAX/programming_formalisms).
+[UPPMAX 'Programming Formalisms' course](https://uppmax.github.io/programming_formalisms/learning_outcomes/).
 
 There are three [IDEs on Bianca](http://docs.uppmax.uu.se/software/ides_on_bianca/)
 we can show: Jupyter, RStudio or VSCodium.
