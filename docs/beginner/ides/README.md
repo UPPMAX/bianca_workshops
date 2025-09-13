@@ -14,7 +14,7 @@ tags:
 
     - Find information in the UPPMAX documentation about IDEs on Bianca
     - Give a reasonable definition of what an IDE is
-    - Remember that RStudio, Jupyter, VSCodium are IDEs that can be run on Bianca
+    - Remember that RStudio, Jupyter, VSCodium and MATLAB are IDEs that can be run on Bianca
     - Can run the voted-for IDE on Bianca
     - (optional) Can give a reason why to use an IDE
     - (optional) Can give a reason why not to use an IDE on Bianca
@@ -176,8 +176,17 @@ Jupyter| Python (R, Julia) | More notebook like
     - [VSCodium](https://docs.uppmax.uu.se/software/vscodium_on_bianca/)
     - [Matlab](https://docs.uppmax.uu.se/software/matlab/#the-matlab-module)
 
-## Discussion
+## Keypoints
 
-!!! question "Do you lack an IDE on Bianca?"
+??? question "Do you lack an IDE on Bianca?"
 
     - Give some input to us.
+
+## Summary
+
+!!! abstract "Keypoints"
+
+    - There are (at least) 4 IDEs instaleld on Bianca
+    - How to start the mare descibed in the documentation
+    - ThinLinc remote desktop is needed.
+    - Starting an interactive session on a compute node is recommended.
