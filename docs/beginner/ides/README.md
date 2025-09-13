@@ -82,46 +82,23 @@ We will practice and discuss one, and briefly talk about the others.
 Tool | Language(s) | Comment
 -----|-------------| -------
 RStudio| R         | Good for various working methods
+Matlab| Matlab      | Good for various working methods
 VSCodium |All       | Very versatile but a bit hard to work with
 Jupyter| Python (R, Julia) | More notebook like
 
 - Use the Zoom breakout room for your favourite IDE
 
-### Exercise 1: Start the favorite IDE
-
-???- info "Learning outcomes"
-
-    - Explore the UPPMAX documentation
-    - Start the favorite IDE on Bianca
-
-- Go to the UPPMAX documentation of the [IDEs on Bianca](http://docs.uppmax.uu.se/software/ides_on_bianca/)
-
-???- question "If you chose Jupyter"
-
-    You can skip the _venv_ step!
-
-    - If not done so earlier:
-
-    ```console
-    $ cd ~   # just 'cd' will work as well
-    $ ln -s /proj/sens2025560/ proj
-    ```
-
-    - Start jupyter from your $HOME folder
-    - Try to run the script `Test-01.ipynb` located in proj/workshop/Jupyter-demo/Test-01.ipynb
-    - You can browse in jupyter to a test notebook in proj/workshop/Jupyter-demo/Test-01.ipynb
-
-### Exercise 2: Understand IDEs on Bianca
+### Exercise 1: Understand IDEs on Bianca
 
 ???- info "Learning outcomes"
 
     - Explore the UPPMAX documentation
     - Understand why to use an IDE
     - Understand why not to use an IDE on Bianca
+    - Understand that a ThinLinc session is needed
     - Understand when to run an IDE on a login node
     - Understand when to use an interactive session
     - Understand how to find out an interactive session is active
-
 
 - Try to answer the questions below.
   Be generous in accepting you answer.
@@ -138,6 +115,12 @@ Jupyter| Python (R, Julia) | More notebook like
     i.e. running through code line-by-line and/or up/down
     the so-called call stack.
 
+???- question "Why use ThinLinc (web) when working with IDEs?"
+
+     - IDEs are by definition graphical tools and needs graphics libraries.
+     - SSH login to Bianca does not support graphics.
+     - Therefore you need the remote desktop. See [Which way to log in to Bianca](https://docs.uppmax.uu.se/getting_started/login_bianca/#which-way-to-log-in-to-bianca).
+
 ???- question "Why not always use an IDE?"
 
     Using an IDE on Bianca is cumbersome and
@@ -153,7 +136,7 @@ Jupyter| Python (R, Julia) | More notebook like
     you code use the login node. This only works if the IDE
     works fine on such limited computational resources.
 
-    !!! tip 
+    ???- tip 
 
         - Allocate at least 2 cores: ``... -n 2 ...``.
         - If you are working with large data sets, allocate 7 GB per core, like 8, to get 56 GB.
@@ -174,6 +157,24 @@ Jupyter| Python (R, Julia) | More notebook like
 
     - the login node has `[project]-bianca`, where `[project]` is the name of the project, e.g. `sens2025560`
     - the interactive node has `b[number]` in it, where `[number]` is the compute node number
+
+### Exercise 2: Start the favorite IDE
+
+???- info "Learning outcomes"
+
+    - Explore the UPPMAX documentation
+    - Start the favorite IDE on Bianca
+
+- Go to the UPPMAX documentation of the [IDEs on Bianca](http://docs.uppmax.uu.se/software/ides_on_bianca/)
+- If you think it is necessary, start an interactive session. [How was this done?](https://uppmax.github.io/bianca_workshops/beginner/slurm_intro/#procedure-for-interactive-jobs)
+- Start the IDE of your choice.
+
+??? tip "Answer"
+
+    - [Jupyter](https://docs.uppmax.uu.se/software/jupyter_on_bianca/)
+    - [RStudio](https://docs.uppmax.uu.se/software/rstudio_on_bianca/)
+    - [VSCodium](https://docs.uppmax.uu.se/software/vscodium_on_bianca/)
+    - [Matlab](https://docs.uppmax.uu.se/software/matlab/#the-matlab-module)
 
 ## Discussion
 
