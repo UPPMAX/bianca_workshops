@@ -86,7 +86,7 @@ Matlab| Matlab      | Good for various working methods
 VSCodium |All       | Very versatile but a bit hard to work with
 Jupyter| Python (R, Julia) | More notebook like
 
-- Use the Zoom breakout room for your favourite IDE
+- Use the Zoom breakout room for your favorite IDE
 
 ### Exercise 1: Understand IDEs on Bianca
 
@@ -117,9 +117,10 @@ Jupyter| Python (R, Julia) | More notebook like
 
 ???- question "Why use ThinLinc (web) when working with IDEs?"
 
-     - IDEs are by definition graphical tools and needs graphics libraries.
-     - SSH login to Bianca does not support graphics.
-     - Therefore you need the remote desktop. See [Which way to log in to Bianca](https://docs.uppmax.uu.se/getting_started/login_bianca/#which-way-to-log-in-to-bianca).
+    - IDEs are by definition graphical tools and needs graphics libraries.
+    - SSH login to Bianca does not support graphics.
+    - Therefore you need the remote desktop.
+        - See [Which way to log in to Bianca](https://docs.uppmax.uu.se/getting_started/login_bianca/#which-way-to-log-in-to-bianca).
 
 ???- question "Why not always use an IDE?"
 
@@ -136,7 +137,7 @@ Jupyter| Python (R, Julia) | More notebook like
     you code use the login node. This only works if the IDE
     works fine on such limited computational resources.
 
-    ???- tip 
+    ???- tip
 
         - Allocate at least 2 cores: ``... -n 2 ...``.
         - If you are working with large data sets, allocate 7 GB per core, like 8, to get 56 GB.
