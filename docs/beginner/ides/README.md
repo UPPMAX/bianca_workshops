@@ -75,13 +75,17 @@ There are three [IDEs on Bianca](http://docs.uppmax.uu.se/software/ides_on_bianc
 we can show: Jupyter, RStudio or VSCodium.
 We will practice and discuss one, and briefly talk about the others.
 
-
 ## Exercises
 
 ### Exercise 0: determine which IDE
 
-Determine which IDE(s) we'll practice in which way
-(e.g. all following the same sequence, or using simultaneous sessions).
+Tool | Language(s) | Comment
+-----|-------------| -------
+RStudio| R         | Good for various working methods
+VSCodium |All       | Very versatile but a bit hard to work with
+Jupyter| Python (R, Julia) | More notebook like
+
+- Use the Zoom breakout room for your favourite IDE
 
 ### Exercise 1: Start the favorite IDE
 
@@ -91,9 +95,6 @@ Determine which IDE(s) we'll practice in which way
     - Start the favorite IDE on Bianca
 
 - Go to the UPPMAX documentation of the [IDEs on Bianca](http://docs.uppmax.uu.se/software/ides_on_bianca/)
-- Get the IDE that got the most votes to run on Bianca, by following
-  its documentation. If you really want to run another IDE,
-  you may do so! When done, do exercise 2.
 
 ???- question "If you chose Jupyter"
 
@@ -107,8 +108,8 @@ Determine which IDE(s) we'll practice in which way
     ```
 
     - Start jupyter from your $HOME folder
-    - Try to run the script `Test-01.ipynb` located in /proj/workshop/Jupyter-demo/Test-01.ipynb
-    - You can browse in jupyter to a test notebook in /proj/workshop/Jupyter-demo/Test-01.ipynb
+    - Try to run the script `Test-01.ipynb` located in proj/workshop/Jupyter-demo/Test-01.ipynb
+    - You can browse in jupyter to a test notebook in proj/workshop/Jupyter-demo/Test-01.ipynb
 
 ### Exercise 2: Understand IDEs on Bianca
 
@@ -152,6 +153,11 @@ Determine which IDE(s) we'll practice in which way
     you code use the login node. This only works if the IDE
     works fine on such limited computational resources.
 
+    !!! tip 
+
+        - Allocate at least 2 cores: ``... -n 2 ...``.
+        - If you are working with large data sets, allocate 7 GB per core, like 8, to get 56 GB.
+
 ???- question "Why not always use an interactive session?"
 
     Because it is an inefficient use of your core hours.
@@ -168,3 +174,9 @@ Determine which IDE(s) we'll practice in which way
 
     - the login node has `[project]-bianca`, where `[project]` is the name of the project, e.g. `sens2025560`
     - the interactive node has `b[number]` in it, where `[number]` is the compute node number
+
+## Discussion
+
+!!! question "Do you lack an IDE on Bianca?"
+
+    - Give some input to us.
