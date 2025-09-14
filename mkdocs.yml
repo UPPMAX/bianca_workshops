@@ -18,7 +18,8 @@ nav:
       - Create an exectable script: beginner/create_script.md
       - Module system: beginner/modules.md
       - Transferring files to/from Bianca using a graphical tool: beginner/file_transfer_using_gui.md
-      - SLURM:  beginner/slurm_intro.md
+      - Slurm:  beginner/slurm_intro.md
+      - Slurm new:  beginner/slurm_intro_new.md
       - IDEs: beginner/ides/README.md
       - Summary: beginner/summary.md
       - Evaluation: beginner/evaluation.md
