@@ -41,21 +41,22 @@ tags:
 
 ## What & Why
 
-- You are already on the login node. Heavy work must run on compute nodes. 
+- You are already on the login node. Heavy work must run on compute nodes.
 - Slurm books (reserves) cores + time for you so jobs from many researchers can share the cluster fairly.
 
 ### Mental Model: Hardware
+
 - Login node: lightweight command & submission point (do not run heavy jobs here)
 - Compute nodes: where your jobs actually run
 - Node: a physical machine; Core: one processing unit within a node
 
 ???- info  "Hardware Diagram"
 
-    #### Overview:
+    #### Overview
 
     ![nodes principle](./img/nodes.png)
 
-    #### Inside a node:
+    #### Inside a node
 
     ![node principle](./img/node.png)
 
@@ -63,6 +64,7 @@ tags:
 Glossary (quick): Node, Core, Partition, Job, Wall time, Core-hours.
 
 ### Core concepts
+
 - Interactive session = temporary shell on a compute node (fast feedback)
 - Batch job = script submitted; runs unattended; releases resources when done
 - Resource request = (project, partition, cores, wall time)
@@ -109,17 +111,21 @@ Keep modules: load them INSIDE the interactive session or inside the batch scrip
 ## Hands-on A: Interactive
 
 1. Start:
-   ```
-   interactive -A sens2025560 -p core -n 2 -t 02:00:00
-   ```
-(If waiting PENDING: observe later with `squeue --me` or `jobinfo`.)
+   
+    ```
+    interactive -A sens2025560 -p core -n 2 -t 02:00:00
+    ```
+
+    (If waiting PENDING: observe later with `squeue --me` or `jobinfo`.)
 
 2. Inside node:
-   ```
-   hostname
-   module load bioinfo-tools
-   exit
-   ```
+    
+    ```
+    hostname
+    module load bioinfo-tools
+    exit
+    ```
+
 3. Confirm you are back on login node (`hostname` changes).
 
 
@@ -143,20 +149,24 @@ echo "Done."
 ```
 
 Submit:
+
 ```
 sbatch hello_job.sh
 squeue --me
 ```
 
 After it finishes:
+
 ```
 cat hello_<jobid>.out
 ```
 
 Try a re-submit with 2 cores overriding script:
+
 ```
 sbatch -n 2 hello_job.sh
 ```
+
 (Add an `srun hostname` line to see per-task output.)
 
 ## Monitoring & Cancellation
@@ -172,12 +182,15 @@ sbatch -n 2 hello_job.sh
 
 Formula: core-hours = cores x (requested time if job runs full time; charged up to what you reserve).  
 Examples:
+
 - 1 core x 2 h = 2 core-h
 - 8 cores x 0.5 h = 4 core-h
+
 Interactive idle problem: reserving 4 cores for 8 h but active use 1 h ⇒ charged 32 vs useful 4 core-h.
 
 Mini Exercise:
 Choose minimal sufficient request for a script expected to run 12 min on 1 core:
+
 - Bad: `-n 4 -t 02:00:00` (too much resources requested)
 - Good: `-n 1 -t 00:20:00` (book twice the hours)
 
@@ -223,10 +236,12 @@ Optional (read later):
 ...existing code...
 
 ## EXTRA: Advanced Workflow (Optional, not in 45 min)
+
 ... move existing GATK/snpEff example here unchanged ...
 
 ...existing code...
 
 ## Links
+
 (Keep existing links list)
 ...existing code...

@@ -390,3 +390,5 @@ sif
 cd
 todo's
 exe
+JobArrayTaskLimit
+ReqNodeNotAvail
