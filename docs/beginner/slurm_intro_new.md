@@ -111,22 +111,22 @@ Keep modules: load them INSIDE the interactive session or inside the batch scrip
 ## Hands-on A: Interactive
 
 1. Start:
-   
-    ```
+
+    ```cmd
     interactive -A sens2025560 -p core -n 2 -t 02:00:00
     ```
 
     (If waiting PENDING: observe later with `squeue --me` or `jobinfo`.)
 
-2. Inside node:
+1. Inside node:
     
-    ```
+    ```cmd
     hostname
     module load bioinfo-tools
     exit
     ```
 
-3. Confirm you are back on login node (`hostname` changes).
+1. Confirm you are back on login node (`hostname` changes).
 
 
 ## Hands-on B: First Batch Job
@@ -150,20 +150,20 @@ echo "Done."
 
 Submit:
 
-```
+```cmd
 sbatch hello_job.sh
 squeue --me
 ```
 
 After it finishes:
 
-```
+```cmd
 cat hello_<jobid>.out
 ```
 
 Try a re-submit with 2 cores overriding script:
 
-```
+```cmd
 sbatch -n 2 hello_job.sh
 ```
 
@@ -197,11 +197,12 @@ Choose minimal sufficient request for a script expected to run 12 min on 1 core:
 ## Scenario Quiz
 
 Decide Interactive or Batch + minimal flags:
+
 1. 6 h genome alignment (no interaction)
-2. Rapid R plotting tuning (needs live edits)
-3. 200 independent 1 min QC runs
-4. GUI RStudio exploratory stats (≤4 h)
-5. Pipeline already validated (repeat weekly)
+1. Rapid R plotting tuning (needs live edits)
+1. 200 independent 1 min QC runs
+1. GUI RStudio exploratory stats (≤4 h)
+1. Pipeline already validated (repeat weekly)
 
 (Poll)
 
