@@ -11,7 +11,7 @@ tags:
   - core
 ---
 
-# Introduction to SLURM
+# Introduction to Slurm
 
 !!! info "Learning outcomes"
 
