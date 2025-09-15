@@ -50,3 +50,9 @@ that is free to use for researchers in Sweden.
 - [The evaluation](evaluation.md)
 - [The course schedule](schedule.md)
 - [The course dates](course_dates.md)
+
+## Exercises
+
+### Exercise 1: what will we learn?
+
+Please fill in [the prevaluation form](https://docs.google.com/forms/d/e/1FAIpQLSdq3WeX9gSTSVt8e4UsdytMgzBrk5Inn4B5DNT05D7hQRy6qw/viewform?usp=header).
