@@ -234,7 +234,7 @@ Optional (read later):
     ???- tip "Answer"
 
         - edit a file using you preferred editor, named `my_bio_worksflow.sh`, for example, with the content
-        - alternatively copy the `/proj/sens2025560/workshop/slurm/my_bio_workflow.sh` file and modify it           
+        - alternatively copy the `/proj/sens2025560/workshop/slurm/my_bio_workflow.sh` file and modify it
             - `cd ~`
             - `cp /proj/sens2025560/workshop/slurm/my_bio_workflow.sh .`
         
