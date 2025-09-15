@@ -8,7 +8,7 @@
 - [Analysis script](analyse.R)
 - [Success score](success_score.txt): 88%
 - [Evaluation results](evaluation_result.csv)
-- [Any feedback results](any_feedback.cvs)
+- [Any feedback results](any_feedback.csv)
 
 ## Confidences
 
