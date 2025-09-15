@@ -12,6 +12,7 @@ tags:
 ---
 
 # Introduction to Slurm
+
 !!! info "Learning outcomes"
 
     - Reach compute nodes (Hands-on A & B)
@@ -135,7 +136,7 @@ Create file `hello_job.sh`:
 ```bash
 #!/bin/bash -l
 #SBATCH -A sens2025560
-#SBATCH -p devcore
+#SBATCH -p core
 #SBATCH -n 1
 #SBATCH -t 00:02:00
 #SBATCH -J hello
@@ -233,8 +234,7 @@ Optional (read later):
     ???- tip "Answer"
 
         - edit a file using you preferred editor, named `my_bio_worksflow.sh`, for example, with the content
-        - alternatively copy the `/proj/sens2025560/workshop/slurm/my_bio_workflow.sh` file and modify it
-           
+        - alternatively copy the `/proj/sens2025560/workshop/slurm/my_bio_workflow.sh` file and modify it           
             - `cd ~`
             - `cp /proj/sens2025560/workshop/slurm/my_bio_workflow.sh .`
         
@@ -323,20 +323,20 @@ Optional (read later):
 ???- question "How many cores in a compute/login node?"
 
     - On a compute node, there are 16 cores in one node. But effectively, you can use only 15 cores of a node.
-    - On a login node, there are 2 cores which are shared among all the project members. 
+    - On a login node, there are 2 cores which are shared among all the project members.
 
 ???- question "How much memory in a compute/login node?"
 
-    - On a compute node, you have 128, 256, 512 GB variants. By default, you get 128 GB unless you specify using `-C` flag, like `-C mem256GB` 
+    - On a compute node, you have 128, 256, 512 GB variants. By default, you get 128 GB unless you specify using `-C` flag, like `-C mem256GB`
     - On a login node, you have 16GB memory only.
 
 ???- question "Do you have GPUs?"
 
-    - Bianca has 10 nodes with 2xA100 40GB GPUs per node. 
+    - Bianca has 10 nodes with 2xA100 40GB GPUs per node.
     - Use `-C gpu` flag to request a gpu node. Use `-C gpu --gpus_per_node=1` if you only want to use one.
     - GPU nodes have 256 GB memory.
 
 ???- question "What is the maximum limit my job can run for?"
 
     - Job walltime for a job on interactive session is limited to 12 hrs and on compute node to 10 days.
-    - Send us a ticket, with justification, via Supr if you like to extend your job beyond this limit. 
+    - Send us a ticket, with justification, via Supr if you like to extend your job beyond this limit.
