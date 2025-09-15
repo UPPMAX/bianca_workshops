@@ -112,6 +112,7 @@ then answer these questions:
     which takes you to [ThinLinc](https://docs.uppmax.uu.se/software/thinlinc/),
     the program that is the workhorse behind the website
 
+
 - Copy-paste text from local computer to your remote desktop
 
 ???- question "Answer"
@@ -130,6 +131,7 @@ then answer these questions:
 
     ![Do a regular paste in a text editor](./img/copied_to_text_editor.png)
 
+
 - Copy-paste text from your remote desktop to your local computer
 
     In the remote desktop environment, press `CTRL + C` to copy
@@ -141,6 +143,7 @@ then answer these questions:
 
     Then, on your local computer, press `CTRL + V` to paste
     the text from your clipboard to a text editor
+
 
 ### Exercise 2: starting a terminal
 
