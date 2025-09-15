@@ -9,7 +9,7 @@ tags:
 
     They are at [the 'Evaluations' (plural) page](../evaluations/README.md).
 
-- [Form: any feedback during the day](https://docs.google.com/forms/d/e/1FAIpQLSfD7RTkuJel4ULcCeD7dj2uyx6a2ayT8-7zYnVjdd3VAnTaFw/viewform?usp=header)
+- `Form: any feedback during the day`
 
 ???- question "For teachers: what is in that form?"
 
@@ -23,7 +23,7 @@ tags:
 
     Any feedback?
 
-- [Form: evaluation questions](https://docs.google.com/forms/d/e/1FAIpQLSeg42FQll9yZuqOszYJGyH0diNfAuFdYQd6x0RP-Rwtfsa9yA/viewform?usp=header) (at the end of the day)
+- `Form: evaluation questions` (at the end of the day)
 
 ???- question "For teachers: what is in that form?"
 
