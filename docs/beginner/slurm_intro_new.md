@@ -151,6 +151,7 @@ echo "Done."
 Submit:
 
 ```cmd
+chmod a+x hello_job.sh
 sbatch hello_job.sh
 squeue --me
 ```
@@ -258,10 +259,10 @@ Optional (read later):
         module load samtools/1.17
 
         # copy and example BAM file
-        cp -a /proj/sens2025560/workshop/data/ERR1252289.subset.bam .
+        cp -a /proj/sens2025560/workshop/data/Col0_C1.100k.bam .
 
         # index the BAM file
-        samtools index ERR1252289.subset.bam
+        samtools index Col0_C1.100k.bam
 
         # load the GATK module
         module load GATK/4.3.0.0
@@ -270,15 +271,15 @@ Optional (read later):
         ln -s /sw/data/iGenomes/Homo_sapiens/UCSC/hg38/Sequence/WholeGenomeFasta/genome.* .
 
         # create a VCF containing inferred variants
-        gatk HaplotypeCaller --reference genome.fa --input ERR1252289.subset.bam --intervals chr1:100300000-100800000 --output ERR1252289.subset.vcf
+        gatk HaplotypeCaller --reference genome.fa --input Col0_C1.100k.bam --intervals chr1:100300000-100800000 --output Col0_C1.100k.vcf
 
         # use snpEFF to annotate variants
         module load snpEff/5.1
-        java -jar $SNPEFF_ROOT/snpEff.jar eff hg38 ERR1252289.subset.vcf > ERR1252289.subset.snpEff.vcf
+        java -jar $SNPEFF_ROOT/snpEff.jar eff hg38 Col0_C1.100k.vcf > Col0_C1.100k.snpEff.vcf
 
         # compress the annotated VCF and index it
-        bgzip ERR1252289.subset.snpEff.vcf
-        tabix -p vcf ERR1252289.subset.snpEff.vcf.gz
+        bgzip Col0_C1.100k.snpEff.vcf
+        tabix -p vcf Col0_C1.100k.snpEff.vcf.gz
         ```
 
         - make the job script executable
