@@ -279,12 +279,19 @@ its name will be useful to know:
 
     ![A file opened with a text editor](./img/opened_file.png)
 
+    Another way is to start `Nedit`
+    from the applications menu.
+
+    <!-- TODO: add screenshot -->
+
 (Optional) To be able to search the web for questions on this graphical text editor,
 its name will be useful to know:
 
 - (optional) What is the name of the graphical text editor?
 
 ???- question "Answer"
+
+    <!-- TODO: now it is called emacs -->
 
     The visual text editor is called 'gedit'.
 
