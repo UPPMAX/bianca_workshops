@@ -6,14 +6,14 @@ Learning outcomes of this course:
 - :rocket: I can log in to the Bianca console environment using SSH
 - I can navigate to the wharf folder using a graphical file manager
 - I can manage my files and folders using a graphical file manager
-- :rocket: I can navigate to the wharf folder using a terminal
+- :rocket: I can navigate to the `wharf` folder using a terminal
 - :rocket: I can manage my files and folders using a terminal
 - I can create a minimal executable bash script
 - I can use modules
 - I can transfer files to/from Bianca using a graphical tool
 - I can start an interactive session
 - I can submit jobs to the scheduler
-- I understand the legal aspects of sensitive data
+- I can start an IDE
 
 The items with :rocket: are optional.
 
