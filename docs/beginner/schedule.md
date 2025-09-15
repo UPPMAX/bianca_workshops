@@ -24,7 +24,7 @@ When  | Who  | What
 13:55 | .    | Break
 14:05 | J    | [Slurm](slurm_intro_new.md)
 14:55 | .    | Break
-15:10 | B    | [IDEs](ides.md)
+15:10 | B    | [IDEs](ides/README.md))
 15:45 | R    | [Summary](summary.md) and anonymous [evaluation](evaluation.md)
 16:00 | .    | Done!
 
