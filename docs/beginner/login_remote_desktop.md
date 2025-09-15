@@ -66,7 +66,8 @@ Using the console environment                        |Within SUNET|SSH client|Co
 <!-- markdownlint-enable MD013 -->
 
 First, we focus on the environment that most of us are familiar with:
-a (remote) desktop environment.
+a (remote) desktop environment. However, it is the other/console environment
+that (almost) always work.
 
 ## Exercises
 
