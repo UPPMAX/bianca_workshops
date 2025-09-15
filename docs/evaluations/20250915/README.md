@@ -20,6 +20,65 @@
 
 ![Confidences per question](confidences_per_question.png)
 
+## Say something positive about Björn
+
+- very calm and knowledgeable
+- great guy!
+- organized, helped with login before the seminar
+
+## Say something about Björn he can improve
+
+[no feedback]
+
+## Say something positive about Jayant
+
+- very calm and loved the mentimeter
+- great guy!
+- organized and helpful
+
+## Say something about Jayant he can improve
+
+[no feedback]
+
+## Say something positive about Pavlin
+
+- Loved his transparency about the complexity of the commands
+- clear instructions!
+- organized and helpful
+
+## Say something about Pavlin he can improve
+
+[no feedback]
+
+## Say something positive about Richèl
+
+- Loved his energy!
+- Very structured and clear, which is highly appreciated.
+  Good with the "cold calls".
+- Such a positive person and very good at getting students to teach each other
+- organized and helpful
+
+## Say something about Richèl he can improve
+
+[no feedback]
+
+## Any other feedback?
+
+- Perhaps provide the respective Bianca workshop links before the course
+  (unless you have already done so and I missed it...),
+  so one can get a bit more familiar with some terms?
+  Every teacher did a good job, so no individual feedback here.
+  It was rather the topics that were challenging at different levels,
+  depending on the existing (or non-existing) background knowledge
+  that made it easier or difficult to follow
+  (hence, perhaps "force" the course participants to complete
+  some reading-up before the course, or make them watch certain videos, etc.,
+  that you feel are important for understanding everything).
+  Could be done in the Canvas platform for example where you can also see
+  if someone has not done the respective task. 
+- Gentle introduction to the topics, good pace, good selection of topics.
+- The course is super helpful and thanks to all the instructors!
+
 ## [Any feedback](any_feedback.cvs)
 
 Love the team's energy and teaching styles,
