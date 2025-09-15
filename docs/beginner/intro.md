@@ -40,9 +40,9 @@ Welcome!
 
 ## Why use Bianca?
 
-Bianca is the HPC cluster
-to work on sensitive data
-that is free to use for researchers in Sweden.
+Bianca is the only HPC cluster
+for working on sensitive data
+that is free to use for all researchers in Sweden.
 
 ## Course overview
 
