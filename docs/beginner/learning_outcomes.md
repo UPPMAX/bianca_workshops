@@ -20,6 +20,6 @@ these.
 - I can transfer files to/from Bianca using a graphical tool
 - I can start an interactive session
 - I can submit jobs to the scheduler
-- I can start RStudio
+- I can start an IDE
 
 The items with :rocket: are optional.
