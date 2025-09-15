@@ -71,9 +71,11 @@ there are superior ways to develop code on Bianca,
 as -for example- taught in the
 [UPPMAX 'Programming Formalisms' course](https://uppmax.github.io/programming_formalisms/learning_outcomes/).
 
-There are three [IDEs on Bianca](http://docs.uppmax.uu.se/software/ides_on_bianca/)
-we can show: Jupyter, RStudio or VSCodium.
-We will practice and discuss one, and briefly talk about the others.
+There are four [IDEs on Bianca](http://docs.uppmax.uu.se/software/ides_on_bianca/)
+
+- Jupyter, RStudio, VSCodium, MATLAB
+    
+You will choose one and dig into that one.
 
 ## Exercises
 
@@ -82,9 +84,11 @@ We will practice and discuss one, and briefly talk about the others.
 Tool | Language(s) | Comment
 -----|-------------| -------
 RStudio| R         | Good for various working methods
-Matlab| Matlab      | Good for various working methods
-VSCodium |All       | Very versatile but a bit hard to work with
+MATLAB| MATLAB      | Good for various working methods
+VSCodium | All      | Very versatile but a bit difficult to work with
 Jupyter| Python (R, Julia) | More notebook like
+
+- If you are not used to any of these I recommend RStudio.
 
 - Use the Zoom breakout room for your favorite IDE
 
