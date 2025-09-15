@@ -74,7 +74,7 @@ as -for example- taught in the
 There are four [IDEs on Bianca](http://docs.uppmax.uu.se/software/ides_on_bianca/)
 
 - Jupyter, RStudio, VSCodium, MATLAB
-    
+
 You will choose one and dig into that one.
 
 ## Exercises

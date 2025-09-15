@@ -119,7 +119,7 @@ Keep modules: load them INSIDE the interactive session or inside the batch scrip
     (If waiting PENDING: observe later with `squeue --me` or `jobinfo`.)
 
 1. Inside node:
-    
+
     ```cmd
     hostname
     module load bioinfo-tools
