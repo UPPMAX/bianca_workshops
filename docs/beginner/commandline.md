@@ -87,9 +87,9 @@ man ls
 ```
 
 These command give the help pages about the programs `man`, `cd` and `ls` respectively.
+`man` does not need an internet connection, hence works perfectly well on Bianca.
 
 Press `q` (short for 'quit') to exit `man`
-
 
 ### Extra: Work with directories
 
