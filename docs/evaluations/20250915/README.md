@@ -91,3 +91,15 @@ and jayant was very calm and knowledgeable.
 Love that he gave a summary of the course progress
 before he started his section too.
 
+## Pre-post analysis
+
+- [analyse_pre_post.R](analyse_pre_post.R)
+- [stats.md](stats.md)
+
+![All confidences pre-post](all_confidences_pre_post.png)
+
+![Average confidences per question pre-post](average_confidences_per_question_pre_post.png)
+
+![Confidences per question pre-post as a boxplot](confidences_per_question_boxplot_pre_post.png)
+
+![Confidences per question pre-post](confidences_per_question_pre_post.png)

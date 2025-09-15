@@ -1,6 +1,6 @@
 #!/bin/env Rscript
-prevaluation_file <- "survey_start.csv"
-evaluation_file <- "survey_end.csv"
+prevaluation_file <- "prevaluation_results.csv"
+evaluation_file <- "evaluation_result.csv"
 alpha_value <- 0.05
 
 testthat::expect_true(file.exists(prevaluation_file))
@@ -14,17 +14,25 @@ other_feedback_post <- t_post_raw$`Any other feedback?`
 t_post_raw$`Any other feedback?` <- NULL
 t_pre_raw$Timestamp <- NULL
 t_post_raw$Timestamp <- NULL
+t_post_raw$`Say something positive about Björn:` <- NULL
+t_post_raw$`Say something about Björn he can improve:` <- NULL
+t_post_raw$`Say something positive about Jayant:` <- NULL
+t_post_raw$`Say something about Jayant he can improve:` <- NULL
+t_post_raw$`Say something positive about Pavlin:` <- NULL
+t_post_raw$`Say something about Pavlin he can improve:` <- NULL
+t_post_raw$`Say something positive about Richèl:` <- NULL
+t_post_raw$`Say something about Richèl he can improve:` <- NULL
 testthat::expect_true(all(names(t_pre_raw) == names(t_post_raw)))
 
 #' Shorten the names of the columns
 shorten_col_names <- function(t) {
   questions <- stringr::str_remove(
     stringr::str_remove(
-      names(t), 
-      "Give you confidence levels of the following statements below: \\["),
+      names(t),
+      "Give you confidence levels of the following statements: \\["),
     "\\]"
   )
-  
+
   names(t) <- questions
   t
 }
@@ -54,9 +62,9 @@ plot_histrogram <- function(t_tidy) {
   n_individuals <- length(unique(t_tidy$i))
   n_ratings <- length(t_tidy$answer[!is.na(t_tidy$answer)])
   mean_confidence <- mean(t_tidy$answer[!is.na(t_tidy$answer)])
-  
+
   ggplot2::ggplot(t_tidy, ggplot2::aes(x = answer)) +
-    ggplot2::geom_density() + 
+    ggplot2::geom_density() +
     ggplot2::labs(
       title = "All confidences",
       caption = paste0(
@@ -65,7 +73,7 @@ plot_histrogram <- function(t_tidy) {
         "Mean confidence: ", round(mean_confidence, digits = 2)
       )
     )
-  
+
 }
 
 plot_histrogram(t_pre)
@@ -78,9 +86,9 @@ ks_test_p_value <- ks_test$p.value
 ks_test_is_different <- ks_test$p.value < alpha_value
 
 ggplot2::ggplot(t, ggplot2::aes(x = answer, fill = when)) +
-  ggplot2::geom_density(alpha = 0.5) + 
-  ggplot2::geom_vline(xintercept = mean_pre, color = "skyblue", lty = "dashed") + 
-  ggplot2::geom_vline(xintercept = mean_post, color = "salmon", lty = "dashed") + 
+  ggplot2::geom_density(alpha = 0.5) +
+  ggplot2::geom_vline(xintercept = mean_pre, color = "skyblue", lty = "dashed") +
+  ggplot2::geom_vline(xintercept = mean_post, color = "salmon", lty = "dashed") +
   ggplot2::labs(
     title = "All confidences",
     caption = paste0(
@@ -95,7 +103,7 @@ ggplot2::ggplot(t, ggplot2::aes(x = answer, fill = when)) +
 ggplot2::ggsave(filename = "all_confidences_pre_post.png", width = 6, height = 2)
 
 ggplot2::ggplot(t, ggplot2::aes(x = answer, fill = when)) +
-  ggplot2::geom_density(alpha = 0.5) + 
+  ggplot2::geom_density(alpha = 0.5) +
   ggplot2::facet_grid(rows = "question", scales = "free_y") +
   ggplot2::theme(
     strip.text.y = ggplot2::element_text(angle = 0),
@@ -110,9 +118,9 @@ ggplot2::ggsave(filename = "confidences_per_question_pre_post.png", width = 6, h
 names(t)
 
 ggplot2::ggplot(
-  t, 
+  t,
   ggplot2::aes(x = question, y = answer, fill = when)) +
-  ggplot2::geom_boxplot(position = "dodge") + 
+  ggplot2::geom_boxplot(position = "dodge") +
   ggplot2::theme(
     axis.text.x = ggplot2::element_text(angle = 90, vjust = 0.5, hjust = 1),
     legend.position = "none"
@@ -125,9 +133,9 @@ ggplot2::ggsave(filename = "confidences_per_question_boxplot_pre_post.png", widt
 # Get the average
 t_averages <- t |> dplyr::group_by(question, when) |> dplyr::summarise(mean = mean(answer))
 ggplot2::ggplot(
-  t_averages, 
+  t_averages,
   ggplot2::aes(x = question, y = mean, fill = when)) +
-  ggplot2::geom_col(position = "dodge") + 
+  ggplot2::geom_col(position = "dodge") +
   ggplot2::theme(
     axis.text.x = ggplot2::element_text(angle = 90, vjust = 0.5, hjust = 1),
     legend.position = "none"
