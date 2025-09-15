@@ -215,7 +215,8 @@ it is the folder where you run your project in.
 It can be found at `/proj/[project_code]`,
 where `[project_code]` is the project code.
 
-- Navigate to the project folder of this course
+- Navigate to the project folder of this course.
+  Ignore `cygnus` (whatever it is): you do not need it today.
 
 ???- question "Don't know the project code?"
 
