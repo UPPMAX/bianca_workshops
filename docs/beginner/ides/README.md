@@ -15,7 +15,7 @@ tags:
     - Find information in the UPPMAX documentation about IDEs on Bianca
     - Give a reasonable definition of what an IDE is
     - Remember that RStudio, Jupyter, VSCodium and MATLAB are IDEs that can be run on Bianca
-    - Can run the voted-for IDE on Bianca
+    - Can run the favorite IDE on Bianca
     - (optional) Can give a reason why to use an IDE
     - (optional) Can give a reason why not to use an IDE on Bianca
     - (optional) Can give a reason why not to run an IDE on a login node
@@ -43,10 +43,10 @@ tags:
       dateFormat X
       axisFormat %s
       Introduction: intro, 0, 5s
-      Vote on whcih IDE: vote, after intro, 5s
-      Exercise with winning IDE: crit, exercise, after vote, 20s
-      Feedback: feedback, after exercise, 10s
-      Monologue other 2 IDEs: monologue, after feedback, 5s
+      Decide on IDE and create BO:, after intro, 5s
+      Exercise in IDE-specific rooms: exercise, 15s
+      Feedback: feedback, after exercise, 3s
+      Monologue: monologue, after feedback, 2s
       Break: milestone, after monologue
     ```
 
