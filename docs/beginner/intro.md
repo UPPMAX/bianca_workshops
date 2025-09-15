@@ -8,15 +8,17 @@ tags:
 
 !!!- info "Learning outcomes"
 
-    - To have heard the setup of this course
     - To have heard the reasons for using Bianca
+    - To have read the learning outcomes of this course
+    - To have heard the setup of this course
 
 ???- question "For teachers"
 
     Teaching goals are:
 
-    - Learners have heard the setup of this course
     - Learners have heard the reasons for using Bianca
+    - Learners have read the learning outcomes of this course
+    - Learners have heard the setup of this course
 
     Prior questions:
 
