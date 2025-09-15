@@ -20,7 +20,11 @@ names(t) <- new_names
 t$i <- seq(1, nrow(t))
 
 
-t_tidy <- tidyr::pivot_longer(t, cols = starts_with("I", ignore.case = FALSE))
+
+t_tidy <- tidyr::pivot_longer(
+  t |> dplyr::select(starts_with("I")),
+  cols = starts_with("I", ignore.case = FALSE)
+)
 names(t_tidy)
 # No idea why 'starts_with("I", ignore.case = FALSE)' does not work today
 #t_tidy$`Any other feedback?` <- NULL
@@ -73,20 +77,9 @@ ggplot2::ggplot(average_confidences, ggplot2::aes(y = question, x = mean)) +
 
 ggplot2::ggsave(filename = "average_confidences_per_question.png", width = 6, height = 7)
 
+# All sessions were taught
 t_sessions_taught <- c(
-  "I can log in to the Bianca remote desktop using the website",
-  "I can log in to the Bianca console environment using SSH",
-  # "I can log in to Bianca via Rackham",
-  "I can navigate to the wharf folder using a graphical file manager",
-  "I can manage my files and folders using a graphical file manager",
-  "I can navigate to the wharf folder using a terminal",
-  "I can manage my files and folders using a terminal",
-  "I can create a minimal executable bash script",
-  "I can use modules",
-  "I can transfer files to/from Bianca using FileZilla",
-  "I can start an interactive session",
-  "I can submit jobs to the scheduler",
-  "I understand the legal aspects of sensitive data"
+  unique(t_tidy$question)
 )
 
 testthat::expect_true(all(t_sessions_taught %in% unique(t_tidy$question)))
