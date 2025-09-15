@@ -134,6 +134,8 @@ then answer these questions:
 
 - Copy-paste text from your remote desktop to your local computer
 
+???- question "Answer"
+
     In the remote desktop environment, press `CTRL + C` to copy
     the selected text to the remote desktop's clipboard.
 
