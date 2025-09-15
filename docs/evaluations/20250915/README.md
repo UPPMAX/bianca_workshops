@@ -7,7 +7,8 @@
 ## Any feedback
 
 Love the team's energy and teaching styles,
-it made it easier to follow even though there were different teaching styles as well.
+it made it easier to follow
+even though there were different teaching styles as well.
 
 Richèl was a good energetic anchor and interactive teacher,
 Pavlin was a transparent teacher that encouraged extra-curricular knowledge,
