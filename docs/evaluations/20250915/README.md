@@ -9,7 +9,7 @@
 - [Success score](success_score.txt): 88%
 - [Evaluation results](evaluation_result.csv)
 - [Any feedback results](any_feedback.csv)
-- [Reflection by Richel](../../evaluations/20250915/20250915_richel.md)
+- [Reflection by Richel](../../reflections/20250915/20250915_richel.md)
 
 ## Confidences
 
