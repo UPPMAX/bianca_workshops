@@ -8,7 +8,7 @@ Learning outcomes of this course:
 - I can manage my files and folders using a graphical file manager
 - :rocket: I can navigate to the `wharf` folder using a terminal
 - :rocket: I can manage my files and folders using a terminal
-- I can create a minimal executable bash script
+- I can create a Bash script
 - I can use modules
 - I can transfer files to/from Bianca using a graphical tool
 - I can start an interactive session

@@ -8,38 +8,24 @@ tags:
 
 !!! info "Objectives"
 
-    - Create an executable bash script
+    - Create a Bash script by copy-pasting
+    - Run a Bash script
 
 ???- info "Notes for teachers"
 
     Teaching goals:
 
-    - The learners demonstrate they can create an executable script
-
-    Schedule:
-
-    ```mermaid
-    gantt
-      title Lesson plan Command line
-      dateFormat X
-      axisFormat %s
-      Prior knowledge: prior, 0, 5s
-      Theory: theory, after prior, 5s
-      Exercises: crit, exercise, after theory, 25s
-      Feedback: feedback, after exercise, 10s
-    ```
+    - Learners can create a Bash script by copy-pasting
+    - Learners can run a Bash script
 
     Prior:
 
     - What is a script?
-    - What is a scripting language?
-    - What is an executable script?
-    - Why use executable scripts?
 
     Feedback:
 
     - What is a script?
-    - When would you use an executable script?
+    - When would you use a script?
 
 ## Why use scripts?
 
@@ -51,13 +37,6 @@ you can put these in a file,
 with the goal of automatic and/or sharing your work.
 
 ## Procedure
-
-Creating an executable script has two steps:
-
-- Create a script
-- Allow the script to execute
-
-Both steps are typically done on Bianca, in any folder.
 
 As an example, from a terminal on Bianca,
 we create a script, called `do_it.sh`:
@@ -95,22 +74,16 @@ Save and close `nano`.
   press enter
 - Use `CTRL-X` to exit
 
-Use [chmod](https://en.wikipedia.org/wiki/Chmod) to make the file executable:
+You can run the script with:
 
 ```bash
-chmod +x do_it.sh
+bash do_it.sh
 ```
 
-- `+x` can be read as: 'add the right to execute'
-
-!!! info "Create read-only files"
-    If you want to protect your data from being modified accidentally,
-    `chmod` can create read-only files,
-    by removing the writing rights using `chmod -w`.
 
 ## Exercises
 
-### Exercise 1: create an executable script
+### Exercise 1: create a script
 
 - On Bianca, create a file called `do_it.sh` using `nano`
 
@@ -124,7 +97,8 @@ chmod +x do_it.sh
 
     Then do `CTRL + O` to save, `CTRL + X` to exit
 
-- Edit the file `do_it.sh` to have the content below:
+- Use **copy-paste** to edit the file `do_it.sh` to have the content below.
+  This script may be small, yours will likely not be, hence use a copy-paste
 
 ```bash
 #!/bin/bash
@@ -141,27 +115,11 @@ echo "Hello!"
 
     Then do `CTRL + O` to save, `CTRL + X` to exit
 
-- Make the script executable
-
-???- question "Answer"
-
-    Do:
-
-    ```bash
-    chmod +x ./do_it.sh
-    ```
-
 - Run the script
 
 ???- question "Answer"
 
     Run the script:
-
-    ```bash
-    ./do_it.sh
-    ```
-
-    Or, alternatively:
 
     ```bash
     bash do_it.sh
