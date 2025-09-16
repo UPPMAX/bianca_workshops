@@ -80,7 +80,7 @@
 - Gentle introduction to the topics, good pace, good selection of topics.
 - The course is super helpful and thanks to all the instructors!
 
-## [Any feedback](any_feedback.cvs)
+## [Any feedback](any_feedback.csv)
 
 Love the team's energy and teaching styles,
 it made it easier to follow
