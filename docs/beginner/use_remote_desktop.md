@@ -279,10 +279,16 @@ its name will be useful to know:
 
     ![A file opened with a text editor](./img/opened_file.png)
 
-    Another way is to start `Nedit`
-    from the applications menu.
+    Another way is to start `nedit`
+    from the applications menu:
 
-    <!-- TODO: add screenshot -->
+    ![Click 'Applications | Development | `nedit`'](img/bianca_applications_development_click_nedit.png)
+
+    > Click 'Applications | Development | `nedit`'
+
+    ![`nedit` on Bianca](img/nedit_on_bianca.png)
+
+    > `nedit` on Bianca
 
 (Optional) To be able to search the web for questions on this graphical text editor,
 its name will be useful to know:
@@ -291,23 +297,9 @@ its name will be useful to know:
 
 ???- question "Answer"
 
-    <!-- TODO: now it is called emacs -->
+    The default visual text editor is called 'emacs'.
 
-    The visual text editor is called 'gedit'.
-
-     You can see its name in the menu bar at the top:
-
-    ![A file opened with gedit](./img/opened_file.png)
-
-    You can also click on
-    [the hamburger button](https://en.wikipedia.org/wiki/Hamburger_button)
-    and click 'Help':
-
-    ![The gedit hamburger menu](./img/gedit_help_about.png)
-
-    This will show you the gedit about screen:
-
-    ![The gedit about screen](./img/gedit_about.png)
+    You can see its name in the menu bar at the top.
 
 - Save the file. There are multiple ways!
 
