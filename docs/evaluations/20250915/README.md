@@ -11,6 +11,12 @@
 - [Any feedback results](any_feedback.csv)
 - [Reflection by Richel](../../reflections/20250915/20250915_richel.md)
 
+!!! note "Analysis note"
+
+    One learner filled in zeroes at three later sessions at the end of
+    the day. We hypothesize this learner left earlier.
+    We modified the data to remove those zeroes.
+
 ## Confidences
 
 - [Average confidences as a table](average_confidences.csv)
@@ -76,7 +82,7 @@
   some reading-up before the course, or make them watch certain videos, etc.,
   that you feel are important for understanding everything).
   Could be done in the Canvas platform for example where you can also see
-  if someone has not done the respective task. 
+  if someone has not done the respective task.
 - Gentle introduction to the topics, good pace, good selection of topics.
 - The course is super helpful and thanks to all the instructors!
 
@@ -105,17 +111,18 @@ before he started his section too.
 
 ![Confidences per question pre-post](confidences_per_question_pre_post.png)
 
-question                                                          | mean_pre| mean_post|   p_value|different 
-------------------------------------------------------------------|---------|----------|----------|----------
-I can log in to the Bianca remote desktop using the website       |    2.625|     4.875| 0.0106845|TRUE
-I can log in to the Bianca console environment using SSH          |    3.500|     4.500| 0.6854435|FALSE     
-I can navigate to the wharf folder using a graphical file manager |    2.000|     4.875| 0.0101293|TRUE      
-I can manage my files and folders using a graphical file manager  |    1.375|     4.875| 0.0024739|TRUE      
-I can navigate to the wharf folder using a terminal               |    2.125|     4.500| 0.0412186|TRUE      
-I can manage my files and folders using a terminal                |    2.125|     4.375| 0.0342120|TRUE      
-I can create a minimal executable bash script                     |    2.250|     4.500| 0.0907979|FALSE     
-I can use modules                                                 |    2.375|     4.125| 0.1369613|FALSE     
-I can transfer files to/from Bianca using a graphical tool        |    1.250|     4.625| 0.0045563|TRUE      
-I can start an interactive session                                |    1.375|     4.125| 0.0255363|TRUE      
-I can submit jobs to the scheduler                                |    1.250|     3.875| 0.0310325|TRUE      
-I can start an IDE                                                |    0.750|     3.750| 0.0198831|TRUE      
+question                                                          | mean_pre| mean_post|   p_value|different
+------------------------------------------------------------------|--------:|---------:|---------:|:---------
+I can log in to the Bianca remote desktop using the website       |    2.625|  4.875000| 0.0106845|TRUE
+I can log in to the Bianca console environment using SSH          |    3.500|  4.500000| 0.6854435|FALSE
+I can navigate to the wharf folder using a graphical file manager |    2.000|  4.875000| 0.0101293|TRUE
+I can manage my files and folders using a graphical file manager  |    1.375|  4.875000| 0.0024739|TRUE
+I can navigate to the wharf folder using a terminal               |    2.125|  4.500000| 0.0412186|TRUE
+I can manage my files and folders using a terminal                |    2.125|  4.375000| 0.0342120|TRUE
+I can create a minimal executable bash script                     |    2.250|  4.500000| 0.0907979|FALSE
+I can use modules                                                 |    2.375|  4.125000| 0.1369613|FALSE
+I can transfer files to/from Bianca using a graphical tool        |    1.250|  4.625000| 0.0045563|TRUE
+I can start an interactive session                                |    1.375|  4.714286| 0.0056481|TRUE
+I can submit jobs to the scheduler                                |    1.250|  4.428571| 0.0074946|TRUE
+I can start an IDE                                                |    0.750|  4.285714| 0.0076924|TRUE
+
