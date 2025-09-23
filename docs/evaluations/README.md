@@ -15,7 +15,7 @@ Beginner    |B3        |[Evaluation](20240925/README.md)|78%
 Intermediate|I3        |[Evaluation](20241111/README.md)|66%
 Beginner    |B4        |[Evaluation](20250319/README.md)|85%
 Intermediate|I4        |[Evaluation](20250523/README.md)|62%
-Beginner    |B5        |[Evaluation](20250915/README.md)|88%
+Beginner    |B5        |[Evaluation](20250915/README.md)|91%
 Intermediate|I5        |[Evaluation](20251118/README.md)|.
 
 ## Other data

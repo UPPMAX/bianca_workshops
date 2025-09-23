@@ -6,7 +6,7 @@
 - Number of learners showing up: ~12 (52% show-up rate)
 - Number of evaluation results: 8 (67% fill-in rate)
 - [Analysis script](analyse.R)
-- [Success score](success_score.txt): 88%
+- [Success score](success_score.txt): 91%
 - [Evaluation results](evaluation_result.csv)
 - [Any feedback results](any_feedback.csv)
 - [Reflection by Richel](../../reflections/20250915/20250915_richel.md)
