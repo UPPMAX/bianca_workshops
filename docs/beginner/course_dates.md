@@ -17,6 +17,5 @@ tags:
 
 Iteration|Course date
 ---------|---------------
-5        |Monday 2025-09-15
 6        |Around 2026-03-19
 7        |Around 2026-09-15
