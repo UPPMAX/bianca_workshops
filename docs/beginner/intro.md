@@ -57,4 +57,4 @@ that is free to use for all researchers in Sweden.
 
 ### Exercise 1: what will we learn?
 
-Please fill in [the prevaluation form](https://docs.google.com/forms/d/e/1FAIpQLSdq3WeX9gSTSVt8e4UsdytMgzBrk5Inn4B5DNT05D7hQRy6qw/viewform?usp=header).
+Please fill in `the prevaluation form` <!-- TODO -->
