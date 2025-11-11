@@ -17,7 +17,8 @@ tags:
 
 Iteration|Course date
 ---------|---------------
-6        |?2026-03-16 [1]
+6        |2026-02-13 [1]
 7        |?2026-09-14
 
-- [1] As indicated in the NAISS course schedule document
+- [1] Day 5 of the NAISS intro week,
+  as indicated in the NAISS course schedule document
