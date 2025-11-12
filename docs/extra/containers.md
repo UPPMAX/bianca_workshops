@@ -18,7 +18,7 @@ Within a container you can install whatever you want and send it to whichever co
 
 You can either download an existing container containing your software of interest or build one yourself.
 
-??? question "Do yo uwant to see a video?"
+??? question "Do you want to see a video?"
 
     [https://www.nextlabs.com/what-is-containerization/](https://www.youtube.com/shorts/3CzZ8AiWeSY)
 
@@ -26,10 +26,10 @@ You can either download an existing container containing your software of intere
 
 - 2(3) types
 
-  1. Singularity/Apptainer perfect for HPC systems
-  2. Docker that does not work on HPC-systems
+1. Singularity/Apptainer perfect for HPC systems
+2. Docker that does not work on HPC-systems
 
-     - But docker images can be used by Singularity and Apptainer
+    - But docker images can be used by Singularity and Apptainer
 
 
 ## Docker vs Singularity/Apptainer
