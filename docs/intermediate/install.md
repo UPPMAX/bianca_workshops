@@ -122,9 +122,10 @@ tags:
 
 !!! info "Installation principle"
 
-    - Install on Rackham or other place
+    - Get the package without installing it to a computer with internet
     - Sync to ``wharf``
     - Move the files on Bianca to a place in the path used for packages of R, Python (pip) or julia
+    - Install there 
 
 ???- admonition "R"
 
@@ -134,8 +135,8 @@ tags:
     Links:
 
     - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshops/extra/rpackages/)
-    - [From R course: packages](https://uppmax.github.io/R-python-julia-matlab-HPC/r/packagesR.html){:target="_blank"}
-    - [From R course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/r/isolatedR.html){:target="_blank"}
+    - [From R course: packages](https://uppmax.github.io/R-matlab-julia-HPC/r/packages.html){:target="_blank"}
+    - [From old R course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/r/isolatedR.html){:target="_blank"}
 
 ???- admonition "pip (PyPI)"
 
@@ -151,14 +152,14 @@ tags:
 
 !!! info "Tip Python packages"
 
-    - Try Conda first directly on Bianca. We have mirrored all _major_ Conda repositories directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
-    - If you want to keep number of files down, use PyPI (pip), but then you need to use Rackham and the ``wharf``.
+    - Try Conda first directly on Bianca. We have mirrored all _major_ Conda repositories directly on Bianca. These are updated every third day.
+    - If you want to keep number of files down, use PyPI (pip), but then you need to use the ``wharf``.
 
 ???- admonition "Conda"
 
-    - We have mirrored the non-proprietary Conda repositories (not ``main``, ``anaconda`` and ``r``) directly on UPPMAX, on both Rackham and Bianca. These are updated every third day.
+    - We have mirrored the non-proprietary Conda repositories (not ``main``, ``anaconda`` and ``r``) directly on Bianca. These are updated every third day.
     - Good to change ``CONDA_ENVS_PATH`` to project folder, because of many small files.
-    - Example: ``CONDA_ENVS_PATH=/proj/sens2025560/bjornc/conda``
+    - Example: ``CONDA_ENVS_PATH=/proj/sens2025598/bjornc/conda``
 
     Links:
 
@@ -173,8 +174,8 @@ tags:
     Links:
 
     - [Extra material: Installing Julia packages](https://uppmax.github.io/bianca_workshops/extra/julia/){:target="_blank"}
-    - [UPPMAX julia user guide: Pip](http://docs.uppmax.uu.se/software/julia/){:target="_blank"}
-    - [Julia course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/julia/isolatedJulia.html){:target="_blank"}
+    - [UPPMAX Julia user guide: Pip](http://docs.uppmax.uu.se/software/julia/){:target="_blank"}
+    - [Julia course: environments and packages]([https://uppmax.github.io/R-matlab-julia-HPC/julia/isolatedJulia.html](https://uppmax.github.io/R-matlab-julia-HPC/julia/environments_packages/)){:target="_blank"}
     - :warning: contact [NAISS support](javascript:void(window.open('https://supr.naiss.se/support/?centre_resource=c4%27,%27_blank%27,%27toolbar=1,location=1,status=1,menubar=1,scrollbars=1,resizable=1%27));) for individual help!
 
 ## Exercise ~20 min
@@ -198,7 +199,7 @@ tags:
 
 ## Install software yourself
 
-- If not available on Bianca already (like Conda repositories) --> use the ``wharf`` to install your tools
+- If not available on Bianca already (like Conda repositories) --> use the ``wharf`` to install your tools.
 
 !!! note "Typical workflow for installation"
 
@@ -209,7 +210,6 @@ tags:
     - **Move file(s)** to either
         - ``$HOME`` directory.
             - Handy for personal needs and low numbers of files — i.e. not Conda.
-            - Example python/R/julia packages.
         - Usually better to install in project directory.
             - This way the project contains both data and software
             - Good for reproducibility, collaboration, and everyone's general sanity.
@@ -217,18 +217,6 @@ tags:
         - **Binaries** for Linux on x86 and 64-bit **should be able to be run directly** as they are.
         - Install program from source code, following instructions from documentation of the software.
 
-### Build from source (C/C++ and Fortran)
-
-- To build from source use a **compiler module**
-- We have several compiler versions from GNU and INTEL
-- ``make`` is installed on the system
-    - :warning: It could happen that the "Makefile" contains web fetching, which will not work from Bianca.
-    - Usually it is not a problem to build on Rackham and move to Bianca.
-- ``cmake`` is available as module
-
-!!! info "More info"
-
-    - [Extra material: Build from source](../extra/source_install.md)
 
 ### Containers
 
@@ -236,36 +224,45 @@ tags:
     - operative system
     - dependencies (libraries and other programs) with correct versions
 
-
 ![Containerization](img/Containerization_nextlabs.png)
 
-> From Nextlabs (broken link to `https://www.nextlabs.com/what-is-containerization/`):
-
 !!! info
-
-    - 2(3) types
-
-        1. Singularity/Apptainer perfect for HPC systems
-        2. Docker that does not work on HPC-systems
-
-            - But docker images can be used by Singularity and Apptainer
 
     - Everything is included
     - Workflow:
 
-        - Download on Rackham or local computer
+        - Download on a computer with internet
         - Transfer to Bianca
         - Move to from wharf to any place in your working folders on Bianca
 
     - Draw-backs
 
-        - you install also things that may be already installed
+        - you will  install also things that may be already installed
         - therefore, probably more disk space is needed
 
 !!! info "More info"
 
     - [Extra material: Containers](https://uppmax.github.io/bianca_workshops/extra/containers/)
     - [Singularity course](https://docs.uppmax.uu.se/courses_workshops/singularity/)
+
+### Build from source (C/C++ and Fortran)
+
+!!! attention
+
+    We are not covering this 
+
+??? info "Still interested?"
+
+    - Get the source files to Bianca via the Wharf
+    - To build from source use a **compiler module**
+    - We have several compiler versions from GNU and INTEL
+    - ``make`` is installed on the system
+        - :warning: It could happen that the "Makefile" contains web fetching, which will not work from Bianca.
+        - Usually it is not a problem to build on Rackham and move to Bianca.
+    - ``cmake`` is available as module
+
+    - [Extra material: Build from source](../extra/source_install.md)
+
 
 ## Exercise ~10 min
 
