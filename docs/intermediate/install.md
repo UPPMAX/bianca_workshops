@@ -122,10 +122,10 @@ tags:
 
 !!! info "Installation principle"
 
-    - Get the package without installing it to a computer with internet
-    - Sync to ``wharf``
-    - Move the files on Bianca to a place in the path used for packages of R, Python (pip) or julia
-    - Install there 
+    - Get the package without installing it to a computer with internet.
+    - Sync to ``wharf``.
+    - Move the files on Bianca to a place in the path used for packages of R, Python (pip) or Julia.
+    - Install there.
 
 ???- admonition "R"
 
@@ -249,7 +249,7 @@ tags:
 
 !!! attention
 
-    We are not covering this 
+    We are not covering this more than superficially.
 
 ??? info "Still interested?"
 
