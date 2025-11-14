@@ -159,7 +159,7 @@ tags:
 
     - We have mirrored the non-proprietary Conda repositories (not ``main``, ``anaconda`` and ``r``) directly on Bianca. These are updated every third day.
     - Good to change ``CONDA_ENVS_PATH`` to project folder, because of many small files.
-    - Example: ``CONDA_ENVS_PATH=/proj/sens2025598/bjornc/conda``
+    - Example: ``CONDA_ENVS_PATH=/proj/sens2025560/bjornc/conda``
 
     Links:
 
