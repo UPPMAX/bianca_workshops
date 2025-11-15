@@ -174,8 +174,8 @@ tags:
     Links:
 
     - [Extra material: Installing Julia packages](https://uppmax.github.io/bianca_workshops/extra/julia/){:target="_blank"}
-    - [UPPMAX Julia user guide: Pip](http://docs.uppmax.uu.se/software/julia/){:target="_blank"}
-    - [Julia course: environments and packages](https://uppmax.github.io/R-matlab-julia-HPC/julia/environments_packages/){:target="_blank"}
+    - [UPPMAX Julia user guide](http://docs.uppmax.uu.se/software/julia/){:target="_blank"}
+    - [HPC Julia course: environments and packages](https://uppmax.github.io/R-matlab-julia-HPC/julia/environments_packages/){:target="_blank"}
     - :warning: contact [NAISS support](javascript:void(window.open('https://supr.naiss.se/support/?centre_resource=c4%27,%27_blank%27,%27toolbar=1,location=1,status=1,menubar=1,scrollbars=1,resizable=1%27));) for individual help!
 
 ## Exercise ~20 min
