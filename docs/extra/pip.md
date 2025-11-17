@@ -8,8 +8,6 @@ tags:
 
 ???+ question "Read through the content below"
 
-???+ question "Try to follow the steps with the package ``numpy==1.22.3`` for ``python/3.11.8`` "
-
 !!! info "Installation principle"
 
     - Log in to Transit
@@ -32,27 +30,23 @@ tags:
 **Is it not there? Then proceed!**
 
 !!! info
+
     **Methods:**
 
     - You can either just download a python package, transfer to ``wharf`` and Bianca and install there.
     - Install it on Rackham. Perhaps you need it here as well! Then transfer to ``wharf`` and Bianca local python library.
     - Make a virtual environment with one or several packages on Rackham. Then transfer to ``wharf`` and Bianca (any place).
 
-## Principles
-
-Works for all | Special solution for Rackham users
---------------|-----------------------------------
-Find source files | Install in side a R session on Rackham
-Download to Transit/wharf| Transfer to the wharf via any method
-Install On Bianca | Move package to right folder
-
-## Users without access to Rackham/Pelle
 
 ## Users without access to Rackham/Pelle
 
 - **NOTE** that if you install a package this way, you need to handle any dependencies yourself.
 
-Use [transit](../cluster_guides/login_transit.md)!
+!!! danger
+
+    Got only here
+  
+Use [transit](https://docs.uppmax.uu.se/cluster_guides/login_transit/)!
 
 1. [Log in to transit](https://docs.uppmax.uu.se/cluster_guides/login_transit/)
 2. [Go to the mounted project folder](https://docs.uppmax.uu.se/software/bianca_file_transfer_using_rsync/#3-mount-a-bianca-project)r
@@ -64,9 +58,7 @@ Use [transit](../cluster_guides/login_transit.md)!
 ### Download part
 
 
-!!! danger
 
-    Got only here
 
 
 
