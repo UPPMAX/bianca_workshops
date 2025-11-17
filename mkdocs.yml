@@ -30,7 +30,7 @@ nav:
       - Schedule: intermediate/schedule.md
       - GPUs: intermediate/gpu.md
       - Transferring files to/from Bianca: intermediate/transfer.md
-      - Efficient jobs: intermediate/efficient_jobs.md
+      - Efficient jobs: intermediate/efficient_jobs/README.md
       - Packages and software installation: intermediate/install.md
       - Overview: intermediate/overview.md
       - Summary: intermediate/summary.md

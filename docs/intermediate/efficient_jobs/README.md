@@ -171,11 +171,18 @@ to plot. Here we first look for a job, after which we plot it.
 
 ???- question "Answer"
 
-    Use any of the code snippets, for example
-    [How do I find jobs that have finished and took longer than an hour?](https://docs.uppmax.uu.se/software/finishedjobinfo/#how-do-i-find-jobs-that-have-finished-and-took-longer-than-an-hour):
+    Here is a code snippet to find jobs that have completed:
+    
 
     ```bash
-    finishedjobinfo | grep -E "runtime.([0-9]-)?[0-9][1-9]"
+    finishedjobinfo | grep COMPLETED
+    ```
+
+    Look for a job that has a high `runtime` value, such as the one below.
+    The runtime must be above 5 minutes for this to work.
+
+    ```bash
+    2025-11-17 13:21:38 jobid=368 jobstate=COMPLETED username=richel account=sens2025560 nodes=sens2025560-b9 procs=1 partition=core qos=normal jobname=do_r_2d_integration.sh maxmemory_in_GiB=0.1 maxmemory_node=sens2025560-b9 timelimit=02:00:00 submit_time=2025-11-17T13:15:31 start_time=2025-11-17T13:15:52 end_time=2025-11-17T13:21:38 runtime=00:05:46 margin=01:54:14 queuetime=00:00:21
     ```
 
     Press `CTRL-C` to stop the process: it will take very long to finish.
@@ -185,21 +192,40 @@ to plot. Here we first look for a job, after which we plot it.
 
 ???- question "Answer"
 
+    Here is the general answer:
+
     ```bash
-    jobstats --plot 12345678
+    jobstats --plot [job_id]
+    ```
+
+    For example:
+
+    ```bash
+    jobstats --plot 368
     ```
 
 
-- View the `jobstats` plot. Use [the UPPMAX documentation on 'eog'](https://docs.uppmax.uu.se/software/eog/)
-  if you want to be fast :-)
+- `jobstats` has created a plot and saved it as file
+  `bianca-[project_name]-[username]-[job_id].png`,
+  for example, `bianca-sens2025560-sven-368.png`.
+  Download the `jobstats` plot and view it.
 
 ???- question "Answer"
 
-    ```bash
-    eog bianca-sens1234-sens1234-12345678.png
-    ```
+    Here is an example plot:
+
+    ![The bianca-sens2025560-richel-368 plot](bianca-sens2025560-richel-368.png)
 
 - Was that a job that was set up well? If not, how should it be setup? Why?
+
+???- question "Answer"
+
+    The example jobs seems to be set up perfectly.
+
 - Does the quote at the start of this sessions ('If everyone would use our
   computational resources effectively, there would be no queue') apply to
-  your job?
+  the job you just investigated?
+
+???- question "Answer"
+
+    No.
