@@ -26,11 +26,10 @@ tags:
         - Python packages using conda
         - Python packages using pip
         - R packages
-        - Julia packages
     - understand what containers are
     - learners have explored the UPPMAX documentation
 
-    - (optional) can install software using a container
+    - can install software using a container
     - (optional) can build software from source
 
 ???- info "Notes for teachers"
@@ -38,8 +37,21 @@ tags:
     Teaching goals:
 
     - See above
+
     Lesson plan:
 
+    - Intro 20
+        - module system 5
+        - content 5
+        - packages and libraries 10
+    - Exercise 20 min
+    - Install software yourself 15
+        - Containers
+        - Build from source
+   - Exercise 10 min
+   - Summary 5 min
+
+   Total time: 70 m
 
 ## The module system
 
@@ -65,17 +77,17 @@ tags:
     - R
     - Conda
     - Python/pip
-    - Julia
+    - (Julia)
 - Feedback
 - Principles of software installation on Bianca
-    - From source
     - From binary
     - Containers
+    - (From source)
 - Development and Git on Bianca
 
 ## Packages and libraries to scripting programs
 
-- Python, R and Julia all have some **centrally installed packages** that are available from the modules.
+- Python, R (and Julia) all have some **centrally installed packages** that are available from the modules.
     - R has a special module called ``R_packages``,
     - Python has many packages already in the Python module
         - Machine Learning python packages are included in the ``python_ml_packages`` module.
@@ -123,6 +135,7 @@ tags:
 !!! info "Installation principle"
 
     - Get the package without installing it to a computer with internet.
+        - ``transit`` works well because you can reach R and Python modules from there
     - Sync to ``wharf``.
     - Move the files on Bianca to a place in the path used for packages of R, Python (pip) or Julia.
     - Install there.
@@ -134,7 +147,7 @@ tags:
 
     Links:
 
-    - [Extra material: Installing R packages](https://uppmax.github.io/bianca_workshops/extra/rpackages/)
+    - [Course material: Installing R packages](https://uppmax.github.io/bianca_workshops/extra/rpackages/)
     - [From R course: packages](https://uppmax.github.io/R-matlab-julia-HPC/r/packages){:target="_blank"}
     - [From old R course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/r/isolatedR.html){:target="_blank"}
 
@@ -145,7 +158,7 @@ tags:
 
     Links:
 
-    - [Extra material: Installing pip packages](https://uppmax.github.io/bianca_workshops/extra/pip/){:target="_blank"}
+    - [Course material: Installing pip packages](https://uppmax.github.io/bianca_workshops/extra/pip/){:target="_blank"}
     - [UPPMAX Python user guide: Pip](http://docs.uppmax.uu.se/software/python_install_packages/#pip){:target="_blank"}
     - [From Python course: packages](https://uppmax.github.io/R-python-julia-matlab-HPC/python/packages.html){:target="_blank"}
     - [From Python course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/python/isolated.html){:target="_blank"}
@@ -163,7 +176,7 @@ tags:
 
     Links:
 
-    - [Extra material: Installing Conda packages](https://uppmax.github.io/bianca_workshops/extra/conda/)
+    - [Course material: Installing Conda packages](https://uppmax.github.io/bianca_workshops/extra/conda/)
     - [Conda user guide](http://docs.uppmax.uu.se/software/conda/)
 
 ???- admonition "Julia"
@@ -173,7 +186,6 @@ tags:
 
     Links:
 
-    - [Extra material: Installing Julia packages](https://uppmax.github.io/bianca_workshops/extra/julia/){:target="_blank"}
     - [UPPMAX Julia user guide](http://docs.uppmax.uu.se/software/julia/){:target="_blank"}
     - [HPC Julia course: environments and packages](https://uppmax.github.io/R-matlab-julia-HPC/julia/environments_packages/){:target="_blank"}
     - :warning: contact [NAISS support](javascript:void(window.open('https://supr.naiss.se/support/?centre_resource=c4%27,%27_blank%27,%27toolbar=1,location=1,status=1,menubar=1,scrollbars=1,resizable=1%27));) for individual help!
@@ -205,7 +217,19 @@ tags:
 
     - **Download** the
         - _source_ code or
+
+        ??? question "What is source code?"
+
+            - These are files written in a programming language that needs to be compiled before run.
+            - Typically they come as compressed archives with the file endingsd ``.tar.gz``
+        
         - _binary_ (Linux on x86 and 64-bit)
+
+        ??? question "What is a binary?"
+
+            - This is a ready-compiled program.
+            - You need to choose one that states it is ``linux`` and ``x86_64`` system.
+
     - **Transfer** to the ``wharf``
     - **Move file(s)** to either
         - ``$HOME`` directory.
@@ -215,7 +239,7 @@ tags:
             - Good for reproducibility, collaboration, and everyone's general sanity.
     - Then, either:
         - **Binaries** for Linux on x86 and 64-bit **should be able to be run directly** as they are.
-        - Install program from source code, following instructions from documentation of the software.
+        - Install program from source code, following instructions from documentation of the software!
 
 
 ### Containers
@@ -242,7 +266,7 @@ tags:
 
 !!! info "More info"
 
-    - [Extra material: Containers](https://uppmax.github.io/bianca_workshops/extra/containers/)
+    - [Course material: Containers](https://uppmax.github.io/bianca_workshops/extra/containers/)
     - [Singularity course](https://docs.uppmax.uu.se/courses_workshops/singularity/)
 
 ### Build from source (C/C++ and Fortran)
