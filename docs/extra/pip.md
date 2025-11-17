@@ -27,7 +27,7 @@ tags:
 - from BASH shell with the
 
 - ``pip list`` command
-- ``ml help python/3.9.5`` at UPPMAX
+- Ex. ``ml help python/3.9.5`` at UPPMAX
 
 **Is it not there? Then proceed!**
 
@@ -37,6 +37,39 @@ tags:
     - You can either just download a python package, transfer to ``wharf`` and Bianca and install there.
     - Install it on Rackham. Perhaps you need it here as well! Then transfer to ``wharf`` and Bianca local python library.
     - Make a virtual environment with one or several packages on Rackham. Then transfer to ``wharf`` and Bianca (any place).
+
+## Principles
+
+Works for all | Special solution for Rackham users
+--------------|-----------------------------------
+Find source files | Install in side a R session on Rackham
+Download to Transit/wharf| Transfer to the wharf via any method
+Install On Bianca | Move package to right folder
+
+## Users without access to Rackham/Pelle
+
+## Users without access to Rackham/Pelle
+
+- **NOTE** that if you install a package this way, you need to handle any dependencies yourself.
+
+Use [transit](../cluster_guides/login_transit.md)!
+
+1. [Log in to transit](https://docs.uppmax.uu.se/cluster_guides/login_transit/)
+2. [Go to the mounted project folder](https://docs.uppmax.uu.se/software/bianca_file_transfer_using_rsync/#3-mount-a-bianca-project)r
+3. [Download](#download-part) source files with ``wget``
+4. Load R_packages of desired version (R is loaded on the fly)
+5. Start R session
+6. Install from source in R session
+
+### Download part
+
+
+!!! danger
+
+    Got only here
+
+
+
 
 ## Only download on Rackham/Transit and install on Bianca
 
@@ -61,7 +94,7 @@ Mounting wharf (accessible for you only) to /home/<user>/sens2025560
 - Navigate to your wharf folder
 
 ```bash
-cd sens2023531
+cd sens2025560_
 ```
 
 - Download!
@@ -86,6 +119,43 @@ Now, upload to the `wharf` the package `<package-name>` and all the dependency p
 ``` bash
 sftp> put -r <package-name>
 ```
+
+Usage:
+  pip download [options] <requirement specifier> [package-index-options] ...
+  pip download [options] -r <requirements file> [package-index-options] ...
+  pip download [options] <vcs project url> ...
+  pip download [options] <local project path> ...
+  pip download [options] <archive url/path> ...
+
+
+may require ml gcc
+
+pip download numpy==2.0.0
+Collecting numpy==2.0.0
+  Downloading numpy-2.0.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (19.3 MB)
+     |████████████████████████████████| 19.3 MB 18.5 MB/s
+Saved ./numpy-2.0.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+Successfully downloaded numpy
+
+
+In transit
+ml Python version
+pip download numpy==2.2.6
+
+You should get a .whl file
+ml gcc
+
+
+
+pip install --user numpy-2.0.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+
+
+
+
+$ pip install --user numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+Processing ./numpy-2.3.4.tar.gz
+
+
 
 ### Install on Bianca
 
@@ -179,7 +249,7 @@ sftp> put -r <path>/projectB
 On Bianca
 
 ``` bash
-cd /proj/sens2023531/nobackup/wharf/bjornc/bjornc-sens2023531/
+cd /proj/sens2025560/nobackup/wharf/bjornc/bjornc-sens2025560/
 mv –a  projectB <path to any place, like project folder>
 ```
 
@@ -248,7 +318,7 @@ mv –a  projectB <path to any place, like project folder>
     On Bianca
 
     ``` bash
-    cd /proj/sens2023531/nobackup/wharf/bjornc/bjornc-sens2023531/
+    cd /proj/sens2025560/nobackup/wharf/bjornc/bjornc-sens2025560/
     mv –a  <file(s)> ~/.local/lib/python<version>/site-packages/
     ```
 
