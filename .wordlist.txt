@@ -396,3 +396,9 @@ HH
 MM
 SS
 menti
+manylinux
+Pelle
+numpy
+whl
+gz
+Pelle
