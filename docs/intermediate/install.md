@@ -48,10 +48,10 @@ tags:
     - Install software yourself 15
         - Containers
         - Build from source
-   - Exercise 10 min
-   - Summary 5 min
+    - Exercise 10 min
+    - Summary 5 min
 
-   Total time: 70 m
+    Total time: 70 m
 
 ## The module system
 
