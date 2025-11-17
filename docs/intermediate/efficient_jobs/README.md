@@ -83,7 +83,7 @@ See `jobstats plot 1` below and answer these questions:
 - How much cores should this user book?
 - Why?
 
-![jobstats plot 1](./img/jobstats_example_1.png)
+![jobstats plot 1](jobstats_example_1.png)
 
 > jobstats plot 1
 
@@ -103,7 +103,7 @@ See `jobstats plot 2` below and answer these questions:
 - How much cores should this user book?
 - Why?
 
-![jobstats plot 2](./img/jobstats_example_2.png)
+![jobstats plot 2](jobstats_example_2.png)
 
 > jobstats plot 2
 
@@ -122,7 +122,7 @@ See `jobstats plot 2` below and answer these questions:
 - How much cores should this user book?
 - Why?
 
-![jobstats plot 3](./img/jobstats_example_3.png)
+![jobstats plot 3](jobstats_example_3.png)
 
 > jobstats plot 3
 
@@ -148,7 +148,7 @@ See `jobstats plot 4` below and answer these questions:
 - How much cores should this user book?
 - Why?
 
-![jobstats plot 4](./img/rackham-naiss2023-22-1014-fdube-50060711.png)
+![jobstats plot 4](rackham-naiss2023-22-1014-fdube-50060711.png)
 
 > jobstats plot 4
 
