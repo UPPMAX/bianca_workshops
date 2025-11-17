@@ -6,7 +6,7 @@ tags:
 
 # Installing R packages on Bianca
 
-???+ question "Read through the content of Rapackages on Bianca in our documentation"
+???+ question "Read through the content of R packages on Bianca in our documentation"
 
     ??? question "Can't you find it?"
 
