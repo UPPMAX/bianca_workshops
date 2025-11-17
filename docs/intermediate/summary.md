@@ -89,3 +89,16 @@ I can can run the voted-for IDE on Bianca
   module load VSCodium/latest
   code
   ```
+
+Possible next steps:
+
+<!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
+
+I want to ...                   |Solution
+--------------------------------|-------------------------------
+do my computational work smarter|Attend [the 'Programming Formalisms' course](https://uppmax.github.io/programming_formalisms/)
+transfer files smarter          |Attend [the NAISS 'File Transfer' course](https://uppmax.github.io/naiss_file_transfer_course/)
+work smarter on the command line|Attend [the NAISS 'Command line 101' course](https://nbisweden.github.io/SCoRe_user_doc/courses/)
+find out what courses there are |See [the SCoRe overview of courses](https://nbisweden.github.io/SCoRe_user_doc/courses/)
+
+<!-- markdownlint-enable MD013 -->
