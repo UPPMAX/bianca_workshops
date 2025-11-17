@@ -17,7 +17,7 @@ When | Who  | What
 9:50 | .    | Break
 10:05| P    | [Transferring files](transfer.md)
 10:55| .    | Break
-11:10| R    | [Efficient jobs](efficient_jobs.md)
+11:10| R    | [Efficient jobs](efficient_jobs/README.md)
 12:00| .    | Lunch
 13:00| B    | [Packages and software installation](https://uppmax.github.io/bianca_workshops/intermediate/install/) 1/2
 13:50| .    | Break

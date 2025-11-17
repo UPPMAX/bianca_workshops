@@ -229,3 +229,8 @@ to plot. Here we first look for a job, after which we plot it.
 ???- question "Answer"
 
     No.
+
+???- question "How was the example plot generated?"
+
+    Using the benchmark script from
+    [the R-Julia-MATLAB course, session 'thread parallelism'](https://uppmax.github.io/R-matlab-julia-HPC/advanced/thread_parallelism/).

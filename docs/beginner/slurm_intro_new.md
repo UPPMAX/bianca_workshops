@@ -299,7 +299,7 @@ Optional (read later):
 - RStudio in an interactive session
 - Advanced bioinformatics workflow (GATK + snpEff)
 - Efficient multi-core & job arrays (see [extra material: replicate jobs](../intermediate/replicate_jobs.md))
-- Monitoring resource usage: `jobstats` (see [intermediate: efficient jobs](../intermediate/efficient_jobs.md))
+- Monitoring resource usage: `jobstats` (see [intermediate: efficient jobs](../intermediate/efficient_jobs/README.md))
 
 ## Links
 

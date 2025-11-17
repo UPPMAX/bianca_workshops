@@ -521,7 +521,7 @@ Example
     Intermediate workshop material on Slurm:
 
     - [complex jobs](../intermediate/complex_jobs.md)
-    - [efficient jobs](../intermediate/efficient_jobs.md)
+    - [efficient jobs](../intermediate/efficient_jobs/README.md)
     - [replicate jobs](../intermediate/complex_jobs.md)
 
 !!! admonition "Slurm Cheat Sheet"
