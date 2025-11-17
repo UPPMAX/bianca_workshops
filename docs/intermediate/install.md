@@ -43,16 +43,15 @@ tags:
     - Intro 20
         - module system 5
         - content 5
-        - packages and libraries 10 
-    - Exercise 20 min 
+        - packages and libraries 10
+    - Exercise 20 min
     - Install software yourself 15
         - Containers
         - Build from source
-   -  Exercise 10 min
-   -  Summary 5
+   - Exercise 10 min
+   - Summary 5 min
 
    Total time: 70 m
-
 
 ## The module system
 
