@@ -230,7 +230,19 @@ to plot. Here we first look for a job, after which we plot it.
 
 ???- question "Answer"
 
-    The example jobs seems to be set up perfectly.
+    We don't know. The user uses all CPU power perfectly and
+    there is enough memory available.
+
+    The user may benefit from more CPUs, as the program may be
+    CPU limited.
+
+    It may be that the program used is designed to use
+    all the scheduled cores maximally,
+    hence scheduling that amount of cores is perfect!
+
+    It may be that using less cores is a strategy of the user:
+    using multiple cores always brings computational overhead
+    and hence wasted CPU resources.
 
 - Does the quote at the start of this sessions ('If everyone would use our
   computational resources effectively, there would be no queue') apply to
