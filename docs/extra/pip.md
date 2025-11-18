@@ -33,10 +33,8 @@ tags:
 
     **Methods:**
 
-    - You can either just download a python package, transfer to ``wharf`` and Bianca and install there.
-    - Install it on Rackham. Perhaps you need it here as well! Then transfer to ``wharf`` and Bianca local python library.
-    - Make a virtual environment with one or several packages on Rackham. Then transfer to ``wharf`` and Bianca (any place).
-
+    - You can just download a python package on Transit with pip, then install from the ``.whl`` file in ``wharf`` on Bianca.
+    - Rackham users: Install it on Rackham. Perhaps you need it here as well! Then transfer to ``wharf`` and Bianca local python library.
 
 ## Users without access to Rackham/Pelle
 
