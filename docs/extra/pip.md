@@ -45,7 +45,7 @@ Use [transit](https://docs.uppmax.uu.se/cluster_guides/login_transit/)!
 1. [Log in to transit](https://docs.uppmax.uu.se/cluster_guides/login_transit/)
 2. [Go to the mounted project folder](https://docs.uppmax.uu.se/software/bianca_file_transfer_using_rsync/#3-mount-a-bianca-project)r
 3. Load Python of desired version (IMPORTANT!)
-4. [Download](pip.md#download-on-transit) source files with ``wget``
+4. [Download](pip.md#download-on-transit) with pip
 5. On Bianca: Load Python of desired version (IMPORTANT!)
 6. pip install
 
