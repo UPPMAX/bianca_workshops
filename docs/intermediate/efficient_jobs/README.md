@@ -62,9 +62,9 @@ tags:
 
 !!! note "Quote from the UPPMAX documentation"
 
-    > If everyone would use our computational resources effectively,
-    > there would be no queue.
-    >
+    If everyone would use our computational resources effectively,
+    there would be no queue.
+    
     > From the UPPMAX documentation, original source unknown
 
 Running efficient jobs allows you to run more jobs that start running faster.
