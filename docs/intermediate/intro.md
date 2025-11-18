@@ -134,18 +134,17 @@ The goal of these questions is to introduce what is taught
 today, as well as measuring how much knowledge is gained at the end
 of the day.
 
-- Fill in [this form](https://docs.google.com/forms/d/e/1FAIpQLSeXGoGlfFZpdmLEvfxlBq82IjaVwhz3kowXRT4ijsZe1bOWDA/viewform?usp=header)
+- Fill in [the 'Intermediate Bianca learning outcomes form'](https://docs.google.com/forms/d/e/1FAIpQLSe6Ve8AlVrS-wQWlhFnIdfvjVNS7ZYFoaHLILnUyIQegL221A/viewform?usp=publish-editor)
 
 ???- question "What is in that form?"
 
+    Intermediate Bianca learning outcomes form
+
     In this exercise, we will find out today's learning objectives.
 
-    The goal of these questions is to introduce what is taught
-    today, as well as measuring how much knowledge is gained at the end
-    of the day.
+    The goal of these questions is to introduce what is taught today, as well as measuring how much knowledge is gained at the end of the day.
 
-    Give you confidence levels of the following statements,
-    using this scale:
+    Give you confidence levels of the following statements, using this scale:
 
     - 0: I don't know even what this is about ...?
     - 1: I have no confidence I can do this

@@ -21,7 +21,7 @@ form to help us improve the course
 
 ???- question "What is in the feedback form?"
 
-    Intermediate Bianca: Any feedback
+    Intermediate Bianca feedback form
 
     Thanks for your feedback.
     This feedback will be published as-is at the end of the day,
@@ -32,6 +32,8 @@ form to help us improve the course
     Any feedback?
 
 ???- question "What is in the evaluation form?"
+
+    Intermediate Bianca evaluation form
 
     These are the evaluation questions.
     The goals of these questions is to find out how successful
