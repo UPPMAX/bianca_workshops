@@ -46,10 +46,10 @@ Use [transit](https://docs.uppmax.uu.se/cluster_guides/login_transit/)!
 
 1. [Log in to transit](https://docs.uppmax.uu.se/cluster_guides/login_transit/)
 2. [Go to the mounted project folder](https://docs.uppmax.uu.se/software/bianca_file_transfer_using_rsync/#3-mount-a-bianca-project)r
-3. [Download](#download-on-transit) source files with ``wget``
-4. Load R_packages of desired version (R is loaded on the fly)
-5. Start R session
-6. Install from source in R session
+3. Load Python of desired version (IMPORTANT!)
+4. [Download](#download-on-transit) source files with ``wget``
+5. On Bianca: Load Python of desired version (IMPORTANT!)
+6. pip install
 
 ### Transit
 
