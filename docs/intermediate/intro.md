@@ -31,6 +31,10 @@ tags:
     - What do you think about when you think about Bianca?
     - How would you like to improve your Bianca experience?
 
+![Bianca Castafiore](./img/bianca_castafiore_192_x_226.png)
+
+> Bianca Castafiore, the Tintin character the cluster is named after.
+
 Are you already working with sensitive data in your research
 and feel your workflow can be improved?
 If yes, welcome to a full day of learning of smarter ways
@@ -43,10 +47,6 @@ to work on the Bianca UPPMAX cluster.
 
     This course assumes you have worked with Bianca for longer
     and there is no time scheduled to get a Bianca beginner up to speed.
-
-- [Schedule](schedule.md)
-- [Course dates](course_dates.md)
-- [Shared document](shared_document.md)
 
 ## Overview of courses
 
