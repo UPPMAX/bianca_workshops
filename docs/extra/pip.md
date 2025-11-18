@@ -46,7 +46,7 @@ Use [transit](https://docs.uppmax.uu.se/cluster_guides/login_transit/)!
 
 1. [Log in to transit](https://docs.uppmax.uu.se/cluster_guides/login_transit/)
 2. [Go to the mounted project folder](https://docs.uppmax.uu.se/software/bianca_file_transfer_using_rsync/#3-mount-a-bianca-project)r
-3. [Download](#download-part) source files with ``wget``
+3. [Download](#download-on-transit) source files with ``wget``
 4. Load R_packages of desired version (R is loaded on the fly)
 5. Start R session
 6. Install from source in R session
@@ -91,20 +91,22 @@ $ pip download <package-name>==<version>
     pip --help
     ```
 
-    ??? info "output" 
+    ??? info "output"
     
+        ```console
         Usage:
           pip download [options] <requirement specifier> [package-index-options] ...
           pip download [options] -r <requirements file> [package-index-options] ...
           pip download [options] <vcs project url> ...
           pip download [options] <local project path> ...
           pip download [options] <archive url/path> ...
+          ```
 
 ### Installation part on Bianca
 
 - Log in to Bianca and the relevant project
 - Load the same python version
-     - Ex. ``ml python/3.9.5`` 
+    - Ex. ``ml python/3.9.5``
 
 ```console
 pip install --user --no-index --find-links /proj/sens2025560/nobackup/wharf/$USER/$USER-sens2025560 <package-name>==<version>
@@ -146,14 +148,13 @@ python
 
 
         - Resulting file name: ``numpy-2.0.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl``
-         
+        
         On Bianca:
         
         ```console
         ml python/3.9.5
         pip install --user --no-index --find-links /proj/sens2025560/nobackup/wharf/$USER/$USER-sens2025560 numpy=2.0.0
         ```
-
 
 ## Rackham users (will not work soon)
 
@@ -164,7 +165,7 @@ $ ml python/<version>
 $ pip download <package-name>
 ```
 
-### Transit
+### Transit set-up
 
 - **Log in to transit**: ``ssh <username>@transit.uppmax.uu.se``
     - [Documentation](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/transfer_bianca/#transit-server)
