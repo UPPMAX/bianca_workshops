@@ -11,9 +11,15 @@ tags:
 
     They are at [the 'Evaluations' (plural) page](../evaluations/README.md).
 
-- `Form: any feedback during the day`
+Goal                               |Form
+-----------------------------------|------------------------------------------------------
+Share any anonymous feedback easily|`Form: any feedback during the day`
+Evaluate the course anonymously    |`Form: The evaluation form`
 
-???- question "For teachers: what is in that form?"
+Also those that need to leave early are encouraged to fill in the evaluation
+form to help us improve the course
+
+???- question "What is in the feedback form?"
 
     Intermediate Bianca: Any feedback
 
@@ -25,11 +31,7 @@ tags:
 
     Any feedback?
 
-- [The evaluation form](https://docs.google.com/forms/d/e/1FAIpQLScLc6vOsNcjSTDpEiTzFLNrLbIBnSwObOjdMdgjGGrM1hQqSQ/viewform?usp=header)
-
-It takes into account that one may need to leave early too.
-
-???- question "What are the evaluation questions?"
+???- question "What is in the evaluation form?"
 
     These are the evaluation questions.
     The goals of these questions is to find out how successful
