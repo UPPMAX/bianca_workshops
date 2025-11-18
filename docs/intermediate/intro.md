@@ -12,6 +12,7 @@ tags:
     - I have read the topics discussed today
     - I can find [the schedule](schedule.md)
     - I can find [the evaluation forms](evaluation.md)
+    - I can find [the NAISS project of this course](../misc/project.md)
 
 ???- question "For teachers"
 
