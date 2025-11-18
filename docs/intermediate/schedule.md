@@ -26,4 +26,4 @@ When | Who  | What
 15:00| R    | [Evaluation](evaluation.md)
 15:10| .    | End or questions
 
-- Who: `B`: Björn, `J`: Jayant, `P`: Pavlin, `R`: Richèl
+- Who: `B`: Björn, `P`: Pavlin, `R`: Richèl
