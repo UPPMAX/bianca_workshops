@@ -10,7 +10,6 @@ tags:
 
     - I know the goal of the course
     - I have read the topics discussed today
-    - I can find the link to [the shared document](shared_document.md)
     - I can find [the schedule](schedule.md)
     - I can find [the evaluation forms](evaluation.md)
 
