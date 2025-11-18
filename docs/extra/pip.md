@@ -33,43 +33,21 @@ tags:
 
     **Methods:**
 
-    - You can either just download a python package, transfer to ``wharf`` and Bianca and install there.
-    - Install it on Rackham. Perhaps you need it here as well! Then transfer to ``wharf`` and Bianca local python library.
-    - Make a virtual environment with one or several packages on Rackham. Then transfer to ``wharf`` and Bianca (any place).
-
+    - You can just download a python package on Transit with pip, then install from the ``.whl`` file in ``wharf`` on Bianca.
+    - Rackham users: Install it on Rackham. Perhaps you need it here as well! Then transfer to ``wharf`` and Bianca local python library.
 
 ## Users without access to Rackham/Pelle
 
 - **NOTE** that if you install a package this way, you need to handle any dependencies yourself.
 
-!!! danger
-
-    Got only here
-  
 Use [transit](https://docs.uppmax.uu.se/cluster_guides/login_transit/)!
 
 1. [Log in to transit](https://docs.uppmax.uu.se/cluster_guides/login_transit/)
 2. [Go to the mounted project folder](https://docs.uppmax.uu.se/software/bianca_file_transfer_using_rsync/#3-mount-a-bianca-project)r
-3. [Download](#download-part) source files with ``wget``
-4. Load R_packages of desired version (R is loaded on the fly)
-5. Start R session
-6. Install from source in R session
-
-### Download part
-
-
-
-
-
-
-
-## Only download on Rackham/Transit and install on Bianca
-
-### Rackham
-
-``` sh
-$ pip download <package-name>
-```
+3. Load Python of desired version (IMPORTANT!)
+4. [Download](pip.md#download-on-transit) with pip
+5. On Bianca: Load Python of desired version (IMPORTANT!)
+6. pip install
 
 ### Transit
 
@@ -86,7 +64,121 @@ Mounting wharf (accessible for you only) to /home/<user>/sens2025560
 - Navigate to your wharf folder
 
 ```bash
-cd sens2025560_
+cd sens2025560
+```
+
+### Download on Transit
+
+- Load the Python version you plan to use
+
+``` sh
+$ ml python/<version>
+```
+
+- Download!
+
+``` sh
+$ pip download <package-name>==<version>
+```
+
+- You should get a ``.whl`` file
+
+??? question "Interested in requirements files etc?"
+
+    ```console
+    pip --help
+    ```
+
+    ??? info "output"
+    
+        ```console
+        Usage:
+          pip download [options] <requirement specifier> [package-index-options] ...
+          pip download [options] -r <requirements file> [package-index-options] ...
+          pip download [options] <vcs project url> ...
+          pip download [options] <local project path> ...
+          pip download [options] <archive url/path> ...
+          ```
+
+### Installation part on Bianca
+
+- Log in to Bianca and the relevant project
+- Load the same python version
+    - Ex. ``ml python/3.9.5``
+
+```console
+pip install --user --no-index --find-links /proj/sens2025560/nobackup/wharf/$USER/$USER-sens2025560 <package-name>==<version>
+```
+
+- NOTE: you don't need the full name of the ``.whl`` file!
+
+### Test it in Python
+
+- Start a python console
+
+```console
+python
+```
+
+- Import the package with ``import <package>``
+- This should give no errors!
+
+
+### Exercise
+
+!!! question "Install ``numpy-2.0.0`` for Python/3.9.5
+
+
+    ??? question "Answer"
+    
+        - Using Transit and how to navigate to the porject folder is shown above.
+        - Load Python: ``ml python/3.9.5``
+        - Download ``numpy-2.0.0``: ``pip download numpy==2.0.0``
+
+        ??? question "How will that look like?"
+
+            pip download numpy==2.0.0
+            Collecting numpy==2.0.0
+              Downloading numpy-2.0.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (19.3 MB)
+                 |████████████████████████████████| 19.3 MB 18.5 MB/s
+            Saved ./numpy-2.0.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+            Successfully downloaded numpy
+
+
+        - Resulting file name: ``numpy-2.0.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl``
+        
+        On Bianca:
+        
+        ```console
+        ml python/3.9.5
+        pip install --user --no-index --find-links /proj/sens2025560/nobackup/wharf/$USER/$USER-sens2025560 numpy=2.0.0
+        ```
+
+## Rackham users (will not work soon)
+
+### Rackham
+
+```sh
+$ ml python/<version>
+$ pip download <package-name>
+```
+
+### Transit set-up
+
+- **Log in to transit**: ``ssh <username>@transit.uppmax.uu.se``
+    - [Documentation](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/transfer_bianca/#transit-server)
+- (If not done already) Mount the wharf of your project.
+
+```bash
+user@transit:~$ mount_wharf sens2025560
+Mounting wharf (accessible for you only) to /home/<user>/sens2025560
+<user>-sens2025560@bianca-sftp.uppmax.uu.se's password:
+```
+
+- Navigate to your wharf folder
+
+```bash
+cd sens2025560
 ```
 
 - Download!
@@ -111,43 +203,6 @@ Now, upload to the `wharf` the package `<package-name>` and all the dependency p
 ``` bash
 sftp> put -r <package-name>
 ```
-
-Usage:
-  pip download [options] <requirement specifier> [package-index-options] ...
-  pip download [options] -r <requirements file> [package-index-options] ...
-  pip download [options] <vcs project url> ...
-  pip download [options] <local project path> ...
-  pip download [options] <archive url/path> ...
-
-
-may require ml gcc
-
-pip download numpy==2.0.0
-Collecting numpy==2.0.0
-  Downloading numpy-2.0.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (19.3 MB)
-     |████████████████████████████████| 19.3 MB 18.5 MB/s
-Saved ./numpy-2.0.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-Successfully downloaded numpy
-
-
-In transit
-ml Python version
-pip download numpy==2.2.6
-
-You should get a .whl file
-ml gcc
-
-
-
-pip install --user numpy-2.0.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-
-
-
-
-$ pip install --user numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-Processing ./numpy-2.3.4.tar.gz
-
-
 
 ### Install on Bianca
 
