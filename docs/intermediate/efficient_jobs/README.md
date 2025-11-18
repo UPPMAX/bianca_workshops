@@ -60,10 +60,12 @@ tags:
 
 ## Why?
 
-> If everyone would use our computational resources effectively,
-> there would be no queue.
->
-> From the UPPMAX documentation, original source unknown
+!!! note "Quote from the UPPMAX documentation"
+
+    > If everyone would use our computational resources effectively,
+    > there would be no queue.
+    >
+    > From the UPPMAX documentation, original source unknown
 
 Running efficient jobs allows you to run more jobs that start running faster.
 
@@ -83,9 +85,11 @@ See `jobstats plot 1` below and answer these questions:
 - How much cores should this user book?
 - Why?
 
-![jobstats plot 1](jobstats_example_1.png)
+!!! info "jobstats plot 1"
 
-> jobstats plot 1
+    ![jobstats plot 1](jobstats_example_1.png)
+
+    > jobstats plot 1
 
 ???- question "Answer"
 
