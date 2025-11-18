@@ -8,9 +8,11 @@ tags:
 
 !!!- info "Learning outcomes"
 
+    - I know the goal of the course
     - I have read the topics discussed today
-    - I can find the link to the shared document
-    - I can find the schedule
+    - I can find the link to [the shared document](shared_document.md)
+    - I can find [the schedule](schedule.md)
+    - I can find [the evaluation forms](evaluation.md)
 
 ???- question "For teachers"
 
@@ -42,26 +44,9 @@ to work on the Bianca UPPMAX cluster.
     This course assumes you have worked with Bianca for longer
     and there is no time scheduled to get a Bianca beginner up to speed.
 
-!!! info "Course shared document"
-
-    The course shared document can be found at:
-    [https://hackmd.io/@UPPMAX/bianca-workshop-2024/edit](https://hackmd.io/@UPPMAX/bianca-workshop-2024/edit).
-
-    It contains exercises, room for questions and room for feedback.
-
-    To view the shared document in both text and rendered form,
-    click on the button in the top between the pen and eye.
-
-    Regarding questions:
-
-    - create a new line for new questions
-    - take care if others are editing at the same time
-    - the more teaching assistants available, the quicker questions are answered
-    - some questions may be answered after the workshop
-
-
 - [Schedule](schedule.md)
 - [Course dates](course_dates.md)
+- [Shared document](shared_document.md)
 
 ## Overview of courses
 

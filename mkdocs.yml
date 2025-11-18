@@ -35,6 +35,7 @@ nav:
       - Overview: intermediate/overview.md
       - Summary: intermediate/summary.md
       - Evaluation: intermediate/evaluation.md
+      - Shared document: intermediate/shared_document.md
   - Extra material:
       - Transferring files to/from Bianca: extra/transfer_basics.md
       - Introduction to compute nodes: extra/slurm_intro.md
