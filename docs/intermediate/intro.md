@@ -63,13 +63,13 @@ flowchart TD
       can_tranfer_files_using_rsync(Can transfer files using rsync)
       can_schedule_jobs(Can schedule jobs)
       can_create_bash_script_using_cli(Can create a bash script using CLI)
+      can_use_ide(Can use an IDE)
     end
 
     subgraph sub_intermediate_use["Intermediate use of Bianca"]
       can_use_command_line_2(Can use the command line 2)
       can_run_efficient_jobs(Can run efficient jobs)
       can_run_jobs_on_gpu(Can run jobs on GPU)
-      can_use_ide(Can use an IDE)
       can_tranfer_files_using_rsync2(Can transfer files using rsync)
       can_install(Can install software and packages)
     end
@@ -93,13 +93,13 @@ flowchart TD
     can_use_command_line_1 --> can_tranfer_files_using_rsync
     can_use_modules --> can_schedule_jobs
     can_create_bash_script_using_cli --> can_schedule_jobs
+    can_use_interactive_node --> can_use_ide
+    can_use_modules --> can_use_ide
 
     %% Basic -> Intermediate
     can_tranfer_files_using_rsync --> can_tranfer_files_using_rsync2
     can_schedule_jobs --> can_run_efficient_jobs
     can_schedule_jobs ---> can_run_jobs_on_gpu
-    can_use_interactive_node --> can_use_ide
-    can_use_modules --> can_use_ide
     can_tranfer_files_using_rsync2 -.-> |extra| can_tranfer_files_using_gui
 
     %% Make sure Intermediate is below Basic,
@@ -161,7 +161,6 @@ of the day.
     - I understand the principles how to install software and packages myself
     - I can install a Julia/Python/R packages myself
     - I understand what containers are
-    - I can can run an IDE on Bianca
 
     Is there a learning objective you think is missing? What is it?
 
