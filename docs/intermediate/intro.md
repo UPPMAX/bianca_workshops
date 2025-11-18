@@ -141,7 +141,8 @@ of the day.
 
     In this exercise, we will find out today's learning objectives.
 
-    The goal of these questions is to introduce what is taught today, as well as measuring how much knowledge is gained at the end of the day.
+    The goal of these questions is to introduce what is taught today,
+    as well as measuring how much knowledge is gained at the end of the day.
 
     Give you confidence levels of the following statements, using this scale:
 

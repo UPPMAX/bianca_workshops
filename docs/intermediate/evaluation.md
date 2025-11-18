@@ -14,7 +14,7 @@ tags:
 Goal                               |Form
 -----------------------------------|------------------------------------------------------
 Share any anonymous feedback easily|[Feedback form](https://docs.google.com/forms/d/e/1FAIpQLSdltCAs-5q84opLWobYK5nXMix6q--JvIXgCs37RiBYRzmCww/viewform?usp=publish-editor)
-Evaluate the course anonymously    |`Form: The evaluation form`
+Evaluate the course anonymously    |[Evaluation form](https://docs.google.com/forms/d/e/1FAIpQLSeBmqsD-SRde_CV_aDfBM10GUTK0Qf-N6PMwtgTqa_GMq11BQ/viewform?usp=publish-editor)
 
 Also those that need to leave early are encouraged to fill in the evaluation
 form to help us improve the course
@@ -61,9 +61,14 @@ form to help us improve the course
     - I can install a Julia/Python/R packages myself
     - I understand what containers are
 
-    An other feedback?
+    Any other feedback?
 
-    Thanks for your feedback.
+    ```text
+    Free text paragraph
+    ```
+
+    Thanks for your feedback!
+
     This feedback will be published as-is at the end of the day,
     if and only if there are no personal details (email, address, etc.)
     in the feedback. Do mention the teachers, assistants, etc by name!
