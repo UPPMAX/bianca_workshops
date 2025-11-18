@@ -13,7 +13,7 @@ tags:
 
 Goal                               |Form
 -----------------------------------|------------------------------------------------------
-Share any anonymous feedback easily|`Form: any feedback during the day`
+Share any anonymous feedback easily|[Feedback form](https://docs.google.com/forms/d/e/1FAIpQLSdltCAs-5q84opLWobYK5nXMix6q--JvIXgCs37RiBYRzmCww/viewform?usp=publish-editor)
 Evaluate the course anonymously    |`Form: The evaluation form`
 
 Also those that need to leave early are encouraged to fill in the evaluation
