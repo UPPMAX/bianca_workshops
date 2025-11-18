@@ -35,10 +35,14 @@ tags:
 
 > Bianca Castafiore, the Tintin character the cluster is named after.
 
-Are you already working with sensitive data in your research
-and feel your workflow can be improved?
-If yes, welcome to a full day of learning of smarter ways
-to work on the Bianca UPPMAX cluster.
+## Goal
+
+To use Bianca in a better way:
+
+- run calculations faster on a GPU (if possible)
+- transfer files to/from Bianca using the smartest tool
+- run more calculations that start faster
+- run software that is not installed by UPPMAX anyways
 
 ???- tip "Help! I am new to Bianca, where do I start instead?"
 
