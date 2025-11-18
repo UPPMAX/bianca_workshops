@@ -1,9 +1,29 @@
 ---
 tags:
   - evaluation
+  - feedback
+  - anonymous
 ---
 
 # Evaluation
+
+???- question "Where are the earlier course evaluations?"
+
+    They are at [the 'Evaluations' (plural) page](../evaluations/README.md).
+
+- `Form: any feedback during the day`
+
+???- question "For teachers: what is in that form?"
+
+    Intermediate Bianca: Any feedback
+
+    Thanks for your feedback.
+    This feedback will be published as-is at the end of the day,
+    if and only if there are no personal details (email, address, etc.)
+    in the feedback.
+    Do mention the teachers, assistants, etc by name!
+
+    Any feedback?
 
 - [The evaluation form](https://docs.google.com/forms/d/e/1FAIpQLScLc6vOsNcjSTDpEiTzFLNrLbIBnSwObOjdMdgjGGrM1hQqSQ/viewform?usp=header)
 
