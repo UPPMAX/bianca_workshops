@@ -110,7 +110,7 @@ $ pip download <package-name>==<version>
 pip install --user --no-index --find-links /proj/sens2025560/nobackup/wharf/$USER/$USER-sens2025560 <package-name>==<version>
 ```
 
-- NOTE: you don't need the full naem of the ``.whl`` file!
+- NOTE: you don't need the full name of the ``.whl`` file!
 
 ### Test it in Python
 
