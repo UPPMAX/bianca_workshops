@@ -207,7 +207,7 @@ tags:
 
 !!! note "Typical workflow for installation"
     
-    - **Download** the 
+    - **Download** the
     
         - _source_ code or
 
