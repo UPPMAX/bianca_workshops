@@ -15,15 +15,12 @@ tags:
 
 ???- question "For teachers"
 
-    Prerequisites are:
-
-    - Link to shared document
-
     Teaching goals are:
 
+    - Learners have heard the goal of the course
     - Learners have read the topics discussed today
-    - Learners can find the link to the shared document
     - Learners can find the schedule
+    - Learners can find the evaluation
 
     Prior questions:
 
@@ -125,7 +122,7 @@ flowchart TD
 
 ## Exercises
 
-### Exercise 1: today's topic
+### Exercise 1: what will we learn today?
 
 In this exercise, we will find out today's learning objectives.
 
