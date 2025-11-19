@@ -98,13 +98,17 @@ Rule of thumb:
 
 ## Minimal Commands
 
-| Action | Command (example) |
-|-------|-------------------|
-| Interactive session | `interactive -A sens2025560 -p core -n 1 -t 00:10:00` |
-| Submit batch | `sbatch job.sh` |
-| List my in-queue jobs | `squeue --me` or `jobinfo` |
-| Cancel a job | `scancel <jobid>` |
-| Override cores/time | `sbatch -n 2 -t 00:05:00 job.sh` |
+<!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
+
+| Action                | Command (example)                                     |
+|-----------------------|-------------------------------------------------------|
+| Interactive session   | `interactive -A sens2025560 -p core -n 1 -t 00:10:00` |
+| Submit batch          | `sbatch job.sh`                                       |
+| List my in-queue jobs | `squeue --me` or `jobinfo`                            |
+| Cancel a job          | `scancel <jobid>`                                     |
+| Override cores/time   | `sbatch -n 2 -t 00:05:00 job.sh`                      |
+
+<!-- markdownlint-enable MD013 -->
 
 Keep modules: load them INSIDE the interactive session or inside the batch script.
 

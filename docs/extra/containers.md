@@ -76,7 +76,7 @@ Well. It is there but broadinstitute is not there. Let's look for alternatives, 
 Perfect!
 
 | ![gatk_syslabs](./img/gatk_syslabs.png) | ![gatk_dockerhub](./img/gatk_dockerhub.png) |
-|---|---|
+|-----------------------------------------|---------------------------------------------|
 
 - **Log in to transit**: ``ssh <username>@transit.uppmax.uu.se``
     - [Documentation](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/transfer_bianca/#transit-server)

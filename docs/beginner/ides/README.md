@@ -81,12 +81,12 @@ You will choose one and dig into that one.
 
 ### Exercise 0: determine which IDE
 
-Tool | Language(s) | Comment
------|-------------| -------
-RStudio| R         | Good for various working methods
-MATLAB| MATLAB      | Good for various working methods
-VSCodium | All      | Very versatile but a bit difficult to work with
-Jupyter| Python (R, Julia) | More notebook like
+Tool    | Language(s)       | Comment
+--------|-------------------|--------
+RStudio | R                 | Good for various working methods
+MATLAB  | MATLAB            | Good for various working methods
+VSCodium| All               | Very versatile but a bit difficult to work with
+Jupyter | Python (R, Julia) | More notebook like
 
 - If you are not used to any of these I recommend RStudio.
 

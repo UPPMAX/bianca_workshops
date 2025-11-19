@@ -121,8 +121,8 @@ Also, these videos may be useful:
 
 <!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
 
-HPC cluster|Login method |Documentation |Video
------------|-------------|--------------|------
+HPC cluster|Login method |Documentation                                                                                   | Video
+-----------|-------------|------------------------------------------------------------------------------------------------|------
 Bianca     |Website      |[Documentation](https://docs.uppmax.uu.se/getting_started/login_bianca_remote_desktop_website/) | [Video](https://youtu.be/Ni9nyCf7me8)
 Bianca     |SSH          |[Documentation](https://docs.uppmax.uu.se/getting_started/login_bianca_console_password/)       | [Video](https://youtu.be/7mKDxnXqi_M)
 
