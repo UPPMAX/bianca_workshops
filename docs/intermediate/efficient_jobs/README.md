@@ -126,11 +126,23 @@ Here is a visualisation of a user that booked too many cores:
 Programs can **sometimes** use multiple cores to speed up its calculation.
 The idea is to let multiple cores each do their own part of the total
 calculation. Such programs are called 'programs that allow parallel
-computation'. In this session, I call these **multithreaded programs**, which
-is a simplification that is not entirely technically correct.
+computation'.
+In this session, I call these **multithreaded programs**
+(a simplification that is not entirely technically correct).
 Where multithreaded programs can use multiple cores,
 **singlethreaded program** cannot. For singlethreaded programs,
 booking more cores to speed up the calculation is useless.
+
+There are multiple ways to find out if a program can use multiple cores:
+
+- Measure the number of cores used during a calculation
+  (which is what we will do in this session)
+- Read the documentation of the program
+- Measure the speed increase by using multiple cores.
+  This is called **benchmarking**. 
+  When a benchmark shows that there is no speed
+  increase for multiple cores, it can be concluded that
+  the program cannot use multiple cores.
 
 Here is a visualisation of a user that booked multiple cores
 for a singlethreaded program:
@@ -177,103 +189,115 @@ The details behind this table can be found at
 
 ## Exercises
 
-### Exercise 1: reading a `jobstats` plot
+## Exercise 1: use cases
 
-- Read [the UPPMAX `jobstats` documentation](https://docs.uppmax.uu.se/software/jobstats/)
-  to know enough to be able to (practice) read a `jobstats` plot.
-  Especially [the 'effective use' section](https://docs.uppmax.uu.se/software/jobstats/#efficient-use)
-  is important.
+## Question 1
 
-#### Exercise 1.1: `jobstats plot 1`
+For your research project, you need to run a lot of calculations.
+Each calculation takes 10 hours. How do you make optimal use
+of your computational resources?
 
-See `jobstats plot 1` below and answer these questions:
+??? tip "Answer"
 
-- How much cores should this user book?
-- Why?
+    Run the calculation on a single core for 100% efficiency
 
-!!! info "jobstats plot 1"
+## Question 2
 
-    ![jobstats plot 1](jobstats_c_555912-l_1-k_bad_job_01_with_border.png)
+For your research project, you also have a calculation that takes 11 days.
+Your HPC cluster allows a calculation of at most 10 days.
+Assume your HPC center will not extend your job
+(they will probably do so when asked: we are there to help!).
+How do you make optimal use of your computational resources?
 
-    > jobstats plot 1
+??? tip "Answer"
+
+    If your calculation already has parallelism built-in,
+    then run the calculation on two cores: this only involves changing your
+    Slurm script, with a low loss of computational resources.
+
+    If you are a really tight on computational resources, you can
+    implement a 'save state' in your calculation, so that you can schedule
+    two runs of nine days in succession, each with 100% efficiency.
+
+    Alternatively, you can added thread parallelism to allow running
+    with multiple cores.
+
+## Question 3
+
+Your colleague runs many jobs with a lot of cores. 'It is way faster!',
+he/she states. That same colleague, however, also complains about long
+waiting times before his/her jobs start. How would you explain this
+situation?
+
+??? tip "Answer"
+
+    The colleague used up (or: 'wasted') all his/her computational resources
+    (commonly 10,000 core hours per month on UPPMAX).
+
+    Due to this, his/her jobs are only run when the HPC cluster
+    has a low workload and activates the so-called 'bonus queue' (UPPMAX)
+    or generally have to wait for their priority to go up again.
+
+## Question 4
+
+Your colleague needs to finish his/her analysis quickly
+and starts scheduling multiple cores for his/her jobs.
+After some measurements, he/she concludes that the calculation does not finish
+faster at all.
+How would you explain this situation? 
+What would you advise him/her?
+
+??? tip "Answer"
+
+    The colleague is trying to run a singlethreaded calculation,
+    i.e. a calculation that cannot use multiple cores.
+
+    You should advise to go back to scheduling single-core jobs
+    directly, to prevent his/her jobs from being in the queue longer.
+
+## Question 5
+
+You are using a program that is known to be single-threaded.
+You does not want to schedule more cores than needed.
+However, you know that you need to schedule 10 cores
+for the program to run at all.
+Is there a way you can use your computational resources more efficiently?
+
+??? tip "Answer"
+
+    No.
+
+    If you need 10 cores for the memory it provides,
+    than that is what is needed.
+
+    Sure, 9 core are not helping with the calculation at all,
+    which is acceptable here.
+
+## Question 6
+
+For years, you have been using a pipeline with multiple
+steps that use different tools.
+Some of these tools recommend to use 16 cores,
+so you have booked 16 cores for the whole process.
+
+Due to this session, you decided to measure the job statistics of this job
+and you find the following graph:
+
+![Question 6](jobstats_c_555912-l_1-k_bad_job_05_with_border.png)
+
+After seeing this graph, how much course will you book in the future?
 
 ???- question "Answer"
 
-    The user should have booked 1 core: the memory use will work fine with
-    1 core and this matches the CPU usage exactly.
+    If you want to make best use of your core hours, use 1 core:
+    the calculation takes around 130 minutes by 16 cores.
+    Assuming that on average 8 cores are actually doing work, this
+    calculation will then take 130 minutes * 8 cores less = 1040 minutes
+    for 1 core = around 18 hours.
 
-    It may be that the program is set up incorrectly
-    and that it can use multiple cores if set up correctly.
-
-#### Exercise 1.2: `jobstats plot 2`
-
-See `jobstats plot 2` below and answer these questions:
-
-- Did the job finish successfully?
-- How much cores should this user book?
-- Why?
-
-!!! info "jobstats plot 2"
-
-    ![jobstats plot 2](jobstats_example_2.png)
-
-    > jobstats plot 2
-
-???- question "Answer"
-
-    The job did not finish successfully, the `OUT_OF_MEMORY` error
-    indicites that.
-
-    How much cores the user should book is uncertain, we only know that it is
-    more then currently used. One strategy is to double to amount of cores
-    and finetune after a successful run.
-
-#### Exercise 1.3: `jobstats plot 3`
-
-- See `jobstats plot 3` below and answer these questions:
-- How much cores should this user book?
-- Why?
-
-!!! info "jobstats plot 3"
-
-    ![jobstats plot 3](jobstats_example_3.png)
-
-    > jobstats plot 3
-
-???- question "Answer"
-
-    We don't know. The user uses all CPU power perfectly and
-    there is enough memory available.
-
-    The user may benefit from more CPUs, as the program may be
-    CPU limited.
-
-    It may be that the program used is designed to use
-    20 CPUs maximally, hence scheduling 20 cores is perfect!
-
-    It may be that using 20 cores is a strategy of the user:
-    using multiple cores always brings computational overhead
-    and hence wasted CPU resources.
-
-#### Exercise 1.4: `jobstats plot 4`
-
-See `jobstats plot 4` below and answer these questions:
-
-- How much cores should this user book?
-- Why?
-
-!!! info "jobstats plot 4"
-
-    ![jobstats plot 4](rackham-naiss2023-22-1014-fdube-50060711.png)
-
-    > jobstats plot 4
-
-???- question "Answer"
-
-    This seems to be the cleanest example of using the algorithm to
-    use computational resources efficiently: the user needs 2 cores
-    for memory and adds 1 for safely. The job is not clearly
-    CPU limited.
+    If you want to be a bit faster, use between 2-8 cores,
+    as the calculation uses 8 cores on average. Using 8 cores here
+    is reasonable use.
 
 ### Exercise 2: creating a `jobstats` plot
 
@@ -281,14 +305,24 @@ We are going to create a `jobstats` plot. For that, we need a job
 to plot. Here we first look for a job, after which we plot it.
 
 - Scan [the UPPMAX `finishedjobinfo` documentation](https://docs.uppmax.uu.se/software/finishedjobinfo/)
-- Log in to **your own Bianca project**.
+- Log in to **your own Bianca project** where you have had a run
+  of at least 1 hour
 - Find a job that has finished successfully that took longer than one hour
   (if there is none, use the job the ran longest)
 
 ???- question "Answer"
 
-    Here is a code snippet to find jobs that have completed:
+
+    From [the UPPMAX `finishedjobinfo` documentation](https://docs.uppmax.uu.se/software/finishedjobinfo/),
+    here is a code snippet to find jobs that have completed and took longer
+    than an hour:
     
+
+    ```bash
+    finishedjobinfo | grep -E "runtime.([0-9]-)?[0-9][1-9]"
+    ```
+
+    If there is no job that is long enough, use:
 
     ```bash
     finishedjobinfo | grep COMPLETED
