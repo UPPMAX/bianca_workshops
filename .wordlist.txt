@@ -402,3 +402,9 @@ numpy
 whl
 gz
 Pelle
+maximimal
+Visualisation
+visualisation
+multithreaded
+singlethreaded
+benchmarking
