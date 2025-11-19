@@ -206,7 +206,7 @@ tags:
 - If not available on Bianca already (like Conda repositories) --> use the ``wharf`` to install your tools.
 
 !!! note "Typical workflow for installation"
-    
+
     - **Download** the
     
         - _source_ code or

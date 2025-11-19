@@ -139,7 +139,7 @@ There are multiple ways to find out if a program can use multiple cores:
   (which is what we will do in this session)
 - Read the documentation of the program
 - Measure the speed increase by using multiple cores.
-  This is called **benchmarking**. 
+  This is called **benchmarking**.
   When a benchmark shows that there is no speed
   increase for multiple cores, it can be concluded that
   the program cannot use multiple cores.
@@ -244,7 +244,7 @@ Your colleague needs to finish his/her analysis quickly
 and starts scheduling multiple cores for his/her jobs.
 After some measurements, he/she concludes that the calculation does not finish
 faster at all.
-How would you explain this situation? 
+How would you explain this situation?
 What would you advise him/her?
 
 ??? tip "Answer"
