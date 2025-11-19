@@ -126,7 +126,7 @@ python
 
 ### Exercise
 
-!!! question "Install ``numpy-2.0.0`` for Python/3.9.5
+!!! question "Install ``numpy-2.0.0`` for Python/3.9.5"
 
 
     ??? question "Answer"
