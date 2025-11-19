@@ -1,10 +1,10 @@
 # Evaluation
 
-- Date: 2025-11-17
+- Date: 2025-11-18
 - Course: Intermediate
-- [Lesson plan](../../lesson_plans/20251117/20251117_richel.md)
-- [Evaluation](../../evaluations/20251117/README.md)
-- [Reflection](../../reflections/20251117/20251117_richel.md)
+- [Lesson plan](../../lesson_plans/20251118/20251118_richel.md)
+- [Evaluation](../../evaluations/20251118/README.md)
+- [Reflection](../../reflections/20251118/20251118_richel.md)
 - [Analysis script (R)](analyse.R)
 - [average_confidences.csv](average_confidences.csv)
 - [success_score.txt](success_score.txt): 86%
