@@ -7,7 +7,7 @@
 - [Reflection](../../reflections/20251117/20251117_richel.md)
 - [Analysis script (R)](analyse.R)
 - [average_confidences.csv](average_confidences.csv)
-- [success_score.txt](success_score.txt): 0.62
+- [success_score.txt](success_score.txt): 86%
 
 ![All confidences](all_confidences.png)
 

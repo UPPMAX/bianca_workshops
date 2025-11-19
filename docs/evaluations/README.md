@@ -16,7 +16,7 @@ Intermediate|I3        |[Evaluation](20241111/README.md)|66%
 Beginner    |B4        |[Evaluation](20250319/README.md)|85%
 Intermediate|I4        |[Evaluation](20250523/README.md)|62%
 Beginner    |B5        |[Evaluation](20250915/README.md)|91%
-Intermediate|I5        |[Evaluation](20251118/README.md)|.
+Intermediate|I5        |[Evaluation](20251118/README.md)|86%
 
 ## Other data
 
@@ -31,4 +31,4 @@ I3       |?            |6               |5 (83%)
 B4       |24           |11 (46%)        |11 (100%)
 I4       |3            |3 (100%)        |2 (66%)
 B5       |23           |12 (52%)        |8 (67%)
-I5       |.            |.               |.
+I5       |7            |2 (29%)         |2 (100%)
