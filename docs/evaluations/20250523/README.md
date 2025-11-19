@@ -2,12 +2,12 @@
 
 - Date: 2025-05-23
 - Course: Intermediate
-- [Lesson plan](../../lesson_plans/20250523/20250523_richel.md)
-- [Evaluation](../../evaluations/20250523/README.md)
-- [Reflection](../../reflections/20250523/20250523_richel.md)
+- [Lesson plan](../../lesson_plans/20251117/20251117_richel.md)
+- [Evaluation](../../evaluations/20251117/README.md)
+- [Reflection](../../reflections/20251117/20251117_richel.md)
 - [Analysis script (R)](analyse.R)
 - [average_confidences.csv](average_confidences.csv)
-- [success_score.txt](success_score.txt): 0.62
+- [success_score.txt](success_score.txt): 86%
 
 ![All confidences](all_confidences.png)
 
