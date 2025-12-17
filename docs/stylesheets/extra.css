@@ -25,3 +25,12 @@
   -webkit-mask-image: var(--md-admonition-icon--t2s);
           mask-image: var(--md-admonition-icon--t2s);
 }
+
+.header-class {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100px;
+    background: linear-gradient(to right, #4b0029, #010088);
+    color: white !important;
+    }
