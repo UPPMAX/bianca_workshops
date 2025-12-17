@@ -1,4 +1,4 @@
-# Welcome to the Bianca workshop!
+# Welcome to the NAISS Bianca workshop!
 
 ![NAISS logo](assets/naiss_logo_inverted.png)
 ![UU logo](assets/UU_logo_color_116_x_109.png)

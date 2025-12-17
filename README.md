@@ -10,7 +10,7 @@
 
 <!-- markdownlint-enable MD013 -->
 
-This repository contains the source code for the [Bianca workshop](https://uppmax.github.io/bianca_workshops/)
+This repository contains the source code for the [NAISS Bianca workshop](https://uppmax.github.io/bianca_workshops/)
 
 ## Credits
 
