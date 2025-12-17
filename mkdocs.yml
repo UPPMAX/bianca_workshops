@@ -117,7 +117,7 @@ theme:
     text: Lato
     code: JetBrains Mono
 
-  logo: assets/logo.svg
+  logo: logos/naiss_logo_inverted.png
 
   features:
     - navigation.tabs
