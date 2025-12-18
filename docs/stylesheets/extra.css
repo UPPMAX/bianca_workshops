@@ -25,3 +25,29 @@
   -webkit-mask-image: var(--md-admonition-icon--t2s);
           mask-image: var(--md-admonition-icon--t2s);
 }
+
+
+.md-header {
+
+  /* Get the exact NAISS color gradient used by https://www.naiss.se/ */
+  /* Red color at the left: RGB #4b0029 == HSL 327,100,15 */
+  /* Blue color at the right: RGB #010088 == HSL 240,100,27 */
+  background: linear-gradient(to right, #4b0029, #010088);
+  /* The text must be readable on this dark color gradient */
+  color: white
+
+  /* Get a NAISS color gradient that is twice as bright */
+  /* Red color at the left: RGB #990052 == HSL 327,100,30 */
+  /* Blue color at the right: RGB #1414FF == HSL 240,100,54 */
+  /* background: linear-gradient(to right, #990052, #1414FF); */
+  /* The text must be readable on this still-dark color gradient */
+  /* color: white */
+
+  /* Get a NAISS color gradient that is thrice as bright */
+  /* Red color at the left: RGB #E6007E  == HSL 327,100,45 */
+  /* Blue color at the right: RGB #9E9EFF == HSL 240,100,81 */
+  /* background: linear-gradient(to right, #E6007E, #9E9EFF); */
+  /* The text is readable */
+
+
+}

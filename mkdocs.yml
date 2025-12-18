@@ -37,7 +37,7 @@ nav:
   - Extra material:
       - The bigger picture: intermediate/overview.md
       - Transferring files to/from Bianca: extra/transfer_basics.md
-      - Introduction to compute nodes: extra/slurm_intro.md
+      - Introduction to compute nodes: extra/slurm_intro_old.md
       - intermediate/complex_jobs.md
       - intermediate/replicate_jobs.md
       - extra/slurm.md
@@ -66,7 +66,15 @@ not_in_nav: |
   beginner/slurm_intro_old.md
   beginner/start_interactive_node.md
   beginner/img/empty.md
+  beginner/slurm_intro.md
+  beginner/start_interactive_session.md
   communication/beginner_welcome_email.md
+  communication/beginner/README.md
+  communication/beginner/beginner_welcome_email.md
+  communication/intermediate/README.md
+  communication/intermediate/Bianca_login.md
+  communication/intermediate/intermediate_welcome_email_250516.md
+  communication/intermediate/practical_details.md
   data/README.md
   data/counts/20250319/README.md
   evaluations/20230911/README.md
@@ -78,6 +86,13 @@ not_in_nav: |
   evaluations/20241111/stats.md
   evaluations/20250319/README.md
   evaluations/20250523/README.md
+  evaluations/20250915/README.md
+  evaluations/20250915/stats.md
+  evaluations/20251118/README.md
+  evaluations/20251118/stats.md
+  evaluations/20260206/README.md
+  extra/beginner_exercises.md
+  extra/linux.md
   extra/jupyter.md
   intermediate/compute_nodes.md
   intermediate/practicalities.md
@@ -92,6 +107,9 @@ not_in_nav: |
   lesson_plans/20250319/20250319_richel.md
   lesson_plans/20250523/20250523_richel.md
   lesson_plans/20250523/README.md
+  lesson_plans/20250915/20250915_richel.md
+  lesson_plans/20251118/20251118_richel.md
+  lesson_plans/20260206/20260206_richel.md
   meeting_notes/20241010.md
   meeting_notes/20241108.md
   meeting_notes/20250417.md
@@ -107,6 +125,9 @@ not_in_nav: |
   reflections/20241111/20241111_richel.md
   reflections/20250319/20250319_richel.md
   reflections/20250523/20250523_richel.md
+  reflections/20250915/20250915_richel.md
+  reflections/20251118/20251118_richel.md
+  reflections/20260206/20260206_richel.md
   shared_documents/20240419.md
   shared_documents/20240524.md
 
@@ -124,7 +145,7 @@ theme:
     previous: 80 # p
     search: 83   # s
 
-  logo: logo/naiss_logo_inverted.png
+  logo: logo/naiss_logo_white.png
 
   features:
     - navigation.tabs
