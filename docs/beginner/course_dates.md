@@ -15,10 +15,8 @@ tags:
 
     - [Shared document for teaching dates](https://hackmd.io/@UPPMAX/uppmax-training-events)
 
-Iteration|Course date
----------|---------------
-6        |2026-02-06 [1]
-7        |?2026-09-14
+Week|Date                      |Times      |Registration                                                                   |Registration closing date
+----|--------------------------|-----------|-------------------------------------------------------------------------------|-------------------------
+6   |Friday 2026-02-06 [1]     |9:00-16:00 |[Registration](https://naiss-training.github.io/NAISS-intro-week/#registration)|2026-01-23
 
-- [1] Day 5 of the NAISS intro week,
-  as indicated in the NAISS course schedule document
+- [1] Part of [the NAISS intro week](https://naiss-training.github.io/NAISS-intro-week/), 2-6 February

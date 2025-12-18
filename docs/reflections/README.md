@@ -6,7 +6,7 @@ tags:
 # Reflections
 
 Course      |Iteration |Reflections
-------------|----------|-----------------------------
+------------|----------|-----------------------------------------
 Beginner    |B1        |[Reflection](20230911/20230911_richel.md)
 Intermediate|I1        |[Reflection](20231211/20231211_richel.md)
 Beginner    |B2        |[Reflection](20240419/20240419_richel.md)
@@ -17,6 +17,7 @@ Beginner    |B4        |[Reflection](20250319/20250319_richel.md)
 Intermediate|I4        |[Reflection](20250523/20250523_richel.md)
 Beginner    |B5        |[Reflection](20250915/20250915_richel.md)
 Intermediate|I5        |[Reflection](20251118/20251118_richel.md)
+Beginner    |B6        |[Reflection](20260206/20260206_richel.md)
 
 - Note that the first iteration is only the first documented iteration.
   It is unknown how many iterations came before it
