@@ -117,6 +117,13 @@ theme:
     text: Lato
     code: JetBrains Mono
 
+  # Keyboard shortcuts for navigation, from https://www.mkdocs.org/user-guide/choosing-your-theme/
+  shortcuts:
+    help: 191    # ?
+    next: 78     # n
+    previous: 80 # p
+    search: 83   # s
+
   logo: logo/naiss_logo_inverted.png
 
   features:
