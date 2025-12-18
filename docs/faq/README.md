@@ -283,6 +283,21 @@ or 0.64/0.70 `[Cornelius-White, 2007][Hattie, 2012]`.
 
 Because NAISS does not have a GitHub owner page yet.
 
+### How did you do the NAISS color gradient at the top of the MkDocs page?
+
+By adding the lines below to [the style sheet](../stylesheet/extra.css):
+
+```text
+.md-header {
+  background: linear-gradient(to right, #4b0029, #010088);
+  color: white
+}
+.md-tabs {
+  background: linear-gradient(to right, #4b0029, #010088);
+  color: white
+}
+```
+
 ## References
 
 - `[Cornelius-White, 2007]` Cornelius-White, Jeffrey.
