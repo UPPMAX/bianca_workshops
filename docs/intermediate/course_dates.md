@@ -17,6 +17,5 @@ tags:
 
 Iteration|Course dates
 ---------|---------------------------------
-5        |Tuesday 2025-11-18
-6        |Around 2026-05-23, e.g. Monday 2026-05-25
+6        |?[Friday 2026-05-22](https://github.com/UPPMAX/bianca_workshops/issues/89)
 7        |Around 2026-11-17, e.g. Monday 2026-11-16
