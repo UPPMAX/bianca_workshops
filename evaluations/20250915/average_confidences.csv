@@ -1,0 +1,13 @@
+question,mean
+I can create a minimal executable bash script,4.5
+I can log in to the Bianca console environment using SSH,4.5
+I can log in to the Bianca remote desktop using the website,4.875
+I can manage my files and folders using a graphical file manager,4.875
+I can manage my files and folders using a terminal,4.375
+I can navigate to the wharf folder using a graphical file manager,4.875
+I can navigate to the wharf folder using a terminal,4.5
+I can start an IDE,4.285714285714286
+I can start an interactive session,4.714285714285714
+I can submit jobs to the scheduler,4.428571428571429
+I can transfer files to/from Bianca using a graphical tool,4.625
+I can use modules,4.125
