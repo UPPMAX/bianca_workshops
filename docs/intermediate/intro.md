@@ -131,7 +131,7 @@ The goal of these questions is to introduce what is taught
 today, as well as measuring how much knowledge is gained at the end
 of the day.
 
-- Fill in [the 'Intermediate Bianca learning outcomes form'](https://docs.google.com/forms/d/e/1FAIpQLSe6Ve8AlVrS-wQWlhFnIdfvjVNS7ZYFoaHLILnUyIQegL221A/viewform?usp=publish-editor)
+- Fill in [TODO: the 'Intermediate Bianca learning outcomes form'](https://github.com/UPPMAX/bianca_workshops/issues/88)
 
 ???- question "What is in that form?"
 
