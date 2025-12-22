@@ -285,7 +285,7 @@ Because NAISS does not have a GitHub owner page yet.
 
 ### How did you do the NAISS color gradient at the top of the MkDocs page?
 
-By adding the lines below to [the style sheet](../stylesheet/extra.css):
+By adding the lines below to [the style sheet](../stylesheets/extra.css):
 
 ```text
 .md-header {
