@@ -162,6 +162,7 @@ theme:
 
   custom_dir: mkdocs_uppmax/
 
+# For NAISS color gradient at top
 extra_css:
   - stylesheets/extra.css
 
