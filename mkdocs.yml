@@ -15,7 +15,7 @@ nav:
       - Using the desktop environment: beginner/use_remote_desktop.md
       - Log in to the Bianca console environment: beginner/login_console.md
       - Command-line intro: beginner/commandline.md
-      - Create an exectable script: beginner/create_script.md
+      - Create an executable script: beginner/create_script.md
       - Module system: beginner/modules.md
       - Transferring files to/from Bianca using a graphical tool: beginner/file_transfer_using_gui.md
       # - Slurm:  beginner/slurm_intro.md
