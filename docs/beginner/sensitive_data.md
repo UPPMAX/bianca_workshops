@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # Working with sensitive data outside Bianca
 
 It is of course great to store and work with sensitive data on a platform built to satisfy the legal and information security requirements.
