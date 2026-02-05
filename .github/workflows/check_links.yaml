@@ -4,6 +4,7 @@ name: Check links
 # Check links on the 2nd day of the month.
 # 2nd as the first letter of this repo is the 2nd letter in the alphabet.
 on:
+  workflow_dispatch:
   push:
     paths:
       - "docs/**"
