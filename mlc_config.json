@@ -3,6 +3,7 @@
     "ignorePatterns": [
         {
             "pattern": "^https://bianca.uppmax.uu.se"
+            "pattern": "^https://docs.uppmax.uu.se"
         }
     ]
 }
