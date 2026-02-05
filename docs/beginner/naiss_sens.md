@@ -1,3 +1,9 @@
+---
+tags:
+  - lesson
+  - session
+---
+
 # NAISS SENS
 
 !!! info "Learning outcomes"
