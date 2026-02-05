@@ -3,7 +3,7 @@
 !!! info "Learning outcomes"
 
     - This is a short overview of NAISS SENS projects in the context of NAISS
-    - To have heard about Bianca and Arrhenius, as well as other NAISS systems
+    - To have heard about Bianca and Arrhenius, and expected changes that will come under 2026
 
 
 ## NAISS
