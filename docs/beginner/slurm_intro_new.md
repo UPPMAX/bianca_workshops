@@ -49,6 +49,7 @@ tags:
 - Login node: lightweight command & submission point (do not run heavy jobs here)
 - Compute nodes: where your jobs actually run
 - Node: a physical machine; Core: one processing unit within a node
+- [NEWS!](https://status.uppmax.uu.se/2026-02-05/welcome-maja/): More 256 GB memory nodes (`-C mem215GB`) and login nodes memory increased from 15->30GB 
 
 ???- info  "Hardware Diagram"
 
@@ -209,7 +210,7 @@ Decide Interactive or Batch + minimal flags:
 1. GUI RStudio exploratory stats (≤4 h)
 1. Pipeline already validated (repeat weekly)
 
-(Join at menti.com | code 3957 0305)
+(Join at menti.com | code 5863 8668)
 
 ## Cheat Sheet
 
