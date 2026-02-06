@@ -44,4 +44,4 @@ tags:
 - A little cumbersome but doable!
 
 - For collaboration within a ``sens`` project your can have a "local" ``remote`` repo in your common project folder.
-- [More on Git on Bianca](http://docs.uppmax.uu.se/software/git_on_bianca/)
+- [More on Git on Bianca](https://docs.uppmax.uu.se/software/git_on_bianca/)

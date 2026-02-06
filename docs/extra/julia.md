@@ -45,7 +45,7 @@ tags:
     - The first time Julia will precompile the package for you!
 - You may control the present "central library" by typing ``ml help julia/<version>`` in the BASH shell.
     - There you will also find which python, gcc and openmpi version that are compatible.
-    - Or see the [Julia user guide at UPPMAX](http://docs.uppmax.uu.se/software/julia/){:target="_blank"}
+    - Or see the [Julia user guide at UPPMAX](https://docs.uppmax.uu.se/software/julia/){:target="_blank"}
 - A possibly more up-to-date status can be found from the Julia shell:
 
 ``` julia

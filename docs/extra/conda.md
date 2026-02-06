@@ -29,12 +29,12 @@ We have mirrored all major non-proprietary Conda repositories (not ``main``, ``a
     - Good to change ``CONDA_ENVS_PATH`` to project folder, because of many small files.
     - Example: ``CONDA_ENVS_PATH=/proj/sens2025560/bjornc/conda``
 
-???+ question "Read [Conda user guide](http://docs.uppmax.uu.se/software/conda/)"
+???+ question "Read [Conda user guide](https://docs.uppmax.uu.se/software/conda/)"
 
-    - Read [Conda user guide](http://docs.uppmax.uu.se/software/conda/)
-        - skip [Working with Conda environments defined by files](http://docs.uppmax.uu.se/software/conda/#working-with-conda-environments-defined-by-files)
+    - Read [Conda user guide](https://docs.uppmax.uu.se/software/conda/)
+        - skip [Working with Conda environments defined by files](https://docs.uppmax.uu.se/software/conda/#working-with-conda-environments-defined-by-files)
 
-    - ONLY for the interested: [Working with Conda environments defined by files](http://docs.uppmax.uu.se/software/conda/#working-with-conda-environments-defined-by-files)
+    - ONLY for the interested: [Working with Conda environments defined by files](https://docs.uppmax.uu.se/software/conda/#working-with-conda-environments-defined-by-files)
         - On bianca you have to get the `environments.yml` to wharf first!
 
 ## Exercises

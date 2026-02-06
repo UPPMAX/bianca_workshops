@@ -137,9 +137,9 @@ flowchart LR
 
 As Bianca is a sensitive data cluster, we need to know:
 
-- [wharf](http://docs.uppmax.uu.se/cluster_guides/wharf/): a folder
+- [wharf](https://docs.uppmax.uu.se/cluster_guides/wharf/): a folder
   on Bianca that is the only folder one can transfer data to/from
-- [Transit](http://docs.uppmax.uu.se/cluster_guides/transit/):
+- [Transit](https://docs.uppmax.uu.se/cluster_guides/transit/):
   a service that allows one to transfer files between Bianca
   and other places, such as your local computer,
   but also other sensitive data clusters.
@@ -148,13 +148,13 @@ As Bianca is a sensitive data cluster, we need to know:
 
 ## Software
 
-There are many ways to [transfer files to/from Bianca](http://docs.uppmax.uu.se/cluster_guides/transfer_bianca/).
+There are many ways to [transfer files to/from Bianca](https://docs.uppmax.uu.se/cluster_guides/transfer_bianca/).
 
 In this session, we use:
 
-- [File transfer to/from Bianca using rsync](http://docs.uppmax.uu.se/software/bianca_file_transfer_using_rsync/):
+- [File transfer to/from Bianca using rsync](https://docs.uppmax.uu.se/software/bianca_file_transfer_using_rsync/):
   the recommended way to do so
-- [File transfer to/from Bianca using FileZilla](http://docs.uppmax.uu.se/software/bianca_file_transfer_using_filezilla/):
+- [File transfer to/from Bianca using FileZilla](https://docs.uppmax.uu.se/software/bianca_file_transfer_using_filezilla/):
   the user-friendly way to do so
 
 We will use `rsync` first, as this is the UPPMAX-recommended way,
@@ -207,18 +207,18 @@ and stay open during the break.
 
 - As a group, agree on how to start, for example to agree
   to first read the exercises
-- Scan the content of [the UPPMAX documentation on how to use rsync to transfer data to/from Bianca](http://docs.uppmax.uu.se/software/bianca_file_transfer_using_rsync/)
+- Scan the content of [the UPPMAX documentation on how to use rsync to transfer data to/from Bianca](https://docs.uppmax.uu.se/software/bianca_file_transfer_using_rsync/)
 - Answer the following questions to yourself in your own words (answers are below).
   Be generous in accepting your own answer.
   You may share your answer in the course shared document for feedback,
   but do not wait for feedback.
   If you have no idea at all, read the linked UPPMAX documentation:
 
-    - What is [SUNET](http://docs.uppmax.uu.se/getting_started/get_inside_sunet/)?
-    - What is [`ssh`](http://docs.uppmax.uu.se/software/ssh/)? What does it allow us to do?
-    - What is [`wharf`](http://docs.uppmax.uu.se/cluster_guides/wharf/)? What does it allow us to do?
-    - What is [`rsync`](http://docs.uppmax.uu.se/software/rsync/)?
-    - What is [`transit`](http://docs.uppmax.uu.se/cluster_guides/transit/)?
+    - What is [SUNET](https://docs.uppmax.uu.se/getting_started/get_inside_sunet/)?
+    - What is [`ssh`](https://docs.uppmax.uu.se/software/ssh/)? What does it allow us to do?
+    - What is [`wharf`](https://docs.uppmax.uu.se/cluster_guides/wharf/)? What does it allow us to do?
+    - What is [`rsync`](https://docs.uppmax.uu.se/software/rsync/)?
+    - What is [`transit`](https://docs.uppmax.uu.se/cluster_guides/transit/)?
 
 ???- question "Answers"
 
@@ -228,22 +228,22 @@ and stay open during the break.
 
     > - What is `ssh`? What does it allow us to do?
 
-    [`ssh`](http://docs.uppmax.uu.se/software/ssh/) is an SSH client
+    [`ssh`](https://docs.uppmax.uu.se/software/ssh/) is an SSH client
     that allows us to log in to Bianca and Transit
 
     > - What is `wharf`? What does it allow us to do?
 
-    [`wharf`](http://docs.uppmax.uu.se/cluster_guides/wharf/) is a folder
+    [`wharf`](https://docs.uppmax.uu.se/cluster_guides/wharf/) is a folder
     on Bianca used for file transfer to/from Bianca.
 
     > - What is `rsync`?
 
-    [`rsync`](http://docs.uppmax.uu.se/software/rsync/) is a command-line tool
+    [`rsync`](https://docs.uppmax.uu.se/software/rsync/) is a command-line tool
     to transfer files to/from Bianca.
 
     > - What is `transit`?
 
-    [`transit`](http://docs.uppmax.uu.se/cluster_guides/transit/)
+    [`transit`](https://docs.uppmax.uu.se/cluster_guides/transit/)
     is an UPPMAX service that can be used to securely transfer files.
 
 ### Exercise 2: using `rsync`
@@ -269,7 +269,7 @@ Here is what to do when you get stuck:
 Here is the exercise:
 
 - Follow the step-by-step guide of
-  [the UPPMAX documentation on how to use rsync to transfer data to/from Bianca](http://docs.uppmax.uu.se/software/bianca_file_transfer_using_rsync/).
+  [the UPPMAX documentation on how to use rsync to transfer data to/from Bianca](https://docs.uppmax.uu.se/software/bianca_file_transfer_using_rsync/).
   There are 4 transfers described (file versus folder, upload versus download),
   do at least 1 upload and 1 download
 - Signal in Zoom that you are done using the Yes (a green checkmark) Reaction
@@ -284,9 +284,9 @@ Here is the exercise:
     - Explore the UPPMAX documentation
     - Transfer files to/from Bianca using `sftp`
 
-- Scan the content of [the UPPMAX documentation on how to use sftp to transfer data to/from Bianca](http://docs.uppmax.uu.se/software/bianca_file_transfer_using_sftp/)
+- Scan the content of [the UPPMAX documentation on how to use sftp to transfer data to/from Bianca](https://docs.uppmax.uu.se/software/bianca_file_transfer_using_sftp/)
 - Follow the step-by-step guide of
-  [the UPPMAX documentation on how to use sftp to transfer data to/from Bianca](http://docs.uppmax.uu.se/software/bianca_file_transfer_using_sftp/).
+  [the UPPMAX documentation on how to use sftp to transfer data to/from Bianca](https://docs.uppmax.uu.se/software/bianca_file_transfer_using_sftp/).
   There are 2 transfers described (upload versus download),
   do both
 - Signal in Zoom that you have nothing left to do using the No (a red cross) Reaction.
@@ -302,9 +302,9 @@ Here is the exercise:
     - Explore the UPPMAX documentation
     - Transfer files to/from Bianca using FileZilla
 
-- Scan the content of [the UPPMAX documentation on how to use FileZilla to transfer data to/from Bianca](http://docs.uppmax.uu.se/software/bianca_file_transfer_using_filezilla/)
+- Scan the content of [the UPPMAX documentation on how to use FileZilla to transfer data to/from Bianca](https://docs.uppmax.uu.se/software/bianca_file_transfer_using_filezilla/)
 - Follow the step-by-step guide of
-  [the UPPMAX documentation on how to use FileZilla to transfer data to/from Bianca](http://docs.uppmax.uu.se/software/bianca_file_transfer_using_filezilla/).
+  [the UPPMAX documentation on how to use FileZilla to transfer data to/from Bianca](https://docs.uppmax.uu.se/software/bianca_file_transfer_using_filezilla/).
   There are 2 transfers described (upload versus download),
   do both
 - Signal in Zoom that you have nothing left to do using the No (a red cross) Reaction.

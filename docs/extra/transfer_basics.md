@@ -33,7 +33,7 @@ tags:
 
 ## Data transfers
 
-- <http://docs.uppmax.uu.se/cluster_guides/transfer_bianca/>
+- <https://docs.uppmax.uu.se/cluster_guides/transfer_bianca/>
     - section 3: Transfer files to and from Bianca
 
 ### The `wharf` location on Bianca
@@ -91,7 +91,7 @@ Be sure to really use a SFTP client -- not just a SCP client.
 
 ## Using standard sftp client (command line)
 
-<http://docs.uppmax.uu.se/software/bianca_file_transfer_using_sftp/>
+<https://docs.uppmax.uu.se/software/bianca_file_transfer_using_sftp/>
 
 ```bash
 $ sftp -q <username>@bianca-sftp.uppmax.uu.se

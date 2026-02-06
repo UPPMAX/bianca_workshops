@@ -8,9 +8,9 @@ tags:
 
 - [Link to Slurm session in Intro to UPPMAX course](https://www.uu.se/download/18.57591c9d18f3ec99a0521784/1715116006615/c_560271-l_1-k_uppmax-slurm-2024-01.pdf){:target="_blank"}
 - [Slurm documentation](https://slurm.schedmd.com/){:target="_blank"}
-- [Slurm user guide](http://docs.uppmax.uu.se/cluster_guides/slurm/){:target="_blank"}
-- [Discovering job resource usage with `jobstats`](http://docs.uppmax.uu.se/software/jobstats/){:target="_blank"}
-- [Plotting your core hour usage](http://docs.uppmax.uu.se/software/projplot/){:target="_blank"}
+- [Slurm user guide](https://docs.uppmax.uu.se/cluster_guides/slurm/){:target="_blank"}
+- [Discovering job resource usage with `jobstats`](https://docs.uppmax.uu.se/software/jobstats/){:target="_blank"}
+- [Plotting your core hour usage](https://docs.uppmax.uu.se/software/projplot/){:target="_blank"}
 
 ## Example
 

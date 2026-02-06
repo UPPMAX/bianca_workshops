@@ -198,7 +198,7 @@ that uses 2 cores and has a maximum duration of 8 hours.
 
 ### Try interactive and run RStudio
 
-We recommend using at least two cores for [RStudio](http://docs.uppmax.uu.se/software/rstudio/), and to get those resources, you must should start an interactive job.
+We recommend using at least two cores for [RStudio](https://docs.uppmax.uu.se/software/rstudio/), and to get those resources, you must should start an interactive job.
 
 !!! example "Demo/type-along"
 
@@ -521,8 +521,8 @@ srun echo Hello world!
 ## Links
 
 - [New Slurm user guide](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/slurm/){:target="_blank"}
-- [Discovering job resource usage with `jobstats`](http://docs.uppmax.uu.se/software/jobstats/){:target="_blank"}
-- [Plotting your core hour usage](http://docs.uppmax.uu.se/software/projplot/){:target="_blank"}
+- [Discovering job resource usage with `jobstats`](https://docs.uppmax.uu.se/software/jobstats/){:target="_blank"}
+- [Plotting your core hour usage](https://docs.uppmax.uu.se/software/projplot/){:target="_blank"}
 - [The job scheduler graphically](https://docs.uppmax.uu.se/cluster_guides/slurm_scheduler/){:target="_blank"}
 - [Official slurm documentation](https://slurm.schedmd.com/){:target="_blank"}
 

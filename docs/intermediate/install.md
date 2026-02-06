@@ -158,7 +158,7 @@ tags:
     Links:
 
     - [Course material: Installing pip packages](https://uppmax.github.io/bianca_workshops/extra/pip/){:target="_blank"}
-    - [UPPMAX Python user guide: Pip](http://docs.uppmax.uu.se/software/python_install_packages/#pip){:target="_blank"}
+    - [UPPMAX Python user guide: Pip](https://docs.uppmax.uu.se/software/python_install_packages/#pip){:target="_blank"}
     - [From Python course: packages](https://uppmax.github.io/R-python-julia-matlab-HPC/python/packages.html){:target="_blank"}
     - [From Python course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/python/isolated.html){:target="_blank"}
 
@@ -176,7 +176,7 @@ tags:
     Links:
 
     - [Course material: Installing Conda packages](https://uppmax.github.io/bianca_workshops/extra/conda/)
-    - [Conda user guide](http://docs.uppmax.uu.se/software/conda/)
+    - [Conda user guide](https://docs.uppmax.uu.se/software/conda/)
 
 ???- admonition "Julia"
 
