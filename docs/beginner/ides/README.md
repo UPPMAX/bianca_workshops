@@ -41,7 +41,7 @@ tags:
     ```mermaid
     gantt
       title IDEs
-      dateFormat X
+      dateFormat %s
       axisFormat %s
       Introduction: intro, 0, 5s
       Decide on IDE and create BO:, after intro, 5s
