@@ -41,14 +41,14 @@ tags:
     ```mermaid
     gantt
       title IDEs
-      dateFormat %s
+      dateFormat X
       axisFormat %s
       Introduction: intro, 0, 5s
-      Decide on IDE and create BO:, after intro, 5s
-      Exercise in IDE-specific rooms:, exercise, 15s
-      Feedback: feedback, after exercise, 3s
-      Monologue: monologue, after feedback, 2s
-      Break: milestone, after monologue
+      Decide on IDE and create BO:, 5, 5s
+      Exercise in IDE-specific rooms:, 10, 15s
+      Feedback: feedback, 25, 3s
+      Monologue: monologue, 28, 2s
+      Break: milestone, 30, 0s
     ```
 
 ## Why?
