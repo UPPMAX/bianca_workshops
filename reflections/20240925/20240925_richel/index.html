@@ -1,0 +1,2665 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Reflection - Handling sensitive data at NAISS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reflection" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Handling sensitive data at NAISS" class="md-header__button md-logo" aria-label="Handling sensitive data at NAISS" data-md-component="logo">
+      
+  <img src="../../../logo/naiss_logo_white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Handling sensitive data at NAISS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Reflection
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/UPPMAX/bianca_workshop" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../prereqs/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Prerequisites
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../beginner/intro/" class="md-tabs__link">
+          
+  
+  
+  Beginner
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../intermediate/intro/" class="md-tabs__link">
+          
+  
+  
+  Intermediate
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../intermediate/overview/" class="md-tabs__link">
+          
+  
+  
+  Extra material
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../communication/" class="md-tabs__link">
+          
+  
+  
+  Misc
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Handling sensitive data at NAISS" class="md-nav__button md-logo" aria-label="Handling sensitive data at NAISS" data-md-component="logo">
+      
+  <img src="../../../logo/naiss_logo_white.png" alt="logo">
+
+    </a>
+    Handling sensitive data at NAISS
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/UPPMAX/bianca_workshop" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prereqs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prerequisites
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Beginner
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/learning_outcomes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning outcomes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/course_dates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course dates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/sensitive_data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working with sensitive data outside Bianca
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/naiss_sens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NAISS SENS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/login/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Login
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/login_remote_desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Log in to the Bianca remote desktop environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/use_remote_desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using the desktop environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/login_console/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Log in to the Bianca console environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/commandline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command-line intro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/create_script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create an executable script
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Module system
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/file_transfer_using_gui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transferring files to/from Bianca using a graphical tool
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/slurm_intro_new/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slurm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/ides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IDEs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Summary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/evaluation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intermediate
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Intermediate
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/learning_outcomes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning outcomes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/course_dates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course dates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/gpu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPUs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/transfer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transferring files to/from Bianca
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/efficient_jobs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Efficient jobs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Packages and software installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Summary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/evaluation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extra material
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Extra material
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The bigger picture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extra/transfer_basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transferring files to/from Bianca
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extra/slurm_intro_old/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to compute nodes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/complex_jobs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Complex jobs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/replicate_jobs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Replicate jobs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extra/slurm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    More about Slurm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extra/source_install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build from source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extra/conda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conda on Bianca
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extra/pip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install with pip to Bianca
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extra/rpackages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installing R packages on Bianca
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extra/julia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using Julia packages on Bianca
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extra/containers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Containers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extra/devel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Own development and Git on Bianca
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Misc
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Misc
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../communication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Communication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../evaluations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frequently asked questions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lesson_plans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lesson plans
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../meeting_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meeting notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../misc/project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflections
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../misc/shared_document/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shared document
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared_documents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shared documents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#course-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Course schedule
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#until-lunch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Until lunch
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#after-lunch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After lunch
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analysis
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/UPPMAX/bianca_workshop/blob/main/docs/reflections/20240925/20240925_richel.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/UPPMAX/bianca_workshop/raw/main/docs/reflections/20240925/20240925_richel.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="reflection">Reflection<a class="headerlink" href="#reflection" title="Anchor link to this section for reference">&para;</a></h1>
+<ul>
+<li>Author: Richel</li>
+<li>Course: Intro to Bianca</li>
+<li>Date: 2024-09-25</li>
+<li><a href="../../../lesson_plans/20240925/20240925_richel/">Lesson plan</a></li>
+</ul>
+<h2 id="course-schedule">Course schedule<a class="headerlink" href="#course-schedule" title="Anchor link to this section for reference">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>When</th>
+<th>Who</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9:00</td>
+<td>R</td>
+<td>Introduction, login, log in to remote desktop, use the remote desktop</td>
+</tr>
+<tr>
+<td>10:00</td>
+<td>.</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>10:15</td>
+<td>R</td>
+<td>Log in to console environment, command line</td>
+</tr>
+<tr>
+<td>11:00</td>
+<td>.</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>11:15</td>
+<td>R</td>
+<td>Create an executable script, use modules</td>
+</tr>
+<tr>
+<td>12:00</td>
+<td>.</td>
+<td>Lunch</td>
+</tr>
+<tr>
+<td>13:00</td>
+<td>P</td>
+<td>Transferring files to and from Bianca</td>
+</tr>
+<tr>
+<td>13:55</td>
+<td>.</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>14:05</td>
+<td>B</td>
+<td>Compute nodes and SLURM, including interactive nodes</td>
+</tr>
+<tr>
+<td>14:55</td>
+<td>.</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>15:10</td>
+<td>L</td>
+<td>Legal aspects of sensitive data</td>
+</tr>
+<tr>
+<td>15:30</td>
+<td>R</td>
+<td>Summary and anonymous evaluation</td>
+</tr>
+<tr>
+<td>15:45</td>
+<td>All</td>
+<td>Optional Q&amp;A</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Who: <code>B</code>: Björn, <code>L</code>: Lars, <code>P</code>: Pavlin, <code>R</code>: Richèl</li>
+</ul>
+<h2 id="until-lunch">Until lunch<a class="headerlink" href="#until-lunch" title="Anchor link to this section for reference">&para;</a></h2>
+<p>In practice, this was the schedule</p>
+<table>
+<thead>
+<tr>
+<th>When</th>
+<th>Who</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9:00</td>
+<td>R</td>
+<td>Introduction 15 mins, login 30 mins, log in to remote desktop 15 mins</td>
+</tr>
+<tr>
+<td>10:00</td>
+<td>.</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>10:15</td>
+<td>R</td>
+<td>log in to remote desktop another 15 mins, use the remote desktop 20 mins, then 10 mins for 'Log in to console environment', then 0 minutes for 'command line'</td>
+</tr>
+<tr>
+<td>11:00</td>
+<td>.</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>11:15</td>
+<td>R</td>
+<td>Create an executable script, use modules</td>
+</tr>
+</tbody>
+</table>
+<p>At the start, there were 9 learners.
+During the course, 1 learner left as she already knew everything.
+Another 1 learner left probably due to the same reasons: I met her
+at the 'Intro to UPPMAX Day 1' course, where we teach the same
+content, yet for Rackham.</p>
+<p>The Zoom rooms worked reasonably well. Instead of closing and re-creating the
+rooms, learners moved themselves. This was a slowdown, but I felt not too
+much of a hassle.
+There was 1 room that had a learner with dozens of questions and another
+room with 2 experts. I moved the learner with questions to the room with the
+experts and I think that that was a win-win situation.</p>
+<p>Due to learner-centered teaching, it was made clear that the login via
+SSH had too little time. I would need a 45 minutes session to be able to
+go through that.</p>
+<ul>
+<li>[ ] Discuss either moving SSH login to the Intermediate course,
+  or request 45 minutes more time</li>
+</ul>
+<p>I felt there were too many too short sessions, next time I will merge these.</p>
+<ul>
+<li>[ ] Merge sessions to bigger ones</li>
+</ul>
+<p>There was one learner that could not hear me well. I felt I could correct
+this by speaking slower. In general, I think that is a great idea!</p>
+<ul>
+<li>[ ] Speak slower</li>
+</ul>
+<p>Points from the lesson plan:</p>
+<ul>
+<li>Use 10 minutes for feedback: not needed plenarily, due to group rooms</li>
+<li>Do tell about myself at the start: done, felt OK</li>
+<li>Do ask random learners: done, I think I made the learners comfortable
+  with saying 'I don't know'</li>
+<li>Share with learners to use the videos as a reminder in the future:
+  I did not, as the exercises did not all have videos<ul>
+<li>I did get a compliment on the YouTube videos made as part of the documentation</li>
+</ul>
+</li>
+<li>Add time to get a 2FA: all 9 learners had done this</li>
+<li>Use Zoom rooms, without changes: done, used group size of 3,
+  worked well</li>
+<li>Add answers to the questions: done, seems to work well</li>
+<li>Add finding wharf as a teaching goal: this seems to work well</li>
+<li>Mention the feedback and evaluation forms at the start: done</li>
+</ul>
+<h2 id="after-lunch">After lunch<a class="headerlink" href="#after-lunch" title="Anchor link to this section for reference">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>When</th>
+<th>Who</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>13:00</td>
+<td>P</td>
+<td>Transferring files to and from Bianca, 55 -&gt; 60 mins</td>
+</tr>
+<tr>
+<td>13:55 -&gt; 14:00</td>
+<td>.</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>14:05 -&gt; 14:10</td>
+<td>B</td>
+<td>Compute nodes and SLURM, including interactive nodes</td>
+</tr>
+<tr>
+<td>14:55 -&gt; 15:00</td>
+<td>.</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>15:10</td>
+<td>L</td>
+<td>Legal aspects of sensitive data</td>
+</tr>
+<tr>
+<td>15:30</td>
+<td>R</td>
+<td>Summary and anonymous evaluation</td>
+</tr>
+<tr>
+<td>15:45</td>
+<td>All</td>
+<td>Optional Q&amp;A</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>13:00-13:55 'Transferring files to and from Bianca' turned from 55 to 60 mins,
+  until interrupted by other teacher to take a break directly.
+  These 60 minutes consisted of 20 mins monologue, 7 mins answering question(s),
+  15 mins of monologue, 1 mins answering question(s), 7 minutes working
+  on exercises in silence, then 10 mins answering question(s)</li>
+</ul>
+<p>Here is the activity diagram:</p>
+<pre class="mermaid"><code>gantt
+  title File transfer
+  dateFormat X
+  axisFormat %s
+  Monologue: 0, 20s
+  Answer questions: 7s
+  Monologue: 15s
+  Answer questions: 1s
+  Work on exercise: crit, 7s
+  Answer questions: 10s</code></pre>
+<p>The goal of this session was to transfer files using FileZilla.
+There were 7 minutes to work on the exercise.
+I predicted that the learners have had a hard time to follow this,
+because all ways to do file transfer were discussed.
+When FileZilla came up, the learners were redirected to WinSCP or CyberDuck.
+My prediction was right.
+Comparing the confidences to a session of mine (see analysis below),
+a <a href="https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test">Kolmogorov–Smirnov test</a>
+cannot rule out that the confidence distribution is different between this
+session and a similar session of mine.</p>
+<ul>
+<li>14:05-14:55 'Compute nodes and SLURM, including interactive nodes' was moved
+  5 mins later, turned to 14:10-15:06</li>
+</ul>
+<pre class="mermaid"><code>gantt
+  title Interactive and scheduler
+  dateFormat X
+  axisFormat %s
+  Monologue: 0, 8s
+  Answer questions: 3s
+  Monologue: 2s
+  Answer questions: 2s
+  Monologue: 4s
+  Answer questions: 1s
+  Monologue: 3s
+  Type along: 6s
+  Answer questions: 1s
+  Monologue: 9s
+  Answer questions: 1s
+  Monologue: 1s
+  Exercise: crit, 11s
+  Answer questions: 15s
+  Check progress: 1s</code></pre>
+<p>The goal of this session was to start an interactive job and to submit
+a job to the scheduler.
+There were 10 minutes to work on the exercises.
+I predicted that the learners have had a hard time to follow this,
+because (1) the teaching material has more content than just those teaching
+goals, (2) type-alongs require learners to do two things at the same time.
+My prediction was too pessimistic, as most learners had good confidence
+they could do it.
+Comparing the confidences to a session of mine (see analysis below),
+a <a href="https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test">Kolmogorov–Smirnov test</a>
+cannot rule out that the confidence distribution is different between this
+session and a similar session of mine.</p>
+<pre class="mermaid"><code>gantt
+  title Legal aspects of sensitive data
+  dateFormat X
+  axisFormat %s
+  Monologue: 0, 2s
+  Poll: crit, 1s
+  Monologue: 8s
+  Poll: crit, 1s
+  Monologue: 4s</code></pre>
+<p>The goal of this session is to 'understand the legal aspects of sensitive data'.
+Up until now, I do not understand what is new here.</p>
+<ul>
+<li>[x] prepare the summary by adding other courses: yup, worked fine</li>
+<li>[x] Indicate two routes: a beginner and an experienced:
+  was there, I feel visible enough</li>
+<li>[ ] create more breakout rooms for the evaluation. Do do
+  the evaluation in room 1. Let questions be answered in
+  other breakout rooms.<ul>
+<li>I did not do this: I wanted all the learners to be in a room quickly,
+and creating 1 room is the best way. Also this time, there was a learner
+coming back that we could not send to a breakout room</li>
+</ul>
+</li>
+</ul>
+<p>The optional Q&amp;A resulted in two questions:</p>
+<ul>
+<li>File transfer: how to do it using SFTP?</li>
+<li>Slurm jobs: where is the output?</li>
+</ul>
+<p>Evaluation results:</p>
+<p><img alt="Confidences per question" src="../confidences_per_question.png" /></p>
+<blockquote>
+<p>Confidences per question</p>
+</blockquote>
+<p>I still have no idea what 'I understand the legal aspects of sensitive data'
+means...</p>
+<p>We got this feedback from the learner.</p>
+<ul>
+<li>Learner: Instead of using graphical interface, I tried to use scp for file transfer, though it didn't work for some reason.</li>
+</ul>
+<p>Using <code>scp</code> was no learning objective. We do not teach it, not in the advanced
+course either. The UPPMAX documentation is maybe to shy in communicating that
+rsync is preferred.</p>
+<ul>
+<li>Learner: A suggestion is to put a survey in the beginning or before course start to evaluate how a students confidence changes after having done the intro course.</li>
+</ul>
+<p>I think this is an interesting idea!</p>
+<ul>
+<li>
+<p>[ ] Do the same survey in the beginning and end of the course</p>
+</li>
+<li>
+<p>Learner: Great pedagogical methods used by the teachers!</p>
+</li>
+</ul>
+<p>This is nice to hear, is this aimed at all teachers?</p>
+<ul>
+<li>Learner: Start with an overview: What is the goal with using Bianca (store and work with sensitive data) For example show a basic statistical analysis in R studio, in graphical interface)</li>
+<li>Learner: Hands-on, how to work with Bianca for users that are not so advanced: For example show a basic statistical analysis in R studio, in graphical interface.</li>
+</ul>
+<p>I like these ideas a lot too.</p>
+<ul>
+<li>
+<p>[ ] Start with a general overview of how to use Bianca.
+  Add this to the UPPMAX documentation first, then see how this feels</p>
+</li>
+<li>
+<p>Learner: The sensitive data part in the end was too short</p>
+</li>
+</ul>
+<p>I wonder what is missing here ...?</p>
+<ul>
+<li>Learner: I missed some info about applying for projects etc</li>
+</ul>
+<p>Agreed, it was not in.</p>
+<ul>
+<li>
+<p>[ ] Consider adding how to apply for projects</p>
+</li>
+<li>
+<p>Learner: Having cameras on was good but the pinpointing of participants with questions was a bit too much.</p>
+</li>
+</ul>
+<p>I understand this can be scary, I will follow the literature over a learner
+here: it is about learning, not feeling super comfortable.</p>
+<p>From all of this, this, I'd enjoy the following changes:</p>
+<ul>
+<li>Add an overview of how to use Bianca, +30 mins</li>
+<li>Remove console login, -10 mins</li>
+<li>Remove command line, -0 mins</li>
+<li>Less time for file transfer (to help talk less and increase focus), -30 mins</li>
+<li>Interactive and Slurm (however, more focused, no type-along, add more silent time): +10 mins</li>
+</ul>
+<p>However, considering the course as a whole, most is already discussed
+in 'Intro to UPPMAX'. Maybe this course should build upon that one
+and focus on Bianca-only aspects?</p>
+<ul>
+<li>[ ] Discuss in a meeting: what about adding 'Intro to UPPMAX'
+  (at least Day 1) as a prerequisite?</li>
+</ul>
+<p>All in all, I think my teaching went moderately okay. Mostly, I was
+uncomfortable with the schedule: I predicted the console part would not fit.
+I was right.</p>
+<h2 id="analysis">Analysis<a class="headerlink" href="#analysis" title="Anchor link to this section for reference">&para;</a></h2>
+<p>I decided to compare confidences for sessions that were present in
+this course and another course ('Intro to UPPMAX, Day 1')</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># I can transfer files to/from Rackham using FileZilla,0,1
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a># I can transfer files to/from Rackham using FileZilla,2,1
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a># I can transfer files to/from Rackham using FileZilla,3,3
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a># I can transfer files to/from Rackham using FileZilla,4,3
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a># I can transfer files to/from Rackham using FileZilla,5,9
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>confidences_transfer_r &lt;- c(rep(0, 1), rep(2, 1), rep(3, 3), rep(4,3), rep(5, 9))
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>testthat::expect_equal(length(confidences_transfer_r), 17)
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>testthat::expect_equal(mean(confidences_transfer_r), 4.0)
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a># I can start an interactive session,4,2
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a># I can start an interactive session,5,15
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a># I can start an interactive session,4,2
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a># I can start an interactive session,5,15
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a># Average = ((4 * 2) + (5 * 15)) / 17 = 4.88
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>confidences_interactive_r &lt;- c(rep(4, 2), rep(5, 15))
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>testthat::expect_equal(length(confidences_interactive_r), 17)
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>testthat::expect_equal(mean(confidences_interactive_r), 4.88, tolerance = 0.01)
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a># I can schedule a job,2,1
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a># I can schedule a job,3,1
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a># I can schedule a job,4,3
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a># I can schedule a job,5,12
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a># Average = ((2 * 1) + (3 * 1) + (4 * 3) + (5 * 12) ) / 17 = 4.53
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>confidences_schedule_r &lt;- c(rep(2, 1), rep(3, 1), rep(4, 3), rep(5, 12))
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>testthat::expect_equal(length(confidences_schedule_r), 17)
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>testthat::expect_equal(mean(confidences_schedule_r), 4.53, tolerance = 0.01)
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>## 2024-09-25: Bianca Intro
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a># I can transfer files to/from Bianca using FileZilla,1,1
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a># I can transfer files to/from Bianca using FileZilla,2,2
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a># I can transfer files to/from Bianca using FileZilla,3,1
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a># I can transfer files to/from Bianca using FileZilla,4,1
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a># Average = ((1 * 1) + (2 * 2) + (3 * 1) + (4 * 1)) / 5 = 2.4
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>confidences_transfer_nr &lt;- c(rep(1, 1), rep(2, 2), rep(3, 1), rep(4,1))
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>testthat::expect_equal(length(confidences_transfer_nr), 5)
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>testthat::expect_equal(mean(confidences_transfer_nr), 2.4)
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a># I can start an interactive session,4,3
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a># I can start an interactive session,5,2
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a># Average = ((4 * 3) + (5 * 2)) / 5 = 4.4
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>confidences_interactive_nr &lt;- c(rep(4, 3), rep(5, 2))
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>testthat::expect_equal(length(confidences_interactive_nr), 5)
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>testthat::expect_equal(mean(confidences_interactive_nr), 4.4, tolerance = 0.01)
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a># I can submit jobs to the scheduler,3,1
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a># I can submit jobs to the scheduler,4,2
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a># I can submit jobs to the scheduler,5,2
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a># Average = ((3 * 1) + (4 * 2) + (5 * 2)) / 5 = 4.2
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>confidences_schedule_nr &lt;- c(rep(3, 1), rep(4, 2), rep(5, 2))
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>testthat::expect_equal(length(confidences_schedule_nr), 5)
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>testthat::expect_equal(mean(confidences_schedule_nr), 4.2, tolerance = 0.01)
+</code></pre></div>
+<p>The distributions seem to differ, between me (<code>r</code>) and someone
+else (<code>nr</code>, not-Richel). However, the statistics do not reject these confidences
+are from a same distribution.</p>
+<p><img alt="File transfer confidences compared" src="../file_transfer_confidences_compared.png" /></p>
+<blockquote>
+<p>File transfer confidences compared between me (<code>r</code>, for 'Richel')
+and not-me (<code>nr</code>). Note that the <code>nr</code> values will be influenced by the fact
+that that teacher did not only discuss FileZilla.</p>
+</blockquote>
+<p><img alt="Interactive confidences compared" src="../interactive_confidences_compared.png" /></p>
+<blockquote>
+<p>Interactive session confidences compared between me (<code>r</code>, for 'Richel')
+and not-me (<code>nr</code>)</p>
+</blockquote>
+<p><img alt="Scheduler confidences compared" src="../schedule_confidences_compared.png" /></p>
+<blockquote>
+<p>Job scheduler confidences compared between me (<code>r</code>, for 'Richel')
+and not-me (<code>nr</code>)</p>
+</blockquote>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.footer", "search.suggest", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.action.edit", "content.action.view"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

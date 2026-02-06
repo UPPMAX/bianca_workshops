@@ -1,0 +1,3205 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Reflection 2023-12-11 - Handling sensitive data at NAISS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reflection-2023-12-11" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Handling sensitive data at NAISS" class="md-header__button md-logo" aria-label="Handling sensitive data at NAISS" data-md-component="logo">
+      
+  <img src="../../../logo/naiss_logo_white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Handling sensitive data at NAISS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Reflection 2023-12-11
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/UPPMAX/bianca_workshop" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../prereqs/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Prerequisites
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../beginner/intro/" class="md-tabs__link">
+          
+  
+  
+  Beginner
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../intermediate/intro/" class="md-tabs__link">
+          
+  
+  
+  Intermediate
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../intermediate/overview/" class="md-tabs__link">
+          
+  
+  
+  Extra material
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../communication/" class="md-tabs__link">
+          
+  
+  
+  Misc
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Handling sensitive data at NAISS" class="md-nav__button md-logo" aria-label="Handling sensitive data at NAISS" data-md-component="logo">
+      
+  <img src="../../../logo/naiss_logo_white.png" alt="logo">
+
+    </a>
+    Handling sensitive data at NAISS
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/UPPMAX/bianca_workshop" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../prereqs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prerequisites
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Beginner
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/learning_outcomes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning outcomes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/course_dates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course dates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/sensitive_data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working with sensitive data outside Bianca
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/naiss_sens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NAISS SENS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/login/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Login
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/login_remote_desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Log in to the Bianca remote desktop environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/use_remote_desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using the desktop environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/login_console/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Log in to the Bianca console environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/commandline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command-line intro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/create_script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create an executable script
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Module system
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/file_transfer_using_gui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transferring files to/from Bianca using a graphical tool
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/slurm_intro_new/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slurm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/ides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IDEs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Summary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../beginner/evaluation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intermediate
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Intermediate
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/learning_outcomes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning outcomes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/course_dates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course dates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/gpu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPUs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/transfer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transferring files to/from Bianca
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/efficient_jobs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Efficient jobs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Packages and software installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Summary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/evaluation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extra material
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Extra material
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The bigger picture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extra/transfer_basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transferring files to/from Bianca
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extra/slurm_intro_old/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to compute nodes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/complex_jobs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Complex jobs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intermediate/replicate_jobs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Replicate jobs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extra/slurm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    More about Slurm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extra/source_install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build from source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extra/conda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conda on Bianca
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extra/pip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install with pip to Bianca
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extra/rpackages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installing R packages on Bianca
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extra/julia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using Julia packages on Bianca
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extra/containers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Containers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extra/devel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Own development and Git on Bianca
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Misc
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Misc
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../communication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Communication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../evaluations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frequently asked questions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lesson_plans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lesson plans
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../meeting_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meeting notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../misc/project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflections
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../misc/shared_document/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shared document
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shared_documents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shared documents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-shared-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The shared document
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-the-learners" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        About the learners
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-your-want-to-request-access-to-general-purpose-hpc-at-which-website-does-your-journey-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Your want to request access to general-purpose HPC. At which website does your journey start?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-your-colleague-visits-httpsbiancauppmaxuuse-and-sees-nothing-appear-what-is-likely-the-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Your colleague visits https://bianca.uppmax.uu.se/ and sees nothing appear. What is likely the problem?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-you-want-to-use-a-piece-of-software-that-came-out-this-morning-on-bianca-will-you-be-able-to-why" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. You want to use a piece of software that came out this morning (!) on Bianca. Will you be able to? Why?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-you-want-to-use-an-online-tool-to-do-a-calculation-on-bianca-will-this-work-why" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. You want to use an online tool to do a calculation on Bianca. Will this work? Why?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-your-colleague-finds-out-that-one-can-run-scripts-with-calculations-directly-on-the-login-node-this-saves-himher-much-time-waiting-for-a-calculation-to-start-is-this-ok-and-why" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Your colleague finds out that one can run scripts with calculations directly on the login node. This saves him/her much time waiting for a calculation to start. Is this OK and why?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6a-you-are-developing-code-on-bianca-you-write-the-code-line-by-line-and-schedule-a-test-run-after-each-addition-however-after-each-new-line-it-takes-a-couple-of-minutes-before-you-know-your-code-worked-yesno-how-could-you-develop-your-code-quicker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6a. You are developing code on Bianca. You write the code line-by-line and schedule a test run after each addition. However, after each new line, it takes a couple of minutes before you know your code worked yes/no. How could you develop your code quicker?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-your-script-downloads-a-human-reference-genome-from-a-secure-website-will-this-work-on-bianca-why" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Your script downloads a human reference genome from a secure website. Will this work on Bianca? Why?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-you-have-a-problem-on-bianca-that-is-too-hard-to-solve-where-do-you-ask-us-for-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. You have a problem on Bianca that is too hard to solve. Where do you ask us for help?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-your-colleague-visits-httpsbiancauppmaxuuse-and-sees-nothing-appear-on-the-website-what-is-likely-the-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Your colleague visits https://bianca.uppmax.uu.se/ and sees nothing appear on the website. What is likely the problem?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-exercise-login-into-the-bianca-remote-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Exercise: login into the Bianca remote desktop"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-exercise-start-a-terminal-in-the-bianca-remote-desktop-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Exercise: start a terminal in the Bianca remote desktop environment"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-exercise-login-into-the-bianca-console-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Exercise: login into the Bianca console environment"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-your-colleague-finds-out-that-one-can-run-scripts-with-calculations-directly-on-the-login-node-this-saves-himher-much-time-waiting-for-a-calculation-to-start-is-this-ok-and-why_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Your colleague finds out that one can run scripts with calculations directly on the login node. This saves him/her much time waiting for a calculation to start. Is this OK and why?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6b-you-are-developing-code-on-bianca-you-write-the-code-line-by-line-and-schedule-a-test-run-after-each-addition-however-after-each-new-line-it-takes-a-couple-of-minutes-before-you-know-your-code-worked-yesno-how-could-you-develop-your-code-quicker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6b. You are developing code on Bianca. You write the code line-by-line and schedule a test run after each addition. However, after each new line, it takes a couple of minutes before you know your code worked yes/no. How could you develop your code quicker?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command-line
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command-line">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-view-the-help-of-the-command-cd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. View the help of the command cd"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2a-navigate-to-the-project-folder-eg-projsens2025560" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2a. Navigate to the project folder, e.g. /proj/sens2025560"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2b-navigate-to-your-home-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2b. Navigate to your home folder"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2c-navigate-to-the-wharf-eg-projsens2025560nobackupwharf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2c. Navigate to the wharf, e.g. /proj/sens2025560/nobackup/wharf"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3a-create-a-folder-projsens2025560workshopyour_login_name-for-example-projsens2025560workshoprichel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3a. Create a folder /proj/sens2025560/workshop/[your_login_name], for example, /proj/sens2025560/workshop/richel"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4a-create-a-file-eg-richeltxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4a. Create a file, e.g. richel.txt"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4b-copy-the-file-eg-to-richel_againtxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4b. Copy the file (e.g. to richel_again.txt). "
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4c-move-the-copied-file-eg-move-it-one-folder-up-to-richel_againtxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4c. Move the copied file (e.g. move it one folder up to ../richel_again.txt)"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4d-delete-the-copied-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4d. Delete the copied file"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-create-an-executable-script-called-projsens2025560workshopyour_login_namedo_itsh-which-upon-running-displays-a-welcome-message-in-text-eg-hello-and-does-something-eg-show-the-files-in-reverse-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Create an executable script called /proj/sens2025560/workshop/[your_login_name]/do_it.sh, which, upon running, displays a welcome message in text (e.g. Hello!) and does something (e.g. show the files in reverse order)"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module system
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Module system">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1a-verify-that-the-tool-cowsay-is-not-available-by-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1a. Verify that the tool cowsay is not available by default"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1b-search-for-the-module-providing-cowsay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1b. Search for the module providing cowsay"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1c-load-a-specific-version-of-that-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1c. Load a specific version of that module"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1d-verify-that-the-tool-cowsay-now-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1d. Verify that the tool cowsay now works"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1e-unload-that-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1e. Unload that module"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1f-verify-that-the-tool-cowsay-is-not-available-anymore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1f. Verify that the tool cowsay is not available anymore"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2a-create-an-executable-script-called-cow_says_hellosh-it-should-load-a-specific-version-of-the-cowsay-module-after-which-it-uses-cowsay-to-do-something" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2a. Create an executable script called cow_says_hello.sh. It should load a specific version of the cowsay module, after which it uses cowsay to do something"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2b-find-out-if-the-cowsay-module-is-not-loaded-after-running-the-script-is-it-loaded-yesno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2b. Find out: if the cowsay module is not loaded, after running the script, is it loaded yes/no?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-module-load-samtools117-gives-the-error-these-modules-or-extensions-exist-but-cannot-be-loaded-as-requested-samtools117-how-to-fix-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. module load samtools/1.17 gives the error These module(s) or extension(s) exist but cannot be loaded as requested: "samtools/1.17. How to fix this?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview 2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging in
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-line-intro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command-line intro
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modules-and-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modules and workflows
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/UPPMAX/bianca_workshop/blob/main/docs/reflections/20231211/20231211_richel.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/UPPMAX/bianca_workshop/raw/main/docs/reflections/20231211/20231211_richel.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="reflection-2023-12-11">Reflection 2023-12-11<a class="headerlink" href="#reflection-2023-12-11" title="Anchor link to this section for reference">&para;</a></h1>
+<ul>
+<li>Intro to Bianca</li>
+<li>Richel</li>
+<li><a href="../../../lesson_plans/20231211/20231211_richel/">Lesson plan</a></li>
+</ul>
+<p>Monday 11th Dec 2023 was the first time we ran the 'Intro to Bianca'
+course with the idea of that day being suitable for complete beginners,
+as we moved more complex topics to the so-called 'Intermediate course'
+or 'Hackathon'.</p>
+<p>I would teach mostly the earlier parts of the day,
+except for an intermezzo by Lars.</p>
+<table>
+<thead>
+<tr>
+<th>When</th>
+<th>Who</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9.00</td>
+<td>R</td>
+<td>Introduction</td>
+</tr>
+<tr>
+<td>9.15</td>
+<td>L</td>
+<td>NAISS-Sens</td>
+</tr>
+<tr>
+<td>9.35</td>
+<td>R</td>
+<td>Login using Thinlinc</td>
+</tr>
+<tr>
+<td>9.55</td>
+<td>.</td>
+<td>coffee break</td>
+</tr>
+<tr>
+<td>10.10</td>
+<td>R</td>
+<td>Command line intro specific to Bianca</td>
+</tr>
+<tr>
+<td>10.55</td>
+<td>.</td>
+<td>break</td>
+</tr>
+<tr>
+<td>11.10</td>
+<td>R</td>
+<td>Module system</td>
+</tr>
+<tr>
+<td>12.00</td>
+<td>.</td>
+<td>Lunch</td>
+</tr>
+<tr>
+<td>13.00</td>
+<td>P</td>
+<td>Intro to transferring files to and from Bianca</td>
+</tr>
+<tr>
+<td>13.55</td>
+<td>.</td>
+<td>break</td>
+</tr>
+<tr>
+<td>14.10</td>
+<td>B</td>
+<td>Compute nodes and SLURM</td>
+</tr>
+<tr>
+<td>14.55</td>
+<td>.</td>
+<td>Coffee break</td>
+</tr>
+<tr>
+<td>15.10</td>
+<td>B</td>
+<td>Summary</td>
+</tr>
+<tr>
+<td>15.15</td>
+<td>B</td>
+<td>Q/A</td>
+</tr>
+<tr>
+<td>15.55</td>
+<td>.</td>
+<td>Closing words</td>
+</tr>
+<tr>
+<td>16.00</td>
+<td>.</td>
+<td>END</td>
+</tr>
+</tbody>
+</table>
+<p>My goals were:</p>
+<ul>
+<li>Text as simple and clear as possible</li>
+<li>Ample time for exercises</li>
+<li>Teaching goals, text and exercises must go together well</li>
+</ul>
+<p>I reached those goals, yet I have ideas how to improve:</p>
+<ul>
+<li>Put in groups</li>
+<li>Need more time to check results</li>
+<li>Non-solution: split into levels</li>
+</ul>
+<p>I had (<code>15+20+45+50-5=</code>) two hours and 5 minutes
+and the distribution of time was uneven.
+To give ample time for exercises, in practice all
+of my topics took 30 minutes:</p>
+<table>
+<thead>
+<tr>
+<th>Lecture</th>
+<th>Scheduled</th>
+<th>Actual (minutes)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Introduction</td>
+<td>15</td>
+<td>35</td>
+</tr>
+<tr>
+<td>(NAISS-Sens)</td>
+<td>20</td>
+<td>25</td>
+</tr>
+<tr>
+<td>Login</td>
+<td>20</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Command line intro</td>
+<td>45</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Module system</td>
+<td>50</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<p>I think changing the time to this was way better then just me talking.</p>
+<p>The form of the exercises can be improved: what I did is (1) introduce the
+page and exercises, (2) let the learners do the exercise, with
+a shared document for 'unsure answers' (i.e. an answer a learner wants me
+to check) and questions. I think the learners understood the exercise and
+actually worked on it.
+This way of doing exercises felt empty, i.e. there was not much for me
+to do, except talk, which was suboptimal as the learners need silence to think.</p>
+<p>Next time, put the learners in groups of 3 or 4 in breakout rooms.</p>
+<p>I did check the progress of the students as intended: by using the shared
+document. However, after the first exercise, no content was ever added
+to the shared document. This could by either due to link-fatigue,
+material being clear, the learners discovering that the answers can
+be dropped-down from the questions, the learners learning that I did not
+check progress by asking random learners, and/or me not discussing the
+results.</p>
+<p>I think I should discuss the results, by asking random students for answers
+or demonstrations. This would take more time, yet I feel there is plenty of time
+over the day.</p>
+<p>Next time, discuss the learners' results.</p>
+<p>The group had different backgrounds and I think I should have used that more,
+by putting them in groups. Also, I gave the quicker learners the next exercises
+too, which they could complete without help and I encouraged them for an early
+lunch.</p>
+<p>A non-solution would be to have this intro split by levels. Instead,
+put the learners in groups and let them profit of each other.</p>
+<p>The pace in my part was focused on the absolute beginners, as I sometimes
+waited for all learners to have finished an exercise and sometimes
+let helpers and/or other learners help these with a 1-on-1 session
+in a breakout room. I predict/hope that some learners will state
+in the evaluation stated that my part went too slow: this would
+mean I indeed do so. If some learners would state in the evaluation
+that my part went too fast, I would be surprised and attribute it to
+not using smaller groups (i.e. that learner expected/wanted/needed a 1-on-1).</p>
+<p>This would be my dream schedule:</p>
+<table>
+<thead>
+<tr>
+<th>From</th>
+<th>To</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9:00</td>
+<td>10:00</td>
+<td>Logging in</td>
+</tr>
+<tr>
+<td>10:00</td>
+<td>10:15</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>10:15</td>
+<td>11:00</td>
+<td>Command-line</td>
+</tr>
+<tr>
+<td>11:00</td>
+<td>11:15</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>11:15</td>
+<td>12:00</td>
+<td>Modules</td>
+</tr>
+<tr>
+<td>12:00</td>
+<td>13:00</td>
+<td>Lunch</td>
+</tr>
+<tr>
+<td>13:00</td>
+<td>13:45</td>
+<td>File transfer</td>
+</tr>
+<tr>
+<td>13:45</td>
+<td>14:00</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>14:00</td>
+<td>14:45</td>
+<td>Interactive nodes, scheduling jobs</td>
+</tr>
+<tr>
+<td>14:45</td>
+<td>15:00</td>
+<td>Break</td>
+</tr>
+<tr>
+<td>15:00</td>
+<td>15:30</td>
+<td>Legal aspects of sensitive data</td>
+</tr>
+<tr>
+<td>15:30</td>
+<td>16:00</td>
+<td>Optional Q&amp;A</td>
+</tr>
+</tbody>
+</table>
+<p>Changes I suggest:</p>
+<ul>
+<li>I feel we should dive in immediately and all log in Bianca first!</li>
+<li>I feel the Overview page is nice, but needs not be discussed.
+   Instead, let other pages refer back to it (like I already do)</li>
+<li>I feel the legal aspects of sensitive data would be a nice relaxing
+   lecture at the end of many exercises</li>
+<li>The Q&amp;A should be optional: learners should be encouraged to leave!</li>
+</ul>
+<h2 id="the-shared-document">The shared document<a class="headerlink" href="#the-shared-document" title="Anchor link to this section for reference">&para;</a></h2>
+<p>The shared document that was used (I did remove a name), starting from here:</p>
+<p>[General info at the top]</p>
+<h2 id="about-the-learners">About the learners<a class="headerlink" href="#about-the-learners" title="Anchor link to this section for reference">&para;</a></h2>
+<blockquote>
+<p>Exercise goals: (1) ensure learners can use this shared document, (2) adapt teaching to the learners' existing knowledge, (3) manage expectations</p>
+</blockquote>
+<ul>
+<li>
+<p>Q: What is your background subject field? PhD student, researcher, other?</p>
+<ul>
+<li>A: Researcher Nutrition</li>
+<li>A: Master student in computer science</li>
+<li>A: associate professor (docent)</li>
+<li>A: PhD student</li>
+<li>A: PhD student</li>
+<li>A: Researcher (Bioinformatics)</li>
+<li>A: PhD student</li>
+<li>A: Bioinformatician</li>
+<li>A: PhD student, digital health</li>
+<li>Data Science student</li>
+<li>A: Research Engineer in System Development</li>
+<li>A: Researcher</li>
+<li>
+<p>What is your earlier experience with Bianca?</p>
+</li>
+<li>
+<p>A: None</p>
+</li>
+<li>A: None</li>
+<li>A: None</li>
+<li>A: can run batch job</li>
+<li>A: data stored there, had a look though analysed by</li>
+<li>A: None</li>
+<li>A: None</li>
+<li>A: Logged in, basic data checks, some data transfer</li>
+<li>A: none</li>
+<li>A: none</li>
+<li>A: None</li>
+</ul>
+</li>
+<li>
+<p>Q: What are you expectations?</p>
+<ul>
+<li>A: get the sense of how Bianca works</li>
+<li>A: be able to use Bianca</li>
+<li>A: to see what the difference is with sensitive data processing</li>
+<li>A: to understand the meaning of command lines better</li>
+<li>To learn how to transfer data from Bianca to end point repositories
+      <em>- A: er
+        * A: get an overview of Bianca, a first insight
+        </em>A: learn how Bianca is working, differences with C3SE's (Chalmers) cluster (Alvis/vera)
+        * A: Module system, SLURM,
+        *A: how the sensitive data is processed in Bianca
+        * A: How to transfer data and getting started with Slurm</li>
+</ul>
+</li>
+</ul>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Anchor link to this section for reference">&para;</a></h2>
+<p>These are the questions at [the now dead link]
+<code>https://uppmax.github.io/bianca_workshops/overview/#questions</code> . You may answer these questions for feedback or ask questions back :-)</p>
+<h3 id="1-your-want-to-request-access-to-general-purpose-hpc-at-which-website-does-your-journey-start">1. Your want to request access to general-purpose HPC. At which website does your journey start?"<a class="headerlink" href="#1-your-want-to-request-access-to-general-purpose-hpc-at-which-website-does-your-journey-start" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A: Starts at SCB</li>
+<li>A: NAISS</li>
+<li>A: SUPR</li>
+</ul>
+<h3 id="2-your-colleague-visits-httpsbiancauppmaxuuse-and-sees-nothing-appear-what-is-likely-the-problem">2. Your colleague visits <a href="https://bianca.uppmax.uu.se/">https://bianca.uppmax.uu.se/</a> and sees nothing appear. What is likely the problem?<a class="headerlink" href="#2-your-colleague-visits-httpsbiancauppmaxuuse-and-sees-nothing-appear-what-is-likely-the-problem" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A: I guess that they do not have access?</li>
+<li>A: They are outside the university network</li>
+<li>A: They are not using an affiliated VPN</li>
+<li><a href="https://bianca.uppmax.uu.se/">https://bianca.uppmax.uu.se/</a>  Need to add an s? <img alt="✔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2714.svg" title=":heavy_check_mark:" /> [Richel: assume the 's' is there. Well spotted, will fix now!]</li>
+</ul>
+<h3 id="3-you-want-to-use-a-piece-of-software-that-came-out-this-morning-on-bianca-will-you-be-able-to-why">3. You want to use a piece of software that came out this morning (!) on Bianca. Will you be able to? Why?<a class="headerlink" href="#3-you-want-to-use-a-piece-of-software-that-came-out-this-morning-on-bianca-will-you-be-able-to-why" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A: I do not know - I guess not due to security</li>
+<li>A: Probably not as the system is "closed". I guess there are ways to do it yourself though</li>
+<li>No.</li>
+</ul>
+<h3 id="4-you-want-to-use-an-online-tool-to-do-a-calculation-on-bianca-will-this-work-why">4. You want to use an online tool to do a calculation on Bianca. Will this work? Why?<a class="headerlink" href="#4-you-want-to-use-an-online-tool-to-do-a-calculation-on-bianca-will-this-work-why" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A: No probably not, since nothing online should be allowed into Bianca</li>
+<li>A: No</li>
+<li>No, there is no internet connection.</li>
+<li>Q: What does (close to) no internet access mean in this case</li>
+</ul>
+<h3 id="5-your-colleague-finds-out-that-one-can-run-scripts-with-calculations-directly-on-the-login-node-this-saves-himher-much-time-waiting-for-a-calculation-to-start-is-this-ok-and-why">5. Your colleague finds out that one can run scripts with calculations directly on the login node. This saves him/her much time waiting for a calculation to start. Is this OK and why?<a class="headerlink" href="#5-your-colleague-finds-out-that-one-can-run-scripts-with-calculations-directly-on-the-login-node-this-saves-himher-much-time-waiting-for-a-calculation-to-start-is-this-ok-and-why" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A: As in most HPC environment we are not allowed to run on the login nodes.</li>
+<li>A: No, the login node is only for job managements.</li>
+</ul>
+<h3 id="6a-you-are-developing-code-on-bianca-you-write-the-code-line-by-line-and-schedule-a-test-run-after-each-addition-however-after-each-new-line-it-takes-a-couple-of-minutes-before-you-know-your-code-worked-yesno-how-could-you-develop-your-code-quicker">6a. You are developing code on Bianca. You write the code line-by-line and schedule a test run after each addition. However, after each new line, it takes a couple of minutes before you know your code worked yes/no. How could you develop your code quicker?"<a class="headerlink" href="#6a-you-are-developing-code-on-bianca-you-write-the-code-line-by-line-and-schedule-a-test-run-after-each-addition-however-after-each-new-line-it-takes-a-couple-of-minutes-before-you-know-your-code-worked-yesno-how-could-you-develop-your-code-quicker" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A: I guess to run things in parallel - but that would take time as well to create...</li>
+<li>A: Would like to learn this.</li>
+</ul>
+<h3 id="7-your-script-downloads-a-human-reference-genome-from-a-secure-website-will-this-work-on-bianca-why">7. Your script downloads a human reference genome from a secure website. Will this work on Bianca? Why?"<a class="headerlink" href="#7-your-script-downloads-a-human-reference-genome-from-a-secure-website-will-this-work-on-bianca-why" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A: Probably not, as you need to use its own file upload</li>
+<li>A: Don't think so</li>
+<li>A: I guess not since Bianca should not be connected to anything outside?</li>
+</ul>
+<h3 id="8-you-have-a-problem-on-bianca-that-is-too-hard-to-solve-where-do-you-ask-us-for-help">8. You have a problem on Bianca that is too hard to solve. Where do you ask us for help?"<a class="headerlink" href="#8-you-have-a-problem-on-bianca-that-is-too-hard-to-solve-where-do-you-ask-us-for-help" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A: I don't know. There should be a support place. Lets know about this today.</li>
+<li>A: No idea. I would ask support via the SUPR portal.</li>
+</ul>
+<h3 id="1-your-colleague-visits-httpsbiancauppmaxuuse-and-sees-nothing-appear-on-the-website-what-is-likely-the-problem">1. Your colleague visits <a href="https://bianca.uppmax.uu.se/">https://bianca.uppmax.uu.se/</a> and sees nothing appear on the website. What is likely the problem?"<a class="headerlink" href="#1-your-colleague-visits-httpsbiancauppmaxuuse-and-sees-nothing-appear-on-the-website-what-is-likely-the-problem" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A:</li>
+<li>A: If they are part of my project then I do not know.</li>
+</ul>
+<h3 id="2-exercise-login-into-the-bianca-remote-desktop">2. Exercise: login into the Bianca remote desktop"<a class="headerlink" href="#2-exercise-login-into-the-bianca-remote-desktop" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>[ ] - A:</li>
+<li>A:</li>
+</ul>
+<h3 id="3-exercise-start-a-terminal-in-the-bianca-remote-desktop-environment">3. Exercise: start a terminal in the Bianca remote desktop environment"<a class="headerlink" href="#3-exercise-start-a-terminal-in-the-bianca-remote-desktop-environment" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A:</li>
+<li>A:</li>
+</ul>
+<h3 id="4-exercise-login-into-the-bianca-console-environment">4. Exercise: login into the Bianca console environment"<a class="headerlink" href="#4-exercise-login-into-the-bianca-console-environment" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A:</li>
+<li>A:</li>
+</ul>
+<h3 id="5-your-colleague-finds-out-that-one-can-run-scripts-with-calculations-directly-on-the-login-node-this-saves-himher-much-time-waiting-for-a-calculation-to-start-is-this-ok-and-why_1">5. Your colleague finds out that one can run scripts with calculations directly on the login node. This saves him/her much time waiting for a calculation to start. Is this OK and why?"<a class="headerlink" href="#5-your-colleague-finds-out-that-one-can-run-scripts-with-calculations-directly-on-the-login-node-this-saves-himher-much-time-waiting-for-a-calculation-to-start-is-this-ok-and-why_1" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A:</li>
+<li>A:</li>
+</ul>
+<h3 id="6b-you-are-developing-code-on-bianca-you-write-the-code-line-by-line-and-schedule-a-test-run-after-each-addition-however-after-each-new-line-it-takes-a-couple-of-minutes-before-you-know-your-code-worked-yesno-how-could-you-develop-your-code-quicker">6b. You are developing code on Bianca. You write the code line-by-line and schedule a test run after each addition. However, after each new line, it takes a couple of minutes before you know your code worked yes/no. How could you develop your code quicker?"<a class="headerlink" href="#6b-you-are-developing-code-on-bianca-you-write-the-code-line-by-line-and-schedule-a-test-run-after-each-addition-however-after-each-new-line-it-takes-a-couple-of-minutes-before-you-know-your-code-worked-yesno-how-could-you-develop-your-code-quicker" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A:</li>
+<li>A:</li>
+</ul>
+<h2 id="command-line">Command-line<a class="headerlink" href="#command-line" title="Anchor link to this section for reference">&para;</a></h2>
+<h3 id="1-view-the-help-of-the-command-cd">1. View the help of the command <code>cd</code>"<a class="headerlink" href="#1-view-the-help-of-the-command-cd" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A:</li>
+<li>A:</li>
+</ul>
+<h3 id="2a-navigate-to-the-project-folder-eg-projsens2025560">2a. Navigate to the project folder, e.g. <code>/proj/sens2025560</code>"<a class="headerlink" href="#2a-navigate-to-the-project-folder-eg-projsens2025560" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A:</li>
+<li>A:</li>
+</ul>
+<h3 id="2b-navigate-to-your-home-folder">2b. Navigate to your home folder"<a class="headerlink" href="#2b-navigate-to-your-home-folder" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A:</li>
+<li>A:</li>
+</ul>
+<h3 id="2c-navigate-to-the-wharf-eg-projsens2025560nobackupwharf">2c. Navigate to the wharf, e.g. <code>/proj/sens2025560/nobackup/wharf</code>"<a class="headerlink" href="#2c-navigate-to-the-wharf-eg-projsens2025560nobackupwharf" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A:</li>
+<li>A:</li>
+</ul>
+<h3 id="3a-create-a-folder-projsens2025560workshopyour_login_name-for-example-projsens2025560workshoprichel">3a. Create a folder <code>/proj/sens2025560/workshop/[your_login_name]</code>, for example, <code>/proj/sens2025560/workshop/richel</code>"<a class="headerlink" href="#3a-create-a-folder-projsens2025560workshopyour_login_name-for-example-projsens2025560workshoprichel" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A:</li>
+<li>A:</li>
+</ul>
+<h3 id="4a-create-a-file-eg-richeltxt">4a. Create a file, e.g. <code>richel.txt</code>"<a class="headerlink" href="#4a-create-a-file-eg-richeltxt" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A:</li>
+<li>A:</li>
+</ul>
+<h3 id="4b-copy-the-file-eg-to-richel_againtxt">4b. Copy the file (e.g. to <code>richel_again.txt</code>). "<a class="headerlink" href="#4b-copy-the-file-eg-to-richel_againtxt" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A:</li>
+<li>A:</li>
+</ul>
+<h3 id="4c-move-the-copied-file-eg-move-it-one-folder-up-to-richel_againtxt">4c. Move the copied file (e.g. move it one folder up to <code>../richel_again.txt</code>)"<a class="headerlink" href="#4c-move-the-copied-file-eg-move-it-one-folder-up-to-richel_againtxt" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A:</li>
+<li>A:</li>
+</ul>
+<h3 id="4d-delete-the-copied-file">4d. Delete the copied file"<a class="headerlink" href="#4d-delete-the-copied-file" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A:</li>
+<li>A:</li>
+</ul>
+<h3 id="5-create-an-executable-script-called-projsens2025560workshopyour_login_namedo_itsh-which-upon-running-displays-a-welcome-message-in-text-eg-hello-and-does-something-eg-show-the-files-in-reverse-order">5. Create an executable script called <code>/proj/sens2025560/workshop/[your_login_name]/do_it.sh</code>, which, upon running, displays a welcome message in text (e.g. <code>Hello!</code>) and does something (e.g. show the files in reverse order)"<a class="headerlink" href="#5-create-an-executable-script-called-projsens2025560workshopyour_login_namedo_itsh-which-upon-running-displays-a-welcome-message-in-text-eg-hello-and-does-something-eg-show-the-files-in-reverse-order" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A:</li>
+<li>A:</li>
+</ul>
+<h2 id="module-system">Module system<a class="headerlink" href="#module-system" title="Anchor link to this section for reference">&para;</a></h2>
+<h3 id="1a-verify-that-the-tool-cowsay-is-not-available-by-default">1a. Verify that the tool <code>cowsay</code> is not available by default"<a class="headerlink" href="#1a-verify-that-the-tool-cowsay-is-not-available-by-default" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A:</li>
+<li>A:</li>
+</ul>
+<h3 id="1b-search-for-the-module-providing-cowsay">1b. Search for the module providing <code>cowsay</code>"<a class="headerlink" href="#1b-search-for-the-module-providing-cowsay" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A:</li>
+<li>A:</li>
+</ul>
+<h3 id="1c-load-a-specific-version-of-that-module">1c. Load a specific version of that module"<a class="headerlink" href="#1c-load-a-specific-version-of-that-module" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A:</li>
+<li>A:</li>
+</ul>
+<h3 id="1d-verify-that-the-tool-cowsay-now-works">1d. Verify that the tool <code>cowsay</code> now works"<a class="headerlink" href="#1d-verify-that-the-tool-cowsay-now-works" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A:</li>
+<li>A:</li>
+</ul>
+<h3 id="1e-unload-that-module">1e. Unload that module"<a class="headerlink" href="#1e-unload-that-module" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A:</li>
+<li>A:</li>
+</ul>
+<h3 id="1f-verify-that-the-tool-cowsay-is-not-available-anymore">1f. Verify that the tool <code>cowsay</code> is not available anymore"<a class="headerlink" href="#1f-verify-that-the-tool-cowsay-is-not-available-anymore" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A:</li>
+<li>A:</li>
+</ul>
+<h3 id="2a-create-an-executable-script-called-cow_says_hellosh-it-should-load-a-specific-version-of-the-cowsay-module-after-which-it-uses-cowsay-to-do-something">2a. Create an executable script called <code>cow_says_hello.sh</code>. It should load a specific version of the <code>cowsay</code> module, after which it uses <code>cowsay</code> to do something"<a class="headerlink" href="#2a-create-an-executable-script-called-cow_says_hellosh-it-should-load-a-specific-version-of-the-cowsay-module-after-which-it-uses-cowsay-to-do-something" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A:</li>
+<li>A:</li>
+</ul>
+<h3 id="2b-find-out-if-the-cowsay-module-is-not-loaded-after-running-the-script-is-it-loaded-yesno">2b. Find out: if the <code>cowsay</code> module is not loaded, after running the script, is it loaded yes/no?"<a class="headerlink" href="#2b-find-out-if-the-cowsay-module-is-not-loaded-after-running-the-script-is-it-loaded-yesno" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A:</li>
+<li>A:</li>
+</ul>
+<h3 id="3-module-load-samtools117-gives-the-error-these-modules-or-extensions-exist-but-cannot-be-loaded-as-requested-samtools117-how-to-fix-this">3. <code>module load samtools/1.17</code> gives the error <code>These module(s) or extension(s) exist but cannot be loaded as requested: "samtools/1.17</code>. How to fix this?"<a class="headerlink" href="#3-module-load-samtools117-gives-the-error-these-modules-or-extensions-exist-but-cannot-be-loaded-as-requested-samtools117-how-to-fix-this" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>A:</li>
+<li>A:</li>
+</ul>
+<h2 id="overview-2">Overview 2<a class="headerlink" href="#overview-2" title="Anchor link to this section for reference">&para;</a></h2>
+<ul>
+<li>
+<p>Q:</p>
+<ul>
+<li>A:</li>
+</ul>
+</li>
+<li>
+<p>Q:</p>
+<ul>
+<li>A:</li>
+</ul>
+</li>
+</ul>
+<h2 id="logging-in">Logging in<a class="headerlink" href="#logging-in" title="Anchor link to this section for reference">&para;</a></h2>
+<ul>
+<li>
+<p>Q:</p>
+<ul>
+<li>A:</li>
+</ul>
+</li>
+<li>
+<p>Q:</p>
+<ul>
+<li>A:</li>
+</ul>
+</li>
+</ul>
+<h2 id="command-line-intro">Command-line intro<a class="headerlink" href="#command-line-intro" title="Anchor link to this section for reference">&para;</a></h2>
+<ul>
+<li>
+<p>Q:</p>
+<ul>
+<li>A:</li>
+</ul>
+</li>
+<li>
+<p>Q:</p>
+</li>
+</ul>
+<h2 id="modules-and-workflows">Modules and workflows<a class="headerlink" href="#modules-and-workflows" title="Anchor link to this section for reference">&para;</a></h2>
+<ul>
+<li>
+<p>Q:</p>
+<ul>
+<li>A:</li>
+</ul>
+</li>
+<li>
+<p>Q:</p>
+<ul>
+<li>A:</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.footer", "search.suggest", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.action.edit", "content.action.view"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

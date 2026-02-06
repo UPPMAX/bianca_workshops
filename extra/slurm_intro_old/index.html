@@ -1,0 +1,3329 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../transfer_basics/">
+      
+      
+        <link rel="next" href="../../intermediate/complex_jobs/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Introduction to compute nodes - Handling sensitive data at NAISS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction-to-compute-nodes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Handling sensitive data at NAISS" class="md-header__button md-logo" aria-label="Handling sensitive data at NAISS" data-md-component="logo">
+      
+  <img src="../../logo/naiss_logo_white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Handling sensitive data at NAISS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction to compute nodes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/UPPMAX/bianca_workshop" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../prereqs/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Prerequisites
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../beginner/intro/" class="md-tabs__link">
+          
+  
+  
+  Beginner
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../intermediate/intro/" class="md-tabs__link">
+          
+  
+  
+  Intermediate
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../intermediate/overview/" class="md-tabs__link">
+          
+  
+  
+  Extra material
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../communication/" class="md-tabs__link">
+          
+  
+  
+  Misc
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Handling sensitive data at NAISS" class="md-nav__button md-logo" aria-label="Handling sensitive data at NAISS" data-md-component="logo">
+      
+  <img src="../../logo/naiss_logo_white.png" alt="logo">
+
+    </a>
+    Handling sensitive data at NAISS
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/UPPMAX/bianca_workshop" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prereqs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prerequisites
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginner
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Beginner
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beginner/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beginner/learning_outcomes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning outcomes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beginner/course_dates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course dates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beginner/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beginner/sensitive_data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working with sensitive data outside Bianca
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beginner/naiss_sens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NAISS SENS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beginner/login/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Login
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beginner/login_remote_desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Log in to the Bianca remote desktop environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beginner/use_remote_desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using the desktop environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beginner/login_console/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Log in to the Bianca console environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beginner/commandline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command-line intro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beginner/create_script/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create an executable script
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beginner/modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Module system
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beginner/file_transfer_using_gui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transferring files to/from Bianca using a graphical tool
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beginner/slurm_intro_new/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slurm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beginner/ides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IDEs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beginner/summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Summary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../beginner/evaluation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intermediate
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Intermediate
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intermediate/intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intermediate/learning_outcomes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning outcomes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intermediate/course_dates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course dates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intermediate/schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intermediate/gpu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPUs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intermediate/transfer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transferring files to/from Bianca
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intermediate/efficient_jobs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Efficient jobs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intermediate/install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Packages and software installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intermediate/summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Summary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intermediate/evaluation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extra material
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Extra material
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intermediate/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The bigger picture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transfer_basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transferring files to/from Bianca
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to compute nodes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to compute nodes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nodes-and-cores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodes and cores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slurm-schedules-and-allocates-compute-resources-for-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slurm schedules and allocates compute resources for you
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Slurm schedules and allocates compute resources for you">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-ways-to-allocate-compute-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two ways to allocate compute resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allocation-flagsslurm-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Allocation flags/Slurm parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jobs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The queue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core-hours
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactive-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interactive jobs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interactive jobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#try-interactive-and-run-rstudio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Try interactive and run RStudio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#job-scripts-batch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Job scripts (batch)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Job scripts (batch)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#try-batch-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Try batch job
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-the-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check the jobs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises-20-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercises 20 minutes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Links
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intermediate/complex_jobs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Complex jobs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intermediate/replicate_jobs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Replicate jobs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slurm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    More about Slurm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build from source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conda on Bianca
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install with pip to Bianca
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rpackages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installing R packages on Bianca
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../julia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using Julia packages on Bianca
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../containers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Containers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Own development and Git on Bianca
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Misc
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Misc
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../communication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Communication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../evaluations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frequently asked questions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lesson_plans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lesson plans
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meeting_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meeting notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reflections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflections
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/shared_document/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shared document
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shared_documents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shared documents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nodes-and-cores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodes and cores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slurm-schedules-and-allocates-compute-resources-for-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slurm schedules and allocates compute resources for you
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Slurm schedules and allocates compute resources for you">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-ways-to-allocate-compute-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two ways to allocate compute resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allocation-flagsslurm-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Allocation flags/Slurm parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jobs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-queue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The queue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core-hours
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactive-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interactive jobs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interactive jobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#try-interactive-and-run-rstudio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Try interactive and run RStudio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#job-scripts-batch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Job scripts (batch)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Job scripts (batch)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#try-batch-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Try batch job
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-the-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check the jobs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises-20-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercises 20 minutes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Links
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../intermediate/overview/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Extra material
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/UPPMAX/bianca_workshop/blob/main/docs/extra/slurm_intro_old.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/UPPMAX/bianca_workshop/raw/main/docs/extra/slurm_intro_old.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="introduction-to-compute-nodes">Introduction to compute nodes<a class="headerlink" href="#introduction-to-compute-nodes" title="Anchor link to this section for reference">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Learning outcomes</p>
+<ul>
+<li>This is a short introduction in how to reach the calculation/compute/worker nodes</li>
+<li>The learners should be able to:<ul>
+<li>Run simple jobs in the batch system</li>
+<li>Run interactively on compute nodes</li>
+<li>See when to run interactive and when to use batch system</li>
+<li>Check the progress of their jobs</li>
+</ul>
+</li>
+</ul>
+</div>
+<details class="- info">
+<summary>Notes for teachers</summary>
+<p>Teaching goals:</p>
+<ul>
+<li>The learners demonstrate to have run in interactive</li>
+<li>The learners demonstrate to have run batch job</li>
+<li>The learners demonstrate to have understood when to use batch or interactive</li>
+<li>The learners demonstrate to have understood how to plan for jobs</li>
+</ul>
+<p>Schedule (50 minutes):</p>
+<ul>
+<li>10 minutes: lecturing</li>
+<li>15 minutes type-alongs x 2</li>
+<li>20 minutes: exercise + quiz</li>
+<li>5 minutes: discuss answers</li>
+</ul>
+</details>
+<h2 id="nodes-and-cores">Nodes and cores<a class="headerlink" href="#nodes-and-cores" title="Anchor link to this section for reference">&para;</a></h2>
+<ul>
+<li>Bianca contains hundreds of nodes.</li>
+<li>Each node is like a ordinary computer without a screen.</li>
+<li>One Bianca node consists of 16 cores.</li>
+<li>Each core can do work more or less independently.</li>
+</ul>
+<p>There are two types of nodes:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Login node</td>
+<td>Start jobs for worker nodes, do easy things. You share 2 cores and 15 GB RAM with active users within your Sens project</td>
+</tr>
+<tr>
+<td>Compute nodes</td>
+<td>Do hard calculations, either from scripts of an interactive session</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Our nodes on Bianca have this principle</strong></li>
+</ul>
+<p><img alt="node principle" src="../img/node.png" /></p>
+<ul>
+<li><strong>Our clusters (like Bianca) have this principle</strong></li>
+</ul>
+<p><img alt="nodes principle" src="../img/nodes.png" /></p>
+<h2 id="slurm-schedules-and-allocates-compute-resources-for-you">Slurm schedules and allocates compute resources for you<a class="headerlink" href="#slurm-schedules-and-allocates-compute-resources-for-you" title="Anchor link to this section for reference">&para;</a></h2>
+<ul>
+<li>Problem: <em>1000 users, 300 nodes, 5000 cores</em></li>
+<li>
+<p>We need a <strong>queue</strong> system:</p>
+<ul>
+<li><a href="https://slurm.schedmd.com/">Slurm</a> is a job scheduler</li>
+</ul>
+</li>
+</ul>
+<h3 id="two-ways-to-allocate-compute-resources">Two ways to allocate compute resources<a class="headerlink" href="#two-ways-to-allocate-compute-resources" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>Work <strong>interactively</strong> with your data or develop or test<ul>
+<li>Run an <strong>Interactive session</strong></li>
+<li><code>$ interactive &lt;flags&gt; ...</code></li>
+<li>Typical use cases:<ul>
+<li>Run RStudio</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>If you <em>don't</em> need any live interaction with your workflow/analysis/simulation<ul>
+<li>Send your job to the slurm job <strong>batch</strong> (sbatch)</li>
+<li><code>$ sbatch &lt;flags&gt; &lt;program&gt;</code> or</li>
+<li><code>$ sbatch &lt;job script&gt;</code></li>
+</ul>
+</li>
+</ul>
+<pre class="mermaid"><code>flowchart TD
+    UPPMAX(What to run on which node?)
+    operation_type{What type of operation/calculation?}
+    interaction_type{What type of interaction?}
+    login_node(Work on login node)
+    interactive_node(Work on interactive node)
+    calculation_node(Schedule for calculation node)
+
+    UPPMAX--&gt;operation_type
+    operation_type--&gt;|light,short|login_node
+    operation_type--&gt;|heavy,long|interaction_type
+    interaction_type--&gt;|Direct|interactive_node
+    interaction_type--&gt;|Indirect|calculation_node</code></pre>
+<h3 id="allocation-flagsslurm-parameters">Allocation flags/Slurm parameters<a class="headerlink" href="#allocation-flagsslurm-parameters" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>1 mandatory setting for jobs:<ul>
+<li>Which compute project? (<code>-A</code>)</li>
+<li>Example: <code>interactive -A sens2025560</code></li>
+</ul>
+</li>
+<li>3 settings you really should set:<ul>
+<li>Type of queue or partition? (<code>-p</code>)<ul>
+<li><code>core</code>  for most jobs and <strong>default</strong>!</li>
+<li><code>node</code>  for larger jobs</li>
+<li>for short development jobs and tests: <code>devcore</code>, <code>devel</code>)</li>
+<li>Example: <code>interactive -A sens2025560 -p core</code></li>
+</ul>
+</li>
+<li>How many cores? (<code>-n</code>)<ul>
+<li>up to 16 for core job (default 1)</li>
+<li>Example: <code>interactive -A sens2025560 -p core -n 4</code></li>
+</ul>
+</li>
+<li>How long at most? (<code>-t</code>)<ul>
+<li>Example: ask for 30 minutes of 4 cores<ul>
+<li><code>interactive -A sens2025560 -p core -n 4 -t 0:30:0</code></li>
+</ul>
+</li>
+<li>Default is 1 min so set it if the job requires more time!</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>If in doubt:<ul>
+<li><code>-p core</code></li>
+<li><code>-n 1</code>, for Rstudio <code>-n 2</code></li>
+<li><code>-t 10-00:00:00</code> (10 days)</li>
+</ul>
+</li>
+</ul>
+<h3 id="jobs">Jobs<a class="headerlink" href="#jobs" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>Job = what happens during booked time</li>
+<li>In interactive session = what you do "live"</li>
+<li>Otherwise (batch described in)<ul>
+<li>a script file or</li>
+<li>the command-line (priority over script)</li>
+</ul>
+</li>
+<li>Content of batch script :<ul>
+<li>Slurm parameters (<strong>flags</strong>)</li>
+<li>Load software modules</li>
+<li>(Navigate in file system)</li>
+<li>Run program(s)</li>
+<li>(Collect output)</li>
+<li>... and more</li>
+</ul>
+</li>
+</ul>
+<div class="admonition admonition">
+<p class="admonition-title">Slurm Cheat Sheet</p>
+<ul>
+<li><code>-A</code>    project number</li>
+<li><code>-t</code>    wall time</li>
+<li><code>-n</code>    number of cores</li>
+<li><code>-N</code>    number of nodes (can only be used if your code is parallelized with MPI)</li>
+<li><code>-p</code>    partition<ul>
+<li><code>core</code> is default and works for jobs narrower than 16 cores</li>
+<li><code>node</code> can be used if you need the whole node and its memory</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="the-queue">The queue<a class="headerlink" href="#the-queue" title="Anchor link to this section for reference">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>You don't see the queue graphically.</li>
+<li>But, overall:<ul>
+<li>short and narrow jobs will start fast</li>
+<li>test and development jobs can get use of specific development nodes if they are shorter than 1 hour and uses up to two nodes.</li>
+<li>waste of resources unless you have a parallel program or need all the memory, e.g. 128 GB per node</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">See also</p>
+<ul>
+<li><a href="https://docs.uppmax.uu.se/cluster_guides/slurm_scheduler/" target="_blank">The job scheduler graphically</a></li>
+</ul>
+</div>
+<h3 id="core-hours">Core-hours<a class="headerlink" href="#core-hours" title="Anchor link to this section for reference">&para;</a></h3>
+<ul>
+<li>Remember that you are charged CPU-hours according to booked #cores x hours</li>
+<li>Example 1: 60 hours with 2 cores = 120 CPU-hours</li>
+<li>Example 2: 12 hours with a full node = 192 hours<ul>
+<li>Waste of resources unless you have a parallel program using all cores or need all the memory, e.g. 128 GB per node</li>
+</ul>
+</li>
+</ul>
+<h2 id="interactive-jobs">Interactive jobs<a class="headerlink" href="#interactive-jobs" title="Anchor link to this section for reference">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>When to use?<ul>
+<li>Development and programs that nees responiveness</li>
+</ul>
+</li>
+<li>Pros<ul>
+<li>Interactive jobs are high-priority</li>
+<li>Quickly gives you a job and logs you in to the compute node</li>
+<li>You run play with your data and do graphical analysis in real-time</li>
+<li>You can develop and test your coming workflows to be run later as perfect batch jobs with larger data.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul>
+<li>When to not use?<ul>
+<li>Most work is most effective as submitted jobs (batch)</li>
+</ul>
+</li>
+<li>Cons<ul>
+<li>Limited to 12 hours (?) and 2 nodes (32 cores)</li>
+<li>CPU hours are ticking all the time the session is active, even if you do not perform any work</li>
+</ul>
+</li>
+</ul>
+</div>
+<ul>
+<li>Log in to compute node via the terminal:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>interactive<span class="w"> </span>-A<span class="w"> </span><span class="o">[</span>project<span class="w"> </span>name<span class="o">]</span><span class="w"> </span>-p<span class="w"> </span>core<span class="w"> </span>-n<span class="w"> </span><span class="o">[</span>number_of_cores<span class="o">]</span><span class="w"> </span>-t<span class="w"> </span><span class="o">[</span>session_duration<span class="o">]</span>
+</code></pre></div>
+<ul>
+<li>Log out with <code>&lt;Ctrl&gt;-D</code> or <code>logout</code></li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>interactive<span class="w"> </span>-A<span class="w"> </span>sens2025560<span class="w"> </span>-p<span class="w"> </span>core<span class="w"> </span>-n<span class="w"> </span><span class="m">2</span><span class="w"> </span>-t<span class="w"> </span><span class="m">8</span>:0:0
+</code></pre></div>
+<p>This starts an interactive session using project <code>sens2025560</code>
+that uses 2 cores and has a maximum duration of 8 hours.</p>
+<h3 id="try-interactive-and-run-rstudio">Try interactive and run RStudio<a class="headerlink" href="#try-interactive-and-run-rstudio" title="Anchor link to this section for reference">&para;</a></h3>
+<p>We recommend using at least two cores for <a href="https://docs.uppmax.uu.se/software/rstudio/">RStudio</a>, and to get those resources, you must should start an interactive job.</p>
+<div class="admonition example">
+<p class="admonition-title">Demo/type-along</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>Try to start  the interactive session but if it takes a while, just listen.</li>
+<li>It may have started by the time for exercises</li>
+</ul>
+</div>
+<p>Use <strong>ThinLinc</strong></p>
+<ul>
+<li>
+<p>If you already have an interactive session going on, use that.</p>
+<div class="highlight"><pre><span></span><code>- If you don&#39;t find it, do
+
+    ``$ squeue``
+
+- find your session, ssh to it, like:
+
+    ``$ ssh sens2025560-b9``
+</code></pre></div>
+</li>
+<li>
+<p>Otherwise start a new one with:</p>
+<p><code>$ interactive -A sens2025560 -p devcore -n 2 -t 30:00 --mail-type=BEGIN</code></p>
+</li>
+<li>
+<p>You will get an email wghen started so you don't miss some compute time!</p>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>Try to start  the interactive session but if it takes a while, just listen.</li>
+<li>It may have started by the time for exercises.</li>
+<li>We may all also return to this after some time!</li>
+</ul>
+</div>
+<ul>
+<li>
+<p>When session is started, you can check which node you are from the information in your prompt, like:
+    <code>[bjornc@sens2025560-b9 ~]$</code></p>
+</li>
+<li>
+<p>Once the interactive job has begun after a while you need to <strong>load needed modules</strong>, even if you had loaded them before in the login node</p>
+</li>
+<li>
+<p>Load an RStudio module and an R_packages module (if not loading R you will have to stick with R/3.6.0) and run "rstudio" from there.</p>
+<p><code>$ ml RStudio/2023.06.2-561</code></p>
+</li>
+<li>
+<p><strong>Start rstudio</strong>, keeping terminal active (<code>&amp;</code>)</p>
+</li>
+</ul>
+<p><code>$ rstudio &amp;</code></p>
+<ul>
+<li><strong>Quit RStudio</strong>!</li>
+<li><strong>Log out</strong> from interactive session with <code>&lt;Ctrl&gt;-D</code> or <code>logout</code> or <code>exit</code></li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>(Re-)load modules in an interactive session</li>
+<li>Check your working directory, <code>pwd</code>. You are not automatically coming to <code>~</code> or you project folder.</li>
+</ul>
+</div>
+<h2 id="job-scripts-batch">Job scripts (batch)<a class="headerlink" href="#job-scripts-batch" title="Anchor link to this section for reference">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>A batch job is an instruction you give the computer to perform.</li>
+<li>The instruction is settled when it has been sent to the job scheduler.<ul>
+<li>you can though <code>cancel</code> the job, if you find out that you missed anything</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>When to use?<ul>
+<li>Finished (and tested) automatic workflows where no interaction is needed</li>
+</ul>
+</li>
+<li>Pros<ul>
+<li>Very effective on CPU hours</li>
+<li>Ends when the job is done<ul>
+<li>or if something goes wrong (hopefully)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul>
+<li>When to not use?<ul>
+<li>When you need to interact or adjust settings during run</li>
+</ul>
+</li>
+<li>Cons<ul>
+<li>You have no interaction</li>
+</ul>
+</li>
+</ul>
+</div>
+<ul>
+<li>Batch scripts can be written in any scripting language. We will use BASH</li>
+<li>Make first line be  <code>#!/bin/bash -l</code> in the top line<ul>
+<li>It is good practice to end the line with <code>-l</code> to reload a fresh environment with no modules loaded.</li>
+<li>This makes you sure that you don't enable other software or versions that may interfere with what you want to do in the job.</li>
+</ul>
+</li>
+<li>Before the job content, add the batch flags starting the lines with the keyword <code>#SBATCH</code>, like:<ul>
+<li><code>#SBATCH -t 0:30:00</code></li>
+<li><code>#SBATCH -p core</code></li>
+<li><code>#SBATCH -n 3</code></li>
+</ul>
+</li>
+<li><code>#</code> will be ignored by <code>bash</code> and can run as an ordinary bash script</li>
+<li>If running the script with the command <code>sbatch &lt;script&gt;</code> the <code>#SBATCH</code> lines will be interpreted as slurm flags</li>
+<li>Then add your workflow: An algorithm of the steps to be done from the terminal point of view.<ul>
+<li>Think about what you would have to do yourself in the terminal to:<ul>
+<li>run the tool in a login session from the terminal.</li>
+<li>and do possible modification to allow for use of more cores</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="try-batch-job">Try batch job<a class="headerlink" href="#try-batch-job" title="Anchor link to this section for reference">&para;</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Type-along</p>
+<ul>
+<li>Write a bash script called <code>jobscript.sh</code><ul>
+<li>You can be in your <code>~</code> folder</li>
+</ul>
+</li>
+<li>To make it faster Copy-paste the code below.</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><img alt="copy-paste" src="../img/copy_paste.PNG" /></p>
+</div>
+<h4 id="a-very-simple-job-script-template">A (very) simple job script template<a class="headerlink" href="#a-very-simple-job-script-template" title="Anchor link to this section for reference">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="ch">#!/bin/bash -l</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1">#SBATCH -A sens2025560  # Project ID</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1">#SBATCH -p devcore  # Asking for cores (for test jobs and as opposed to multiple nodes)</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1">#SBATCH -n 2  # Number of cores</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1">#SBATCH -t 00:1:00  # One minute</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="c1">#SBATCH -J Test  # Name of the job</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="c1"># go to some directory</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="nb">cd</span><span class="w"> </span>/proj/sens2025560/
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="nb">pwd</span><span class="w"> </span>-P
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="c1"># load software modules</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>module<span class="w"> </span>load<span class="w"> </span>bioinfo-tools
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>module<span class="w"> </span>list
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="c1"># do something</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>hostname
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="nb">echo</span><span class="w"> </span>Hello<span class="w"> </span>world!
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="nb">echo</span><span class="w"> </span>Using<span class="w"> </span>the<span class="w"> </span>srun<span class="w"> </span>command:<span class="w"> </span>Running<span class="w"> </span>the<span class="w"> </span>same<span class="w"> </span>commands<span class="w"> </span>using<span class="w"> </span>the<span class="w"> </span>available<span class="w"> </span>cores
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>srun<span class="w"> </span>hostname
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>srun<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>Hello<span class="w"> </span>world!
+</code></pre></div>
+<ul>
+<li>
+<p>Run it:</p>
+<ul>
+<li><code>$ sbatch jobscript.sh</code></li>
+</ul>
+</li>
+<li>
+<p>We <em>can</em> modify the slurm parameters for tests from the command-line.</p>
+<ul>
+<li><code>$ sbatch -n 4 jobscript.sh</code></li>
+</ul>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do we need to go back and test the interactive?</p>
+</div>
+<h2 id="check-the-jobs">Check the jobs<a class="headerlink" href="#check-the-jobs" title="Anchor link to this section for reference">&para;</a></h2>
+<ul>
+<li><code>squeue</code> — quick info about jobs in queue</li>
+<li><code>jobinfo</code> — detailed info about jobs</li>
+<li><code>finishedjobinfo</code> — summary of finished jobs</li>
+<li><code>jobstats</code> — efficiency of booked resources<ul>
+<li>use <code>eog</code> to watch the <code>png</code> output files</li>
+</ul>
+</li>
+<li><code>bianca_combined_jobinfo</code></li>
+</ul>
+<div class="admonition admonition">
+<p class="admonition-title">See also</p>
+<p>Intermediate workshop material on Slurm:</p>
+<ul>
+<li><a href="../../intermediate/complex_jobs/">complex jobs</a></li>
+<li><a href="../../intermediate/efficient_jobs/">efficient jobs</a></li>
+<li><a href="../../intermediate/complex_jobs/">replicate jobs</a></li>
+</ul>
+</div>
+<div class="admonition admonition">
+<p class="admonition-title">Slurm Cheat Sheet</p>
+<ul>
+<li><code>-A</code>    project number</li>
+<li><code>-t</code>    wall time</li>
+<li><code>-n</code>    number of cores</li>
+<li><code>-N</code>    number of nodes (can only be used if your code is parallelized with MPI)</li>
+<li><code>-p</code>    partition<ul>
+<li><code>core</code> is default and works for jobs narrower than 16 cores</li>
+<li><code>node</code> can be used if you need the whole node and its memory<ul>
+<li>must be used when allocating the fat nodes, see below</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>-C mem256GB</code> allocate a fat node with 256 GB RAM</li>
+<li><code>-C mem512GB</code> allocate a fat node with 512 GB RAM</li>
+<li>
+<p><code>-C gpu</code></p>
+</li>
+<li>
+<p><strong>Batch jobs</strong></p>
+</li>
+<li>
+<p>Two alternatives</p>
+<ul>
+<li><code>sbatch &lt;jobscript with all #SBATCH options&gt;</code></li>
+<li><code>sbatch &lt;options that will be prioritized over the options within the jobs script&gt; &lt;jobscript&gt;</code><ul>
+<li>can for instance be used if you just want to test with, for instance, fewer cores and shorter time</li>
+<li>Example: <code>sbatch -t  60:00 -p devcore -n 2 job.sh</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Interactive</strong></p>
+</li>
+<li>
+<p><code>interactive -A &lt;project&gt; &lt;other options if not using default settings&gt;</code></p>
+</li>
+<li>load your modules when session starts</li>
+</ul>
+</div>
+<div class="admonition admonition">
+<p class="admonition-title">Check and cancel jobs</p>
+<ul>
+<li><code>squeue</code>    see the pending and running jobs with their job IDs</li>
+<li><code>scancel [job ID]</code></li>
+</ul>
+</div>
+<h2 id="exercises-20-minutes">Exercises 20 minutes<a class="headerlink" href="#exercises-20-minutes" title="Anchor link to this section for reference">&para;</a></h2>
+<details class="question" open="open">
+<summary>You are developing code on Bianca.</summary>
+<ul>
+<li>You write the code line-by-line and schedule a test run after each addition.</li>
+<li>However, after each new line, it takes a couple of minutes before you know your code worked yes/no.</li>
+<li>How could you develop your code quicker?"</li>
+</ul>
+<details class="tip">
+<summary>Answer</summary>
+<ul>
+<li>This is the typical use-case to use an interactive node.</li>
+<li>One could also consider to develop code on a local computer instead (which uses nonsensitive/simulated/fake testing data) and upload the final code instead.</li>
+</ul>
+</details>
+</details>
+<details class="- question">
+<summary>Why not always use an interactive session?</summary>
+<ul>
+<li>Because it is an inefficient use of your core hours.</li>
+<li>An interactive session means that you use a calculation node with low efficiency: only irregularly you will use such a node to its full
+capacity.</li>
+<li>However, the number of core hours are registered as if the node is used at full capacity, as it is <em>reserved</em> to be used at that capacity.</li>
+</ul>
+</details>
+<details class="question" open="open">
+<summary>Which approach is best in the following use cases? Batch jobs or interactive sessions?</summary>
+<ol>
+<li>Long jobs</li>
+<li>Short jobs with interactive "run-time"/interactive user input</li>
+<li>Short jobs without interactive "run-time"/interactive user input</li>
+<li>Test/debugging/developing code</li>
+<li>Playing with and plotting large data</li>
+</ol>
+<details class="tip">
+<summary>Answer</summary>
+<ol>
+<li>batch</li>
+<li>interactice</li>
+<li>batch</li>
+<li>interactive</li>
+<li>interactive</li>
+</ol>
+</details>
+</details>
+<details class="question">
+<summary>Start an interactive session</summary>
+<ul>
+<li>Ask for like 15 minutes only</li>
+<li>The goal of this exercise is to make sure you know how to start an interactive session.</li>
+<li>Try to reproduce the steps in the Demo above, if we did not manage!</li>
+</ul>
+</details>
+<details class="question" open="open">
+<summary>Play with some changes in the submit script used in the Type-along</summary>
+<ul>
+<li>Examples:<ul>
+<li>more cores</li>
+<li>other things to do</li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="question" open="open">
+<summary>Extra: Submit a complex Slurm job</summary>
+<ul>
+<li>Make a batch job to run the <a href="https://uppmax.github.io/bianca_workshops/extra/slurm/">demo</a> "Hands on: Processing a BAM file to a VCF using GATK, and annotating the variants with snpEff". Ask for 2 cores for 1h.<ul>
+<li>You can copy the my_bio_workflow.sh file in <code>/proj/sens2025560/workshop/slurm</code> to your home folder and make the necessary changes.</li>
+</ul>
+</li>
+</ul>
+<details class="tip">
+<summary>Answer</summary>
+<ul>
+<li>edit a file using you preferred editor, named <code>my_bio_worksflow.sh</code>, for example, with the content</li>
+<li>alternatively copy the <code>/proj/sens2025560/workshop/slurm/my_bio_workflow.sh</code> file and modify it
+  <code>cd ~</code>
+  <code>cp /proj/sens2025560/workshop/slurm/my_bio_workflow.sh .</code></li>
+<li>edit <code>my_bio_workflow.sh</code> and add the SBATCH commands</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="ch">#!/bin/bash</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1">#SBATCH -A sens2025560</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1">#SBATCH -J workflow</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">#SBATCH -t 01:00:00</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1">#SBATCH -p core</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1">#SBATCH -n 2</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="nb">cd</span><span class="w"> </span>~
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>myworkflow
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="nb">cd</span><span class="w"> </span>myworkflow
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>module<span class="w"> </span>load<span class="w"> </span>bioinfo-tools
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="c1"># load samtools</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>module<span class="w"> </span>load<span class="w"> </span>samtools/1.17
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="c1"># copy and example BAM file</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>cp<span class="w"> </span>-a<span class="w"> </span>/proj/sens2025560/workshop/data/ERR1252289.subset.bam<span class="w"> </span>.
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="c1"># index the BAM file</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>samtools<span class="w"> </span>index<span class="w"> </span>ERR1252289.subset.bam
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="c1"># load the GATK module</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>module<span class="w"> </span>load<span class="w"> </span>GATK/4.3.0.0
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="c1"># make symbolic links to the hg38 genomes</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>ln<span class="w"> </span>-s<span class="w"> </span>/sw/data/iGenomes/Homo_sapiens/UCSC/hg38/Sequence/WholeGenomeFasta/genome.*<span class="w"> </span>.
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="c1"># create a VCF containing inferred variants</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>gatk<span class="w"> </span>HaplotypeCaller<span class="w"> </span>--reference<span class="w"> </span>genome.fa<span class="w"> </span>--input<span class="w"> </span>ERR1252289.subset.bam<span class="w"> </span>--intervals<span class="w"> </span>chr1:100300000-100800000<span class="w"> </span>--output<span class="w"> </span>ERR1252289.subset.vcf
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="c1"># use snpEFF to annotate variants</span>
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>module<span class="w"> </span>load<span class="w"> </span>snpEff/5.1
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>java<span class="w"> </span>-jar<span class="w"> </span><span class="nv">$SNPEFF_ROOT</span>/snpEff.jar<span class="w"> </span>eff<span class="w"> </span>hg38<span class="w"> </span>ERR1252289.subset.vcf<span class="w"> </span>&gt;<span class="w"> </span>ERR1252289.subset.snpEff.vcf
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="c1"># compress the annotated VCF and index it</span>
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>bgzip<span class="w"> </span>ERR1252289.subset.snpEff.vcf
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>tabix<span class="w"> </span>-p<span class="w"> </span>vcf<span class="w"> </span>ERR1252289.subset.snpEff.vcf.gz
+</code></pre></div>
+<ul>
+<li>make the job script executable</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>chmod<span class="w"> </span>a+x<span class="w"> </span>my_bio_workflow.sh
+</code></pre></div>
+<ul>
+<li>submit the job</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span>sbatch<span class="w"> </span>my_bio_workflow.sh
+</code></pre></div>
+</details>
+</details>
+<details class="question" open="open">
+<summary>EXTRA: Have look at the link below</summary>
+<ul>
+<li>
+<p><a href="https://docs.uppmax.uu.se/cluster_guides/slurm_scheduler/" target="_blank">The job scheduler graphically</a></p>
+</li>
+<li>
+<p>Which jobs will start faster?</p>
+</li>
+</ul>
+</details>
+<h2 id="links">Links<a class="headerlink" href="#links" title="Anchor link to this section for reference">&para;</a></h2>
+<ul>
+<li><a href="https://uppmax.github.io/UPPMAX-documentation/cluster_guides/slurm/" target="_blank">New Slurm user guide</a></li>
+<li><a href="https://docs.uppmax.uu.se/software/jobstats/" target="_blank">Discovering job resource usage with <code>jobstats</code></a></li>
+<li><a href="https://docs.uppmax.uu.se/software/projplot/" target="_blank">Plotting your core hour usage</a></li>
+<li><a href="https://docs.uppmax.uu.se/cluster_guides/slurm_scheduler/" target="_blank">The job scheduler graphically</a></li>
+<li><a href="https://slurm.schedmd.com/" target="_blank">Official slurm documentation</a></li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Discussion</p>
+<ul>
+<li>Discuss the exercise</li>
+<li>Any further thoughts?</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Keypoints</p>
+<ul>
+<li>Slurm is a job scheduler to handle the compute nodes<ul>
+<li>add flags to describe your job.</li>
+</ul>
+</li>
+<li>You are always in the login node unless you:<ul>
+<li>start an interactive session to do development or hands-on work</li>
+<li>start a batch job to run jobs not needing any manual input</li>
+</ul>
+</li>
+<li>There is a job wall time limit of ten days (240 hours).</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../transfer_basics/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Transferring files to/from Bianca">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Transferring files to/from Bianca
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../intermediate/complex_jobs/" class="md-footer__link md-footer__link--next" aria-label="Next: Complex jobs">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Complex jobs
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.footer", "search.suggest", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
