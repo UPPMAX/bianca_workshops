@@ -10,6 +10,8 @@ nav:
       - Learning outcomes: beginner/learning_outcomes.md
       - Course dates: beginner/course_dates.md
       - Schedule: beginner/schedule.md
+      - beginner/sensitive_data.md
+      - beginner/naiss_sens.md
       - Login: beginner/login.md
       - Log in to the Bianca remote desktop environment: beginner/login_remote_desktop.md
       - Using the desktop environment: beginner/use_remote_desktop.md
