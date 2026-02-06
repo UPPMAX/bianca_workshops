@@ -16,7 +16,7 @@ tags:
     - Give a reasonable definition of what an IDE is
     - Remember that RStudio, Jupyter, VSCodium and MATLAB are IDEs that can be run on Bianca
     - Can run the favorite IDE on Bianca
-    - (optional) Can give a reason 
+    - (optional) Can give a reason
         - why to use an IDE
         - why not to use an IDE on Bianca
         - why not to run an IDE on a login node
