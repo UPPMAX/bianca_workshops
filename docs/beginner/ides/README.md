@@ -191,7 +191,7 @@ Jupyter | Python (R, Julia) | More notebook like
 
 !!! abstract "Keypoints"
 
-    - There are (at least) 4 IDEs instaleld on Bianca
+    - There are (at least) 4 IDEs installed on Bianca
     - How to start the mare descibed in the documentation
     - ThinLinc remote desktop is needed.
     - Starting an interactive session on a compute node is recommended.
