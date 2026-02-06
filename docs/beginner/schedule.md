@@ -14,7 +14,9 @@ tags:
 
 When  | Who  | What
 ------|------|-----------------------------
-9:00  | R    | [Introduction](intro.md) (this page), [login](login.md), [log in to remote desktop](login_remote_desktop.md), [use the remote desktop](use_remote_desktop.md)
+9:00  | R    | [Introduction](intro.md) (this page)
+9:10  | M    | Arrhenius
+9:25  | R    | [login](login.md), [log in to remote desktop](login_remote_desktop.md), [use the remote desktop](use_remote_desktop.md)
 10:00 | .    | Break
 10:15 | R    | [log in to remote desktop](login_remote_desktop.md), [use the remote desktop](use_remote_desktop.md), :rocket: [Log in to console environment](login_console.md), :rocket: [command line](commandline.md)
 11:00 | .    | Break
@@ -30,5 +32,5 @@ When  | Who  | What
 
 <!-- markdownlint-enable MD013 -->
 
-- Who: `B`: Björn, `J`: Jayant, `P`: Pavlin, `R`: Richèl
+- Who: `B`: Björn, `J`: Jayant, `M`: Marcus, `P`: Pavlin, `R`: Richèl
 - :rocket:: for those that are (even) faster
