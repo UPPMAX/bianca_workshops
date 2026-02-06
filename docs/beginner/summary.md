@@ -52,7 +52,7 @@ flowchart TD
       can_use_command_line_2(Can use the command line 2):::intermediate_node
       can_use_custom_software(Can use custom software):::intermediate_node
       can_monitor_jobs(Can monitor jobs):::intermediate_node
-      can_use_ide(Can use an IDE):::intermediate_node
+      can_use_ide(Can use an IDE):::basic_node
     %% end
     %% style sub_intermediate_use fill:#ffc,color:#000,stroke:#ffc
 
