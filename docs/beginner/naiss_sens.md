@@ -11,14 +11,13 @@ tags:
     - This is a short overview of NAISS SENS projects in the context of NAISS
     - To have heard about Bianca and Arrhenius, and expected changes that will come under 2026
 
-
 ## NAISS
 
 The National Academic Infrastructure for Supercomputing in Sweden (NAISS) is funded by the Swedish Research Council with the instruction to provide free-at-the-point-of-use compute and storage resources on a national level to satisfy all needs.
 
 On a national level means that systems should be larger than what is reasonable for a single university to procure.
 
-## NAISS SENS
+## NAISS SENS service
 
 The services appropriate for handling sensitive personal data are traditionally known as NAISS SENS.
 
