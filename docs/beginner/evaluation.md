@@ -9,7 +9,7 @@ tags:
 
     They are at [the 'Evaluations' (plural) page](../evaluations/README.md).
 
-- `Form: any feedback during the day`
+- [Form: any feedback during the day](https://docs.google.com/forms/d/e/1FAIpQLSePkByXrdyylSu8DkfE1Fraoq0DLlGe5aZuP0Ugu2eOUau17A/viewform?usp=publish-editor)
 
 ???- question "For teachers: what is in that form?"
 
@@ -23,7 +23,7 @@ tags:
 
     Any feedback?
 
-- `Form: evaluation questions` (at the end of the day)
+- [Form: evaluation questions](https://docs.google.com/forms/d/e/1FAIpQLSfQ9hj7kzWnG2-hrfwv1IlBcyGKf3V0q-kZPHly9-N51fuH0g/viewform?usp=publish-editor) (at the end of the day)
 
 ???- question "For teachers: what is in that form?"
 
@@ -57,55 +57,6 @@ tags:
     - I can start an interactive session
     - I can submit jobs to the scheduler
     - I can start RStudio
-
-    Say something positive about Björn:
-
-    ```text
-    [Empty paragraph]
-    ```
-
-    Say something about Björn he can improve:
-
-    ```text
-    [Empty paragraph]
-    ```
-
-    Say something positive about Jayant:
-
-    ```text
-    [Empty paragraph]
-    ```
-
-    Say something about Jayant he can improve:
-
-    ```text
-    [Empty paragraph]
-    ```
-
-    Say something positive about Pavlin:
-
-    ```text
-    [Empty paragraph]
-    ```
-
-    Say something about Pavlin he can improve:
-
-    ```text
-    [Empty paragraph]
-    ```
-
-    Say something positive about Richèl:
-
-    ```text
-    [Empty paragraph]
-    ```
-
-    Say something about Richèl he can improve:
-
-    ```text
-    [Empty paragraph]
-    ```
-
 
     Any other feedback?
 
