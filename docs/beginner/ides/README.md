@@ -132,7 +132,7 @@ Jupyter | Python (R, Julia) | More notebook like
     Using an IDE on Bianca is cumbersome and
     there are superior ways to develop code on Bianca,
     as -for example- taught in the
-    [UPPMAX 'Programming Formalisms' course](https://github.com/UPPMAX/programming_formalisms).
+    [UPPMAX 'Programming Formalisms' course](https://uppmax.github.io/programming_formalisms/).
 
 ???- question "Is it OK to run IDEs on a login node? Why yes/no?"
 
@@ -142,7 +142,7 @@ Jupyter | Python (R, Julia) | More notebook like
     you code use the login node. This only works if the IDE
     works fine on such limited computational resources.
 
-    ???- tip
+    ??? tip "Answer"
 
         - Allocate at least 2 cores: ``... -n 2 ...``.
         - If you are working with large data sets, allocate 7 GB per core, like 8, to get 56 GB.
