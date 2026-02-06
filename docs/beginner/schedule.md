@@ -15,10 +15,10 @@ tags:
 When  | Who  | What
 ------|------|-----------------------------
 9:00  | R    | [Introduction](intro.md) (this page)
-9:10  | M    | Arrhenius
-9:25  | R    | [login](login.md), [log in to remote desktop](login_remote_desktop.md), [use the remote desktop](use_remote_desktop.md)
+9:10  | M    | [Sensitive data](sensitive_data.md), [NAISS SENS](naiss_sens.md)
+9:25  | R    | [Login](login.md), [log in to remote desktop](login_remote_desktop.md), [use the remote desktop](use_remote_desktop.md)
 10:00 | .    | Break
-10:15 | R    | [log in to remote desktop](login_remote_desktop.md), [use the remote desktop](use_remote_desktop.md), :rocket: [Log in to console environment](login_console.md), :rocket: [command line](commandline.md)
+10:15 | R    | [Log in to remote desktop](login_remote_desktop.md), [use the remote desktop](use_remote_desktop.md), :rocket: [Log in to console environment](login_console.md), :rocket: [command line](commandline.md)
 11:00 | .    | Break
 11:15 | R    | [Create an executable script](create_script.md), [use modules](modules.md)
 12:00 | .    | Lunch
