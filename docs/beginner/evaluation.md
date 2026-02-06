@@ -45,6 +45,8 @@ tags:
 
     Give you confidence levels of the following statements:
 
+    - I understand how to be careful with sensitive data outside Bianca
+    - I know what NAISS SENS is and how it relates to Bianca
     - I can log in to the Bianca remote desktop using the website
     - I can log in to the Bianca console environment using SSH
     - I can navigate to the wharf folder using a graphical file manager
