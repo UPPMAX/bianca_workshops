@@ -66,7 +66,7 @@ Please fill in [the prevaluation form](https://docs.google.com/forms/d/e/1FAIpQL
     These are the learning outcomes for today.
 
     The goals of this exercise is to make sure you've read
-    what we will learn today. Also, it helps us decide what to teach. 
+    what we will learn today. Also, it helps us decide what to teach.
 
     Give you confidence levels of the following statements,
     using this scale:
