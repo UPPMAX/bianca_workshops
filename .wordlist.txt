@@ -1,4 +1,9 @@
 Ångström
+HPCs
+winSCP
+somewhen
+teamplay
+boxplot
 MkDocs
 Bilderbeek
 Björn
