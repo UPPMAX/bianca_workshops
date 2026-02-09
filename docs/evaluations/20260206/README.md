@@ -2,8 +2,8 @@
 
 - Course: Basic
 - Date: 2026-12-05
-- Number of registrations: ?
-- Number of learners showing up: 9 (?% show-up rate)
+- Number of registrations: 43
+- Number of learners showing up: 9 (21% show-up rate)
 - Number of evaluation results: 8 (89% fill-in rate)
 - [Analysis script (R)](analyse.R)
 - [average_confidences.csv](average_confidences.csv)
