@@ -57,7 +57,7 @@ that is free to use for all researchers in Sweden.
 
 ### Exercise 1: what will we learn?
 
-Please fill in [the prevaluation form](https://docs.google.com/forms/d/e/1FAIpQLSeUMkDG0haxih3YMWC2CcI_0Cd6tdl5Mx3BMJGaPYoJVZ1i3Q/viewform?usp=publish-editor)
+Please fill in [TODO: the prevaluation form](https://github.com/UPPMAX/bianca_workshops/issues/91)
 
 ???- question "For teachers: what is in that form?"
 

@@ -9,7 +9,7 @@ tags:
 
     They are at [the 'Evaluations' (plural) page](../evaluations/README.md).
 
-- [Form: any feedback during the day](https://docs.google.com/forms/d/e/1FAIpQLSePkByXrdyylSu8DkfE1Fraoq0DLlGe5aZuP0Ugu2eOUau17A/viewform?usp=publish-editor)
+- [TODO: Form: any feedback during the day](https://github.com/UPPMAX/bianca_workshops/issues/91)
 
 ???- question "For teachers: what is in that form?"
 
@@ -23,7 +23,7 @@ tags:
 
     Any feedback?
 
-- [Form: evaluation questions](https://docs.google.com/forms/d/e/1FAIpQLSfQ9hj7kzWnG2-hrfwv1IlBcyGKf3V0q-kZPHly9-N51fuH0g/viewform?usp=publish-editor) (at the end of the day)
+- [TODO: Form: evaluation questions](https://github.com/UPPMAX/bianca_workshops/issues/91) (at the end of the day)
 
 ???- question "For teachers: what is in that form?"
 
