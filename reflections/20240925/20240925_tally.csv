@@ -1,0 +1,37 @@
+question,answer,n
+I can create a minimal executable bash script,3,1
+I can create a minimal executable bash script,4,1
+I can create a minimal executable bash script,5,3
+I can log in to Bianca via Rackham,0,2
+I can log in to Bianca via Rackham,1,1
+I can log in to Bianca via Rackham,3,1
+I can log in to Bianca via Rackham,5,1
+I can log in to the Bianca console environment using SSH,2,1
+I can log in to the Bianca console environment using SSH,5,4
+I can log in to the Bianca remote desktop using the website,5,5
+I can manage my files and folders using a graphical file manager,2,1
+I can manage my files and folders using a graphical file manager,3,1
+I can manage my files and folders using a graphical file manager,4,2
+I can manage my files and folders using a graphical file manager,5,1
+I can manage my files and folders using a terminal,2,2
+I can manage my files and folders using a terminal,5,3
+I can navigate to the wharf folder using a graphical file manager,3,1
+I can navigate to the wharf folder using a graphical file manager,4,1
+I can navigate to the wharf folder using a graphical file manager,5,3
+I can navigate to the wharf folder using a terminal,2,2
+I can navigate to the wharf folder using a terminal,5,3
+I can start an interactive session,4,3
+I can start an interactive session,5,2
+I can submit jobs to the scheduler,3,1
+I can submit jobs to the scheduler,4,2
+I can submit jobs to the scheduler,5,2
+I can transfer files to/from Bianca using FileZilla,1,1
+I can transfer files to/from Bianca using FileZilla,2,2
+I can transfer files to/from Bianca using FileZilla,3,1
+I can transfer files to/from Bianca using FileZilla,4,1
+I can use modules,3,1
+I can use modules,4,1
+I can use modules,5,3
+I understand the legal aspects of sensitive data,3,2
+I understand the legal aspects of sensitive data,4,1
+I understand the legal aspects of sensitive data,5,2

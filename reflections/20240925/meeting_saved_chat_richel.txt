@@ -1,0 +1,111 @@
+09:00:41 From Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshop/intro/
+09:01:27 From Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://github.com/richelbilderbeek/teaching/blob/master/who_is_richel/README.md
+09:03:26 From Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshop/intro/
+09:03:52 From Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshop/evaluation/
+09:04:36 From Björn Claremar To Everyone:
+	This is the correct HackMD:
+	https://hackmd.io/@UPPMAX/bianca_sep2024_QaA/edit
+09:04:54 From Björn Claremar To Everyone:
+	I'll change in the materials
+09:06:44 From Björn Claremar To Everyone:
+	OK we take the ones in the materials
+09:06:50 From Björn Claremar To Everyone:
+	https://hackmd.io/@UPPMAX/Bianca_Intro_QaA
+09:10:21 From Saima Zubair To Everyone:
+	I am on the bus, so I will be listening now. I will actively participate when at place.
+09:10:40 From Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshop/login/
+09:12:29 From Saima Zubair To Everyone:
+	High performance paralel computing
+09:13:17 From Saima Zubair To Everyone:
+	Running parallel multiple cores to improve processing
+09:13:45 From Saima Zubair To Everyone:
+	In Uppsala
+09:14:03 From Saima Zubair To Everyone:
+	For high level computing
+09:15:20 From Saima Zubair To Everyone:
+	I have loged in to rakham
+09:19:32 From Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshop/login/
+09:45:44 From Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshop/login_remote_desktop/
+10:00:06 From Richèl 'Rea-shell' Bilderbeek To Everyone:
+	BREAKTIME! Please take a break until 10:15, as this is better for learning!
+	
+	Enjoy your break :-)
+10:15:06 From Richèl 'Rea-shell' Bilderbeek To Everyone:
+	Back to work! 
+	
+	I hope you've enjoyed your break, back to the exercises at
+	
+	https://uppmax.github.io/bianca_workshop/use_remote_desktop/
+	
+	When done, please come back to the main room, so we can move on :-)
+10:27:45 From Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshop/use_remote_desktop/
+10:41:27 From Richèl 'Rea-shell' Bilderbeek To Everyone:
+	cp file1.txt file2.txt
+10:50:47 From Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshop/login_console/
+11:18:17 From Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshop/create_script/
+11:30:10 From Richèl 'Rea-shell' Bilderbeek To Everyone:
+	Rscript my_script.R
+11:36:18 From Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshop/modules/
+12:45:29 From Björn Claremar To Everyone:
+	@Richèl 'Rea-shell' Bilderbeek can you please log out from ThinLinc so that Pavlin can log in?
+12:46:32 From Björn Claremar To Everyone:
+	that is, use logout button , I guess
+12:47:17 From Pavlin Mitev To Everyone:
+	It is fine - I will use the terminal
+13:01:36 From Pavlin Mitev To Everyone:
+	https://uppmax.github.io/bianca_workshop/transfer_basics/
+13:46:20 From Pavlin Mitev To Everyone:
+	https://cyberduck.io/
+13:52:50 From Pavlin Mitev To Everyone:
+	cat /proj/sens2025560/shared/test-file.txt
+13:59:56 From Richèl 'Rea-shell' Bilderbeek To Everyone:
+	Break until 14:10 :-)
+14:10:36 From María Bueno Álvez To Richèl 'Rea-shell' Bilderbeek(direct message):
+	Hej Richèl! Could you point me to the specific documentation to connect to Bianca through VSCode? 😊
+14:11:13 From Richèl 'Rea-shell' Bilderbeek To María Bueno Álvez(direct message):
+	Hi Maria, yes, will do so now... you pay attention to class :-)
+14:11:31 From María Bueno Álvez To Richèl 'Rea-shell' Bilderbeek(direct message):
+	Reacted to "Hi Maria, yes, will ..." with ♥️
+14:11:59 From Richèl 'Rea-shell' Bilderbeek To María Bueno Álvez(direct message):
+	Here she is: https://docs.uppmax.uu.se/software/vscodium_on_bianca/
+15:06:09 From Richèl 'Rea-shell' Bilderbeek To Lars Eklund(direct message):
+	Hi Lars, welcome!
+15:06:28 From Lars Eklund To Richèl 'Rea-shell' Bilderbeek(direct message):
+	Hi
+15:06:41 From Richèl 'Rea-shell' Bilderbeek To Everyone:
+	Break until 15:20!
+15:24:59 From Björn Claremar To Everyone:
+	https://uppmax.github.io/bianca_workshop/sens_project_short/
+15:25:15 From Björn Claremar To Everyone:
+	presentation from the link in the top section
+15:25:31 From Björn Claremar To Everyone:
+	https://github.com/UPPMAX/bianca_workshop/blob/main/docs/presentations/Bianca%20legal%20and%20admin.pdf
+15:45:27 From Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshop/evaluation/
+15:47:18 From Björn Claremar To Everyone:
+	Bianca In-Depth: Improve Your Handling of Sensitive Research Data, 11 November
+15:47:41 From María To Everyone:
+	Reacted to "Bianca In-Depth: Imp…" with ❤️
+15:49:52 From María To Everyone:
+	Just wanted to say that I have to leave
+15:50:00 From María To Everyone:
+	But will fill the form!
+15:50:13 From María To Everyone:
+	Thank you very much for today, was very useful 😊
+15:53:12 From Richèl 'Rea-shell' Bilderbeek To Miriam Franklin(direct message):
+	Thanks for filling it in!
+15:53:23 From Richèl 'Rea-shell' Bilderbeek To Miriam Franklin(direct message):
+	the evaluation that is :-)
+15:59:18 From Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://docs.uppmax.uu.se/software/bianca_file_transfer_using_filezilla/
