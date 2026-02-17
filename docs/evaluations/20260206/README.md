@@ -1,7 +1,7 @@
 # Evaluation
 
 - Course: Basic
-- Date: 2026-12-05
+- Date: 2026-02-06
 - Number of registrations: 43
 - Number of learners showing up: 9 (21% show-up rate)
 - Number of evaluation results: 8 (89% fill-in rate)
