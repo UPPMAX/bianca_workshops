@@ -1,0 +1,12 @@
+question,mean
+Can run the voted-for IDE on Bianca,4.25
+Find information in the UPPMAX documentation about IDEs on Bianca,4.5
+Find information in the UPPMAX documentation about file transfer on Bianca,5
+Know where to find an overview of topics discussed today,4.5
+See job CPU and memory usage,4.25
+Transfer files to/from Bianca using rsync,4
+Understand how to build from source,2.25
+Understand how to deal with sensitive data,4.25
+Understand how to install software myself,4
+Understand how to use packages and libraries for scripts,4.25
+Understand what containers are,2.75
