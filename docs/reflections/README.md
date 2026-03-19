@@ -18,6 +18,7 @@ Intermediate|I4        |[Reflection](20250523/20250523_richel.md)
 Beginner    |B5        |[Reflection](20250915/20250915_richel.md)
 Intermediate|I5        |[Reflection](20251118/20251118_richel.md)
 Beginner    |B6        |[Reflection](20260206/20260206_richel.md)
+Intermediate|I6        |[Reflection](20260522/20260522_richel.md)
 
 - Note that the first iteration is only the first documented iteration.
   It is unknown how many iterations came before it

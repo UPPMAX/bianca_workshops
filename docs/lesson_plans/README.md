@@ -18,6 +18,7 @@ Intermediate|I4        |[Lesson plan](20250523/20250523_richel.md)
 Beginner    |B5        |[Lesson plan](20250915/20250915_richel.md)
 Intermediate|I5        |[Lesson plan](20251118/20251118_richel.md)
 Beginner    |B6        |[Lesson plan](20260206/20260206_richel.md)
+Intermediate|I6        |[Lesson plan](20260522/20260522_richel.md)
 
 - Note that the first iteration is only the first documented iteration.
   It is unknown how many iterations came before it
