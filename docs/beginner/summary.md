@@ -106,7 +106,7 @@ I want to ...                   |Solution
 --------------------------------|-------------------------------
 work smarter with Bianca        |Attend [the 'Bianca Intermediate' course](https://uppmax.github.io/bianca_workshops/intermediate/intro/)
 do my computational work smarter|Attend [the 'Programming Formalisms' course](https://uppmax.github.io/programming_formalisms/)
-transfer files smarter          |Attend [the NAISS 'File Transfer' course](https://uppmax.github.io/naiss_file_transfer_course/)
+transfer files smarter          |Attend [the NAISS 'File Transfer' course](https://hpc.pages.naiss.se/training/connect-transfer/)
 work smarter on the command line|Attend [the NAISS 'Command line 101' course](https://nbisweden.github.io/SCoRe_user_doc/courses/)
 find out what courses there are |See [the SCoRe overview of courses](https://nbisweden.github.io/SCoRe_user_doc/courses/)
 
