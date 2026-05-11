@@ -13,7 +13,7 @@ tags:
 When | Who  | What
 -----|------|-------------------------
 9:00 | R    | [Introduction](intro.md)
-9:15 | B    | [GPUs](gpu.md)
+9:15 | J    | [GPUs](gpu.md)
 9:50 | .    | Break
 10:05| P    | [Transferring files](transfer.md)
 10:55| .    | Break
@@ -26,4 +26,4 @@ When | Who  | What
 15:00| R    | [Evaluation](evaluation.md)
 15:10| .    | End or questions
 
-- Who: `B`: Björn, `P`: Pavlin, `R`: Richèl
+- Who:  `J`: Jayant, `P`: Pavlin, `R`: Richèl, `B`: Björn
