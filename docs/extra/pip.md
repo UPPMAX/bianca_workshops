@@ -128,95 +128,56 @@ python
 
 ### Exercise
 
-!!! question "Install ``numpy-2.2.5`` for Python/3.12.7"
+!!! question "Install ``numpy-2.1.0`` for Python/3.10.8"
 
 
     ??? question "Answer"
     
         - Using Transit and how to navigate to the porject folder is shown above.
-        - Load Python: ``ml python/3.9.5``
-        - Download ``numpy-2.0.0``: ``pip download numpy==2.0.0``
+        - Find a Python version (major, minor) that goes together with the Bianca Python: ``ml av python``
+            - We can choose between 3.10.4 and 3.10.8. Let's take the newest one and ``bare`` is sufficient for us.
+        - Load Python: ``ml Python/3.10.8-GCCcore-12.2.0-bare``
+        - Download ``numpy-2.1.0``: ``pip download numpy==2.1.0``
 
         ??? question "How will that look like?"
 
-            pip download numpy==2.0.0
-            Collecting numpy==2.0.0
-              Downloading numpy-2.0.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (19.3 MB)
-                 |████████████████████████████████| 19.3 MB 18.5 MB/s
-            Saved ./numpy-2.0.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+            $ pip download numpy==2.1.0
+            Collecting numpy==2.1.0
+              Downloading numpy-2.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.3 MB)
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.3/16.3 MB 34.0 MB/s eta 0:00:00
+            Saved ./numpy-2.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
             Successfully downloaded numpy
 
-
-        - Resulting file name: ``numpy-2.0.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl``
+        - Resulting file name: ``numpy-2.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl``
         
         On Bianca:
         
         ```console
-        ml python/3.9.5
-        pip install --user --no-index --find-links /proj/sens2025560/nobackup/wharf/$USER/$USER-sens2025560 numpy=2.0.0
+        ml python/3.10.8
+        pip install --user --no-index --find-links /proj/sens2025560/nobackup/wharf/$USER/$USER-sens2025560 numpy=2.1.0
         ```
 
-## Rackham users (will not work soon)
+        - Test it by starting python colsole and improt and check version: 
+        
+        ```console
+        python
+        ```
+        
+        ```python
+        import numpy
+        print(numpy.__version__)
+        ```
 
-### Rackham
-
-```sh
-$ ml python/<version>
-$ pip download <package-name>
-```
-
-### Transit set-up
 
 - **Log in to transit**: ``ssh <username>@transit.uppmax.uu.se``
     - [Documentation](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/transfer_bianca/#transit-server)
 - (If not done already) Mount the wharf of your project.
 
-```bash
-user@transit:~$ mount_wharf sens2025560
-Mounting wharf (accessible for you only) to /home/<user>/sens2025560
-<user>-sens2025560@bianca-sftp.uppmax.uu.se's password:
+
+
 ```
 
-- Navigate to your wharf folder
 
-```bash
-cd sens2025560
-```
-
-- Download!
-
-``` sh
-$ pip download <package-name>
-```
-
-### Transfer to the ``wharf`` (only if Rackham)
-
-```bash
-sftp douglas@bianca-sftp
-sftp> cd sens2017625/
-sftp> dir
-sftp>
-```
-
-If you have not uploaded anything to your ``wharf``, this will be empty. It might have a few things in it.
-
-Now, upload to the `wharf` the package `<package-name>` and all the dependency packages `pip download` got you.
-
-``` bash
-sftp> put -r <package-name>
-```
-
-### Install on Bianca
-
-On Bianca
-install it (Yes, you can do it from this place) by telling pip where to look for packages and dependencies
-
-- In this case i should have ended up in: ``/proj/sens2025560/nobackup/wharf/$USER/$USER-sens2025560``
-
-``` sh
-$ ml python
-$ pip install --user --no-index --find-links /proj/sens2025560/nobackup/wharf/$USER/$USER-sens2025560 <package-name>
-```
 
 **Then the package ends up in ``~/.local/lib/python<version>/site-packages/`` .**
 
