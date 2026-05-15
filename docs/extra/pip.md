@@ -172,7 +172,34 @@ python
         print(numpy.__version__)
         ```
 
+!!! info "Packahges with dependencies"
 
+    - Pandas is a typical packages that relies on specific version of numpy and also some other packages.
+    - Downloading pandas as source also fetches the dependencies with compatible versions.
+    Example: 
+
+    ```console
+    $ pip download pandas==2.2.2
+    Collecting pandas==2.2.2
+      Using cached pandas-2.2.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.0 MB)
+    Collecting numpy>=1.22.4
+      Using cached numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+    Collecting python-dateutil>=2.8.2
+      Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+    Collecting pytz>=2020.1
+      Using cached pytz-2026.2-py2.py3-none-any.whl (510 kB)
+    Collecting tzdata>=2022.7
+      Using cached tzdata-2026.2-py2.py3-none-any.whl (349 kB)
+    Collecting six>=1.5
+      Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+    Saved ./pandas-2.2.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+    Saved ./numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+    Saved ./python_dateutil-2.9.0.post0-py2.py3-none-any.whl
+    Saved ./pytz-2026.2-py2.py3-none-any.whl
+    Saved ./tzdata-2026.2-py2.py3-none-any.whl
+    Saved ./six-1.17.0-py2.py3-none-any.whl
+    Successfully downloaded pandas numpy python-dateutil pytz tzdata six
+    ```
 
 
 
@@ -192,6 +219,12 @@ python
     - You can remove the environment and create a new one, if not needed or with errors.
 
 - More information about [isolated environments](https://uppmax.github.io/HPC-python/extra/isolated_deeper.html).
+
+Principle here:
+
+- Download all packages on Transit and in relevant mounted SENS project folder
+- Start an environment on Bianca and activate it and from there install the packages.
+
 
 **Example, where python packages from the loaded module are used (``--system-site-packages``)**
 
