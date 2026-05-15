@@ -49,8 +49,6 @@ Use [transit](https://docs.uppmax.uu.se/cluster_guides/login_transit/)!
 5. On Bianca: Load Python of desired version (IMPORTANT!)
 6. pip install
 
-
-
 ### Transit
 
 - **Log in to transit**: ``ssh <username>@transit.uppmax.uu.se``
