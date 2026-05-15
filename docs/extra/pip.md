@@ -114,6 +114,8 @@ pip install --user --no-index --find-links /proj/sens2025560/nobackup/wharf/$USE
 
 - NOTE: you don't need the full name of the ``.whl`` file!
 
+- **The package ends up in automatically in ``~/.local/lib/python<version>/site-packages/`` .**
+
 ### Test it in Python
 
 - Start a python console
@@ -141,12 +143,14 @@ python
 
         ??? question "How will that look like?"
 
+            ```console 
             $ pip download numpy==2.1.0
             Collecting numpy==2.1.0
               Downloading numpy-2.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.3 MB)
                  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.3/16.3 MB 34.0 MB/s eta 0:00:00
             Saved ./numpy-2.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
             Successfully downloaded numpy
+            ```
 
         - Resulting file name: ``numpy-2.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl``
         
@@ -169,32 +173,8 @@ python
         ```
 
 
-- **Log in to transit**: ``ssh <username>@transit.uppmax.uu.se``
-    - [Documentation](https://uppmax.github.io/UPPMAX-documentation/cluster_guides/transfer_bianca/#transit-server)
-- (If not done already) Mount the wharf of your project.
 
 
-
-```
-
-
-
-**Then the package ends up in ``~/.local/lib/python<version>/site-packages/`` .**
-
-!!! info "If many files or packages"
-
-    you may want to tar before copying to include all possible symbolic links:
-
-    ``` bash
-    $ tar cfz <tarfile.tar.gz> <package>
-    ```
-
-    and in target directory (wharf_mnt) on Bianca:
-
-    ``` bash
-    $ tar xfz <tarfile.tar.gz> #if there is a tar file!
-    $ mv –a  <file(s)> ~/.local/lib/python<version>/site-packages/
-    ```
 
 ## Isolated/virtual environments
 
