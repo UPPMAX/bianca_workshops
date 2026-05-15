@@ -25,7 +25,7 @@ tags:
 
     - <https://cran.r-project.org/web/packages/dowser/index.html>
     - just 2.4.1 is listed here
-    - go to "Old sources: 	dowser archive" rather close to the bottom of the page.
+    - go to "Old sources:   dowser archive" rather close to the bottom of the page.
     - copy link to ``2.0.0.tar.gz``
     - In project folder in **Transit** (``sens2025560``)
     
@@ -181,6 +181,6 @@ tags:
         >
         ```
 
-- You should see: ``dowser_2.0.0 ``
+- You should see: ``dowser_2.0.0``
 - This confirms that you are using version ``2.0.0``!
 - You can now remove the source file from the wharf folder.
