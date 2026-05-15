@@ -183,3 +183,4 @@ tags:
 
 - You should see: ``dowser_2.0.0 ``
 - This confirms that you are using version ``2.0.0``!
+- You can now remove the source file from the wharf folder.
