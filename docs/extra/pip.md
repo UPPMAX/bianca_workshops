@@ -143,7 +143,7 @@ python
 
         ??? question "How will that look like?"
 
-            ```console 
+            ```console
             $ pip download numpy==2.1.0
             Collecting numpy==2.1.0
               Downloading numpy-2.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.3 MB)
@@ -161,7 +161,7 @@ python
         pip install --user --no-index --find-links /proj/sens2025560/nobackup/wharf/$USER/$USER-sens2025560 numpy=2.1.0
         ```
 
-        - Test it by starting python colsole and improt and check version: 
+        - Test it by starting python colsole and improt and check version:
         
         ```console
         python
@@ -176,7 +176,7 @@ python
 
     - Pandas is a typical packages that relies on specific version of numpy and also some other packages.
     - Downloading pandas as source also fetches the dependencies with compatible versions.
-    Example: 
+    - Example:
 
     ```console
     $ pip download pandas==2.2.2
@@ -200,8 +200,6 @@ python
     Saved ./six-1.17.0-py2.py3-none-any.whl
     Successfully downloaded pandas numpy python-dateutil pytz tzdata six
     ```
-
-
 
 ## Isolated/virtual environments
 
