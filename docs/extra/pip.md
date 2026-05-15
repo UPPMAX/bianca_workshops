@@ -49,6 +49,8 @@ Use [transit](https://docs.uppmax.uu.se/cluster_guides/login_transit/)!
 5. On Bianca: Load Python of desired version (IMPORTANT!)
 6. pip install
 
+
+
 ### Transit
 
 - **Log in to transit**: ``ssh <username>@transit.uppmax.uu.se``
@@ -118,6 +120,16 @@ pip install --user --no-index --find-links /proj/sens2025560/nobackup/wharf/$USE
 
 ### Test it in Python
 
+#### Alternative 1
+
+In the bash session, do
+
+```console
+pip list
+```
+
+#### Alternative 2
+
 - Start a python console
 
 ```console
@@ -127,6 +139,35 @@ python
 - Import the package with ``import <package>``
 - This should give no errors!
 
+!!! info "Packages with dependencies"
+
+    - Pandas is a typical packages that relies on specific version of numpy and also some other packages.
+    - Downloading pandas as source also fetches the dependencies with compatible versions.
+    
+    ??? example
+
+        ```console
+        $ pip download pandas==2.2.2
+        Collecting pandas==2.2.2
+          Using cached pandas-2.2.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.0 MB)
+        Collecting numpy>=1.22.4
+          Using cached numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+        Collecting python-dateutil>=2.8.2
+          Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+        Collecting pytz>=2020.1
+          Using cached pytz-2026.2-py2.py3-none-any.whl (510 kB)
+        Collecting tzdata>=2022.7
+          Using cached tzdata-2026.2-py2.py3-none-any.whl (349 kB)
+        Collecting six>=1.5
+          Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+        Saved ./pandas-2.2.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+        Saved ./numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+        Saved ./python_dateutil-2.9.0.post0-py2.py3-none-any.whl
+        Saved ./pytz-2026.2-py2.py3-none-any.whl
+        Saved ./tzdata-2026.2-py2.py3-none-any.whl
+        Saved ./six-1.17.0-py2.py3-none-any.whl
+        Successfully downloaded pandas numpy python-dateutil pytz tzdata six
+        ```
 
 ### Exercise
 
@@ -172,34 +213,9 @@ python
         print(numpy.__version__)
         ```
 
-!!! info "Packahges with dependencies"
+!!! danger
 
-    - Pandas is a typical packages that relies on specific version of numpy and also some other packages.
-    - Downloading pandas as source also fetches the dependencies with compatible versions.
-    - Example:
-
-    ```console
-    $ pip download pandas==2.2.2
-    Collecting pandas==2.2.2
-      Using cached pandas-2.2.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.0 MB)
-    Collecting numpy>=1.22.4
-      Using cached numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
-    Collecting python-dateutil>=2.8.2
-      Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
-    Collecting pytz>=2020.1
-      Using cached pytz-2026.2-py2.py3-none-any.whl (510 kB)
-    Collecting tzdata>=2022.7
-      Using cached tzdata-2026.2-py2.py3-none-any.whl (349 kB)
-    Collecting six>=1.5
-      Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
-    Saved ./pandas-2.2.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-    Saved ./numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-    Saved ./python_dateutil-2.9.0.post0-py2.py3-none-any.whl
-    Saved ./pytz-2026.2-py2.py3-none-any.whl
-    Saved ./tzdata-2026.2-py2.py3-none-any.whl
-    Saved ./six-1.17.0-py2.py3-none-any.whl
-    Successfully downloaded pandas numpy python-dateutil pytz tzdata six
-    ```
+    below needs cleaning
 
 ## Isolated/virtual environments
 
@@ -251,45 +267,6 @@ $ deactivate
 
 - Virtual environments can be saved easily anywhere
 
-**Transfer to the ``wharf``**
-
-``` bash
-sftp douglas@bianca-sftp
-sftp> cd sens2017625/
-sftp> dir
-sftp>
-```
-
-If you have not uploaded anything to your ``wharf``, this will be empty. It might have a few things in it.
-
-``` bash
-sftp> put -r <path>/projectB
-```
-
-**Move to site-packages folder**
-On Bianca
-
-``` bash
-cd /proj/sens2025560/nobackup/wharf/bjornc/bjornc-sens2025560/
-mv –a  projectB <path to any place, like project folder>
-```
-
-
-???- note "(Not tested for Transit) Install on Rackham/Transit and then transfer to Bianca"
-
-    !!! info
-        
-        **The package ends up on  in ``~/.local/lib/python<version>/site-packages/`` .**
-
-        - Note that `python<version>` is omitting the last number (bug fix), like `3.8` for `python-3.8.7`.
-
-    !!! warning
-
-        - If you don't have Rackham, try with Transit and tweak accoring to instruction for the download part above
-
-
-    Install on Rackham/Transit
-
     ``` sh
     $ ml python/<version>        # this is to make use the correct python version and possible dependencies already available
     $ pip install --user <package-name>
@@ -299,48 +276,6 @@ mv –a  projectB <path to any place, like project folder>
 
     ```bash
     pip install --user -r requirements.txt
-    ```
-
-    **Then the package(s) ends up in ``~/.local/lib/python<version>/site-packages/`` .**
-
-    **Transfer to the ``wharf``**
-
-    ``` bash
-    sftp douglas@bianca-sftp
-    sftp> cd sens2017625/
-    sftp> dir
-    sftp>
-    ```
-
-    If you have not uploaded anything to your ``wharf``, this will be empty. It might have a few things in it.
-
-    - **Alt1: If you would like all your locally installed packages:**
-
-    ``` bash
-    sftp> put -r .local/lib/python<version>/site-packages/
-    ```
-
-    - **Alt 2: Just transfer the latest installed python package(s)**
-
-    - Check what was installed. It may have been several dependency packages as well. Look at the times!
-
-    ``` bash
-    sftp>  lls -lrt .local/lib/python<version>/site-packages/
-    ```
-
-    ``` bash
-    sftp> put -r .local/lib/python<version>/site-packages/<package name 1>
-    # and if several packages
-    sftp> put -r .local/lib/python<version>/site-packages/<package name 2>
-    # and so on...
-    ```
-
-    **Move to site-packages folder**
-    On Bianca
-
-    ``` bash
-    cd /proj/sens2025560/nobackup/wharf/bjornc/bjornc-sens2025560/
-    mv –a  <file(s)> ~/.local/lib/python<version>/site-packages/
     ```
 
 !!! error
