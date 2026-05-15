@@ -25,7 +25,7 @@ tags:
 - from BASH shell with the
 
 - ``pip list`` command
-- Ex. ``ml help python/3.9.5`` at UPPMAX
+- Ex. ``ml help python/3.10.8`` at UPPMAX
 
 **Is it not there? Then proceed!**
 
@@ -36,7 +36,7 @@ tags:
     - You can just download a python package on Transit with pip, then install from the ``.whl`` file in ``wharf`` on Bianca.
     - Rackham users: Install it on Rackham. Perhaps you need it here as well! Then transfer to ``wharf`` and Bianca local python library.
 
-## Users without access to Rackham/Pelle
+## Users without access to Pelle
 
 - **NOTE** that if you install a package this way, you need to handle any dependencies yourself.
 
@@ -69,10 +69,12 @@ cd sens2025560
 
 ### Download on Transit
 
-- Load the Python version you plan to use
+- Be aware of that the module system on Transit is different from Bianca. Typical module name is ``Python/3.13.5-GCCcore-14.3.0``
+- Load the Python version you plan to use. If you need 3.11.X it is sufficient to load a ``Python/3.11`` module, bug fix version matters less. This is to find compatible versions of the package.
+- Note that Transit only covers Python versions 3.10 and higher.
 
 ``` sh
-$ ml python/<version>
+$ ml Python/<version>
 ```
 
 - Download!
@@ -98,13 +100,13 @@ $ pip download <package-name>==<version>
           pip download [options] <vcs project url> ...
           pip download [options] <local project path> ...
           pip download [options] <archive url/path> ...
-          ```
+        ```
 
 ### Installation part on Bianca
 
 - Log in to Bianca and the relevant project
 - Load the same python version
-    - Ex. ``ml python/3.9.5``
+    - Ex. ``ml python/3.11.5``
 
 ```console
 pip install --user --no-index --find-links /proj/sens2025560/nobackup/wharf/$USER/$USER-sens2025560 <package-name>==<version>
@@ -126,7 +128,7 @@ python
 
 ### Exercise
 
-!!! question "Install ``numpy-2.0.0`` for Python/3.9.5"
+!!! question "Install ``numpy-2.2.5`` for Python/3.12.7"
 
 
     ??? question "Answer"
