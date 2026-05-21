@@ -430,3 +430,5 @@ matplotlib
 contourpy
 Yadav
 GCCcore
+GLIBC
+Haswell
