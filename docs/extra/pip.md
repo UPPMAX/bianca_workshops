@@ -49,6 +49,16 @@ Use [transit](https://docs.uppmax.uu.se/cluster_guides/login_transit/)!
 5. On Bianca: Load Python of desired version (IMPORTANT!)
 6. pip install
 
+Python version | Bianca |Transit
+---------------|--------|-------
+3.9 | 3.9.5 | -
+3.10 | 3.10.8 | 3.10.4-GCCcore-11.3.0
+3.11 | 3.11.8 | 3.11.5-GCCcore-13.2.0
+3.12 | 3.12.7 | 3.12.3-GCCcore-13.3.0
+3.13 | 3.13.1 | 3.13.5-GCCcore-14.3.0
+
+
+
 ### Transit
 
 - **Log in to transit**: ``ssh <username>@transit.uppmax.uu.se``
