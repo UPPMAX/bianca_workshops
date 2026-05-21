@@ -429,3 +429,4 @@ deps
 matplotlib
 contourpy
 Yadav
+GCCcore
