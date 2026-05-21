@@ -8,24 +8,50 @@ tags:
 
 ???+ question "Read through the content below"
 
-!!! info "Installation principle"
+??? question "Which transfer method is the best?"
 
+    - Use transit.
+    - By this you get software modules of python, although with not exactly the same version.
+
+!!! info "Installation principles"
+
+    - Decide on a Python version to work with on Bianca
+
+    Transit
+    
     - Log in to Transit
     - (If not done already) Mount the wharf of your project.
     - Go to project directory
-    - Download package
+    - Load the relevant Python module
+    - If you need to test versions
+        - (Make a test isolated environment with ``pip -m venv <name of env>``
+        - (Install right packages, possibly with pinned versions)
+        - (freeze the environment and create a requirements file)
+    - Download package (you may need to force those to be compatible with the old Bianca system)
         - ``pip download <package name>``
-    - You will get a zip file for each package
-    - From Bianca session move the file(s) to correct place
-    - Typical place to put python packages: ``~/.local/lib/python<version>/site-packages/``
+        - ``pip download -r <requirements file>``
+    - You will get a ``.zip`` or ``.whl`` file for each package
 
-## Check for packages
+    Bianca
+    
+    - On Bianca load the relevant python module
+    - Make the installations from these files in wharf, either
+        - Recommended: in a virtual environment in your real project folder.
+            - the installation will end up in the folder of the virtual environment.
+        - If you know what you are doing: to your local folder
+            - everytime you start the python module these packages will show up for that version.
+    - 
+
+## Check for packages on Bianca
+
+With a Python module loaded
 
 - from the Python shell with the ``import`` command
-- from BASH shell with the
+- from BASH shell with the ``pip list`` command
 
-- ``pip list`` command
-- Ex. ``ml help python/3.10.8`` at UPPMAX
+You can also check the content of a module without loading it
+
+-  ``ml help python/3.10.8``
 
 **Is it not there? Then proceed!**
 
