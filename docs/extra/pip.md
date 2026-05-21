@@ -12,7 +12,7 @@ tags:
 
     - Use transit.
     - By this you get software modules of python, although with not exactly the same version.
-
+    - You'll need a Python module to download the packages.
 
 ## Check for packages on Bianca
 
@@ -32,11 +32,13 @@ You can also check the content of a module without loading it
 Use [transit](https://docs.uppmax.uu.se/cluster_guides/login_transit/)!
 
 1. [Log in to transit](https://docs.uppmax.uu.se/cluster_guides/login_transit/)
-2. [Go to the mounted project folder](https://docs.uppmax.uu.se/software/bianca_file_transfer_using_rsync/#3-mount-a-bianca-project)r
+2. [Go to the mounted project folder](https://docs.uppmax.uu.se/software/bianca_file_transfer_using_rsync/#3-mount-a-bianca-project)
 3. Load Python of desired version (IMPORTANT!)
-4. [Download](pip.md#download-on-transit) with pip
+4. [Download](pip.md#download-on-transit) with ``pip download``
 5. On Bianca: Load Python of desired version (IMPORTANT!)
-6. pip install
+6. Do ``pip install``
+
+You may benefit from using a ``requirements.txt`` file and virtual environment through ``python -m venv <environment name>``
 
 ### Transit
 
@@ -74,7 +76,6 @@ cd sens2025560
     3.12 | 3.12.7 | 3.12.3-GCCcore-13.3.0
     3.13 | 3.13.1 | 3.13.5-GCCcore-14.3.0
 
-
 ``` sh
 $ ml Python/<version>
 ```
@@ -91,7 +92,12 @@ $ pip download <package-name>==<version>
 
     - A low-level library called **GLIBC** typicaly follows the OS installation.
     - GLIBC version on Bianca is 2.17
-    - When downloading python packages on Transit you may get packages relying on GLIBC>2.17it finds by default versions compatible with that system (newer GLIBC)
+    - When downloading python packages on Transit you may get packages relying on GLIBC>2.17.
+    - If you use them on Bianca you may get errors like:
+
+    ```console
+    ERROR: contourpy-1.3.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl is not a supported wheel on this platform.
+    ```
 
 !!! info "Solution"
 
@@ -115,10 +121,22 @@ $ pip download <package-name>==<version>
           pip download [options] <archive url/path> ...
         ```
 
+    If you have a ``requirements.txt`` file already, upload it from local computer via e.g. ``sftp`` to Transit.
+
+    - Download the python packages to a specific folder. Like
+
+    ```console
+    mkdir src_packages
+    cd src_packages
+    pip download -r requirements.txt  --platform manylinux_2_17_x86_64 --no-deps
+    ```
+
+    - ``--platform manylinux_2_17_x86_64`` will force the packages to be compatible with Bianca when instaling them there
+
 ### Installation part on Bianca
 
 - Log in to Bianca and the relevant project
-- Load the same python version
+- Load the same python version (3.X, 3rd digit does not matter)
     - Ex. ``ml python/3.11.5``
 
 ```console
@@ -127,7 +145,7 @@ pip install --user --no-index --find-links /proj/sens2025560/nobackup/wharf/$USE
 
 - NOTE: you don't need the full name of the ``.whl`` file!
 
-- **The package ends up in automatically in ``~/.local/lib/python<version>/site-packages/`` .**
+- **The package ends up automatically in ``~/.local/lib/python<version>/site-packages/`` .**
 
 ### Test it in Python
 
@@ -210,10 +228,11 @@ python
         
         ```console
         ml python/3.10.8
+ 
         pip install --user --no-index --find-links /proj/sens2025560/nobackup/wharf/$USER/$USER-sens2025560 numpy=2.1.0
         ```
 
-        - Test it by starting python colsole and improt and check version:
+        - Test it by starting python console and import and check version:
         
         ```console
         python
@@ -224,13 +243,13 @@ python
         print(numpy.__version__)
         ```
 
-## Optional: Isolated/virtual environments and requirements files
+## Optional Exercise: Isolated/virtual environments and requirements files
 
 ### Introduction
 
 !!! note
 
-    Isolated environments (`venv`` solve a couple of problems):
+    Isolated environments (``venv`` solve a couple of problems):
 
     - You can install specific package, also older, versions into them.
     - You can create one for each project and no problem if the two projects require different versions.
@@ -245,45 +264,45 @@ python
     - Doing ``venv`` on Transit will point to python with other paths compared to on Bianca. You cannot reuse that specific environment on Bianca.
     - BUT it can help identify which package versions goes together
 
+### Procedure on Transit
 
-- pip install --no-index --find-links . matplotlib
-- With new matplotlib this can arise:
+- Make test environment venv311T with python-3.11 on Transit
 
-    ERROR: contourpy-1.3.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl is not a supported wheel on this platform.
+```bash
+module load Python/3.11.5-GCCcore-13.2.0
+mkdir test_311
+cd test_311
+python -m venv venv311T
+source venv311T/bin/activate
+mkdir src_311
+cd src_311
+pip install matplotlib/3.9.2
+```
 
-### Test requirements file
+- Make requirements file (should end up in ``test_311/src_311`` folder)
 
-    pip freeze > requirements.txt
-    pip download pillow==12.2.0 --platform manylinux_2_17_x86_64 --no-deps
+```console
+pip freeze > requirements.txt
+```
 
-will this work?
+- Download and pick GLIBC<=2.17 (they should end up in ``test_311/src_311`` folder)
 
-    pip download -r requirements.txt --platform manylinux_2_17_x86_64 --no-deps
+```console
+pip download -r requirements.txt --platform manylinux_2_17_x86_64 --no-deps
+```
+
+### Procedure on Bianca side
+
+- Go to the project folder you want to put your virtual env.
+
+```cd /proj/
+
+
+
 
     pip install --no-index --find-links . -r requirements.txt
 
 
-!!! tip
-
-    - We HIGHLY recommend using a virtual environment during installation, since this makes it easier to install for different versions of Python.
-    - However you can also create virtual environments on Bianca from downloaded packages, see above.
-
-
-
-Principle here:
-
-- Download all packages on Transit and in relevant mounted SENS project folder
-- Start an environment on Bianca and activate it and from there install the packages.
-
-
-**Example, where python packages from the loaded module are used (``--system-site-packages``)**
-
-``` bash
-$ module load python/3.6.8
-$ python -m venv --system-site-packages <path>/projectB
-```
-
-“projectB” is the name of the virtual environment. The directory “projectB” is created in the present working directory. The ``-m`` flag makes sure that you use the libraries from the python version you are using.
 
 - Activate and install with pip (package one by one or from requirements.txt)
 
@@ -301,18 +320,7 @@ $ pip list   # check
 $ deactivate
 ```
 
-- Virtual environments can be saved easily anywhere
 
-    ``` sh
-    $ ml python/<version>        # this is to make use the correct python version and possible dependencies already available
-    $ pip install --user <package-name>
-    ```
-
-    - If there is a requirements.txt file with the content of packages to be installed:
-
-    ```bash
-    pip install --user -r requirements.txt
-    ```
 
 !!! info "Summary installation principles"
 
