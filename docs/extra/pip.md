@@ -215,7 +215,29 @@ python
 
     below needs cleaning
 
-## Isolated/virtual environments
+## Isolated/virtual environments and requirements files
+
+### Introduction
+
+- Doing venv on transit will point to FOSS. Will not work on bianca
+-	Works for specific versions of numpy and pandas
+    -	pip download pillow==12.2.0 --platform manylinux_2_17_x86_64 --no-deps
+-	pip install --no-index --find-links . matplotlib
+-	With new matplotlib this can arise:
+
+    ERROR: contourpy-1.3.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl is not a supported wheel on this platform.
+
+### Test requirements file
+
+    pip freeze > requirements.txt
+    pip download pillow==12.2.0 --platform manylinux_2_17_x86_64 --no-deps
+
+will this work?
+
+    pip download -r requirements.txt --platform manylinux_2_17_x86_64 --no-deps
+
+    pip install --no-index --find-links . -r requirements.txt
+
 
 !!! tip
 
