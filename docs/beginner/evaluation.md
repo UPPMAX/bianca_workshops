@@ -9,7 +9,15 @@ tags:
 
     They are at [the 'Evaluations' (plural) page](../evaluations/README.md).
 
-- [TODO: Form: any feedback during the day](https://github.com/UPPMAX/bianca_workshops/issues/91)
+???- question "Where is the evaluation for the intermediate course?"
+
+    They are at [the 'Evaluation' page for the intermediate course](../intermediate/evaluation.md).
+
+
+Goal                               |Form
+-----------------------------------|------------------------------------------------------
+Share any anonymous feedback easily|[TODO: Form: any feedback during the day](https://github.com/UPPMAX/bianca_workshops/issues/91)
+Evaluate the course anonymously    |[TODO: Evaluation form](https://github.com/UPPMAX/bianca_workshops/issues/91)
 
 ???- question "For teachers: what is in that form?"
 
@@ -62,7 +70,7 @@ tags:
 
     Any other feedback?
 
-    Thanks for your feedback.
+    Thanks for your feedback!
     This feedback will be published as-is at the end of the day,
     if and only if there are no personal details (email, address, etc.)
     in the feedback. Do mention the teachers, assistants, etc by name!

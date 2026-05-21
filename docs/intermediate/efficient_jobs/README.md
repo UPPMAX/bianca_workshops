@@ -285,7 +285,7 @@ and you find the following graph:
 
 ![Question 6](jobstats_c_555912-l_1-k_bad_job_05_with_border.png)
 
-After seeing this graph, how much course will you book in the future?
+After seeing this graph, how much cores will you book in the future?
 
 ???- question "Answer"
 

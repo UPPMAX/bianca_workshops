@@ -3,6 +3,7 @@ tags:
   - evaluation
   - feedback
   - anonymous
+  - intermediate
 ---
 
 # Evaluation
@@ -10,6 +11,10 @@ tags:
 ???- question "Where are the earlier course evaluations?"
 
     They are at [the 'Evaluations' (plural) page](../evaluations/README.md).
+
+???- question "Where is the evaluation for the beginner course?"
+
+    They are at [the 'Evaluation' page for the beginner course](../beginner/evaluation.md).
 
 Goal                               |Form
 -----------------------------------|------------------------------------------------------

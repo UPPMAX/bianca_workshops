@@ -198,5 +198,24 @@ Earlier evaluation results.
     - Click on the search box and search for 'Evaluations'.
       It will be the first hit
 
-- [Form for anonymous feedback](../../evaluation.md)
-- [The FAQ](../../faq.md)
+Form for anonymous feedback during the day.
+
+???- answer "Answer"
+
+    [The evaluations page](../evaluations/README.md).
+
+    Click on the search box and search for 'Anonymous feedback intermediate'.
+    It will be the first hit
+
+The Frequently Asked Questions.
+
+???- answer "Answer"
+
+    [The FAQ](../faq/README.md).
+
+    There are multiple ways:
+
+    - Click on 'Misc' at the top, then 'Frequently asked questions' at the left
+    - Click on the search box and search for 'FAQ' or
+      'Frequently Asked Questions'.
+      It will be the first hit
