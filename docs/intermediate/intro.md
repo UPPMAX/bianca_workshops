@@ -168,3 +168,35 @@ of the day.
     ```code
     [Free text paragraph]
     ```
+
+## (Optional) Exercise 2: where is what?
+
+Explore the website of the course. Where you can you find
+the things below?
+
+The schedule for today.
+
+???- answer "Answer"
+
+    [The schedule](schedule.md).
+
+    There are multiple ways:
+
+    - Click on 'Intermediate' at the top, then 'Schedule' at the left
+    - Click on the search box and search for 'Schedule intermediate'.
+      It will be the first hit
+
+Earlier evaluation results.
+
+???- answer "Answer"
+
+    [The earlier evaluation results](../evaluations/README.md).
+
+    There are multiple ways:
+
+    - Click on 'Misc' at the top, then 'Evaluations' at the left
+    - Click on the search box and search for 'Evaluations'.
+      It will be the first hit
+
+- [Form for anonymous feedback](../../evaluation.md)
+- [The FAQ](../../faq.md)

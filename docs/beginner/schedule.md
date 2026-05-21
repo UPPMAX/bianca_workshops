@@ -2,6 +2,7 @@
 tags:
   - schedule
   - timetable
+  - beginner
 ---
 
 # Schedule

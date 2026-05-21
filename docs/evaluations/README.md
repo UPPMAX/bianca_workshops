@@ -19,19 +19,3 @@ Beginner    |B5        |[Evaluation](20250915/README.md)|91%
 Intermediate|I5        |[Evaluation](20251118/README.md)|86%
 Beginner    |B6        |[Evaluation](20260206/README.md)|79%
 Intermediate|I6        |[Evaluation](20260522/README.md)|.
-
-## Other data
-
-Iteration|Registrations|Learners present|Filled-in evaluations
----------|-------------|----------------|---------------------
-B1       |?            |18              |5 (28%)
-I1       |?            |12              |?
-B2       |?            |9               |8 (89%)
-I2       |?            |5               |4 (80%)
-B3       |?            |6               |5 (83%)
-I3       |?            |6               |5 (83%)
-B4       |24           |11 (46%)        |11 (100%)
-I4       |3            |3 (100%)        |2 (66%)
-B5       |23           |12 (52%)        |8 (67%)
-I5       |7            |2 (29%)         |2 (100%)
-B6       |43           |9 (21&)         |8 (89%)

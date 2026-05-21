@@ -2,6 +2,7 @@
 tags:
   - schedule
   - timetable
+  - intermediate
 ---
 
 # Schedule
