@@ -13,33 +13,6 @@ tags:
     - Use transit.
     - By this you get software modules of python, although with not exactly the same version.
 
-!!! info "Installation principles"
-
-    - Decide on a Python version to work with on Bianca
-
-    Transit
-    
-    - Log in to Transit
-    - (If not done already) Mount the wharf of your project.
-    - Go to project directory
-    - Load the relevant Python module
-    - If you need to test versions
-        - (Make a test isolated environment with ``pip -m venv <name of env>``
-        - (Install right packages, possibly with pinned versions)
-        - (freeze the environment and create a requirements file)
-    - Download package (you may need to force those to be compatible with the old Bianca system)
-        - ``pip download <package name>``
-        - ``pip download -r <requirements file>``
-    - You will get a ``.zip`` or ``.whl`` file for each package
-
-    Bianca
-    
-    - On Bianca load the relevant python module
-    - Make the installations from these files in wharf, either
-        - Recommended: in a virtual environment in your real project folder.
-            - the installation will end up in the folder of the virtual environment.
-        - If you know what you are doing: to your local folder
-            - everytime you start the python module these packages will show up for that version.
 
 ## Check for packages on Bianca
 
@@ -54,16 +27,7 @@ You can also check the content of a module without loading it
 
 **Is it not there? Then proceed!**
 
-!!! info
-
-    **Methods:**
-
-    - You can just download a python package on Transit with pip, then install from the ``.whl`` file in ``wharf`` on Bianca.
-    - Rackham users: Install it on Rackham. Perhaps you need it here as well! Then transfer to ``wharf`` and Bianca local python library.
-
 ## Procedures
-
-- **NOTE** that if you install a package this way, you need to handle any dependencies yourself.
 
 Use [transit](https://docs.uppmax.uu.se/cluster_guides/login_transit/)!
 
@@ -73,14 +37,6 @@ Use [transit](https://docs.uppmax.uu.se/cluster_guides/login_transit/)!
 4. [Download](pip.md#download-on-transit) with pip
 5. On Bianca: Load Python of desired version (IMPORTANT!)
 6. pip install
-
-Python version | Bianca | Transit
--------------- | ------ | ------
-3.9 | 3.9.5 | -
-3.10 | 3.10.8 | 3.10.4-GCCcore-11.3.0
-3.11 | 3.11.8 | 3.11.5-GCCcore-13.2.0
-3.12 | 3.12.7 | 3.12.3-GCCcore-13.3.0
-3.13 | 3.13.1 | 3.13.5-GCCcore-14.3.0
 
 ### Transit
 
@@ -106,6 +62,19 @@ cd sens2025560
 - Load the Python version you plan to use. If you need 3.11.X it is sufficient to load a ``Python/3.11`` module, bug fix version matters less. This is to find compatible versions of the package.
 - Note that Transit only covers Python versions 3.10 and higher.
 
+??? question "Table of python version on Transit and Bianca"
+
+    The table below tells which Python version you should load on Transit to be able to install for Bianca.
+    
+    Python version | Bianca | Transit
+    -------------- | ------ | -------
+    3.9 | 3.9.5 | -
+    3.10 | 3.10.8 | 3.10.4-GCCcore-11.3.0
+    3.11 | 3.11.8 | 3.11.5-GCCcore-13.2.0
+    3.12 | 3.12.7 | 3.12.3-GCCcore-13.3.0
+    3.13 | 3.13.1 | 3.13.5-GCCcore-14.3.0
+
+
 ``` sh
 $ ml Python/<version>
 ```
@@ -117,6 +86,17 @@ $ pip download <package-name>==<version>
 ```
 
 - You should get a ``.whl`` file
+
+!!! warning "Transit has a newer system compared to Bianca"
+
+    - A low-level library called **GLIBC** typicaly follows the OS installation.
+    - GLIBC version on Bianca is 2.17
+    - When downloading python packages on Transit you may get packages relying on GLIBC>2.17it finds by default versions compatible with that system (newer GLIBC)
+
+!!! info "Solution"
+
+    - add the options ``--platform manylinux_2_17_x86_64 --no-deps`` to the ``pip download`` command
+        - Like ``pip download pillow==12.2.0 --platform manylinux_2_17_x86_64 --no-deps``
 
 ??? question "Interested in requirements files etc?"
 
@@ -244,17 +224,28 @@ python
         print(numpy.__version__)
         ```
 
-!!! danger
-
-    below needs cleaning
-
-## Isolated/virtual environments and requirements files
+## Optional: Isolated/virtual environments and requirements files
 
 ### Introduction
 
-- Doing venv on Transit will point to python with other paths compared to on Bianca. Will not work on bianca
-- Works for specific versions of numpy and pandas
-    - pip download pillow==12.2.0 --platform manylinux_2_17_x86_64 --no-deps
+!!! note
+
+    Isolated environments (`venv`` solve a couple of problems):
+
+    - You can install specific package, also older, versions into them.
+    - You can create one for each project and no problem if the two projects require different versions.
+    - You can use it as a sandbox to identify which versions go together
+        - Like finding compatible versions of numpy and pandas
+    - You can remove the environment and create a new one, if not needed or with errors.
+
+- More information about [isolated environments](https://uppmax.github.io/HPC-python/extra/isolated_deeper.html).
+
+!!! warning "You cannot reuse a virtual environment created on Transit on Bianca" 
+
+    - Doing ``venv`` on Transit will point to python with other paths compared to on Bianca. You cannot reuse that specific environment on Bianca.
+    - BUT it can help identify which package versions goes together
+
+
 - pip install --no-index --find-links . matplotlib
 - With new matplotlib this can arise:
 
@@ -277,15 +268,7 @@ will this work?
     - We HIGHLY recommend using a virtual environment during installation, since this makes it easier to install for different versions of Python.
     - However you can also create virtual environments on Bianca from downloaded packages, see above.
 
-!!! note
 
-    Isolated environments solve a couple of problems:
-
-    - You can install specific package, also older, versions into them.
-    - You can create one for each project and no problem if the two projects require different versions.
-    - You can remove the environment and create a new one, if not needed or with errors.
-
-- More information about [isolated environments](https://uppmax.github.io/HPC-python/extra/isolated_deeper.html).
 
 Principle here:
 
@@ -330,6 +313,34 @@ $ deactivate
     ```bash
     pip install --user -r requirements.txt
     ```
+
+!!! info "Summary installation principles"
+
+    - Decide on a Python version to work with on Bianca
+
+    Transit
+    
+    - Log in to Transit
+    - (If not done already) Mount the wharf of your project.
+    - Go to project directory
+    - Load the relevant Python module
+    - If you need to test versions
+        - (Make a test isolated environment with ``pip -m venv <name of env>``
+        - (Install right packages, possibly with pinned versions)
+        - (freeze the environment and create a requirements file)
+    - Download package (you may need to force those to be compatible with the old Bianca system)
+        - ``pip download <package name>``
+        - ``pip download -r <requirements file>``
+    - You will get a ``.zip`` or ``.whl`` file for each package
+
+    Bianca
+    
+    - On Bianca load the relevant python module
+    - Make the installations from these files in wharf, either
+        - Recommended: in a virtual environment in your real project folder.
+            - the installation will end up in the folder of the virtual environment.
+        - If you know what you are doing: to your local folder
+            - everytime you start the python module these packages will show up for that version.
 
 !!! error
 
