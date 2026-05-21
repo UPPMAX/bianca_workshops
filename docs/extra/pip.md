@@ -40,7 +40,6 @@ tags:
             - the installation will end up in the folder of the virtual environment.
         - If you know what you are doing: to your local folder
             - everytime you start the python module these packages will show up for that version.
-    - 
 
 ## Check for packages on Bianca
 
@@ -51,7 +50,7 @@ With a Python module loaded
 
 You can also check the content of a module without loading it
 
--  ``ml help python/3.10.8``
+- ``ml help python/3.10.8``
 
 **Is it not there? Then proceed!**
 
@@ -75,15 +74,13 @@ Use [transit](https://docs.uppmax.uu.se/cluster_guides/login_transit/)!
 5. On Bianca: Load Python of desired version (IMPORTANT!)
 6. pip install
 
-Python version | Bianca |Transit
----------------|--------|-------
+Python version | Bianca | Transit
+-------------- | ------ | ------
 3.9 | 3.9.5 | -
 3.10 | 3.10.8 | 3.10.4-GCCcore-11.3.0
 3.11 | 3.11.8 | 3.11.5-GCCcore-13.2.0
 3.12 | 3.12.7 | 3.12.3-GCCcore-13.3.0
 3.13 | 3.13.1 | 3.13.5-GCCcore-14.3.0
-
-
 
 ### Transit
 
