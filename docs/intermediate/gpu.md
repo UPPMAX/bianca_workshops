@@ -48,7 +48,7 @@ You can also ask for 1 gpu per node and few cores in order to use 2 gpus for dif
 
 ## News
 
-- Maja will have 17 T4 GPU nodes with one GPU each. Those will be on old Haswell nodes.
+- Bianca will have 17 T4 GPU nodes with one GPU each. Those will be on old Haswell nodes.
 
 ## GPU accessibility check
 
