@@ -62,10 +62,10 @@ tags:
 
 !!! note "Quote from the UPPMAX documentation"
 
-    If everyone would use our computational resources effectively,
-    there would be no queue.
+    If everyone followed these guidelines,
+    there would probably not even be a queue most of the time!
     
-    > From the UPPMAX documentation, original source unknown
+    > [From the UPPMAX documentation, original source unknown](https://github.com/UPPMAX/UPPMAX-documentation/blob/main/docs/software/jobstats.md?plain=1#L196)
 
 Running efficient jobs allows you to run more jobs that start running faster.
 
