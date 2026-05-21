@@ -51,8 +51,10 @@ tags:
 
     Prior questions:
 
+    - We want to use Bianca efficiently.
+      Which are the -at least- two things do we try to use efficiently?
+    - How to schedule jobs inefficiently?
     - How to schedule jobs efficiently?
-    - What is the `jobstats` tool?
 
     Present:
 
