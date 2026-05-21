@@ -36,7 +36,7 @@ tags:
     - You can just download a python package on Transit with pip, then install from the ``.whl`` file in ``wharf`` on Bianca.
     - Rackham users: Install it on Rackham. Perhaps you need it here as well! Then transfer to ``wharf`` and Bianca local python library.
 
-## Users without access to Pelle
+## Procedures
 
 - **NOTE** that if you install a package this way, you need to handle any dependencies yourself.
 
@@ -219,11 +219,11 @@ python
 
 ### Introduction
 
-- Doing venv on transit will point to FOSS. Will not work on bianca
--	Works for specific versions of numpy and pandas
-    -	pip download pillow==12.2.0 --platform manylinux_2_17_x86_64 --no-deps
--	pip install --no-index --find-links . matplotlib
--	With new matplotlib this can arise:
+- Doing venv on Transit will point to python with other paths compared to on Bianca. Will not work on bianca
+- Works for specific versions of numpy and pandas
+    - pip download pillow==12.2.0 --platform manylinux_2_17_x86_64 --no-deps
+- pip install --no-index --find-links . matplotlib
+- With new matplotlib this can arise:
 
     ERROR: contourpy-1.3.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl is not a supported wheel on this platform.
 
