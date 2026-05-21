@@ -66,39 +66,15 @@ I understand what containers are.
 - Docker
 - Singularity
 
-I can can run the voted-for IDE on Bianca
-
-- Jupyter:
-
-  ```bash
-  module load python/3.11.4
-  jupyter-notebook --ip 0.0.0.0 --no-browser
-  ```
-
-- RStudio:
-
-  ```bash
-  nteractive -A sens2025560 -n 2 -t 8:00:00
-  module load R/4.3.1 R_packages/4.3.1 RStudio/2023.06.2-561
-  rstudio
-  ```
-
-- VSCodium:
-
-  ```bash
-  module load VSCodium/latest
-  code
-  ```
-
 Possible next steps:
 
 <!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
 
 I want to ...                   |Solution
 --------------------------------|-------------------------------
+find out what courses there are |See [the SCoRe overview of courses](https://nbisweden.github.io/SCoRe_user_doc/courses/)
 do my computational work smarter|Attend [the 'Programming Formalisms' course](https://uppmax.github.io/programming_formalisms/)
 transfer files smarter          |Attend [the NAISS 'File Transfer' course](https://hpc.pages.naiss.se/training/connect-transfer/)
 work smarter on the command line|Attend [the NAISS 'Command line 101' course](https://nbisweden.github.io/SCoRe_user_doc/courses/)
-find out what courses there are |See [the SCoRe overview of courses](https://nbisweden.github.io/SCoRe_user_doc/courses/)
 
 <!-- markdownlint-enable MD013 -->
