@@ -285,6 +285,7 @@ pip install matplotlib/3.9.2
 pip freeze > requirements.txt
 ```
 
+- You may now deactivate the environment: ``deactivate``
 - Download and pick GLIBC<=2.17 (they should end up in ``test_311/src_311`` folder)
 
 ```console
@@ -293,34 +294,37 @@ pip download -r requirements.txt --platform manylinux_2_17_x86_64 --no-deps
 
 ### Procedure on Bianca side
 
-- Go to the project folder you want to put your virtual env.
+- Go to the project folder you want to put your virtual environment.
 
-```cd /proj/
-
-
-
-
-    pip install --no-index --find-links . -r requirements.txt
-
-
-
-- Activate and install with pip (package one by one or from requirements.txt)
-
-``` bash
-$ source <path>/projectB/bin/activate
+```console
+cd /proj/sens2025560/<your name>/
 ```
 
-- Note that your prompt is changing to start with (analysis) to show that you are within an environment.
-- Install the packages from the file::
+- Load Python and make a new virtual environment (``venv311B``, B for Bianca) for this project on Bianca and activate it
 
-```bash
-$ pip install -r requirements.txt
-
-$ pip list   # check
-$ deactivate
+```console
+ml Python/3.11.8
+python -m venv venv311B
+source activate venv311B/bin/activate
 ```
 
+- This should give you the prompt ``(venv311B)``
+- Locate the path to the requirements file and the source files for the packages.
+- Alt 1: Go to that directory and install there
 
+```console
+cd /proj/sens2025560/nobackup/wharf/$USER/$USER-sens2025560/test_311/src_311
+pip install --no-index --find-links . -r requirements.txt 
+```
+
+- Alt 2: Include the path in the install command
+
+```console
+pip install --no-index --find-links /proj/sens2025560/nobackup/wharf/$USER/$USER-sens2025560/test_311/src_311 -r /proj/sens2025560/nobackup/wharf/$USER/$USER-sens2025560//test_311/src_311requirements.txt 
+```
+
+- Check with ``pip list``
+- You may now deactivate the environment: ``deactivate``
 
 !!! info "Summary installation principles"
 
