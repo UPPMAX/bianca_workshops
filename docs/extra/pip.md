@@ -10,7 +10,7 @@ tags:
 
 ??? question "Which transfer method is the best?"
 
-    - Use transit.
+    - Use Transit.
     - By this you get software modules of python, although with not exactly the same version.
     - You'll need a Python module to download the packages.
 
@@ -259,7 +259,7 @@ python
 
 - More information about [isolated environments](https://uppmax.github.io/HPC-python/extra/isolated_deeper.html).
 
-!!! warning "You cannot reuse a virtual environment created on Transit on Bianca" 
+!!! warning "You cannot reuse a virtual environment created on Transit on Bianca"
 
     - Doing ``venv`` on Transit will point to python with other paths compared to on Bianca. You cannot reuse that specific environment on Bianca.
     - BUT it can help identify which package versions goes together
