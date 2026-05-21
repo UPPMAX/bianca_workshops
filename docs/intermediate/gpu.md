@@ -46,9 +46,9 @@ You can also ask for 1 gpu per node and few cores in order to use 2 gpus for dif
 
 - Similarly for interactive session on GPU node, use the same `-C gpu --gpus-per-node=` flag.
 
-## News!
+## News
 
-- Maya will have 17 T4 GPU nodes with one GPU each. Those will be on old Haswell nodes.
+- Maja will have 17 T4 GPU nodes with one GPU each. Those will be on old Haswell nodes.
 
 ## GPU accessibility check
 
@@ -85,11 +85,10 @@ tensor([0.1014], device='cuda:0')
 !!! tip "Get a view of the whole queue, including all projects"
 
     - Use the command `bianca_combined_jobinfo` (queued jobs of all projects)
-      - That makes it easier to see how the resources are used and what the odds are that you can start your job soon!
-      - Slurm showing state as 'unkown' might mean that a VM has been booked on that node but no job is running. 
+        - That makes it easier to see how the resources are used and what the odds are that you can start your job soon!
+        - Slurm showing state as 'unkown' might mean that a VM has been booked on that node but no job is running.
     - If you book 1 GPU with `--gpus-per-node=1` flag, you block 1 full GPU node.
-      - You can get another GPU on the same node faster.
-
+        - You can get another GPU on the same node faster.
 
 ## Profiling
 
