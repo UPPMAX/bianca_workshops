@@ -166,21 +166,7 @@ for the right reasons. Good reasons are:
   may solve the problem
 
 When booking more cores -say twice as much- your program will not go
-twice as fast. Below is a table of a worked-out example giving some numbers:
-
-Program runtime                      |Number of cores|Time|Speedup|Efficiency
--------------------------------------|---------------|----|-------|----------
-![1 core](amdahls_law_example_1.png) |1              |16  |100%   |100%
-![2 cores](amdahls_law_example_2.png)|2              |10  |160%   |80%
-![3 cores](amdahls_law_example_3.png)|3              |8   |200%   |60%
-![4 cores](amdahls_law_example_4.png)|4              |7   |229%   |48%
-![6 cores](amdahls_law_example_6.png)|6              |6   |267%   |33%
-.                                    |12             |5   |320%   |18%
-.                                    |24             |4.5 |356%   |9%
-.                                    |48             |4.25|376%   |5%
-
-The details behind this table can be found at
-[the 'Parallel computing' session of the R-MATLAB-Julia course](https://uppmax.github.io/R-matlab-julia-HPC/advanced/parallel_computing/).
+twice as fast. 
 
 ## Exercises
 
@@ -294,7 +280,7 @@ After seeing this graph, how much cores will you book in the future?
     as the calculation uses 8 cores on average. Using 8 cores here
     is reasonable use.
 
-### Exercise 2: creating a `jobstats` plot
+## Exercise 2: creating a `jobstats` plot
 
 We are going to create a `jobstats` plot. For that, we need a job
 to plot. Here we first look for a job, after which we plot it.
@@ -391,3 +377,140 @@ to plot. Here we first look for a job, after which we plot it.
 
     Using the benchmark script from
     [the R-Julia-MATLAB course, session 'thread parallelism'](https://uppmax.github.io/R-matlab-julia-HPC/advanced/thread_parallelism/).
+
+## (optional) Exercise 3: reading a `jobstats` plot
+
+In this optional exercise, we practice how to read `jobstats` plots
+and schedule our cores efficiently.
+
+The algorithm to schedule cores efficiently
+is described in detail in
+[the 'Efficiency using `jobstats` SCoRe user documentation page](https://docs.score.nbis.se/efficiency_using_jobstats/).
+For this exercise, here I copy the algorithm:
+
+<!-- markdownlint-disable MD013 --><!-- Mermaid nodes cannot be split up over lines, hence will break 80 characters per line -->
+
+```mermaid
+flowchart TD
+  obtain_data[Obtain CPU and memory usage of a job]
+  lower_limit_based_on_memory(Pick the number of cores to have enough memory)
+  limited_by_cpu(For that amount of cores, would runtime by limited by CPU?)
+  lower_limit_based_on_cpu(Increase the number of cores, so that on average, the right amount of CPUs is booked)
+
+  done(Use that amount of cores)
+
+  add_one(Increase the number of cores by one for safety)
+
+  obtain_data --> lower_limit_based_on_memory
+  lower_limit_based_on_memory --> limited_by_cpu
+  limited_by_cpu --> |no| add_one
+  limited_by_cpu --> |yes| lower_limit_based_on_cpu
+  lower_limit_based_on_cpu --> done
+  add_one --> done
+```
+
+<!-- markdownlint-enable MD013 -->
+
+Apply the algorithm to the first `jobstats` figure. How many cores
+are recommended?
+
+???- question "Which figure?"
+
+    This figure:
+
+    ![Visualisation of a user that booked too many cores](jobstats_c_555912-l_1-k_bad_job_01_with_border.png)
+
+???- question "Answer"
+
+    Here booking 5 cores is considered okay.
+
+    > Pick the number of cores to have enough memory
+
+    The dotted black line hits the right-hand vertical axis at 390%.
+    This means that 4 cores (i.e. 400%) would be enough for this job.
+
+    > For that amount of cores, would runtime by limited by CPU?
+
+    The answer is 'no'. Having 4 cores would
+    mean that most of the time only 1 are used.
+    Only for some CPU spikes, the runtime is limited by CPU.
+    This short time only has a minor impact on the runtime speed.
+
+    > Increase the number of cores by one for safety
+
+    This means booking 5 cores is recommended.
+
+## (optional) Exercise 4: understanding the overhead
+
+In this optional exercise, we quantify the overhead of using
+a multithreaded program.
+
+Below is a table of a worked-out example of
+a program that can be run in parallel:
+
+Program runtime                      |Number of cores|Time|Speedup|Efficiency
+-------------------------------------|---------------|----|-------|----------
+![1 core](amdahls_law_example_1.png) |1              |16  |100%   |100%
+![2 cores](amdahls_law_example_2.png)|2              |10  |160%   |80%
+![3 cores](amdahls_law_example_3.png)|3              |8   |200%   |60%
+![4 cores](amdahls_law_example_4.png)|4              |7   |229%   |48%
+![6 cores](amdahls_law_example_6.png)|6              |6   |267%   |33%
+.                                    |12             |5   |320%   |18%
+.                                    |24             |4.5 |356%   |9%
+.                                    |48             |4.25|376%   |5%
+
+The legend of the table is:
+
+Square                | A unit of calculation time that ...
+----------------------|------------------------------------
+:red_square:          | cannot be run in parallel
+:green_square:        | can be run in parallel
+:white_medium_square: | is spent doing nothing
+
+The details behind this table can be found at
+[the 'Parallel computing' session of the R-MATLAB-Julia course](https://uppmax.github.io/R-matlab-julia-HPC/advanced/parallel_computing/)
+
+## Question 1
+
+In this example, which percentage of the code can be run in parallel?
+
+??? tip "Answer"
+
+    75%.
+
+    12 out of 16 squares are green. Green denotes a calculation
+    that can be run in parallel. Hnece divinding 12 by 16 results in 75%.
+
+## Question 2
+
+In this example, what is the shortest amount of time that
+can be spent on the calculation, given infinite resources?
+
+??? tip "Answer"
+
+    4 time units.
+
+    This equals the amount of the calculation that cannot be run in parallel.
+    With infinite resources, the parallel computation can (theoreticallty)
+    be done in zero time units.
+
+## Question 3
+
+In this example, how much faster can you make the calculation run?
+Assume infinite resources.
+
+??? tip "Answer"
+
+    You can make it 4 times as fast.
+
+    The single-threaded calculation takes 16 time unites.
+    The multi-threaded calculation on infinite cores takes 4 time units.
+    Hence, going from 16 to 4 is 4x faster.
+
+## Question 4
+
+How do you know what percentage of your code can be run in parallel?
+
+???- question "Answer"
+
+    By measuring this yourself.
