@@ -19,7 +19,7 @@ tags:
 Goal                               |Form
 -----------------------------------|------------------------------------------------------
 Share any anonymous feedback easily|[Feedback form](https://docs.google.com/forms/d/e/1FAIpQLSfOQRip-h8YvQFSo-GyMet84OQ61WD-HzvnL8iR0GAe1prvgQ/viewform?usp=publish-editor)
-Evaluate the course anonymously    |[TODO: Evaluation form](https://github.com/UPPMAX/bianca_workshops/issues/88)
+Evaluate the course anonymously    |[Evaluation form](https://docs.google.com/forms/d/e/1FAIpQLSeTFtzEXNauBSJTMdN1Ymwuz1Tbiaut5dUW5iyCwfERebXIQA/viewform?usp=publish-editor)
 
 Also those that need to leave early are encouraged to fill in the evaluation
 form to help us improve the course
@@ -41,7 +41,9 @@ form to help us improve the course
     Intermediate Bianca evaluation form
 
     These are the evaluation questions.
-    The goals of these questions is to find out how successful
+
+    The goals of these questions is, for you, to remind yourself
+    what you've learned to day, and for us teachers, how successful
     the course is in achieving its teaching goals.
 
     Give you confidence levels of the following statements,
