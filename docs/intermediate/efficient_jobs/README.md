@@ -146,6 +146,13 @@ Here is a visualisation of a user that booked too many cores:
 
 If you are booking cores for the memory only, use a fat node:
 
+Node type|Memory|Amount
+---------|------|------
+Regular  |128 GB|204
+Fat      |256 GB|75
+Fat      |512 GB|15
+GPU      |512 GB|10
+
 ```mermaid
 flowchart TD
   subgraph hpc_cluster[HPC cluster]
@@ -161,7 +168,7 @@ flowchart TD
     subgraph dat_node[Fat node]
       subgraph cpu_fat[CPU]
         subgraph core_fat[Core]
-          memory_fat[More Memory]
+          memory_fat[More memory]
           processing_power_fat[Processing power]
         end
       end
@@ -169,8 +176,7 @@ flowchart TD
   end
 ```
 
-To do so, add `-C mem256GB` or `-C mem512GB` or `-C 2TB` or `-C 3TB`
-to your Slurm script.
+To do so, add `-C mem256GB` or `-C mem512GB` to your Slurm script.
 
 ### Booking more cores for quicker calculation speed may be useless
 
