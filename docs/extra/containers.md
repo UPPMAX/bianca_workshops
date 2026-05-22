@@ -95,13 +95,13 @@ Perfect!
 cd sens2025560
 ```
   
-- Disable Singularity cache
+- Set some ENV variables and create temporary directories
 
 ```bash
-export APPTAINER_DISABLE_CACHE=true
-export APPTAINER_TMPDIR=/dev/shm/$USER
-mkdir -p $APPTAINER_TMPDIR
-unset ${!NXF_*}
+export APPTAINER_DISABLE_CACHE=false
+export APPTAINER_CACHEDIR=$HOME/sens2025560/APPTAINER_CACHE
+export APPTAINER_TMPDIR=$HOME/sens2025560/APPTAINER_TMP
+mkdir -p $APPTAINER_CACHEDIR $APPTAINER_TMPDIR
 ```
   
 - You can get the container here directly with the "pull" command
@@ -110,6 +110,10 @@ unset ${!NXF_*}
 ```bash
 apptainer pull gatk_4.6.2.0.sif docker://broadinstitute/gatk:4.6.2.0
 ```
+
+!!! warning
+
+    Present setup of Transit may hinder you to perform this becasue of limited space.
 
 - In a Bianca session, navigate to the wharf
 
