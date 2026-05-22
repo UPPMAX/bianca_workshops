@@ -100,7 +100,7 @@ tensor([0.1014], device='cuda:0')
 ## Tips
 
 - If you book 1 GPU with `--gpus-per-node=1` flag, you block 1 full GPU node.
-  - You can get another GPU on the same node faster.
+    - You can get another GPU on the same node faster.
 - Use `--nv` flag while running your apptainer containers to use GPU on a GPU node
 - Correct CUDA modules gets automatically loaded if you use `python_ML_packages/3.9.5-gpu`
 - Various CUDA libraries are available in `module spider cuda`
