@@ -12,7 +12,7 @@ t_post_raw <- readr::read_csv(evaluation_file, show_col_types = FALSE)
 other_feedback_post <- t_post_raw$`Any other feedback?`
 
 t_pre_raw$Timestamp <- NULL
-t_pre_raw$`Is there a learning objective you think is missing? What is it?` <- NULL
+t_pre_raw$`Is there a learning outcome you think is missing? If yes, what is it?` <- NULL
 t_post_raw$Timestamp <- NULL
 t_post_raw$`Any other feedback?` <- NULL
 t_post_raw$`Say something positive about Björn:` <- NULL
@@ -23,6 +23,13 @@ t_post_raw$`Say something positive about Pavlin:` <- NULL
 t_post_raw$`Say something about Pavlin he can improve:` <- NULL
 t_post_raw$`Say something positive about Richèl:` <- NULL
 t_post_raw$`Say something about Richèl he can improve:` <- NULL
+
+names(t_post_raw) <- stringr::str_remove_all(names(t_post_raw), "\n")
+
+names(t_pre_raw) <- stringr::str_remove_all(names(t_pre_raw), "`")
+names(t_post_raw) <- stringr::str_remove_all(names(t_post_raw), "`")
+
+testthat::expect_equal(names(t_pre_raw)[1], names(t_post_raw)[1])
 testthat::expect_true(all(names(t_pre_raw) == names(t_post_raw)))
 
 #' Shorten the names of the columns
