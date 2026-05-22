@@ -257,6 +257,11 @@ tags:
         - you will  install also things that may be already installed
         - therefore, probably more disk space is needed
 
+!!! warning
+
+    Present setup of Transit may hinder you to perform this because of limited space.
+
+
 !!! info "More info"
 
     - [Course material: Containers](https://uppmax.github.io/bianca_workshops/extra/containers/)
