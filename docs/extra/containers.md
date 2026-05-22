@@ -113,7 +113,7 @@ apptainer pull gatk_4.6.2.0.sif docker://broadinstitute/gatk:4.6.2.0
 
 !!! warning
 
-    Present setup of Transit may hinder you to perform this becasue of limited space.
+    Present setup of Transit may hinder you to perform this because of limited space.
 
 - In a Bianca session, navigate to the wharf
 
