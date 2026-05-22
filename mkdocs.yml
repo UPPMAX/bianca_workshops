@@ -52,6 +52,7 @@ nav:
       - extra/devel.md
   - Misc:
       - Communication: communication/README.md
+      - Data: data/README.md
       - Evaluations: evaluations/README.md
       - Frequently asked questions: faq/README.md
       - Lesson plans: lesson_plans/README.md
@@ -77,7 +78,6 @@ not_in_nav: |
   communication/intermediate/Bianca_login.md
   communication/intermediate/intermediate_welcome_email_250516.md
   communication/intermediate/practical_details.md
-  data/README.md
   data/counts/20250319/README.md
   evaluations/20230911/README.md
   evaluations/20231211/README.md
