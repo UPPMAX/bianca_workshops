@@ -27,7 +27,7 @@
 ## Pre-post analysis
 
 - [analyse_pre_post.R](analyse_pre_post.R)
-- [stats.md](stats.md)
+- [stats.txt](stats.txt)
 
 ![All confidences pre-post](all_confidences_pre_post.png)
 
