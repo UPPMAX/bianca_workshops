@@ -2,6 +2,15 @@
 tags:
   - lesson
   - session
+  - efficient
+  - jobs
+  - slurm
+  - optimal
+  - schedule
+  - best
+  - cpu
+  - core
+  - memory
 ---
 
 # Efficient jobs
@@ -9,10 +18,12 @@ tags:
 !!!- info "Learning outcomes"
 
     - Practice using the UPPMAX documentation
-    - I can see the CPU and memory usage of jobs
-    - I can read a `jobstats` plot
-    - I can create a `jobstats` plot
     - I understand how to set up jobs efficiently
+    - I can create a `jobstats` plot
+    - (optional) I can conclude the amount of cores to book
+      from a `jobstats` plot
+    - (optional) I understand that one needs measurements
+      to say something smart about running jobs in parallel
 
 ???- question "Want to see this session as a video?"
 
@@ -468,7 +479,8 @@ Square                | A unit of calculation time that ...
 :white_medium_square: | is spent doing nothing
 
 The details behind this table can be found at
-[the 'Parallel computing' session of the R-MATLAB-Julia course](https://uppmax.github.io/R-matlab-julia-HPC/advanced/parallel_computing/)
+[the 'Parallel computing' session of the R-MATLAB-Julia course](https://uppmax.github.io/R-matlab-julia-HPC/advanced/parallel_computing/),
+but these are not needed for these exercises.
 
 ## Exercise 4.1: Question 1
 
@@ -545,6 +557,8 @@ Which percentage of that code could be run in parallel?
     It depends.
 
     Yes, that is the unsatisfactory answer here.
+    
+    You can conclude this from the 'Efficiency' figure.
 
     It was not discussed anywhere, but apparently the hardware (i.e. the
     HPC cluster) plays a role. It seems that the HPC cluster called
