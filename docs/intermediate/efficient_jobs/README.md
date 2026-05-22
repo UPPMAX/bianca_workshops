@@ -169,6 +169,9 @@ flowchart TD
   end
 ```
 
+To do so, add `-C mem256GB` or `-C mem512GB` or `-C 2TB` or `-C 3TB`
+to your Slurm script.
+
 ### Booking more cores for quicker calculation speed may be useless
 
 Programs can **sometimes** use multiple cores to speed up its calculation.
