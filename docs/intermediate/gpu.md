@@ -87,8 +87,6 @@ tensor([0.1014], device='cuda:0')
     - Use the command `bianca_combined_jobinfo` (queued jobs of all projects)
         - That makes it easier to see how the resources are used and what the odds are that you can start your job soon!
         - Slurm showing state as 'unkown' might mean that a VM has been booked on that node but no job is running.
-    - If you book 1 GPU with `--gpus-per-node=1` flag, you block 1 full GPU node.
-        - You can get another GPU on the same node faster.
 
 ## Profiling
 
@@ -101,6 +99,8 @@ tensor([0.1014], device='cuda:0')
 
 ## Tips
 
+- If you book 1 GPU with `--gpus-per-node=1` flag, you block 1 full GPU node.
+  - You can get another GPU on the same node faster.
 - Use `--nv` flag while running your apptainer containers to use GPU on a GPU node
 - Correct CUDA modules gets automatically loaded if you use `python_ML_packages/3.9.5-gpu`
 - Various CUDA libraries are available in `module spider cuda`
