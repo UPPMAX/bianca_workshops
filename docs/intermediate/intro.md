@@ -131,11 +131,11 @@ The goal of these questions is to introduce what is taught
 today, as well as measuring how much knowledge is gained at the end
 of the day.
 
-- Fill in [TODO: the 'Intermediate Bianca learning outcomes form'](https://github.com/UPPMAX/bianca_workshops/issues/88)
+- Fill in [the 'What will we learn today?' form](https://docs.google.com/forms/d/e/1FAIpQLSfaaj6nE_bc26I_xNFxaVAuBbqmX2cL44Qzx_VaxH6qyQb7zQ/viewform?usp=publish-editor)
 
 ???- question "What is in that form?"
 
-    Intermediate Bianca learning outcomes form
+    Intermediate Bianca, 'What will we learn today?'
 
     In this exercise, we will find out today's learning objectives.
 
@@ -163,13 +163,13 @@ of the day.
     - I can install a Julia/Python/R packages myself
     - I understand what containers are
 
-    Is there a learning objective you think is missing? What is it?
+    Is there a learning outcome you think is missing? If yes, what is it?
 
     ```code
     [Free text paragraph]
     ```
 
-## (Optional) Exercise 2: where is what?
+## Exercise 2: where is what?
 
 Explore the website of the course. Where you can you find
 the things below?
@@ -192,12 +192,20 @@ The NAISS project for today, i.e. the Slurm account we book our jobs on
 
     [The NAISS project](../misc/project.md).
 
-
     There are multiple ways:
 
     - Click on 'Misc' at the top, then 'Project' at the left
     - Click on the search box and search for 'NAISS project'.
       It will be the first hit
+
+Form for anonymous feedback during the day.
+
+???- answer "Answer"
+
+    [The evaluations page](../evaluations/README.md).
+
+    Click on the search box and search for 'Anonymous feedback intermediate'.
+    It will be the first hit
 
 Earlier evaluation results.
 
@@ -211,24 +219,9 @@ Earlier evaluation results.
     - Click on the search box and search for 'Evaluations'.
       It will be the first hit
 
-Form for anonymous feedback during the day.
+## Done?
 
-???- answer "Answer"
+When done,
 
-    [The evaluations page](../evaluations/README.md).
-
-    Click on the search box and search for 'Anonymous feedback intermediate'.
-    It will be the first hit
-
-The Frequently Asked Questions.
-
-???- answer "Answer"
-
-    [The FAQ](../faq/README.md).
-
-    There are multiple ways:
-
-    - Click on 'Misc' at the top, then 'Frequently asked questions' at the left
-    - Click on the search box and search for 'FAQ' or
-      'Frequently Asked Questions'.
-      It will be the first hit
+- login to Bianca
+- start reading the next session
