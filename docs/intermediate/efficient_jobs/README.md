@@ -144,6 +144,31 @@ Here is a visualisation of a user that booked too many cores:
 
 ![Visualisation of a user that booked too many cores](jobstats_c_555912-l_1-k_bad_job_01_with_border.png)
 
+If you are booking cores for the memory only, use a fat node:
+
+```mermaid
+flowchart TD
+  subgraph hpc_cluster[HPC cluster]
+    direction TD
+    subgraph node[Regular node]
+      subgraph cpu[CPU]
+        subgraph core[Core]
+          memory[Memory]
+          processing_power[Processing power]
+        end
+      end
+    end
+    subgraph dat_node[Fat node]
+      subgraph cpu_fat[CPU]
+        subgraph core_fat[Core]
+          memory_fat[More Memory]
+          processing_power_fat[Processing power]
+        end
+      end
+    end
+  end
+```
+
 ### Booking more cores for quicker calculation speed may be useless
 
 Programs can **sometimes** use multiple cores to speed up its calculation.
