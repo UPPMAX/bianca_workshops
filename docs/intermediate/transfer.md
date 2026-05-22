@@ -126,7 +126,7 @@ flowchart LR
     transit[transit server, rsync]
     sftp_server[SFTP server, FileZilla]
     user[User in SUNET]
-    other_users[User on Rackham, user on other NAISS clusters]:::low_focus_node
+    other_users[User on Pelle, user on other NAISS clusters]:::low_focus_node
     wharf <--> transit
     wharf <--> sftp_server
     transit --> user
