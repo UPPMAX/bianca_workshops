@@ -166,13 +166,13 @@ for the right reasons. Good reasons are:
   may solve the problem
 
 When booking more cores -say twice as much- your program will not go
-twice as fast. 
+twice as fast.
 
 ## Exercises
 
 ## Exercise 1: use cases
 
-## Question 1
+## Exercise 1.1: Question 1
 
 For your research project, you need to run a lot of calculations.
 Each calculation takes 10 hours. How do you make optimal use
@@ -182,7 +182,7 @@ of your computational resources?
 
     Run the calculation on a single core for 100% efficiency
 
-## Question 2
+## Exercise 1.2: Question 2
 
 For your research project, you also have a calculation that takes 11 days.
 Your HPC cluster allows a calculation of at most 10 days.
@@ -203,7 +203,7 @@ How do you make optimal use of your computational resources?
     Alternatively, you can added thread parallelism to allow running
     with multiple cores.
 
-## Question 3
+## Exercise 1.3: Question 3
 
 Your colleague runs many jobs with a lot of cores. 'It is way faster!',
 he/she states. That same colleague, however, also complains about long
@@ -219,7 +219,7 @@ situation?
     has a low workload and activates the so-called 'bonus queue' (UPPMAX)
     or generally have to wait for their priority to go up again.
 
-## Question 4
+## Exercise 1.4: Question 4
 
 Your colleague needs to finish his/her analysis quickly
 and starts scheduling multiple cores for his/her jobs.
@@ -236,7 +236,7 @@ What would you advise him/her?
     You should advise to go back to scheduling single-core jobs
     directly, to prevent his/her jobs from being in the queue longer.
 
-## Question 5
+## Exercise 1.5: Question 5
 
 You are using a program that is known to be single-threaded.
 You does not want to schedule more cores than needed.
@@ -254,7 +254,7 @@ Is there a way you can use your computational resources more efficiently?
     Sure, 9 core are not helping with the calculation at all,
     which is acceptable here.
 
-## Question 6
+## Exercise 1.6: Question 6
 
 For years, you have been using a pipeline with multiple
 steps that use different tools.
@@ -470,7 +470,7 @@ Square                | A unit of calculation time that ...
 The details behind this table can be found at
 [the 'Parallel computing' session of the R-MATLAB-Julia course](https://uppmax.github.io/R-matlab-julia-HPC/advanced/parallel_computing/)
 
-## Question 1
+## Exercise 4.1: Question 1
 
 In this example, which percentage of the code can be run in parallel?
 
@@ -481,7 +481,7 @@ In this example, which percentage of the code can be run in parallel?
     12 out of 16 squares are green. Green denotes a calculation
     that can be run in parallel. Hnece divinding 12 by 16 results in 75%.
 
-## Question 2
+## Exercise 4.2: Question 2
 
 In this example, what is the shortest amount of time that
 can be spent on the calculation, given infinite resources?
@@ -494,7 +494,7 @@ can be spent on the calculation, given infinite resources?
     With infinite resources, the parallel computation can (theoreticallty)
     be done in zero time units.
 
-## Question 3
+## Exercise 4.3: Question 3
 
 In this example, how much faster can you make the calculation run?
 Assume infinite resources.
@@ -507,10 +507,54 @@ Assume infinite resources.
     The multi-threaded calculation on infinite cores takes 4 time units.
     Hence, going from 16 to 4 is 4x faster.
 
-## Question 4
+## Exercise 4.4: Question 4
 
 How do you know what percentage of your code can be run in parallel?
 
 ???- question "Answer"
 
     By measuring this yourself.
+
+Doing such measurements is called a benchmark.
+Below are figures obtained from such a benchmark,
+in which exactly the same calculation was done,
+for multiple HPC clusters, for multiple programming languages.
+
+Which percentage of that code could be run in parallel?
+
+=== "Total core seconds"
+
+    ![Benchmark results: core seconds](benchmark_results_core_seconds.png)
+
+    > Benchmark: the total core seconds per number of workers
+
+=== "Efficiency"
+
+    ![Benchmark results: efficiency](benchmark_results_efficiency.png)
+
+    > Benchmark: Efficiency per number of workers
+
+=== "Speedup"
+
+    ![Benchmark results: speedup](benchmark_results_speedup.png)
+
+    > Benchmark: Speedup per number of workers
+
+???- question "Answer"
+
+    It depends.
+
+    Yes, that is the unsatisfactory answer here.
+
+    It was not discussed anywhere, but apparently the hardware (i.e. the
+    HPC cluster) plays a role. It seems that the HPC cluster called
+    'Kebnekaise' has an efficiency of above (!) 100%, where
+    others are less efficient, with 'Pelle' only having 50%.
+
+    For an efficiency of 100%, as is reached on Kebnekaise,
+    it means that 100% of the code can be run in parallel.
+
+    For an efficiency of 50%, as measured on Pelle,
+    it means that 50% of the code can be run in parallel.
+
+    So, for the same code, we get different answers :-/
