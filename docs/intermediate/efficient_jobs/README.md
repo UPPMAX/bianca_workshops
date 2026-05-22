@@ -64,7 +64,7 @@ tags:
 
     - ?Show documentation
 
-## Why?
+## Why care about efficient jobs?
 
 !!! note "Quote from the UPPMAX documentation"
 
@@ -80,7 +80,17 @@ Running efficient jobs allows you to run more jobs that start running faster.
 Here we define an efficient job as a job that
 makes good use of memory and processing power.
 
-Each core you book gives both memory and processing power.
+Each core you book gives both memory and processing power:
+
+```mermaid
+flowchart TD
+  subgraph core[Core]
+    memory[Memory]
+    processing_power[Processing power]
+  end
+```
+
+This session is about booking the right amount of cores on a regular node.
 
 ???- question "What is the relation between node, CPU and core again?"
 
@@ -89,9 +99,12 @@ Each core you book gives both memory and processing power.
     ```mermaid
     flowchart TD
       subgraph hpc_cluster[HPC cluster]
-        subgraph node_1[Node]
-          subgraph cpu_1_1[CPU]
-          core_1_1_1[Core]
+        subgraph node[Node]
+          subgraph cpu[CPU]
+            subgraph core[Core]
+              memory[Memory]
+              processing_power[Processing power]
+            end
           end
         end
       end
@@ -110,6 +123,10 @@ Each core you book gives both memory and processing power.
     <!-- markdownlint-enable MD013 -->
 
     - `[1]` this is a pun to distributed parallelism
+
+!!! info "The One Rule to use your cores as efficient as possible"
+
+    Schedule as few cores as possible.
 
 ### Booking too many cores for memory is a reasonable thing to do
 
@@ -186,7 +203,8 @@ twice as fast.
 ## Exercise 1.1: Question 1
 
 For your research project, you need to run a lot of calculations.
-Each calculation takes 10 hours. How do you make optimal use
+Each calculation takes 10 hours and takes nearly
+no memory. How do you make optimal use
 of your computational resources?
 
 ??? tip "Answer"
