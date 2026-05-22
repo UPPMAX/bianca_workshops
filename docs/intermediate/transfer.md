@@ -119,20 +119,21 @@ sensitive data HPC center.
 ```mermaid
 flowchart LR
   classDef low_focus_node stroke-dasharray: 5 5
+
   subgraph sunet[SUNET]
     subgraph bianca[Bianca]
       wharf
     end
     transit[transit server, rsync]
-    sftp_server[SFTP server, FileZilla]
+    sftp_server[SFTP server, FileZilla]:::low_focus_node
     user[User in SUNET]
-    other_users[User on Pelle, user on other NAISS clusters]:::low_focus_node
     wharf <--> transit
     wharf <--> sftp_server
-    transit --> user
-    transit --> other_users
+    transit <--> user
     sftp_server <--> user
   end
+  transit <--> other_users
+  other_users[User outside of SUNET]:::low_focus_node
 ```
 
 As Bianca is a sensitive data cluster, we need to know:
