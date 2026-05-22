@@ -6,7 +6,7 @@ tags:
 
 # Install with pip to Bianca
 
-???+ question "Read through the content below"
+!!! info "Read through the content below"
 
 ??? question "Which transfer method is the best?"
 
@@ -147,6 +147,16 @@ pip install --user --no-index --find-links /proj/sens2025560/nobackup/wharf/$USE
 
 - **The package ends up automatically in ``~/.local/lib/python<version>/site-packages/`` .**
 
+??? question "Interested in requirements files?"
+
+    - Go to the directory where the the requirements file and the downloaded package files are
+        - Ex: ``cd /proj/sens2025560/nobackup/wharf/$USER/$USER-sens2025560``
+
+    ```console
+    pip install --user --no-index --find-links . -r requirements.txt 
+    ```
+
+
 ### Test it in Python
 
 #### Alternative 1
@@ -198,10 +208,15 @@ python
         Successfully downloaded pandas numpy python-dateutil pytz tzdata six
         ```
 
-### Exercise
+## Exercise
 
-!!! question "Install ``numpy-2.1.0`` for Python/3.10.8"
+!!! question "Install ``numpy-2.1.0`` for general use in by you"
 
+    - You want this in a 3.10 Python version on Bianca.
+    - Download on Transit using a Python/3.10.X version
+    - Install on Bianca using a Python/3.10.X version
+    - Test if it works
+    - Uninstall this package to not pollute your present general package library!
 
     ??? question "Answer"
     
@@ -243,7 +258,14 @@ python
         print(numpy.__version__)
         ```
 
-## Optional Exercise: Isolated/virtual environments and requirements files
+        - If it works you can exit the python shell with ``CTRL+D``
+        - Delete ``numpy-2.1.0`` from your local library
+
+        ```console
+        pip uninstall numpy==2.1.0
+        ```
+
+## Isolated/virtual environments and requirements files
 
 ### Introduction
 
@@ -325,6 +347,11 @@ pip install --no-index --find-links /proj/sens2025560/nobackup/wharf/$USER/$USER
 
 - Check with ``pip list``
 - You may now deactivate the environment: ``deactivate``
+
+## Exercise 2
+
+!!! question "Follow the steps above"
+
 
 !!! info "Summary installation principles"
 
