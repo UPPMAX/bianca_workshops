@@ -186,6 +186,19 @@ The schedule for today.
     - Click on the search box and search for 'Schedule intermediate'.
       It will be the first hit
 
+The NAISS project for today, i.e. the Slurm account we book our jobs on
+
+???- answer "Answer"
+
+    [The NAISS project](../misc/project.md).
+
+
+    There are multiple ways:
+
+    - Click on 'Misc' at the top, then 'Project' at the left
+    - Click on the search box and search for 'NAISS project'.
+      It will be the first hit
+
 Earlier evaluation results.
 
 ???- answer "Answer"
