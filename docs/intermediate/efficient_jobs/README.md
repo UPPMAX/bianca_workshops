@@ -572,3 +572,9 @@ Which percentage of that code could be run in parallel?
     it means that 50% of the code can be run in parallel.
 
     So, for the same code, we get different answers :-/
+
+## Conclusion
+
+- Single-core jobs are the most efficient use of resources
+- Memory is more important than CPU
+- 
