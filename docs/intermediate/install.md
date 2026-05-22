@@ -187,8 +187,6 @@ tags:
 ???+ question "Pick one of the following topics!"
 
     - Read the introduction with a demo and use it to solve the exercise in the end.
-    - "Containers" contains less material but may take time to install.
-
     - [Installing Conda packages](https://uppmax.github.io/bianca_workshops/extra/conda/){:target="_blank"}
     - [Installing pip packages](https://uppmax.github.io/bianca_workshops/extra/pip/){:target="_blank"}
     - [Installing R packages](https://uppmax.github.io/bianca_workshops/extra/rpackages/){:target="_blank"}
@@ -204,6 +202,14 @@ tags:
 ## Install software yourself
 
 - If not available on Bianca already (like Conda repositories) --> use the ``wharf`` to install your tools.
+
+!!! warning
+
+    - Bianca is an old system
+    - A low-level library called **GLIBC** typicaly follows the OS installation.
+    - GLIBC version on Bianca is 2.17 and many distributions are relying on GLIBC>2.17
+    - Solution is to find compatibble versions or use contaienrs, seee below
+
 
 !!! note "Typical workflow for installation"
 
@@ -240,6 +246,7 @@ tags:
 - Containers let you install programs without needing to think about the computer environment, like
     - operative system
     - dependencies (libraries and other programs) with correct versions
+    - makes it possible to run programs that rely in GLIBC>2.17
 
 ![Containerization](img/Containerization_nextlabs.png)
 
