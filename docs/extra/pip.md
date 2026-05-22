@@ -147,6 +147,16 @@ pip install --user --no-index --find-links /proj/sens2025560/nobackup/wharf/$USE
 
 - **The package ends up automatically in ``~/.local/lib/python<version>/site-packages/`` .**
 
+??? question "Interested in requirements files?"
+
+    - Go to the directory where the the requirements file and the downloaded package files are
+        - Ex: ``cd /proj/sens2025560/nobackup/wharf/$USER/$USER-sens2025560``
+
+    ```console
+    pip install --user --no-index --find-links . -r requirements.txt 
+    ```
+
+
 ### Test it in Python
 
 #### Alternative 1
