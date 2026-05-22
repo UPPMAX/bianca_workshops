@@ -131,7 +131,7 @@ The goal of these questions is to introduce what is taught
 today, as well as measuring how much knowledge is gained at the end
 of the day.
 
-- Fill in [the 'What will we learn today?' form](https://docs.google.com/forms/d/e/1FAIpQLSfaaj6nE_bc26I_xNFxaVAuBbqmX2cL44Qzx_VaxH6qyQb7zQ/viewform?usp=publish-editor)
+- Fill in [TODO: the 'What will we learn today?' form](https://github.com/UPPMAX/bianca_workshops/issues/95)
 
 ???- question "What is in that form?"
 
