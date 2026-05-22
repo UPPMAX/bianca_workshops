@@ -18,7 +18,7 @@ tags:
 
 Goal                               |Form
 -----------------------------------|------------------------------------------------------
-Share any anonymous feedback easily|[TODO: Feedback form](https://github.com/UPPMAX/bianca_workshops/issues/88)
+Share any anonymous feedback easily|[Feedback form](https://docs.google.com/forms/d/e/1FAIpQLSfOQRip-h8YvQFSo-GyMet84OQ61WD-HzvnL8iR0GAe1prvgQ/viewform?usp=publish-editor)
 Evaluate the course anonymously    |[TODO: Evaluation form](https://github.com/UPPMAX/bianca_workshops/issues/88)
 
 Also those that need to leave early are encouraged to fill in the evaluation
