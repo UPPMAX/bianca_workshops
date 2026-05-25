@@ -51,7 +51,7 @@ nav:
       - extra/containers.md
       - extra/devel.md
   - Misc:
-      - Acknowledgements: Acknowledgements/README.md
+      - Acknowledgements: misc/acknowledgements.md
       - Communication: communication/README.md
       - Data: data/README.md
       - Evaluations: evaluations/README.md
