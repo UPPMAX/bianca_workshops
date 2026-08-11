@@ -1,0 +1,7 @@
+# Evaluation Bianca Basic 2026-09-18
+
+- Course: Bianca Basic
+- Date: 2026-09-18
+- [Lesson plan](../../lesson_plans/20260918/20260918_richel.md)
+- [Evaluation](../../evaluations/20260918/README.md)
+- [Reflection](../../reflections/20260918/20260918_richel.md)
