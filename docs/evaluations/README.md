@@ -20,3 +20,4 @@ Intermediate|I5        |[Evaluation](20251118/README.md)|86%
 Beginner    |B6        |[Evaluation](20260206/README.md)|79%
 Intermediate|I6        |[Evaluation](20260522/README.md)|53%
 Beginner    |B7        |[Evaluation](20260918/README.md)|.
+Intermediate|I7        |[Evaluation](20261120/README.md)|.
