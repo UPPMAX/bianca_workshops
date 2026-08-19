@@ -1,0 +1,3 @@
+Thanks to all the teacher. Since we were a small group today we could really get the help we needed and that was really valuable.
+The section about GPUs and nodes should have started a bit more basic. Even though I work on Bianca, I have limited knowledge of basic computer science. Like what is A100? 
+Nice course, good hands on help when needed.
