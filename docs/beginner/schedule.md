@@ -24,8 +24,8 @@ When  | Who  | What
 11:15 | R    | [Create an executable script](create_script.md), [use modules](modules.md)
 12:00 | .    | Lunch
 13:00 | P    | [Transferring files to and from Bianca using FileZilla](file_transfer_using_gui.md)
-13:55 | .    | Break
-14:05 | R    | [Slurm](slurm_intro_new.md)
+14:00 | .    | Break
+14:15 | R    | [Slurm](slurm_intro_new.md)
 14:55 | .    | Break
 15:10 | B    | [IDEs](ides/README.md)
 15:45 | R    | [Summary](summary.md) and anonymous [evaluation](evaluation.md)
