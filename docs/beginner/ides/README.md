@@ -91,7 +91,7 @@ Jupyter | Python (R, Julia) | More notebook like
 
 - If you are not used to any of these I recommend RStudio.
 
-- Use the Zoom breakout room for your favorite IDE
+- Use the Zoom breakout room for your favourite IDE
 
 ### Exercise 1: Understand IDEs on Bianca
 
@@ -164,7 +164,7 @@ Jupyter | Python (R, Julia) | More notebook like
     - the login node has `[project]-bianca`, where `[project]` is the name of the project, e.g. `sens2025560`
     - the interactive node has `b[number]` in it, where `[number]` is the compute node number
 
-### Exercise 2: Start the favorite IDE
+### Exercise 2: Start the favourite IDE
 
 ???- info "Learning outcomes"
 
@@ -182,7 +182,7 @@ Jupyter | Python (R, Julia) | More notebook like
     - [VSCodium](https://docs.uppmax.uu.se/software/vscodium_on_bianca/)
     - [Matlab](https://docs.uppmax.uu.se/software/matlab/#the-matlab-module)
 
-## Keypoints
+## Wrap-up
 
 ??? question "Do you lack an IDE on Bianca?"
 
@@ -190,9 +190,9 @@ Jupyter | Python (R, Julia) | More notebook like
 
 ## Summary
 
-!!! abstract "Keypoints"
+!!! abstract "Key points"
 
     - There are (at least) 4 IDEs installed on Bianca
-    - How to start the mare descibed in the documentation
+    - How to start the mare described in the documentation
     - ThinLinc remote desktop is needed.
     - Starting an interactive session on a compute node is recommended.
