@@ -96,7 +96,7 @@ echo "Exercise 1.1"
 
 Run it by:
 
-```
+```bash
 sbatch -A sens2025560 job_scheduler_exercise_1.sh
 ```
 
@@ -301,7 +301,7 @@ List all the files in your folder.
 
     ```bash
     [richel@sens2025560-bianca ~]$ ls
-    bin	 job_scheduler_exercise_1.sh  slurm-623.out
+    bin  job_scheduler_exercise_1.sh  slurm-623.out
     Desktop  job_scheduler_exercise_2.sh  slurm-624.out
     ```
 
