@@ -1,16 +1,3 @@
----
-tags:
-  - lesson
-  - session
-  - beginner
-  - slurm
-  - batch
-  - interactive
-  - compute
-  - node
-  - core
----
-
 # Introduction to Slurm
 
 !!! info "Learning outcomes"
