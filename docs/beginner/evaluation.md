@@ -41,6 +41,17 @@ Evaluate the course anonymously    |[TODO: Evaluation form](https://github.com/U
     The goals of these questions is to find out how successful
     the course is in achieving its teaching goals.
 
+    Answer with yes or no:
+
+    - I have connect to the Bianca remote desktop using the website
+    - I have connected to the Bianca console environment using SSH
+    - I have transferred a file to/from Bianca using a graphical tool
+    - I have created and run a Bash script on Bianca
+    - I have used Bianca software modules
+    - I have started an interactive session
+    - I have submitted a job to the scheduler
+    - I have run RStudio
+
     Give you confidence levels of the following statements,
     using this scale:
 
@@ -55,18 +66,6 @@ Evaluate the course anonymously    |[TODO: Evaluation form](https://github.com/U
 
     - I understand how to be careful with sensitive data outside Bianca
     - I know what NAISS SENS is and how it relates to Bianca
-    - I can log in to the Bianca remote desktop using the website
-    - I can log in to the Bianca console environment using SSH
-    - I can navigate to the wharf folder using a graphical file manager
-    - I can manage my files and folders using a graphical file manager
-    - I can navigate to the wharf folder using a terminal
-    - I can manage my files and folders using a terminal
-    - I can create a Bash script
-    - I can use modules
-    - I can transfer files to/from Bianca using a graphical tool
-    - I can start an interactive session
-    - I can submit jobs to the scheduler
-    - I can start RStudio
 
     Any other feedback?
 
