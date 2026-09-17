@@ -7,6 +7,11 @@
     - Learners have seen their job in the job queue
     - Learners have cancelled their job in the job queue
 
+???- question "Prefer a video?"
+
+    [This YouTube video](https://youtu.be/mXE9AtrMwkg)
+    walks you through this content, including the exercises.
+
 ## Goal
 
 In this session, you will schedule a short batch job,
