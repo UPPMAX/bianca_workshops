@@ -87,18 +87,22 @@ You just need to ask it to schedule your calculation or interactive session.
 
 ### Exercise 1.1: schedule a batch job
 
-Create the following Bash script, called `job_scheduler_exercise_1.sh`:
+On Bianca, create the following Bash script, called `job_scheduler_exercise_1.sh`:
 
 ```bash
 #!/bin/bash
 echo "Exercise 1.1"
 ```
 
-Run it by:
+
+On Bianca, from a terminal, run this script as such:
 
 ```bash
 sbatch -A sens2025560 job_scheduler_exercise_1.sh
 ```
+
+You will be notified directly that you have submitted a batch job.
+You can now go to the next exercise.
 
 ???- question "How does that look like?"
 
@@ -111,7 +115,7 @@ sbatch -A sens2025560 job_scheduler_exercise_1.sh
 
 ### Exercise 1.2: schedule, monitor and cancel a job
 
-Create the following Bash script, called `job_scheduler_exercise_2.sh`:
+On Bianca, create the following Bash script, called `job_scheduler_exercise_2.sh`:
 
 ```bash
 #!/bin/bash
@@ -121,11 +125,14 @@ sleep 1h
 echo "Exercise 1.2"
 ```
 
-Run it by:
+On Bianca, from a terminal, run this script as such:
 
 ```bash
 sbatch -A sens2025560 job_scheduler_exercise_2.sh
 ```
+
+You will be notified directly that you have submitted a batch job.
+You can now go to the next exercise.
 
 ???- question "How does that look like?"
 
@@ -138,13 +145,14 @@ sbatch -A sens2025560 job_scheduler_exercise_2.sh
 
 ### Exercise 1.3: schedule an interactive session
 
-Schedule an interactive session:
+On Bianca, from a terminal, schedule an interactive session as such:
 
 ```bash
 interactive -A sens2025560 
 ```
 
 You will directly see that Bianca is doing something.
+You can now go to the next exercise.
 
 ???- question "How does that look like?"
 
@@ -285,6 +293,18 @@ How can we see that we are not on a login node anymore?
     `[richel@sens2025560-bianca ~]$`|Login node
     `[richel@sens2025560-b9 ~]$`    |Interactive session
 
+In the terminal, type `exit` to leave the interactive session.
+How can we see that we are a login node again?
+
+???- question "Answer"
+
+    We can see that the prompt has changed and now shows `bianca`,
+    and no longer a `b` with a number:
+
+    Example                         |Location/session
+    --------------------------------|-------------------
+    `[richel@sens2025560-bianca ~]$`|Login node
+    `[richel@sens2025560-b9 ~]$`    |Interactive session
 
 ### Exercise 2.2: view the results of a successful script
 
@@ -332,7 +352,7 @@ What is this maximum time?
 
 ???- question "Answer"
 
-    ```bash job_scheduler_exercise_2.sh
+    ```bash
     #!/bin/bash
     #SBATCH --time=239:59:59
     #SBATCH -n 16
@@ -348,7 +368,7 @@ What is this maximum amount of cores?
 
 ???- question "Answer"
 
-    ```bash job_scheduler_exercise_2.sh
+    ```bash
     #!/bin/bash
     #SBATCH --time=239:59:59
     #SBATCH -n 16
