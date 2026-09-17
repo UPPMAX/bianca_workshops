@@ -172,7 +172,8 @@ Jupyter | Python (R, Julia) | More notebook like
     - Start the favorite IDE on Bianca
 
 - Go to the UPPMAX documentation of the [IDEs on Bianca](https://docs.uppmax.uu.se/software/ides_on_bianca/)
-- If you think it is necessary, start an interactive session. [How was this done?](https://uppmax.github.io/bianca_workshops/beginner/slurm_intro/#procedure-for-interactive-jobs)
+- If you think it is necessary, start an interactive session. 
+  [How was this done?](https://uppmax.github.io/bianca_workshops/beginner/job_scheduler/#exercise-13-schedule-an-interactive-session)
 - Start the IDE of your choice.
 
 ??? tip "Answer"

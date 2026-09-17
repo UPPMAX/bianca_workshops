@@ -53,11 +53,11 @@ Compute nodes | Do big calculations, either from scripts or an interactive sessi
 
     - Our nodes on Bianca have this principle
 
-    ![node principle](./img/node.png)
+    ![node principle](node.png)
 
     - Bianca have this principle
 
-    ![nodes principle](./img/nodes.png)
+    ![nodes principle](nodes.png)
 
 ## Slurm schedules and allocates compute resources for you
 
@@ -376,7 +376,7 @@ Example
 
     !!! tip
 
-    ![copy-paste](./img/copy_paste.png)
+    ![copy-paste](copy_paste.png)
 
     !!! info "Documentation"
 
@@ -507,9 +507,9 @@ Example
 
     Intermediate workshop material on Slurm:
 
-    - [complex jobs](../intermediate/complex_jobs.md)
-    - [efficient jobs](../intermediate/efficient_jobs/README.md)
-    - [replicate jobs](../intermediate/complex_jobs.md)
+    - [complex jobs](../../intermediate/complex_jobs.md)
+    - [efficient jobs](../../intermediate/efficient_jobs/README.md)
+    - [replicate jobs](../../intermediate/complex_jobs.md)
 
 !!! admonition "Slurm Cheat Sheet"
 
