@@ -23,7 +23,7 @@ Non-goals:
 
 ## What is a job scheduler?
 
-You use the job schedule to:
+You use the job scheduler to:
 
 - ask it to do a hard calculation
 - ask it for an interactive session
