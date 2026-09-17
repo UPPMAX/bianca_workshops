@@ -29,13 +29,10 @@ jobs:
       - uses: actions/checkout@v4
 
       # Remove folders that do not need to have their links checked
-      #- name: Remove folders that do not need to have their links checked
-      #  run: |
-      #    rm -rf docs/evaluations
-      #    rm -rf docs/lesson_plans
-      #    rm -rf docs/meeting_notes
-      #    rm -rf docs/reflections
-      #    rm -rf docs/shared_documents
+      - name: Remove folders that do not need to have their links checked
+        run: |
+          rm -rf docs/beginner/job_scheduler/20260521_and_older
+          rm -rf docs/beginner/job_scheduler/20260522_jayant
 
       - name: Restore lychee cache
         uses: actions/cache@v4
