@@ -324,7 +324,7 @@ Display the file of the first job you submitted.
 
 ### Exercise 2.3: view the job queue and cancel a job
 
-The second jou you submitted will take quite long.
+The second job you submitted will take quite long.
 In this exercise, we *may* see it waiting in the queue.
 
 The script has booked the maximum time a Bianca job can run.
