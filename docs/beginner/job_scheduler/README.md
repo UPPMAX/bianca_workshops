@@ -87,9 +87,9 @@ You just need to ask it to schedule your calculation or interactive session.
 
 ### Exercise 1.1: schedule a batch job
 
-Create the following Bash script:
+Create the following Bash script, called `job_scheduler_exercise_1.sh`:
 
-```bash job_scheduler_exercise_1.sh
+```bash
 #!/bin/bash
 echo "Exercise 1.1"
 ```
@@ -111,9 +111,9 @@ sbatch -A sens2025560 job_scheduler_exercise_1.sh
 
 ### Exercise 1.2: schedule, monitor and cancel a job
 
-Create the following Bash script:
+Create the following Bash script, called `job_scheduler_exercise_2.sh`:
 
-```bash job_scheduler_exercise_2.sh
+```bash
 #!/bin/bash
 #SBATCH --time=239:59:59
 #SBATCH -n 16
