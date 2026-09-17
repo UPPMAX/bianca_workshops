@@ -84,7 +84,7 @@ You will choose one and dig into that one.
 
 Tool    | Language(s)       | Comment
 --------|-------------------|--------
-RStudio | R                 | Good for various working methods
+[RStudio](rstudio_in_action.png) | R                 | Good for various working methods
 MATLAB  | MATLAB            | Good for various working methods
 VSCodium| All               | Very versatile but a bit difficult to work with
 Jupyter | Python (R, Julia) | More notebook like
