@@ -82,16 +82,16 @@ You will choose one and dig into that one.
 
 ### Exercise 0: determine which IDE
 
-Tool    | Language(s)       | Comment
---------|-------------------|--------
+Tool                             | Language(s)       | Comment
+---------------------------------|-------------------|--------
 [RStudio](rstudio_in_action.png) | R                 | Good for various working methods
-MATLAB  | MATLAB            | Good for various working methods
-VSCodium| All               | Very versatile but a bit difficult to work with
-Jupyter | Python (R, Julia) | More notebook like
+[MATLAB](matlab_bianca.png)      | MATLAB            | Good for various working methods (takes 5 min to initialize)
+[VSCodium](vscodium_bianca.png)  | All               | Very versatile but a bit difficult to work with
+[Jupyter](jupyter_bianca.png)    | Python R, Julia)  | More notebook like
 
 - If you are not used to any of these I recommend RStudio.
 
-- Use the Zoom breakout room for your favourite IDE
+- Use the Zoom breakout room for your favourite IDE.
 
 ### Exercise 1: Understand IDEs on Bianca
 
