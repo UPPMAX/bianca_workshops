@@ -53,6 +53,6 @@ Existing Bianca projects will be migrated to Arrhenius SENS during the autumn. T
 
 Project owners will be contacted with instructions during the spring. While it is likely that NAISS staff can move the actual data for you, you may have to apply for a change in your ethical permit and a few projects may need to sign a new data processing agreement. Until we contact you, please relax and trust that we value your work and will ensure that your data is well taken care of.
 
-!!! info "Quick start (developing)"
+!!! info "Quick start"
 
-    https://hpc.pages.naiss.se/user-documentation/support-docs/arrhenius_sens/quickstart/
+    [Quick start to Arrhenius SENS](https://hpc.pages.naiss.se/user-documentation/support-docs/arrhenius_sens/quickstart/) under development)
