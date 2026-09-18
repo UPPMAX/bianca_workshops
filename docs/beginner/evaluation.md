@@ -16,7 +16,7 @@ tags:
 
 Goal                               |Form
 -----------------------------------|------------------------------------------------------
-Share any anonymous feedback easily|[TODO: Form: any feedback during the day](https://github.com/UPPMAX/bianca_workshops/issues/91)
+Share any anonymous feedback easily|[Form: any feedback during the day](https://docs.google.com/forms/d/e/1FAIpQLSe55g1QLkIkzVgvtmkR91p9o97RTrMKCGUywPDCWIXBN4ndaw/viewform?usp=publish-editor)
 Evaluate the course anonymously    |[TODO: Evaluation form](https://github.com/UPPMAX/bianca_workshops/issues/91)
 
 ???- question "For teachers: what is in that form?"
@@ -30,8 +30,6 @@ Evaluate the course anonymously    |[TODO: Evaluation form](https://github.com/U
     Do mention the teachers, assistants, etc by name!
 
     Any feedback?
-
-- [TODO: Form: evaluation questions](https://github.com/UPPMAX/bianca_workshops/issues/91) (at the end of the day)
 
 ???- question "For teachers: what is in that form?"
 
