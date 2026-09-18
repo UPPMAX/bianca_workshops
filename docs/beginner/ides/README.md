@@ -164,7 +164,7 @@ Tool                             | Language(s)       | Comment
     - the login node has `[project]-bianca`, where `[project]` is the name of the project, e.g. `sens2025560`
     - the interactive node has `b[number]` in it, where `[number]` is the compute node number
 
-### Exercise 2: Start the favourite IDE
+### Exercise 2: Start the favourite IDE in ThinLinc session
 
 ???- info "Learning outcomes"
 
@@ -172,7 +172,8 @@ Tool                             | Language(s)       | Comment
     - Start the favorite IDE on Bianca
 
 - Go to the UPPMAX documentation of the [IDEs on Bianca](https://docs.uppmax.uu.se/software/ides_on_bianca/)
-- If you think it is necessary, start an interactive session.
+- Be in a ThinLinc session
+- If you think it is necessary, also start an interactive session.
   [How was this done?](https://uppmax.github.io/bianca_workshops/beginner/job_scheduler/#exercise-13-schedule-an-interactive-session)
 - Start the IDE of your choice.
 
