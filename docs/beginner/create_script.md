@@ -4,7 +4,7 @@ tags:
   - session
 ---
 
-# Create an executable script
+# Create a script
 
 !!! info "Objectives"
 
