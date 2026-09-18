@@ -21,7 +21,7 @@ When  | Who  | What
 10:00 | .    | Break
 10:15 | R    | [Log in to remote desktop](login_remote_desktop.md), [use the remote desktop](use_remote_desktop.md), :rocket: [Log in to console environment](login_console.md), :rocket: [command line](commandline.md)
 11:00 | .    | Break
-11:15 | R    | [Create an executable script](create_script.md), [use modules](modules.md)
+11:15 | R    | [Create a script](create_script.md), [use modules](modules.md)
 12:00 | .    | Lunch
 13:00 | P    | [Transferring files to and from Bianca using FileZilla](file_transfer_using_gui.md)
 14:00 | .    | Break
