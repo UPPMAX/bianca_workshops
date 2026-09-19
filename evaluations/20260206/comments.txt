@@ -1,0 +1,10 @@
+I really liked the breakout rooms, but it was also nice to have more like "lectures" for some topics.
+A good course with a very responsive and flexible teaching team
+Good course overall, would benefit from using winSCP as an alternative to Filezilla
+Very good course! I was afraid that it would be to fast paced or hard to follow but realized that the course was mainly a chance to explore all the material that is already around.
+Unfortunately, I missed the info that one should create a login in advance and then it was to late so it could be helpful to write that in the SCore/NAISS overview with the link for the registration that the course requires some setup.
+Richèl is an enthusiastic teacher! Great work!
+Great course as an introduction to Linux bash coding and HPC clusters use. Specially helpful when teachers (Richel, Björn, Jayant) explain things along the course material. The small rooms system is also good to work in teams to follow the instructions. 
+I think the structuring of the course can be improved. On the first, second and third day we already worked with HPC clusters, but i didn't really understand what an HPC cluster until the las day. Maybe first focus only on Linux coding and then proceed with HPC clusters and applications. 
+This course is very extensive and introduces you to advanced computational resources. I know feel that I know the basics of coding in Linux and that, with some guidance, I can fin my way in order to work with a HPC cluster. The last day had the biggest learning outcome, and have made me keen to taking more courses on the topic. Thank you to all the teachers involved.
+Thank you for all of the help this week. It was incredibly useful for a newbie like myself trying to engage with HPCs.

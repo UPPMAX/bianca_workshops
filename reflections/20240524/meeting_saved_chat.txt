@@ -1,0 +1,147 @@
+08:35:01 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	- Course material: https://uppmax.github.io/bianca_workshop/intermediate/intro/ 
+	- Evaluation form: https://forms.gle/[censored] 
+	- Bianca project: sens[censored] 
+	- This Zoom room: https://uu-se.zoom.us/j/[censored] with passcode [censored]
+08:39:53 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	- Course material: https://uppmax.github.io/bianca_workshop/intermediate/intro/ 
+	- Shared document: https://hackmd.io/@UPPMAX/bianca-workshop-2024 
+	- Evaluation form: https://forms.gle/[censored] 
+	- Bianca project: sens[censored] 
+	- This Zoom room: https://uu-se.zoom.us/j/[censored] with passcode [censored]
+08:49:40 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	- Course material: https://uppmax.github.io/bianca_workshop/intermediate/intro/ 
+	- Shared document: https://hackmd.io/@UPPMAX/bianca-workshop-2024 
+	- Evaluation form: https://forms.gle/[censored] 
+	- Bianca project: sens[censored] 
+	- This Zoom room: https://uu-se.zoom.us/j/[censored] with passcode [censored]
+09:01:05 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	- Course material: https://uppmax.github.io/bianca_workshop/intermediate/intro/ 
+	- Shared document: https://hackmd.io/@UPPMAX/bianca-workshop-2024 
+	- Evaluation form: https://forms.gle/[censored] 
+	- Bianca project: sens[censored] 
+	- This Zoom room: https://uu-se.zoom.us/j/[censored] with passcode [censored]
+09:01:09 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	- Course material: https://uppmax.github.io/bianca_workshop/intermediate/intro/ 
+	- Shared document: https://hackmd.io/@UPPMAX/bianca-workshop-2024 
+	- Evaluation form: https://forms.gle/[censored] 
+	- Bianca project: sens[censored] 
+	- This Zoom room: https://uu-se.zoom.us/j/[censored] with passcode [censored]
+09:01:36 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	- Course material: https://uppmax.github.io/bianca_workshop/intermediate/intro/ 
+	- Shared document: https://hackmd.io/@UPPMAX/bianca-workshop-2024 
+	- Evaluation form: https://forms.gle/[censored] 
+	- Bianca project: sens[censored] 
+	- This Zoom room: https://uu-se.zoom.us/j/[censored] with passcode [censored]
+09:02:54 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshop/intermediate/intro/
+09:05:38 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	- Course material: https://uppmax.github.io/bianca_workshop/intermediate/intro/ 
+	- Shared document: https://hackmd.io/@UPPMAX/bianca-workshop-2024 
+	- Evaluation form: https://forms.gle/[censored] 
+	- Bianca project: sens[censored] 
+	- This Zoom room: https://uu-se.zoom.us/j/[censored] with passcode [censored]
+09:06:19 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://hackmd.io/@UPPMAX/bianca-workshop-2024
+09:09:19 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://hackmd.io/WUczucxOSqWZiP2AZWynVA
+09:12:01 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	- Course material: https://uppmax.github.io/bianca_workshop/intermediate/intro/ 
+	- Shared document: https://hackmd.io/@UPPMAX/bianca-workshop-2024 
+	- Evaluation form: https://forms.gle/[censored] 
+	- Bianca project: sens[censored] 
+	- This Zoom room: https://uu-se.zoom.us/j/[censored] with passcode [censored]
+09:12:44 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	- Course material: https://uppmax.github.io/bianca_workshop/intermediate/intro/ 
+	- Shared document: https://hackmd.io/@UPPMAX/bianca-workshop-2024 
+	- Evaluation form: https://forms.gle/[censored] 
+	- Bianca project: sens[censored] 
+	- This Zoom room: https://uu-se.zoom.us/j/[censored] with passcode [censored]
+09:17:27 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshop/intermediate/transfer/
+09:21:43 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshop/intermediate/transfer/#exercise-1-first-understanding-of-how-to-use-rsync
+09:59:45 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshop/intermediate/transfer
+10:04:55 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	Break until 10:15 sharp, learners know this :-)
+10:21:03 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_rsync/
+10:21:47 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_rsync/
+10:22:23 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_rsync/
+10:22:36 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	http://docs.uppmax.uu.se/cluster_guides/bianca_file_transfer_using_rsync/
+10:36:04 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	- Course material: https://uppmax.github.io/bianca_workshop/intermediate/intro/ 
+	- Shared document: https://hackmd.io/@UPPMAX/bianca-workshop-2024 
+	- Evaluation form: https://forms.gle/[censored] 
+	- Bianca project: sens[censored] 
+	- This Zoom room: https://uu-se.zoom.us/j/[censored] with passcode [censored]
+10:37:46 From [Teacher] Diana Iusan To Everyone:
+	https://uppmax.github.io/bianca_workshop/intermediate/slurm_bianca/
+10:53:19 From [Teacher] Diana Iusan To Everyone:
+	https://uppmax.github.io/bianca_workshop/intermediate/slurm_bianca/ search for Hand-on #1
+10:54:50 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshop/intermediate/slurm_bianca/ search for Hand-on #1
+10:55:34 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshop/intermediate/slurm_bianca/ search for Hand-on #1
+11:03:54 From [Teacher] Diana Iusan To Everyone:
+	You should    ssh saeeedeh-sens[censored]@bianca.uppmax.uu.se
+11:08:08 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://bianca.uppmax.uu.se
+11:33:25 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://supr.naiss.se/
+11:35:08 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://bianca.uppmax.uu.se
+11:38:33 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Saeedeh Akbari(direct message):
+	We'll talk again when there is time :-)
+11:39:39 From Saeedeh Akbari To [Teacher] Richèl 'Rea-shell' Bilderbeek(direct message):
+	Replying to "We'll talk again whe..."
+	
+	Yes, thanks a lot. I think it is better to try myself now and read docs. I am sorry for making problems!
+11:39:55 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Saeedeh Akbari(direct message):
+	Replying to "We'll talk again whe..."
+	
+	No worries, we are there to help! Yes, do your thing :-)
+12:09:10 From Darian To Everyone:
+	I unfortunately cannot attend the afternoon part of the workshop. Thank you very much for today, it was very helpful!
+14:00:19 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	- Course material: https://uppmax.github.io/bianca_workshop/intermediate/intro/ 
+	- Shared document: https://hackmd.io/@UPPMAX/bianca-workshop-2024 
+	- Evaluation form: https://forms.gle/[censored] 
+	- Bianca project: sens[censored] 
+	- This Zoom room: https://uu-se.zoom.us/j/[censored] with passcode [censored]
+14:00:26 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	hared document: https://hackmd.io/@UPPMAX/bianca-workshop-2024
+14:02:10 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshop/intermediate/ides/
+14:05:30 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://hackmd.io/@UPPMAX/bianca-workshop-2024
+14:08:19 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshop/intermediate/ides/#exercises
+14:27:26 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	We got to room 1!
+14:27:40 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	That is Litika and me :-)
+14:46:17 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	Break until 15:00
+14:59:19 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	#!/bin/bash 
+	quarto render day_5.qmd --to html 
+	quarto render day_5.qmd --to pdf --toc
+15:02:05 From [Teacher]Lars Eklund(UPPMAX/SND/NBIS) To Everyone:
+	https://www.menti.com/alqfc1g7zqm7
+15:50:12 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://forms.gle/[censored]
+15:50:52 From Sakshi To Everyone:
+	Sorry need to leave. Thanks for today. I have filled the evaluation form. Bye! Have a nice weekend everyone.
+16:03:10 From Litika Vermani To Everyone:
+	I need to leave now. Thank you to all the teachers. It was a very nice course. Have a nice weekend.
+16:06:21 From Jonas Söderberg To Everyone:
+	https://nbis-workshop-epigenomics.readthedocs.io/en/latest/content/tutorials/nextflow.html
+16:11:56 From Björn Claremar To Everyone:
+	https://github.com/UPPMAX/bianca_workshop/tree/main/evaluations/20240524
+16:12:19 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://github.com/UPPMAX/bianca_workshop/tree/main/evaluations/20240524
