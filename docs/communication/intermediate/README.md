@@ -14,21 +14,21 @@ Email text                                |When                     |What should
 
 ## Publicity text
 
-Online workshop: Bianca In-Depth – Improve Your Handling of Sensitive Research Data, 23 November, 2026
+!!! info "Online workshop: Bianca In-Depth – Improve Your Handling of Sensitive Research Data, 23 November, 2026"
 
-Are you already using Bianca for research involving sensitive data? Would you like to improve your workflows and make better use of the cluster? Join us for a one-day, hands-on workshop!
+    Are you already using Bianca for research involving sensitive data? Would you like to improve your workflows and make better use of the cluster? Join us for a one-day, hands-on workshop!
 
-We will cover efficient file transfers from the command line, Slurm job monitoring and GPU usage, and installing custom software, packages, and containers. The workshop combines short presentations, practical exercises, and Q&A sessions. Bring your own questions and challenges!
+    We will cover efficient file transfers from the command line, Slurm job monitoring and GPU usage, and installing custom software, packages, and containers. The workshop combines short presentations, practical exercises, and Q&A sessions. Bring your own questions and challenges!
 
-Participants should already be familiar with logging in to Bianca, submitting Slurm jobs, and transferring files. A NAISS SENS course project will be available to all participants.
+    Participants should already be familiar with logging in to Bianca, submitting Slurm jobs, and transferring files. A NAISS SENS course project will be available to all participants.
 
-Note: An introduction to Arrhenius SENS is not included, as a dedicated course is planned for December. Questions about its current status are welcome.
+    Note: An introduction to Arrhenius SENS is not included, as a dedicated course is planned for December. Questions about its current status are welcome.
 
-When: Monday, November 23, 9.00–16.00
-Where: Online via Zoom
+    When: Monday, November 23, 9.00–16.00
+    Where: Online via Zoom
 
-For more information and registration, please visit:
-<https://docs.uppmax.uu.se/courses_workshops/bianca_intermediate/>.
+    For more information and registration, please visit:
+    <https://docs.uppmax.uu.se/courses_workshops/bianca_intermediate/>.
 
 ## Old communication
 

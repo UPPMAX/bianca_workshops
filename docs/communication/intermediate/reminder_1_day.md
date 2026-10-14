@@ -6,27 +6,23 @@
 
 ## Email
 
-<!-- markdownlint-disable MD034 --><!-- Allow bare URLs in this email -->
-
 !!! info "Be ready for the Bianca Intermediate course tomorrow"
 
     Dear learner of the Bianca Intermediate course,
 
     We assume you are ready for the course tomorrow, i.e.
     you have done the prerequisites listed at
-    https://uppmax.github.io/bianca_workshops/prereqs/ .
+    <https://uppmax.github.io/bianca_workshops/prereqs/>.
 
     We see each other tomorrow at 9:00 sharp.
 
     See you there, in the course's Zoom room at:
 
-    **[Zoom link here]**
+    **`[Zoom link here]`**
 
-    Never hesitate to contact us at **[Email]**.
+    Never hesitate to contact us at **`[Email]`**.
 
     Thanks and cheers, the Bianca Intermediate teaching team
-
-<!-- markdownlint-enable MD034 -->
 
 ## References
 
