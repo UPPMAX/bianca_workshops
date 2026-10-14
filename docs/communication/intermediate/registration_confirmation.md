@@ -8,7 +8,7 @@
 
 <!-- markdownlint-disable MD034 --><!-- Allow bare URLs in this email -->
 
-!!! info "Confirmation of registrering to the Bianca Intermediate course"
+!!! info "Confirmation of registering to the Bianca Intermediate course"
 
     Dear learner,
 
