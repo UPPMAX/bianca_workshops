@@ -12,9 +12,9 @@
 
     We see each other at 9:00 sharp, in the course's Zoom room at:
 
-    **[Zoom link here]**
+    **`[Zoom link here]`**
 
-    Never hesitate to contact us at **[Email]**.
+    Never hesitate to contact us at **`[Email here]`**.
 
     Thanks and cheers, the Bianca Intermediate teaching team
 

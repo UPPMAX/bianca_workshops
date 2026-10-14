@@ -6,13 +6,12 @@
 
 ## Email
 
-<!-- markdownlint-disable MD034 --><!-- Allow bare URLs in this email -->
-
 !!! info "Confirmation of registering to the Bianca Intermediate course"
 
     Dear learner,
 
-    Welcome to the Bianca Intermediate course! Your registration has been received
+    Welcome to the Bianca Intermediate course!
+    Your registration has been received
     and is hereby confirmed.
 
     In this online 1-day course you will learn to make (even)
@@ -23,12 +22,13 @@
     Monday 2026-11-23 9:00 (sharp!) (CET/Stockholm time)
 
     To be able to follow the course, please check if you have fulfilled all
-    the prerequisites listed at https://uppmax.github.io/bianca_workshops/prereqs/ .
+    the prerequisites listed at
+    <https://uppmax.github.io/bianca_workshops/prereqs/>.
     It is likely you do.
 
     The Zoom links will be sent 1 day before the course starts.
 
-    Never hesitate to contact us at **[Email]**.
+    Never hesitate to contact us at **`[Email here]`**.
 
     Thanks and cheers, the Bianca Intermediate teaching team
 
