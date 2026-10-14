@@ -6,6 +6,8 @@
 
 ## Email
 
+<!-- markdownlint-disable MD034 --><!-- Allow bare URLs in this email -->
+
 !!! info "Be ready for the Bianca Intermediate course next week"
 
     Dear learner of the Bianca Intermediate course,
@@ -19,3 +21,5 @@
     Never hesitate to contact us at **[Email]**.
 
     Thanks and cheers, the Bianca Intermediate teaching team
+
+<!-- markdownlint-enable MD034 -->

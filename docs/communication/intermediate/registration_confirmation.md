@@ -6,6 +6,8 @@
 
 ## Email
 
+<!-- markdownlint-disable MD034 --><!-- Allow bare URLs in this email -->
+
 !!! info "Confirmation of registrering to the Bianca Intermediate course"
 
     Dear learner,
@@ -18,7 +20,7 @@
 
     We look forward to see you on:
 
-    **Monday 2026-11-23 9:00 (sharp!) (CET/Stockholm time)**
+    Monday 2026-11-23 9:00 (sharp!) (CET/Stockholm time)
 
     To be able to follow the course, please check if you have fulfilled all
     the prerequisites listed at https://uppmax.github.io/bianca_workshops/prereqs/ .
@@ -29,6 +31,8 @@
     Never hesitate to contact us at **[Email]**.
 
     Thanks and cheers, the Bianca Intermediate teaching team
+
+<!-- markdownlint-enable MD034 -->
 
 ## References
 
