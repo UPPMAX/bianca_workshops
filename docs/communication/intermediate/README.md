@@ -28,7 +28,7 @@ When: Monday, November 23, 9.00–16.00
 Where: Online via Zoom
 
 For more information and registration, please visit:
-https://docs.uppmax.uu.se/courses_workshops/bianca_intermediate/.
+<https://docs.uppmax.uu.se/courses_workshops/bianca_intermediate/>.
 
 ## Old communication
 
