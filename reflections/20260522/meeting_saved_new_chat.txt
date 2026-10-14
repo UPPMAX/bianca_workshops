@@ -1,0 +1,186 @@
+2026-05-22 09:02:48 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshops/intermediate/intro/
+	
+2026-05-22 09:05:55 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshops/intermediate/intro/#exercises
+	
+2026-05-22 09:52:54 From [Learner 1] To Everyone:
+	I have a meeting at 10:00, so I'll leave the workshop now. Thank you for your time and for organizing it. Unfortunately, it feels a bit outside the scope of what I use Bianca for, so I might not come back today.. Have a nice day, everyone!
+	
+2026-05-22 09:55:18 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	So break until 10:10!
+	
+2026-05-22 10:10:21 From [Teacher in the back] Pavlin Mitev To Everyone:
+	https://uppmax.github.io/bianca_workshops/intermediate/transfer/
+	
+2026-05-22 10:22:55 From [Teacher in the back] Pavlin Mitev To Everyone:
+	https://docs.uppmax.uu.se/software/bianca_file_transfer_using_rsync/
+	
+2026-05-22 10:26:11 From [Teacher] Björn Claremar To Everyone:
+	sens2025560
+	
+2026-05-22 10:34:46 From [Teacher] Björn Claremar To Everyone:
+	About directory structure
+	
+2026-05-22 10:34:50 From [Teacher] Björn Claremar To Everyone:
+	https://docs.uppmax.uu.se/cluster_guides/bianca_file_tree/
+	
+2026-05-22 11:00:13 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	Break until 11:15. See you then!
+	
+2026-05-22 11:05:21 From [Learner 2] To Everyone:
+	I got rsync to work through mobaXterm 🥳
+	
+2026-05-22 11:08:12 From [Teacher] Björn Claremar To Everyone:
+	/proj/sens2025560/<your name>/
+	
+2026-05-22 11:09:14 From [Learner 3] To Everyone:
+	sorry can't hear anything...
+	
+2026-05-22 11:09:28 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To [Learner 3] (direct message):
+	We can hear each other, so please check your sound :-)
+	
+2026-05-22 11:09:36 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To [Learner 3] (direct message):
+	Good luck!
+	
+2026-05-22 11:09:47 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To [Learner 3] (direct message):
+	I will keep talking a bit so you can test the sound :-)
+	
+2026-05-22 11:17:28 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshops/intermediate/efficient_jobs/
+	
+2026-05-22 11:20:46 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshops/intermediate/efficient_jobs/#booking-too-many-cores-for-memory-is-a-reasonable-thing-to-do
+	
+2026-05-22 11:21:24 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	Good luck reading https://uppmax.github.io/bianca_workshops/intermediate/efficient_jobs/#booking-too-many-cores-for-memory-is-a-reasonable-thing-to-do  to the exercises. Let me know when you are done reading!
+	
+2026-05-22 11:24:23 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To [Learner 3] (direct message):
+	Was the text clear?
+	
+2026-05-22 11:24:31 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	1 done!
+	
+2026-05-22 11:24:46 From [Learner 3] To [Teacher in back] Richèl 'Rea-shell' Bilderbeek (direct message):
+	Yes I think it was good :)
+	
+2026-05-22 11:24:54 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To [Learner 3] (direct message):
+	Great! Welcome to the course!
+	
+2026-05-22 11:25:12 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To [Learner 3] (direct message):
+	Now we wait until the 2nd learners is done ...
+	
+2026-05-22 11:25:25 From [Learner 4] To [Teacher in back] Richèl 'Rea-shell' Bilderbeek (direct message):
+	done reading!
+	
+2026-05-22 11:39:25 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshops/intermediate/efficient_jobs/#exercise-11-question-1
+	
+2026-05-22 11:40:30 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	Good luck answering use cases 1 to and including 6.
+	
+	Let me know when you are done. When 2 are done, we move on!
+	
+2026-05-22 11:41:31 From [Learner 4] To [Teacher in back] Richèl 'Rea-shell' Bilderbeek (direct message):
+	done
+	
+2026-05-22 11:41:51 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To [Learner 4] (direct message):
+	Were the questions clear?
+	
+2026-05-22 11:42:22 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	1 done!
+	
+2026-05-22 11:42:50 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To [Learner 4] (direct message):
+	Or more exciting: was there something you disagreed with?
+	
+2026-05-22 11:44:31 From [Learner 2] To Everyone:
+	done
+	
+2026-05-22 11:49:35 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshops/intermediate/efficient_jobs/#exercise-2-creating-a-jobstats-plot
+	
+2026-05-22 11:50:13 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	11:57
+	
+2026-05-22 11:50:46 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	Good luck getting a jobstats plot! We probably stop at 11:57, due to time.
+	
+	When you made one, let me know then!
+	
+2026-05-22 11:51:10 From [Learner 4] To Everyone:
+	i got thrown a “wait for a login node to start up” smh
+	
+2026-05-22 11:53:00 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	Yuck, that may take the 7 minutes we do not have :-/
+	
+2026-05-22 11:54:03 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	To Julia, what about I share my screen and do it?
+	
+2026-05-22 11:54:09 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	Great idea Richel!
+	
+2026-05-22 11:55:13 From [Learner 4] To Everyone:
+	hehe sorry yes please!
+	
+2026-05-22 11:56:29 From [Learner 2] To Everyone:
+	I have some plots
+	
+2026-05-22 12:00:54 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	Lunch until 13:00! Enjoy!
+	
+2026-05-22 12:56:34 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To [Learner 2] (direct message):
+	Hi [Learner 2],
+	
+	If it is not too much work, could you send your plots to me? I will use these as in the UPPMAX documentation and/or this course's materials. If yes, I will add you to an Acknowledgments section :-)
+	
+2026-05-22 12:58:31 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To [Learner 2] (direct message):
+	Also:
+	
+	Booking a fat node is discussed at the course material 
+	
+	https://uppmax.github.io/bianca_workshops/intermediate/efficient_jobs/#booking-too-many-cores-for-memory-is-a-reasonable-thing-to-do 
+	
+	and I will add this more :-)
+	
+2026-05-22 13:00:18 From [Teacher] Björn Claremar To Everyone:
+	https://uppmax.github.io/bianca_workshops/intermediate/install/
+
+2026-05-22 13:22:23 From [Learner 2] To [Teacher in back] Richèl 'Rea-shell' Bilderbeek (direct message):
+	fhaive/OpTiles
+	
+2026-05-22 13:57:21 From [Teacher] Björn Claremar To Everyone:
+	kassambara/easyGgplot2
+	
+2026-05-22 14:17:16 From [Learner 4] To Everyone:
+	sorry everyone, i have to run..
+	I’ll have to  finish reading on my own later
+	
+	thank you so much for today, it was increadibly useful!
+	
+2026-05-22 14:17:34 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To [Learner 4] (direct message):
+	Enjoy! Thanks for today!
+	
+2026-05-22 14:26:51 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To [Learner 2] (direct message):
+	It is an option to get OpTiles as a Singularity container ... I am looking up where I have done something similar before ...
+	
+2026-05-22 14:26:55 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://docs.uppmax.uu.se/software/nextflow/#nf-core-from-the-module-system
+	
+2026-05-22 14:28:38 From [Teacher] Björn Claremar To Everyone:
+	https://hackmd.io/@pmitev/nfcore_pipelines_Bianca
+	
+2026-05-22 14:49:32 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshops/intermediate/summary/
+	
+2026-05-22 14:49:57 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshops/intermediate/summary/
+	
+2026-05-22 14:52:48 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://docs.score.nbis.se/courses/
+	
+2026-05-22 14:55:31 From [Teacher in back] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://docs.google.com/forms/d/e/1FAIpQLSeTFtzEXNauBSJTMdN1Ymwuz1Tbiaut5dUW5iyCwfERebXIQA/viewform
+	
+2026-05-22 15:08:37 From [Teacher] Björn Claremar To Everyone:
+	https://docs.uppmax.uu.se/cluster_guides/slurm/#more-memory
+	
