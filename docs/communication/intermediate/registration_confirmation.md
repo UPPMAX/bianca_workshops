@@ -1,4 +1,4 @@
-# Registration confirmation.md
+# Registration confirmation
 
 - Sent when: Short after registration
 - Content: Confirmation, event value, date/time in local zone, calendar add
@@ -6,29 +6,29 @@
 
 ## Email
 
-- Title: Confirmation of registrering to the Bianca Intermediate course
+!!! info "Confirmation of registrering to the Bianca Intermediate course"
 
-Dear learner,
+    Dear learner,
 
-Welcome to the Bianca Intermediate course! Your registration has been received
-and is hereby confirmed.
+    Welcome to the Bianca Intermediate course! Your registration has been received
+    and is hereby confirmed.
 
-In this online 1-day course you will learn to make (even)
-better use of Bianca.
+    In this online 1-day course you will learn to make (even)
+    better use of Bianca.
 
-We look forward to see you on:
+    We look forward to see you on:
 
-**Monday 2026-11-23 9:00 (sharp!) (CET/Stockholm time)**
+    **Monday 2026-11-23 9:00 (sharp!) (CET/Stockholm time)**
 
-To be able to follow the course, please check if you have fulfilled all
-the prerequisites listed at https://uppmax.github.io/bianca_workshops/prereqs/ .
-It is likely you do.
+    To be able to follow the course, please check if you have fulfilled all
+    the prerequisites listed at https://uppmax.github.io/bianca_workshops/prereqs/ .
+    It is likely you do.
 
-The Zoom links will be sent 1 day before the course starts.
+    The Zoom links will be sent 1 day before the course starts.
 
-Never hesitate to contact us at **[Email]**.
+    Never hesitate to contact us at **[Email]**.
 
-Thanks and cheers, the Bianca Intermediate teaching team
+    Thanks and cheers, the Bianca Intermediate teaching team
 
 ## References
 
