@@ -147,7 +147,7 @@ tags:
     Links:
 
     - [Course material: Installing R packages](https://uppmax.github.io/bianca_workshops/extra/rpackages/)
-    - [From R course: packages](https://uppmax.github.io/R-matlab-julia-HPC/r/packages){:target="_blank"}
+    - [From R course: packages](https://hpc.pages.naiss.se/training/R-matlab-julia-HPC/r/packages){:target="_blank"}
     - [From old R course: isolated environments](https://uppmax.github.io/R-python-julia-matlab-HPC/r/isolatedR.html){:target="_blank"}
 
 ???- admonition "pip (PyPI)"

@@ -439,7 +439,7 @@ to plot. Here we first look for a job, after which we plot it.
 ???- question "How was the example plot generated?"
 
     Using the benchmark script from
-    [the R-Julia-MATLAB course, session 'thread parallelism'](https://uppmax.github.io/R-matlab-julia-HPC/advanced/thread_parallelism/).
+    [the R-Julia-MATLAB course, session 'thread parallelism'](https://hpc.pages.naiss.se/training/R-matlab-julia-HPC/advanced/thread_parallelism/).
 
 ## (optional) Exercise 3: reading a `jobstats` plot
 
@@ -531,7 +531,7 @@ Square                | A unit of calculation time that ...
 :white_medium_square: | is spent doing nothing
 
 The details behind this table can be found at
-[the 'Parallel computing' session of the R-MATLAB-Julia course](https://uppmax.github.io/R-matlab-julia-HPC/advanced/parallel_computing/),
+[the 'Parallel computing' session of the R-MATLAB-Julia course](https://hpc.pages.naiss.se/training/R-matlab-julia-HPC/advanced/parallel_computing/),
 but these are not needed for these exercises.
 
 ## Exercise 4.1: Question 1
