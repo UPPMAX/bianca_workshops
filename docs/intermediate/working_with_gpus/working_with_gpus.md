@@ -322,11 +322,42 @@ These are all identical:
 GPUs are expensive: 1 GPU hour is 16 CPU hours
 
 
+## Check
+
+Run the following script:
+
+```python
+import torch
+print(torch.cuda.get_device_properties(0))
+```
+
+If there is a GPU:
+
+```bash
+_CudaDeviceProperties(name='NVIDIA A100-PCIE-40GB', major=8, minor=0, total_memory=40326MB, multi_processor_count=108)
+```
+
+If there is no GPU:
+
+```bash
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/sw/apps/python_ML_packages/3.9.5-gpu/bianca/lib/python3.9/site-packages/torch/cuda/__init__.py", line 309, in get_device_properties
+    _lazy_init()  # will define _get_device_properties
+  File "/sw/apps/python_ML_packages/3.9.5-gpu/bianca/lib/python3.9/site-packages/torch/cuda/__init__.py", line 172, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: Found no NVIDIA driver on your system. Please check that you have an NVIDIA GPU and installed a driver from http://www.nvidia.com/Download/index.aspx
+```
 
 ## What are GPUs?
 
 ## Why use GPUs?
 
+
+
+<!----------------- OLD STUFF ---------------------------------------------->
+<!----------------- OLD STUFF ---------------------------------------------->
+<!----------------- OLD STUFF ---------------------------------------------->
 
 !!!- info "Learning outcomes"
 
