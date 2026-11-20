@@ -19,8 +19,9 @@ tags:
 
 ## Goal
 
-- Book a GPU on Bianca
-- Have an idea when to do so
+- Book a GPU on Bianca <!-- Exercise 1 -->
+- Search for GPU modules on Bianca <!-- Exercise 2 -->
+- (optional) Have an idea when to use GPUs <!-- Exercise 3 -->
 
 ## What are GPUs?
 
@@ -32,7 +33,7 @@ such as, for example, matrix multiplications.
 ## Why use GPUs?
 
 - Your calculation *may* go faster
-- You have access to more GPUs than CPUs <!-- gpuavail -->
+- You have access to more GPUs than CPUs
 
 ## How to schedule GPUs on Bianca
 
@@ -91,16 +92,101 @@ interactive -A sens2025560 -C gpu
     interactive -A sens2025560 -C gpu --gpus=1 --gpus-per-node=1 --t=10:00:00
     ```
 
-## How to search modules that use GPUs on Bianca
+## How to search for modules that use GPUs on Bianca
 
+Searching for software modules that use GPUs
+may seem straightforward:
+
+```bash
 module spider gpu
-module spider cuda
-
-```
-[richel@sens2025560-b201 richel]$ module --redirect -r spider '.*cuda.*' > cuda_modules_from_gpu.txt
-[richel@sens2025560-b201 richel]$ module --redirect -r spider '.*gpu.*' > gpu_modules_from_gpu.txt
 ```
 
+However, you will miss most of the GPU software modules;
+the ones that have the word `cuda` in them:
+
+```bash
+module --regexp spider '.*cuda.*'
+```
+
+???- question "What does `--regexp` do?"
+
+    It allows you to search the module system using
+    a regular expression, i.e. a text pattern.
+    The text pattern `.*cuda.*` can be read as: 'anything that has the
+    word `cuda` in it'. 
+
+???- question "Why not do `module spider cuda`?"
+
+    Because then you will only find the `cuda` software modules
+
+???- question "Why does `module spider gpu` work then?"
+
+    Because there is no module called `gpu`.
+    Without such a module, it will search for all modules that have `gpu`
+    in the name, identical to `module --regexp spider '.*gpu.*'`
+
+???- question "What does `cuda` have to do with GPUs?"
+
+    Because CUDA is the software to work with the GPUs we have on Bianca.
+    These GPUs are made by Nvidia.
+
+    Here is an overview of GPUs, their manufacturers and their software:
+
+    ```mermaid
+    flowchart TD
+        classDef not_us stroke:#ccc,color:#ccc
+        
+        GPUs
+        Nvidia
+        AMD:::not_us
+        Intel:::not_us
+        CUDA
+        HIP:::not_us
+        ROCm:::not_us
+        oneAPI:::not_us
+        SYCL:::not_us
+        GPUs --> |Manufactured by| Nvidia
+        GPUs --> |Manufactured by| AMD
+        GPUs --> |Manufactured by| Intel
+        Nvidia --> |Operated by| CUDA
+        AMD --> |Operated by| HIP
+        AMD --> |Operated by| ROCm
+        Intel --> |Operated by| oneAPI
+        Intel --> |Operated by| SYCL
+        linkStyle 1 stroke:#ccc,color:grey;
+        linkStyle 2 stroke:#ccc,color:grey;
+        linkStyle 4 stroke:#ccc,color:grey;
+        linkStyle 5 stroke:#ccc,color:grey;
+        linkStyle 6 stroke:#ccc,color:grey;
+        linkStyle 7 stroke:#ccc,color:grey;
+    ```
+
+???- question "Do I need to be on a GPU node to search for GPU modules?"
+
+    No, `module spider` gives exactly the same modules.
+
+    ???- question "How do you know?"
+    
+        From a GPU node, I ran:
+
+        ```bash
+        [richel@sens2025560-b201 richel]$ module --redirect -r spider '.*cuda.*' > cuda_modules_from_gpu.txt
+        [richel@sens2025560-b201 richel]$ module --redirect -r spider '.*gpu.*' > gpu_modules_from_gpu.txt
+        ```
+
+        and obtained:
+
+        - [cuda_modules_from_gpu.txt](cuda_modules_from_gpu.txt)
+        - [gpu_modules_from_gpu.txt](gpu_modules_from_gpu.txt)
+
+        I did the same on a CPU and obtained:
+
+        - [cuda_modules_from_cpu.txt](cuda_modules_from_cpu.txt)
+        - [gpu_modules_from_cpu.txt](gpu_modules_from_cpu.txt)
+
+        Comparing these shows that these are close to identical.
+
+## 
 
 One uses GPUs when this is faster.
 GPUs are **not** always faster.
@@ -135,6 +221,8 @@ graph TB
 
 
 When working with GPUs, the computer's CPU is called the 'host CPU'.
+
+
 
 
 ## Differences
@@ -180,34 +268,6 @@ sequenceDiagram
 ## GPU software modules on Bianca
 
 
-```mermaid
-flowchart TD
-    classDef not_us stroke:#ccc,color:#ccc
-    
-    GPUs
-    Nvidia
-    AMD:::not_us
-    Intel:::not_us
-    CUDA
-    HIP:::not_us
-    ROCm:::not_us
-    oneAPI:::not_us
-    SYCL:::not_us
-    GPUs --> |Manufactured by| Nvidia
-    GPUs --> |Manufactured by| AMD
-    GPUs --> |Manufactured by| Intel
-    Nvidia --> |Operated by| CUDA
-    AMD --> |Operated by| HIP
-    AMD --> |Operated by| ROCm
-    Intel --> |Operated by| oneAPI
-    Intel --> |Operated by| SYCL
-    linkStyle 1 stroke:#ccc,color:grey;
-    linkStyle 2 stroke:#ccc,color:grey;
-    linkStyle 4 stroke:#ccc,color:grey;
-    linkStyle 5 stroke:#ccc,color:grey;
-    linkStyle 6 stroke:#ccc,color:grey;
-    linkStyle 7 stroke:#ccc,color:grey;
-```
 
 
 When on CPU and doing `module spider gpu`, these are all the hits:
@@ -216,298 +276,14 @@ Module                         |Description
 -------------------------------|--------------------------------------------------------
 Guppy                          |Oxford Nanopore neural-net basecaller, GPU enabled
 Megalodon                      |Base and sequence variant caller from raw nanopore reads
-`python_ML_packages/3.9.5-gpu` |Python GPU packages
+`python_ML_packages/3.9.5-gpu` |Python machine learning packages for GPU
 
-The two `python_ML_packages` differ between CPU and GPU:
+???- question "Are the modules `python_ML_packages/3.9.5-cpu` and `python_ML_packages/3.9.5-gpu` the same?"
 
-=== `python_ML_packages/3.9.5-gpu`
+    No, the two modules differ in the packages they have:
 
-    ```text
-    Package                      Version
-    ---------------------------- -------------------
-    absl-py                      1.0.0
-    astunparse                   1.6.3
-    Babel                        2.14.0
-    cachetools                   5.0.0
-    certifi                      2024.8.30
-    charset-normalizer           3.4.0
-    click                        8.1.7
-    cloudpickle                  2.2.1
-    colorama                     0.4.6
-    cycler                       0.11.0
-    dill                         0.3.6
-    dm-tree                      0.1.8
-    filelock                     3.16.1
-    flatbuffers                  2.0
-    fonttools                    4.31.2
-    fsspec                       2024.10.0
-    gast                         0.5.3
-    ghp-import                   2.1.0
-    google-auth                  2.6.0
-    google-auth-oauthlib         0.4.6
-    google-pasta                 0.2.0
-    googleapis-common-protos     1.56.4
-    grpcio                       1.44.0
-    htmlmin                      0.1.12
-    huggingface-hub              0.26.2
-    idna                         3.10
-    importlib-metadata           4.11.3
-    Jinja2                       3.1.3
-    keras                        2.8.0
-    Keras-Preprocessing          1.1.2
-    kiwisolver                   1.4.0
-    libclang                     13.0.0
-    Markdown                     3.5.2
-    markdown-fenced-code-tabs    1.0.5
-    MarkupSafe                   2.1.5
-    matplotlib                   3.5.1
-    mergedeep                    1.3.4
-    mkdocs                       1.5.3
-    mkdocs-material              9.5.12
-    mkdocs-material-extensions   1.3.1
-    munkres                      1.1.4
-    numpy                        1.22.3
-    oauthlib                     3.2.0
-    opt-einsum                   3.3.0
-    packaging                    24.1
-    paginate                     0.5.6
-    pathspec                     0.12.1
-    Pillow                       9.0.1
-    pip                          22.0.4
-    platformdirs                 4.2.0
-    promise                      2.3
-    protobuf                     3.19.4
-    pyasn1                       0.4.8
-    pyasn1-modules               0.2.8
-    Pygments                     2.17.2
-    pymdown-extensions           10.7.1
-    pyparsing                    3.0.7
-    PyQt5                        5.12.3
-    PyQt5_sip                    4.19.18
-    PyQtChart                    5.12
-    PyQtWebEngine                5.12.1
-    python-dateutil              2.8.2
-    PyYAML                       6.0.2
-    pyyaml_env_tag               0.1
-    regex                        2023.12.25
-    requests                     2.32.3
-    requests-oauthlib            1.3.1
-    rsa                          4.8
-    scikit-learn                 1.0.2
-    scipy                        1.12.0
-    seaborn                      0.11.2
-    setuptools                   61.1.1
-    six                          1.16.0
-    tensorboard                  2.8.0
-    tensorboard-data-server      0.6.1
-    tensorboard-plugin-wit       1.8.1
-    tensorflow-datasets          3.2.1
-    tensorflow-gpu               2.8.0
-    tensorflow-io-gcs-filesystem 0.24.0
-    tensorflow-metadata          1.12.0
-    tensorflow-probability       0.13.0
-    termcolor                    1.1.0
-    tf-estimator-nightly         2.8.0.dev2021122109
-    Theano                       1.0.5
-    threadpoolctl                3.1.0
-    torch                        1.9.0+cu111
-    torchaudio                   0.9.0
-    torchvision                  0.10.0+cu111
-    tornado                      6.1
-    tqdm                         4.67.0
-    typing_extensions            4.12.2
-    unicodedata2                 14.0.0
-    urllib3                      2.2.3
-    watchdog                     4.0.0
-    Werkzeug                     2.0.3
-    wheel                        0.37.1
-    wrapt                        1.14.0
-    zipp                         3.7.0
-    ```
-
-=== `python_ML_packages/3.9.5-cpu` 
-
-    ```text
-    Package                      Version
-    ---------------------------- -------------------
-    absl-py                      1.0.0
-    anndata                      0.8.0
-    appdirs                      1.4.4
-    argon2-cffi                  20.1.0
-    asteval                      0.9.25
-    astunparse                   1.6.3
-    async-generator              1.10
-    attrs                        21.2.0
-    Automat                      20.2.0
-    backcall                     0.2.0
-    bleach                       3.3.0
-    cachetools                   5.0.0
-    certifi                      2021.5.30
-    cffi                         1.14.5
-    cget                         0.1.9
-    chardet                      4.0.0
-    click                        8.0.1
-    cloudpickle                  2.2.1
-    constantly                   15.1.0
-    cramjam                      2.6.2
-    cycler                       0.10.0
-    Cython                       0.29.23
-    decorator                    4.4.2
-    defusedxml                   0.7.1
-    dill                         0.3.4
-    distlib                      0.3.2
-    dm-tree                      0.1.8
-    ducc0                        0.29.0
-    entrypoints                  0.3
-    et-xmlfile                   1.1.0
-    fastparquet                  0.8.3
-    filelock                     3.0.12
-    flatbuffers                  2.0
-    fsspec                       2022.11.0
-    future                       0.18.2
-    gast                         0.5.3
-    gitdb                        4.0.7
-    GitPython                    3.1.17
-    google-auth                  2.6.0
-    google-auth-oauthlib         0.4.6
-    google-pasta                 0.2.0
-    googleapis-common-protos     1.56.4
-    graphviz                     0.16
-    grpcio                       1.44.0
-    h5py                         3.2.1
-    hyperlink                    21.0.0
-    idna                         2.10
-    imbalanced-learn             0.10.1
-    importlib-metadata           4.11.2
-    incremental                  21.3.0
-    iniconfig                    1.1.1
-    ipykernel                    5.5.5
-    ipython                      7.24.1
-    ipython-genutils             0.2.0
-    ipywidgets                   7.6.3
-    jedi                         0.18.0
-    Jinja2                       3.0.1
-    joblib                       1.2.0
-    jsonschema                   3.2.0
-    jupyter                      1.0.0
-    jupyter-client               6.1.12
-    jupyter-console              6.4.0
-    jupyter-core                 4.7.1
-    jupyterlab-pygments          0.1.2
-    jupyterlab-widgets           1.0.0
-    keras                        2.8.0
-    Keras-Preprocessing          1.1.2
-    kiwisolver                   1.3.1
-    libclang                     13.0.0
-    lmfit                        1.0.3
-    Markdown                     3.3.6
-    MarkupSafe                   2.0.1
-    matplotlib                   3.4.2
-    matplotlib-inline            0.1.2
-    mistune                      0.8.4
-    mock                         4.0.3
-    natsort                      7.1.1
-    nbclient                     0.5.3
-    nbconvert                    6.0.7
-    nbformat                     5.1.3
-    nest-asyncio                 1.5.1
-    networkx                     2.5.1
-    nlp                          0.4.0
-    nltk                         3.6.2
-    nose                         1.3.7
-    notebook                     6.4.0
-    numpy                        1.20.3
-    oauthlib                     3.2.0
-    openpyxl                     3.0.10
-    opt-einsum                   3.3.0
-    packaging                    20.9
-    pandas                       1.2.4
-    pandocfilters                1.4.3
-    parso                        0.8.2
-    patsy                        0.5.2
-    pexpect                      4.8.0
-    pickleshare                  0.7.5
-    Pillow                       8.2.0
-    pip                          21.1.2
-    pluggy                       0.13.1
-    prometheus-client            0.11.0
-    promise                      2.3
-    prompt-toolkit               3.0.18
-    protobuf                     3.19.4
-    ptyprocess                   0.7.0
-    py                           1.10.0
-    pyarrow                      7.0.0
-    pyasn1                       0.4.8
-    pyasn1-modules               0.2.8
-    pycparser                    2.20
-    pydot                        1.4.2
-    Pygments                     2.9.0
-    pyparsing                    2.4.7
-    PyQt5                        5.15.4
-    PyQt5-Qt5                    5.15.2
-    PyQt5-sip                    12.9.0
-    pyrsistent                   0.17.3
-    pysqlite3                    0.4.6
-    pytest                       6.2.4
-    python-dateutil              2.8.1
-    python-graph-core            1.8.2
-    python-graph-dot             1.8.2
-    python-qt-binding            0.3.4
-    pytz                         2021.1
-    PyYAML                       5.4.1
-    pyzmq                        22.1.0
-    qtconsole                    5.1.0
-    qtgui                        0.0.1
-    QtPy                         1.9.0
-    regex                        2021.4.4
-    reportlab                    3.5.67
-    requests                     2.25.1
-    requests-oauthlib            1.3.1
-    rsa                          4.8
-    scikit-learn                 1.0.2
-    scipy                        1.6.3
-    seaborn                      0.11.2
-    Send2Trash                   1.5.0
-    setuptools                   57.0.0
-    singledispatch               3.6.2
-    six                          1.16.0
-    smmap                        4.0.0
-    statsmodels                  0.13.1
-    tensorboard                  2.8.0
-    tensorboard-data-server      0.6.1
-    tensorboard-plugin-wit       1.8.1
-    tensorflow                   2.8.0
-    tensorflow-datasets          3.2.1
-    tensorflow-io-gcs-filesystem 0.24.0
-    tensorflow-metadata          1.12.0
-    tensorflow-probability       0.13.0
-    termcolor                    1.1.0
-    terminado                    0.10.0
-    testpath                     0.5.0
-    tf-estimator-nightly         2.8.0.dev2021122109
-    tflite-runtime               2.10.0
-    Theano                       1.0.5
-    threadpoolctl                3.1.0
-    toml                         0.10.2
-    torch                        1.11.0
-    tornado                      6.1
-    tqdm                         4.61.0
-    traitlets                    5.0.5
-    Twisted                      21.2.0
-    typing-extensions            4.1.1
-    uncertainties                3.1.6
-    urllib3                      1.26.5
-    virtualenv                   20.4.7
-    wcwidth                      0.2.5
-    webencodings                 0.5.1
-    Werkzeug                     2.0.3
-    wheel                        0.36.2
-    widgetsnbextension           3.5.1
-    wrapt                        1.14.0
-    xxhash                       3.0.0
-    zipp                         3.7.0
-    zope.interface               5.4.0
-    ```
+    - CPU: [`module load python_ML_packages/3.9.5-cpu; pip list`](pip_list_cpu.txt)
+    - GPU: [`module load python_ML_packages/3.9.5-gpu; pip list`](pip_list_gpu.txt)
 
 
 In the docu
@@ -617,6 +393,57 @@ Then schedule it:
 sbatch gpus_1.sh
 ```
 
+When the job is finished, what does the output look like?
+
+???- question "Answer"
+
+    The Slurm output file should be empty, except for some warnings:
+    if CUDA is available, nothing happens.
+
+    Your output will look similar to:
+
+    ```bash
+    [maja@sens2025560-b201 maja]$ cat slurm-678.out 
+    Lmod Warning:
+    -------------------------------------------------------------------------------
+    The following dependent module(s) are not currently loaded: CUDAcore/11.1.1
+    (required by: CUDA/11.1.1-GCC-10.2.0, GDRCopy/2.1-GCCcore-10.2.0-CUDA-11.1.1,
+    UCX/1.9.0-GCCcore-10.2.0-CUDA-11.1.1)
+    -------------------------------------------------------------------------------
+    ```
+
+## Exercise 2: search for GPU modules
+
+## FAQ
+
+???- question "How can I check how much GPUs are available?"
+
+    You cannot.
+
+    On Pelle, one can use [`gpuavail`](https://docs.uppmax.uu.se/software/gpuavail/).
+
+    This tool, however, has not been installed on Bianca.
+
+    ???- question "How do you know `gpuavail` is not on Bianca?"
+
+        Because I tried from a CPU node:
+
+        ```bash
+        [richel@sens2025560-bianca richel]$ gpuavail
+        bash: gpuavail: command not found
+        ```
+
+        And I tried from a GPU node:
+
+        ```bash
+        [richel@sens2025560-b201 richel]$ gpuavail
+        bash: gpuavail: command not found
+        [richel@sens2025560-b201 richel]$ gp
+        gpasswd            gpgconf            gpgparsemail       gpg-zip
+        gpg                gpg-connect-agent  gpgsplit           gpic
+        gpg2               gpg-error          gpgv               gprof
+        gpg-agent          gpg-error-config   gpgv2
+        ```
 
 
 ## References
