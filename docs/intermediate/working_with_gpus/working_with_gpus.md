@@ -21,6 +21,8 @@ tags:
 - Book a GPU on Bianca <!-- Exercise 1 -->
 - Search for GPU modules on Bianca <!-- Exercise 2 -->
 - (optional) Have an idea when to use GPUs <!-- Exercise 3 -->
+- (optional) To be fooled less likely by CPU versus GPU
+  benchmarks <!-- Exercise 4 -->
 
 ## What are GPUs?
 
@@ -575,6 +577,7 @@ Taking all this into account, one concludes
     the authors state that the CPU throughput is higher.
 
     ![Adapted from `[Barker et al., 2026]` figure 2a](barker_et_al_2026_fig_2a.svg)
+
 
 - `[Fridman et al, 2025]`
   Fridman, Yehonatan, Yosef Goren, and Gal Oren.
