@@ -270,7 +270,7 @@ How many are there on Bianca?
     module spider gpu
     ```
 
-    The full output can be seen [in this text file](gpu_modules_on_gpu.txt).
+    The full output can be seen [in this text file](gpu_modules_from_gpu.txt).
 
     You will find these three software modules:
 
@@ -292,7 +292,7 @@ How many are there on Bianca? You should find at least two.
     module --regexp spider '.*cuda.*'
     ```
 
-    The CUDA modules can be found [in this text file](cuda_modules_on_gpu.txt).
+    The CUDA modules can be found [in this text file](cuda_modules_from_gpu.txt).
     There are many.
 
 ## (optional) Exercise 3: When GPU is slower
