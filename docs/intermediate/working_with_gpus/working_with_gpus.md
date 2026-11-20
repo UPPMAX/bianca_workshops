@@ -61,7 +61,7 @@ On Bianca, 1 GPU hour is booked as 16 CPU hours.
 
     The output will look similar to:
 
-    ```
+    ```bash
     [maja@sens2025560-bianca maja]$ interactive -A sens2025560 -C gpu
     You receive the high interactive priority.
     You may run for at most 12 hours.
@@ -78,8 +78,8 @@ On Bianca, 1 GPU hour is booked as 16 CPU hours.
      _   _ ____  ____  __  __    _    __  __
     | | | |  _ \|  _ \|  \/  |  / \   \ \/ /   | System:    sens2025560-b201
     | | | | |_) | |_) | |\/| | / _ \   \  /    | User:      maja
-    | |_| |  __/|  __/| |  | |/ ___ \  /  \    | 
-     \___/|_|   |_|   |_|  |_/_/   \_\/_/\_\   | 
+    | |_| |  __/|  __/| |  | |/ ___ \  /  \    |
+     \___/|_|   |_|   |_|  |_/_/   \_\/_/\_\   |
 
     ###############################################################################
 
@@ -89,7 +89,7 @@ On Bianca, 1 GPU hour is booked as 16 CPU hours.
             Write to support@uppmax.uu.se, if you have questions or comments.
 
 
-    [maja@sens2025560-b201 maja]$ 
+    [maja@sens2025560-b201 maja]$
     ```
 
 ???- question "What about other command line parameters?"
@@ -127,7 +127,7 @@ module --regexp spider '.*cuda.*'
     It allows you to search the module system using
     a regular expression, i.e. a text pattern.
     The text pattern `.*cuda.*` can be read as: 'anything that has the
-    word `cuda` in it'. 
+    word `cuda` in it'.
 
 ???- question "Why not do `module spider cuda`?"
 
@@ -149,7 +149,7 @@ module --regexp spider '.*cuda.*'
     ```mermaid
     flowchart TD
         classDef not_us stroke:#ccc,color:#ccc
-        
+
         GPUs
         Nvidia
         AMD:::not_us
@@ -180,7 +180,7 @@ module --regexp spider '.*cuda.*'
     No, `module spider` gives exactly the same modules.
 
     ???- question "How do you know?"
-    
+
         From a GPU node, I ran:
 
         ```bash
@@ -248,7 +248,7 @@ When the job is finished, what does the output look like?
     Your output will look similar to:
 
     ```bash
-    [maja@sens2025560-b201 maja]$ cat slurm-678.out 
+    [maja@sens2025560-b201 maja]$ cat slurm-678.out
     Lmod Warning:
     -------------------------------------------------------------------------------
     The following dependent module(s) are not currently loaded: CUDAcore/11.1.1
@@ -382,7 +382,7 @@ Does it **look** fair to you? Why?
         This is the output I got:
 
         ```bash
-        [richel@sens2025560-bianca richel]$ cat slurm-687.out 
+        [richel@sens2025560-bianca richel]$ cat slurm-687.out
         Lmod Warning:
         -------------------------------------------------------------------------------
         The following dependent module(s) are not currently loaded: CUDAcore/11.1.1
@@ -410,9 +410,9 @@ to (try to) conclude why the GPU script needs to -unfairly!- do more work.
 
     ```mermaid
     sequenceDiagram
-        CPU->>CPU: (already has data in memory) 
-        Note over CPU: Works on data 
-        CPU->>CPU: (already has result in memory) 
+        CPU->>CPU: (already has data in memory)
+        Note over CPU: Works on data
+        CPU->>CPU: (already has result in memory)
     ```
 
 === "GPU"
@@ -420,7 +420,7 @@ to (try to) conclude why the GPU script needs to -unfairly!- do more work.
     ```mermaid
     sequenceDiagram
         CPU->>GPU: send data
-        Note over GPU: Works on data 
+        Note over GPU: Works on data
         GPU->>CPU: send results
     ```
 
@@ -568,7 +568,7 @@ Taking all this into account, one concludes
 ???- question "Summary of `[Barker et al., 2026]`"
 
     The paper benchmarks 2 CPUs and 2 GPUs.
-    
+
     In figure 2a, shown below, it shows that bigger data (in this case,
     the number of codewords) gives highest throughput with a GPU
     (the red line). At the left side, however, for smaller data, the
