@@ -496,11 +496,14 @@ to (try to) conclude why the GPU script needs to -unfairly!- do more work.
     ```
 
     - `a_d` is a vector on the GPU that
-      gets copied from vector `a` (on the CPU)
+      gets copied from vector `a` (on the CPU).
+      This is what `.cuda()` does: it copies from CPU to GPU
     - `b_d` is a vector on the GPU that
       gets copied from vector `b` (on the CPU)
+      This is what `.cuda()` does: it copies from CPU to GPU
     - `c` is a vector on the CPU that
       gets copied from the calculation on the GPU
+      This is what `.cpu()` does: it copies from GPU to CPU
 
 The second misleading thing is the (lack of) optimization of
 the CPU code.
