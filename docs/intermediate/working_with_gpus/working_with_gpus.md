@@ -30,6 +30,17 @@ GPUs do not need to be used for graphics, however.
 Instead, they are specialized in doing any type of parallel computation,
 such as, for example, matrix multiplications.
 
+```mermaid
+graph TB
+  cpu[CPU]
+  gpu[GPU]
+  cpu_features[Any operations]
+  gpu_features[Parallel operations]
+  cpu <--> |data transfer| gpu
+  cpu -.- cpu_features
+  gpu -.- gpu_features
+```
+
 ## Why use GPUs?
 
 - Your calculation *may* go faster
@@ -186,83 +197,6 @@ module --regexp spider '.*cuda.*'
 
         Comparing these shows that these are close to identical.
 
-## 
-
-One uses GPUs when this is faster.
-GPUs are **not** always faster.
-
-For smaller data, CPU is faster `[Barker et al., 2026][Haryanto et al., 2026]`.
-
-
-https://doi.org/10.33650/coreai.v7i1.15758
-
-
-GPUs are likelier to be faster, when
-
-- the data you work on is big
-- the calculations you do are 
-
-They have hard-wired operations
-
-
-```mermaid
-graph TB
-  cpu[CPU]
-  gpu[GPU]
-  cpu_features[Any operations]
-  gpu_features[Parallel operations]
-  cpu <--> |data transfer| gpu
-  cpu -.- cpu_features
-  gpu -.- gpu_features
-```
-
-
-- [Nvidia applications](https://marketplace.nvidia.com/en-us/enterprise/applications/)
-
-
-When working with GPUs, the computer's CPU is called the 'host CPU'.
-
-
-
-
-## Differences
-
-- GPU is specialized on floating point and array operations
-- Values must be copied to it
-- Results must be copied back
-
-- [Programming for GPU](https://docs.nvidia.com/cuda/cuda-programming-guide/part2.html)
-
-
-```mermaid
-sequenceDiagram
-    CPU->>GPU: send data
-    Note over GPU: Works on data 
-    GPU->>CPU: send results
-```
-
-!!! warning "Benchmarks may be misleading"
-
-    Benchmarks you find online may focus on code readability,
-    but these may be unfair due to this.
-
-    - There is an **optimization bias**, where CPU code
-      uses slow constructs (e.g. a raw `for` loop, instead of using a
-      vectorized version) where the GPU is optimized. Optimizing the CPU
-      code can flip the conclusion from the GPU being 5x faster to the
-      CPU being 41% faster `[Shanbhag et al., 2020]`
-    - Ignore **memory transfer overhead**:
-      when you load a variable in Python, it is in CPU.
-      To make a GPU do something, these values must be copied to it,
-      and the results must be copied back. In naive benchmarks, this transfer
-      of the data is part of the timed GPU part.
-      This overhead may be 50-98% of the whole calculation if it is included
-      `[Gregg and Hazelwood, 2011]`
-    - Ignore warm-ups: both CPU and GPU need to allocate memory. A memory
-      allocation takes an indeterminate amount of time, hence this will be
-      a source of noise for both CPU and GPU
-
-
 
 
 ## GPU software modules on Bianca
@@ -413,6 +347,207 @@ When the job is finished, what does the output look like?
     ```
 
 ## Exercise 2: search for GPU modules
+
+HIERO
+
+## (optional) Exercise 3: When GPU is slower
+
+[The references](#references) of this session contains
+three papers that show **when** GPU is slower,
+which are `[Barker et al., 2026]`,`[Fridman et al, 2025]`
+and `[Haryanto et al., 2026]`.
+
+The easiest to understand is `[Haryanto et al., 2026]`.
+Scroll down and look at the summary of `[Haryanto et al., 2026]`: there is
+a figure in it.
+
+To have an idea when GPU is slower, what does
+`[Haryanto et al., 2026]` teach us?
+
+???- question "Answer"
+
+    The figure teaches us that GPUs are slower when the input is small.
+
+## (optional) Exercise 4: How hard it is to spot a misleading benchmark
+
+To determine if CPU or GPU is faster, one uses benchmarks.
+Benchmarks may be misleading.
+In this exercise, I try to convince you of this.
+
+Take a look (do not run it!) at
+[this benchmarking code](compare_cpu_and_gpu_using_pytorch_misleading.py).
+The supposed goal of this benchmark is to measure
+how much faster/slower a GPU can do a calculation.
+
+Does it **look** fair to you? Why?
+
+???- question "Answer"
+
+    Yes, this **looks** fair.
+
+    The operation that takes place is adding two vectors,
+    and for CPU and GPU look reasonably similar:
+
+    ```python
+    def vector_add_cpu(a, b):
+        c = np.zeros(NUM_ELEMENTS, dtype=np.float32)
+        for i in range(NUM_ELEMENTS):
+            c[i] = a[i] + b[i]
+        return c
+
+    def vector_add_gpu(a, b):
+        a_d = torch.from_numpy(a).cuda()
+        b_d = torch.from_numpy(b).cuda()
+        c = (a_d + b_d).cpu().numpy()
+        return c
+    ```
+
+    Each function gets a vector `a` (e.g. `[1, 2, 3]`),
+    a vector `b` (e.g. `[4, 5, 6]`), adds these up
+    (resulting in e.g. `[5, 7, 9]`) and returns the output.
+
+
+    Also measuring the time each operation takes **looks** good:
+
+    ```bash
+    a = np.ones(NUM_ELEMENTS, dtype=np.float32)
+    b = np.ones(NUM_ELEMENTS, dtype=np.float32)
+
+    start = timer()
+    vector_add_cpu(a, b)
+    cpu_time = timer() - start
+
+    start = timer()
+    vector_add_gpu(a, b)
+    gpu_time = timer() - start
+
+    print("CPU function took (seconds):", cpu_time)
+    print("GPU function took (seconds):", gpu_time)
+    ```
+
+    Both the CPU and GPU code use similar constructs,
+    so this seems fair.
+
+    You should never run this benchmark: it is misleading.
+    I had a lot of fun to write it :-)
+
+    ???- question "What if you run it anyways?"
+
+        This is the output I got:
+
+        ```bash
+        [richel@sens2025560-bianca richel]$ cat slurm-687.out 
+        Lmod Warning:
+        -------------------------------------------------------------------------------
+        The following dependent module(s) are not currently loaded: CUDAcore/11.1.1
+        (required by: CUDA/11.1.1-GCC-10.2.0, GDRCopy/2.1-GCCcore-10.2.0-CUDA-11.1.1,
+        UCX/1.9.0-GCCcore-10.2.0-CUDA-11.1.1)
+        -------------------------------------------------------------------------------
+
+        CPU function took (seconds): 0.28272856599960505
+        GPU function took (seconds): 10.879071963999195
+        ```
+
+        I -the author of the funnily misleading script- could not have
+        predicted this/any outcome.
+
+The first reason why this script is misleading,
+is because it does not do what the goal states:
+
+> The supposed goal of this benchmark is to measure
+> how much faster/slower a GPU can do a calculation.
+
+Compare the two sequence diagrams below
+to (try to) conclude why the GPU script needs to -unfairly!- do more work. 
+
+=== "CPU"
+
+    ```mermaid
+    sequenceDiagram
+        CPU->>CPU: (already has data in memory) 
+        Note over CPU: Works on data 
+        CPU->>CPU: (already has result in memory) 
+    ```
+
+=== "GPU"
+
+    ```mermaid
+    sequenceDiagram
+        CPU->>GPU: send data
+        Note over GPU: Works on data 
+        GPU->>CPU: send results
+    ```
+
+???- question "Answer"
+
+    The GPU part does a calculation (like the CPU part)
+    **and a transfer of data**!
+
+    Such overhead may be 50-98% of the whole calculation if it is
+    included in a benchmark `[Gregg and Hazelwood, 2011]`.
+
+    This happens in the `vector_add_gpu` function:
+
+    ```python
+    def vector_add_gpu(a, b):
+        a_d = torch.from_numpy(a).cuda()
+        b_d = torch.from_numpy(b).cuda()
+        c = (a_d + b_d).cpu().numpy()
+        return c
+    ```
+
+    - `a_d` is a vector on the GPU that
+      gets copied from vector `a` (on the CPU)
+    - `b_d` is a vector on the GPU that
+      gets copied from vector `b` (on the CPU)
+    - `c` is a vector on the CPU that
+      gets copied from the calculation on the GPU
+
+The second misleading thing is the (lack of) optimization of
+the CPU code.
+
+Do you see a way to improve the CPU code? Without this improvement,
+what *have* we measured?
+
+???- question "Answer"
+
+    The CPU code uses a hand-written for-loop:
+
+    ```python
+    def vector_add_cpu(a, b):
+        c = np.zeros(NUM_ELEMENTS, dtype=np.float32)
+        for i in range(NUM_ELEMENTS):
+            c[i] = a[i] + b[i]
+        return c
+    ```
+
+    It could be rewritten to this instead:
+
+    ```python
+    def vector_add_cpu(a, b):
+        return a + b
+    ```
+
+    Without this improvement, we most measure how fast a CPU
+    goes through a Python `for` loop (i.e. the overhead of the `for` loop
+    becomes consequential).
+
+    Optimizing the CPU
+    code can flip the conclusion from the GPU being 5x faster to the
+    CPU being 41% faster `[Shanbhag et al., 2020]`
+
+The other two misleading things are:
+
+- Ignore warm-ups: both CPU and GPU need to allocate memory. A memory
+  allocation takes an indeterminate amount of time, hence this will be
+  a source of noise for both CPU and GPU
+- GPU operations do not make the Python script stop, unless told so.
+  Without a `torch.cuda.synchronize()` in the timed part of the GPU
+  benchmark, means that this step is measured only after memory allocation,
+  not after the actual allocation.
+
+Taking all this into account, one concludes
+[this fair benchmarking code](compare_cpu_and_gpu_using_pytorch.py).
 
 ## FAQ
 
