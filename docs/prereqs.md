@@ -19,7 +19,8 @@ These are the **five** prerequisites for following this course:
 
 !!! attention "If your academic institute does not provide VPN"
 
-    https://docs.uppmax.uu.se/getting_started/login_bianca/#your-academic-institute-does-not-provide-vpn
+    - [Use the Bianca remote desktop website using Rackham socks proxy](https://docs.uppmax.uu.se/getting_started/login_bianca_remote_desktop_no_sunet/)
+    - [Use a terminal and password using Rackham as jump host to log in to Bianca's console environment](https://docs.uppmax.uu.se/getting_started/login_bianca_console_password_no_sunet/)
 
 ???- question "Any questions about this?"
 
