@@ -17,7 +17,7 @@ When | Who               | What
 9:15 | Björn Claremar    | Sensitive data, NAISS SENS
 9:30 | Pavlin Mitev      | [Transferring files](transfer.md)
 10:00| .                 | Break
-10:15  Pavlin Mitev      | [Transferring files cont'd](transfer.md)
+10:15¶ Pavlin Mitev      | [Transferring files cont'd](transfer.md)
 10:35| Richèl Bilderbeek | [Efficient jobs](efficient_jobs/README.md)
 11:00| .                 | Break
 11:15| Richèl Bilderbeek | [Efficient jobs cont'd](efficient_jobs/README.md)
