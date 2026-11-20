@@ -17,6 +17,10 @@ tags:
 
     James T. Kirk, a fictional Star Trek character, episode 'Mirror, Mirror'
 
+## Goal
+
+- Book a GPU on Bianca
+- Have an idea when to do so
 
 ## What are GPUs?
 
@@ -27,9 +31,76 @@ such as, for example, matrix multiplications.
 
 ## Why use GPUs?
 
-- :warning: To make your calculation go faster
-- To make you calculation start faster:
-  you have access to more GPUs than CPUs
+- Your calculation *may* go faster
+- You have access to more GPUs than CPUs <!-- gpuavail -->
+
+## How to schedule GPUs on Bianca
+
+To start a 10-minute interactive session on 1 GPU:
+
+```bash
+interactive -A sens2025560 -C gpu
+```
+
+???- question "What does that look like?"
+
+    The output will look similar to:
+
+    ```
+    [maja@sens2025560-bianca maja]$ interactive -A sens2025560 -C gpu
+    You receive the high interactive priority.
+    You may run for at most 12 hours.
+    Please note that in 12 wallclock hours this interactive job will use 192 core hours.
+
+    Please, use no more than 14 GB of RAM.
+
+    Waiting for job 679 to start...
+    ```
+
+    After a while (I expect this to take 20 minutes) you will see:
+
+    ```bash
+     _   _ ____  ____  __  __    _    __  __
+    | | | |  _ \|  _ \|  \/  |  / \   \ \/ /   | System:    sens2025560-b201
+    | | | | |_) | |_) | |\/| | / _ \   \  /    | User:      maja
+    | |_| |  __/|  __/| |  | |/ ___ \  /  \    | 
+     \___/|_|   |_|   |_|  |_/_/   \_\/_/\_\   | 
+
+    ###############################################################################
+
+            User Guides: http://www.uppmax.uu.se/support/user-guides
+            FAQ: http://www.uppmax.uu.se/support/faq
+
+            Write to support@uppmax.uu.se, if you have questions or comments.
+
+
+    [maja@sens2025560-b201 maja]$ 
+    ```
+
+???- question "What about other command line parameters?"
+
+    This command:
+
+    ```bash
+    interactive -A sens2025560 -C gpu
+    ```
+
+    is identical to:
+
+    ```bash
+    interactive -A sens2025560 -C gpu --gpus=1 --gpus-per-node=1 --t=10:00:00
+    ```
+
+## How to search modules that use GPUs on Bianca
+
+module spider gpu
+module spider cuda
+
+```
+[richel@sens2025560-b201 richel]$ module --redirect -r spider '.*cuda.*' > cuda_modules_from_gpu.txt
+[richel@sens2025560-b201 richel]$ module --redirect -r spider '.*gpu.*' > gpu_modules_from_gpu.txt
+```
+
 
 One uses GPUs when this is faster.
 GPUs are **not** always faster.
@@ -87,17 +158,22 @@ sequenceDiagram
     Benchmarks you find online may focus on code readability,
     but these may be unfair due to this.
 
-    - CPU version uses a `for` loop: slowness is mostly caused by doing
-      this `for` loop in Python, instead of using a vectorized C version
-      like the GPU does
-    - Ignore warm-ups: both CPU and GPU need to allocate memory. A memory
-      allocation takes an indeterminate amount of time, hence this will be
-      a source of noise for both CPU and GPU
-    - Ignore copy of GPU: When you load a variable in Python, it is in CPU.
+    - There is an **optimization bias**, where CPU code
+      uses slow constructs (e.g. a raw `for` loop, instead of using a
+      vectorized version) where the GPU is optimized. Optimizing the CPU
+      code can flip the conclusion from the GPU being 5x faster to the
+      CPU being 41% faster `[Shanbhag et al., 2020]`
+    - Ignore **memory transfer overhead**:
+      when you load a variable in Python, it is in CPU.
       To make a GPU do something, these values must be copied to it,
       and the results must be copied back. In naive benchmarks, this transfer
       of the data is part of the timed GPU part.
-      
+      This overhead may be 50-98% of the whole calculation if it is included
+      `[Gregg and Hazelwood, 2011]`
+    - Ignore warm-ups: both CPU and GPU need to allocate memory. A memory
+      allocation takes an indeterminate amount of time, hence this will be
+      a source of noise for both CPU and GPU
+
 
 
 
@@ -510,6 +586,37 @@ If there is no GPU:
 
 
 
+## Exercises
+
+## Exercise 1: run a GPU job
+
+Copy-paste the following two scripts to Bianca:
+
+Create this file, call it `gpus_1.sh`:
+
+```bash
+#!/bin/bash
+#SBATCH -A sens2025560
+#SBATCH -C gpu
+#SBATCH --gpus=1
+#SBATCH --gpus-per-node=1
+module load python_ML_packages/3.9.5-gpu
+python gpus_1.py
+```
+
+Create this file, call it `gpus_1.py`:
+
+```bash
+import torch
+assert torch.cuda.is_available(), "CUDA not available"
+```
+
+Then schedule it:
+
+```bash
+sbatch gpus_1.sh
+```
+
 
 
 ## References
@@ -554,6 +661,14 @@ If there is no GPU:
 
     ![Adapted from `[Fridman et al, 2025]` figure 1](fridman_et_al_2025_fig_1.svg)
 
+
+- `[Gregg and Hazelwood, 2011]`
+  Gregg, C., & Hazelwood, K. (2011). Where is the data? Why you cannot debate
+  CPU vs. GPU performance without the answer. IEEE International Symposium on
+  Performance Analysis of Systems and Software (ISPASS), 134-144.
+  [DOI](https://doi.org/10.1109/ispass.2011.5762730)
+
+
 - `[Haryanto et al., 2026]`
   D. Haryanto, M. N. Hoiri, A. Sidiq, A. Azzahrah, and Amarudin,
   "Performance evaluation of CPU and GPU architectures in Google Colab-based
@@ -569,6 +684,13 @@ If there is no GPU:
     We see for a matrix size of 500x500, the CPU is faster:
 
     ![Adapted from `[Haryanto et al., 2026]` figure 1](haryanto_et_al_2026_fig_1.svg)
+
+
+- `[Shanbhag et al., 2020]` Shanbhag, A., Madden, S., & Yu, X. (2020).
+  A Study of the Fundamental Performance Characteristics of GPUs and CPUs
+  for Database Analytics. ACM SIGMOD International Conference on Management
+  of Data (SIGMOD), 1617-1632.
+  [DOI](https://doi.org/10.1145/3318464.3380595)
 
 
 
