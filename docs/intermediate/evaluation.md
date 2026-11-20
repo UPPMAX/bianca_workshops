@@ -16,25 +16,11 @@ tags:
 
     They are at [the 'Evaluation' page for the beginner course](../beginner/evaluation.md).
 
-Goal                               |Form
------------------------------------|------------------------------------------------------
-Share any anonymous feedback easily|[TODO: Feedback form](https://github.com/UPPMAX/bianca_workshops/issues/95)
-Evaluate the course anonymously    |[TODO: Evaluation form](https://github.com/UPPMAX/bianca_workshops/issues/95)
+
+Here is the evaluation form: [TODO: Evaluation form](https://github.com/UPPMAX/bianca_workshops/issues/95)
 
 Also those that need to leave early are encouraged to fill in the evaluation
-form to help us improve the course
-
-???- question "What is in the feedback form?"
-
-    Intermediate Bianca feedback form
-
-    Thanks for your feedback.
-    This feedback will be published as-is at the end of the day,
-    if and only if there are no personal details (email, address, etc.)
-    in the feedback.
-    Do mention the teachers, assistants, etc by name!
-
-    Any feedback?
+form to help us improve the course :+1:
 
 ???- question "What is in the evaluation form?"
 
