@@ -294,8 +294,6 @@ If there is no GPU:
 #RuntimeError: Found no NVIDIA driver on your system. Please check that you have an NVIDIA GPU and installed a driver from http://www.nvidia.com/Download/index.aspx
 ```
 
-
-
 ## Exercises
 
 ## Exercise 1: run a GPU job
@@ -371,7 +369,8 @@ To have an idea when GPU is slower, what does
 ## (optional) Exercise 4: How hard it is to spot a misleading benchmark
 
 To determine if CPU or GPU is faster, one uses benchmarks.
-Benchmarks may be misleading.
+Benchmarks may be misleading (as discussed by, e.g.
+`[Gregg and Hazelwood, 2011]`).
 In this exercise, I try to convince you of this.
 
 Take a look (do not run it!) at
@@ -548,6 +547,7 @@ The other two misleading things are:
 
 Taking all this into account, one concludes
 [this fair benchmarking code](compare_cpu_and_gpu_using_pytorch.py).
+
 
 ## FAQ
 
