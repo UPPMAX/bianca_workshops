@@ -21,9 +21,9 @@ When | Who               | What
 10:35| Richèl Bilderbeek | [Efficient jobs](efficient_jobs/README.md)
 11:00| .                 | Break
 11:15| Richèl Bilderbeek | [Efficient jobs cont'd](efficient_jobs/README.md)
-11:40| Richèl Bilderbeek | [GPUs](gpu.md)
+11:40| Richèl Bilderbeek | [GPUs](working_with_gpus/working_with_gpus.md)
 12:00| .                 | Lunch
-13:00| Richèl Bilderbeek | [GPUs cont'd](gpu.md)
+13:00| Richèl Bilderbeek | [GPUs cont'd](working_with_gpus/working_with_gpus.md)
 13:15| Björn Claremar    | [Packages and software installation](https://uppmax.github.io/bianca_workshops/intermediate/install/)
 13:50| .                 | Break
 14:05| Björn Claremar    | [Packages and software installation cont'd](https://uppmax.github.io/bianca_workshops/intermediate/install/)
