@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad-gpu" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <!-- Substrate Gradient -->
+    <linearGradient id="gpu-substrate-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <!-- Die Gradient -->
+    <linearGradient id="gpu-die-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1E40AF"/>
+    </linearGradient>
+    <!-- VRAM Memory Block Gradient -->
+    <linearGradient id="vram-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <!-- Core Grid Color -->
+    <linearGradient id="alu-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#93C5FD"/>
+      <stop offset="100%" stop-color="#60A5FA"/>
+    </linearGradient>
+    <!-- Control Gradient -->
+    <linearGradient id="gpu-ctrl-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#BFDBFE"/>
+      <stop offset="100%" stop-color="#93C5FD"/>
+    </linearGradient>
+    <!-- Drop Shadows -->
+    <filter id="shadow-gpu" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <!-- Circuit Trace Accents -->
+  <path d="M 50 100 H 90 M 50 400 H 90 M 410 100 H 450 M 410 400 H 450" stroke="#3B82F6" stroke-width="2" opacity="0.4"/>
+  <!-- Main Chip Substrate -->
+  <rect x="90" y="90" width="320" height="320" rx="16" fill="url(#gpu-substrate-grad)" filter="url(#shadow-gpu)" stroke="#60A5FA" stroke-width="3"/>
+  <!-- VRAM Memory Chips (Surrounding Central Die) -->
+  <!-- Top VRAM -->
+  <rect x="145" y="102" width="60" height="26" rx="4" fill="url(#vram-grad)" stroke="#1E3A8A" stroke-width="1.5"/>
+  <rect x="220" y="102" width="60" height="26" rx="4" fill="url(#vram-grad)" stroke="#1E3A8A" stroke-width="1.5"/>
+  <rect x="295" y="102" width="60" height="26" rx="4" fill="url(#vram-grad)" stroke="#1E3A8A" stroke-width="1.5"/>
+  <!-- Bottom VRAM -->
+  <rect x="145" y="372" width="60" height="26" rx="4" fill="url(#vram-grad)" stroke="#1E3A8A" stroke-width="1.5"/>
+  <rect x="220" y="372" width="60" height="26" rx="4" fill="url(#vram-grad)" stroke="#1E3A8A" stroke-width="1.5"/>
+  <rect x="295" y="372" width="60" height="26" rx="4" fill="url(#vram-grad)" stroke="#1E3A8A" stroke-width="1.5"/>
+  <!-- Left/Right Memory Interface Rails -->
+  <rect x="102" y="160" width="26" height="180" rx="4" fill="url(#vram-grad)" stroke="#1E3A8A" stroke-width="1.5"/>
+  <rect x="372" y="160" width="26" height="180" rx="4" fill="url(#vram-grad)" stroke="#1E3A8A" stroke-width="1.5"/>
+  <!-- Central GPU Die Container -->
+  <rect x="140" y="140" width="220" height="220" rx="10" fill="url(#gpu-die-grad)" stroke="#93C5FD" stroke-width="2"/>
+  <!-- GPU Control / Thread Scheduler Bar -->
+  <rect x="152" y="152" width="196" height="24" rx="4" fill="url(#gpu-ctrl-grad)" stroke="#1E3A8A" stroke-width="1.5"/>
+  <!-- Array of Hundreds of Parallel Core Units (ALU Grid) -->
+  <g>
+    <rect x="156.0" y="188.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="171.5" y="188.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="187.0" y="188.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="202.5" y="188.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="218.0" y="188.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="233.5" y="188.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="249.0" y="188.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="264.5" y="188.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="280.0" y="188.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="295.5" y="188.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="311.0" y="188.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="326.5" y="188.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="156.0" y="203.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="171.5" y="203.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="187.0" y="203.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="202.5" y="203.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="218.0" y="203.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="233.5" y="203.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="249.0" y="203.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="264.5" y="203.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="280.0" y="203.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="295.5" y="203.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="311.0" y="203.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="326.5" y="203.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="156.0" y="219.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="171.5" y="219.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="187.0" y="219.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="202.5" y="219.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="218.0" y="219.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="233.5" y="219.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="249.0" y="219.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="264.5" y="219.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="280.0" y="219.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="295.5" y="219.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="311.0" y="219.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="326.5" y="219.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="156.0" y="234.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="171.5" y="234.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="187.0" y="234.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="202.5" y="234.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="218.0" y="234.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="233.5" y="234.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="249.0" y="234.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="264.5" y="234.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="280.0" y="234.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="295.5" y="234.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="311.0" y="234.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="326.5" y="234.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="156.0" y="250.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="171.5" y="250.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="187.0" y="250.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="202.5" y="250.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="218.0" y="250.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="233.5" y="250.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="249.0" y="250.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="264.5" y="250.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="280.0" y="250.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="295.5" y="250.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="311.0" y="250.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="326.5" y="250.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="156.0" y="265.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="171.5" y="265.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="187.0" y="265.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="202.5" y="265.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="218.0" y="265.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="233.5" y="265.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="249.0" y="265.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="264.5" y="265.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="280.0" y="265.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="295.5" y="265.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="311.0" y="265.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="326.5" y="265.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="156.0" y="281.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="171.5" y="281.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="187.0" y="281.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="202.5" y="281.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="218.0" y="281.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="233.5" y="281.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="249.0" y="281.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="264.5" y="281.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="280.0" y="281.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="295.5" y="281.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="311.0" y="281.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="326.5" y="281.0" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="156.0" y="296.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="171.5" y="296.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="187.0" y="296.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="202.5" y="296.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="218.0" y="296.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="233.5" y="296.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="249.0" y="296.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="264.5" y="296.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="280.0" y="296.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="295.5" y="296.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="311.0" y="296.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+<rect x="326.5" y="296.5" width="12" height="12" rx="2" fill="url(#alu-grad)" stroke="#1E3A8A" stroke-width="0.8"/>
+  </g>
+  <!-- Parallel Array Label Overlay -->
+  <rect x="180" y="322" width="140" height="24" rx="4" fill="#1E3A8A" stroke="#60A5FA" stroke-width="1" opacity="0.95"/>
+  <!-- Central Badge / Label -->
+  <rect x="180" y="425" width="140" height="38" rx="19" fill="#1E3A8A" stroke="#60A5FA" stroke-width="2"/>
+</svg>
