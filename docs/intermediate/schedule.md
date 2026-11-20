@@ -15,7 +15,7 @@ When | Who               | What
 -----|-------------------|-------------------------------------------
 9:00 | Richèl Bilderbeek | [Introduction](intro.md)
 9:15 | Björn Claremar    | Sensitive data, NAISS SENS
-9:30 | Richèl Bilderbeek | [Working with GPUs](working_with_gpus.md)
+9:30 | Richèl Bilderbeek | [Working with GPUs](working_with_gpus/working_with_gpus.md)
 10:00| .                 | Break
 10:15| Richèl Bilderbeek | [Efficient jobs](efficient_jobs/README.md)
 11:00| .                 | Break
