@@ -16,6 +16,11 @@ These are the **five** prerequisites for following this course:
 - Prerequisites 4/5: In [SUPR](https://supr.naiss.se/project/request/?search=sens2025560), you have joined the NAISS project `sens2025560`
 - Prerequisites 5/5: (Basic course only) [Have FileZilla or WinSCP installed](faq/README.md#should-i-install-filezilla-or-winscp)
 
+
+!!! attention "If your academic institute does not provide VPN"
+
+    https://docs.uppmax.uu.se/getting_started/login_bianca/#your-academic-institute-does-not-provide-vpn
+
 ???- question "Any questions about this?"
 
     See [the 'Prerequisites' section of the Frequently Asked Questions](faq/README.md/#prerequisites)
