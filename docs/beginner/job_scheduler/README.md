@@ -20,7 +20,7 @@ job will be cancelled.
 
 Non-goals:
 
-- [How to schedule jobs that require GPUs](../../intermediate/gpu.md)
+- [How to schedule jobs that require GPUs](../../intermediate/working_with_gpus/working_with_gpus.md)
 - [How to schedule jobs that use Bianca efficiently](../../intermediate/efficient_jobs/README.md)
 - [How to schedule jobs that require more memory](../../intermediate/efficient_jobs/README.md)
 

@@ -55,7 +55,7 @@ Please complete these steps before the workshop starts in order to avoid having 
   **If your computer is not connected to a university network, SUNET, you will need to log in via a VPN.**
 
   You need to use the **VPN connected to your affiliated university.**
-  **As an example here is a [Link to VPN for UU](https://www.uu.se/en/staff/service-and-tools/it-and-telephony-services/it-services/network-and-vpn)**
+  **As an example here is a [Link to VPN for UU](hhttps://www.uu.se/en/staff/service-and-tools/tools-and-guides/connect-to-the-network-remotely)**
   You may find instructions at web pages of the IT office of your university.
 
   **If you are a student you may not be allowed to use a VPN. Instead you may need to use the Eduroam connection or similar at Campus.**
