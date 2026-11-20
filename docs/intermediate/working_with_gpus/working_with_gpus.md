@@ -9,17 +9,41 @@ tags:
 
 # GPUs
 
+![GPU](gpu.svg)
+
 !!! quote
 
     Not our universe, not our ship. Something... parallel.
 
     James T. Kirk, a fictional Star Trek character, episode 'Mirror, Mirror'
 
+
 ## What are GPUs?
 
-
+A GPU, short for 'graphical processing unit', can do calculations.
+GPUs do not need to be used for graphics, however.
+Instead, they are specialized in doing any type of parallel computation,
+such as, for example, matrix multiplications.
 
 ## Why use GPUs?
+
+- :warning: To make your calculation go faster
+- To make you calculation start faster:
+  you have access to more GPUs than CPUs
+
+One uses GPUs when this is faster.
+GPUs are **not** always faster.
+
+For smaller data, CPU is faster `[Barker et al., 2026][Haryanto et al., 2026]`.
+
+
+https://doi.org/10.33650/coreai.v7i1.15758
+
+
+GPUs are likelier to be faster, when
+
+- the data you work on is big
+- the calculations you do are 
 
 They have hard-wired operations
 
@@ -78,6 +102,37 @@ sequenceDiagram
 
 
 ## GPU software modules on Bianca
+
+
+```mermaid
+flowchart TD
+    classDef not_us stroke:#ccc,color:#ccc
+    
+    GPUs
+    Nvidia
+    AMD:::not_us
+    Intel:::not_us
+    CUDA
+    HIP:::not_us
+    ROCm:::not_us
+    oneAPI:::not_us
+    SYCL:::not_us
+    GPUs --> |Manufactured by| Nvidia
+    GPUs --> |Manufactured by| AMD
+    GPUs --> |Manufactured by| Intel
+    Nvidia --> |Operated by| CUDA
+    AMD --> |Operated by| HIP
+    AMD --> |Operated by| ROCm
+    Intel --> |Operated by| oneAPI
+    Intel --> |Operated by| SYCL
+    linkStyle 1 stroke:#ccc,color:grey;
+    linkStyle 2 stroke:#ccc,color:grey;
+    linkStyle 4 stroke:#ccc,color:grey;
+    linkStyle 5 stroke:#ccc,color:grey;
+    linkStyle 6 stroke:#ccc,color:grey;
+    linkStyle 7 stroke:#ccc,color:grey;
+```
+
 
 When on CPU and doing `module spider gpu`, these are all the hits:
 
@@ -378,6 +433,7 @@ The two `python_ML_packages` differ between CPU and GPU:
     zope.interface               5.4.0
     ```
 
+
 In the docu
 
 On CPU:
@@ -402,6 +458,10 @@ Lmod has detected the following error:  Unable to find: "numba".
 Lmod has detected the following error:  Unable to find: "llvmlite".
 ```
 
+Alternatively, `module spider cuda`, gives you this:
+
+TODO
+
 
 ## Scheduling GPUs
 
@@ -421,26 +481,129 @@ Run the following script:
 
 ```python
 import torch
-print(torch.cuda.get_device_properties(0))
+assert torch.cuda.is_available(), "CUDA not available"
+# print(torch.cuda.get_device_properties(0))
 ```
+
 
 If there is a GPU:
 
 ```bash
-_CudaDeviceProperties(name='NVIDIA A100-PCIE-40GB', major=8, minor=0, total_memory=40326MB, multi_processor_count=108)
+# No output, but check
+
+# _CudaDeviceProperties(name='NVIDIA A100-PCIE-40GB', major=8, minor=0, total_memory=40326MB, multi_processor_count=108)
 ```
 
 If there is no GPU:
 
 ```bash
-Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-  File "/sw/apps/python_ML_packages/3.9.5-gpu/bianca/lib/python3.9/site-packages/torch/cuda/__init__.py", line 309, in get_device_properties
-    _lazy_init()  # will define _get_device_properties
-  File "/sw/apps/python_ML_packages/3.9.5-gpu/bianca/lib/python3.9/site-packages/torch/cuda/__init__.py", line 172, in _lazy_init
-    torch._C._cuda_init()
-RuntimeError: Found no NVIDIA driver on your system. Please check that you have an NVIDIA GPU and installed a driver from http://www.nvidia.com/Download/index.aspx
+# The assert message here
+
+#Traceback (most recent call last):
+#  File "<string>", line 1, in <module>
+#  File "/sw/apps/python_ML_packages/3.9.5-gpu/bianca/lib/python3.9/site-packages/torch/cuda/__init__.py", line 309, in get_device_properties
+#    _lazy_init()  # will define _get_device_properties
+#  File "/sw/apps/python_ML_packages/3.9.5-gpu/bianca/lib/python3.9/site-packages/torch/cuda/__init__.py", line 172, in _lazy_init
+#    torch._C._cuda_init()
+#RuntimeError: Found no NVIDIA driver on your system. Please check that you have an NVIDIA GPU and installed a driver from http://www.nvidia.com/Download/index.aspx
 ```
+
+
+
+
+
+## References
+
+- `[Barker et al., 2026]`
+  Barker, R., Boone, J., Seyfi, T., Dorcheh, A. E., Afghah, F., & Boccuzzi, J.
+  (2026). Six Times to Spare: Characterizing GPU-Accelerated 5G LDPC Decoding
+  for Edge-RSU Communications. IEEE Vehicular Technology Conference,
+  `abs/2602.04652`, 1-7.
+  [DOI](https://doi.org/10.1109/vtc2026-fall68024.2026.11758285)
+
+???- question "Summary of `[Barker et al., 2026]`"
+
+    The paper benchmarks 2 CPUs and 2 GPUs.
+    
+    In figure 2a, shown below, it shows that bigger data (in this case,
+    the number of codewords) gives highest throughput with a GPU
+    (the red line). At the left side, however, for smaller data, the
+    CPUs and GPUs have a similar throughput. Even though this is not visible,
+    the authors state that the CPU throughput is higher.
+
+    ![Adapted from `[Barker et al., 2026]` figure 2a](barker_et_al_2026_fig_2a.svg)
+
+- `[Fridman et al, 2025]`
+  Fridman, Yehonatan, Yosef Goren, and Gal Oren.
+  "From OpenACC to OpenMP5 GPU offloading: Performance evaluation on NAS
+  parallel benchmarks." Proceedings of the 2025 4th International Workshop
+  on Extreme Heterogeneity Solutions. 2025.
+
+???- question "Summary of `[Fridman et al, 2025]`"
+
+    The paper benchmarks 1 CPU and 2 GPUs.
+
+    On the horizontal axis, these are different benchmarks.
+    Classes are from simple (class A) to most complex (class D).
+    `OpenACC-A100-80G` (blue) and `OpenMP-S2S-A100-80G` (red) are GPU,
+    `OpenMP-Orig-SPR-192cores` (brown) is CPU.
+    We see that for the simpler problems (class A) that CPU is likelier
+    to have a shorter execution time.
+    We see that for the more complex problems (class D) that GPU is likelier
+    to have a shorter execution time.
+
+    ![Adapted from `[Fridman et al, 2025]` figure 1](fridman_et_al_2025_fig_1.svg)
+
+- `[Haryanto et al., 2026]`
+  D. Haryanto, M. N. Hoiri, A. Sidiq, A. Azzahrah, and Amarudin,
+  "Performance evaluation of CPU and GPU architectures in Google Colab-based
+  parallel computing using execution time and speedup,"
+  COREAI: Jurnal Kecerdasan Buatan, Komputasi dan Teknologi Informasi,
+  vol. 7, no. 1, 2026.
+  [doi: 10.33650/coreai.v7i1.15758](https://doi.org/10.33650/coreai.v7i1.15758).
+
+???- question "Summary of `[Haryanto et al., 2026]`"
+
+    The paper benchmarks CPU and GPU for doing matrix multiplications.
+
+    We see for a matrix size of 500x500, the CPU is faster:
+
+    ![Adapted from `[Haryanto et al., 2026]` figure 1](haryanto_et_al_2026_fig_1.svg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
