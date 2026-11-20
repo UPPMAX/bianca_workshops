@@ -6,10 +6,9 @@ tags:
   - graphical processing unit
 ---
 
-
 # GPUs
 
-![GPU](gpu.svg)
+![GPU](gpu.svg){width="200"}
 
 !!! quote
 
@@ -53,6 +52,8 @@ To start a 10-minute interactive session on 1 GPU:
 ```bash
 interactive -A sens2025560 -C gpu
 ```
+
+On Bianca, 1 GPU hour is booked as 16 CPU hours.
 
 ???- question "What does that look like?"
 
@@ -197,102 +198,12 @@ module --regexp spider '.*cuda.*'
 
         Comparing these shows that these are close to identical.
 
-
-
-## GPU software modules on Bianca
-
-
-
-
-When on CPU and doing `module spider gpu`, these are all the hits:
-
-Module                         |Description
--------------------------------|--------------------------------------------------------
-Guppy                          |Oxford Nanopore neural-net basecaller, GPU enabled
-Megalodon                      |Base and sequence variant caller from raw nanopore reads
-`python_ML_packages/3.9.5-gpu` |Python machine learning packages for GPU
-
 ???- question "Are the modules `python_ML_packages/3.9.5-cpu` and `python_ML_packages/3.9.5-gpu` the same?"
 
     No, the two modules differ in the packages they have:
 
     - CPU: [`module load python_ML_packages/3.9.5-cpu; pip list`](pip_list_cpu.txt)
     - GPU: [`module load python_ML_packages/3.9.5-gpu; pip list`](pip_list_gpu.txt)
-
-
-In the docu
-
-On CPU:
-
-```bash
-[richel@sens2025560-bianca richel]$ module spider numba
-Lmod has detected the following error:  Unable to find: "numba".
-
-
-
-[richel@sens2025560-bianca richel]$ module spider llvmlite
-Lmod has detected the following error:  Unable to find: "llvmlite".
-```
-
-On GPU:
-
-```bash
-[richel@sens2025560-b201 richel]$ module spider numba
-Lmod has detected the following error:  Unable to find: "numba".
-
-[richel@sens2025560-b201 richel]$ module spider llvmlite
-Lmod has detected the following error:  Unable to find: "llvmlite".
-```
-
-Alternatively, `module spider cuda`, gives you this:
-
-TODO
-
-
-## Scheduling GPUs
-
-These are all identical:
-
-- `-C gpu`
-- `-C gpu --gpus=1` <!-- untested, but I am condident -->
-- `-C gpu --gpus-per-node=1`
-- `-C gpu --gpus=1 --gpus-per-node=1`
-
-GPUs are expensive: 1 GPU hour is 16 CPU hours
-
-
-## Check
-
-Run the following script:
-
-```python
-import torch
-assert torch.cuda.is_available(), "CUDA not available"
-# print(torch.cuda.get_device_properties(0))
-```
-
-
-If there is a GPU:
-
-```bash
-# No output, but check
-
-# _CudaDeviceProperties(name='NVIDIA A100-PCIE-40GB', major=8, minor=0, total_memory=40326MB, multi_processor_count=108)
-```
-
-If there is no GPU:
-
-```bash
-# The assert message here
-
-#Traceback (most recent call last):
-#  File "<string>", line 1, in <module>
-#  File "/sw/apps/python_ML_packages/3.9.5-gpu/bianca/lib/python3.9/site-packages/torch/cuda/__init__.py", line 309, in get_device_properties
-#    _lazy_init()  # will define _get_device_properties
-#  File "/sw/apps/python_ML_packages/3.9.5-gpu/bianca/lib/python3.9/site-packages/torch/cuda/__init__.py", line 172, in _lazy_init
-#    torch._C._cuda_init()
-#RuntimeError: Found no NVIDIA driver on your system. Please check that you have an NVIDIA GPU and installed a driver from http://www.nvidia.com/Download/index.aspx
-```
 
 ## Exercises
 
@@ -346,7 +257,41 @@ When the job is finished, what does the output look like?
 
 ## Exercise 2: search for GPU modules
 
-HIERO
+Search for all software modules that have `gpu` in the name.
+How many are there on Bianca?
+
+???- question "Anser"
+
+    To search, do:
+
+    ```bash
+    module spider gpu
+    ```
+
+    The full output can be seen [in this text file](gpu_modules_on_gpu.txt).
+
+    You will find these three software modules:
+
+    Software module                |Description
+    -------------------------------|--------------------------------------------------------
+    Guppy                          |Oxford Nanopore neural-net basecaller, GPU enabled
+    Megalodon                      |Base and sequence variant caller from raw nanopore reads
+    `python_ML_packages/3.9.5-gpu` |Python machine learning packages for GPU
+
+
+Search for all software modules that have `cuda` in the name.
+How many are there on Bianca? You should find at least two.
+
+???- question "Answer"
+
+    To search, do:
+
+    ```bash
+    module --regexp spider '.*cuda.*'
+    ```
+
+    The CUDA modules can be found [in this text file](cuda_modules_on_gpu.txt).
+    There are many.
 
 ## (optional) Exercise 3: When GPU is slower
 
@@ -583,6 +528,32 @@ Taking all this into account, one concludes
         gpg-agent          gpg-error-config   gpgv2
         ```
 
+???- question "How can I monitor my GPU usage?"
+
+    One can monitor GPU utilization using `nvidia-smi`:
+
+    ```bash
+    nvidia-smi dmon -o DT
+    ```
+
+    Another example, is to create a file that logs the performance:
+
+    ```bash
+    nvidia-smi --format=noheader,csv --query-compute-apps=timestamp,gpu_name,pid,name,used_memory --loop=1 -f my_profile.log
+    ```
+
+???- question "How can I let my containers use/find my GPU?"
+
+    Use `--nv` flag while running your Apptainer containers, for example:
+
+    ```python
+    apptainer exec --nv my_container.sif python my_script.py
+    ```
+
+    Here we let Apptainer execute, from the container `my_container.sif`
+    the program `python` that will run the Python script `my_scripy.py`.
+
+
 
 ## References
 
@@ -656,144 +627,3 @@ Taking all this into account, one concludes
   for Database Analytics. ACM SIGMOD International Conference on Management
   of Data (SIGMOD), 1617-1632.
   [DOI](https://doi.org/10.1145/3318464.3380595)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!----------------- OLD STUFF ---------------------------------------------->
-<!----------------- OLD STUFF ---------------------------------------------->
-<!----------------- OLD STUFF ---------------------------------------------->
-
-!!!- info "Learning outcomes"
-
-    - Practice using the UPPMAX documentation
-    - I can see the GPU and memory usage of jobs
-    - I know the correct flags to utilize GPUs.
-    - I understand the GPU configuration on Bianca.
-
-
-## Hardware and flags
-
-- 10 Nodes with 2 Nvidia A100 40 GB each.
-- Nodelist : ``sens2025xxx-b[201-210]``
-- All GPU nodes have at least 256 GB RAM (fat nodes) with 16 CPU cores and 2 GPUs per node.
-- In order to avoid GPU misuse, a project cannot request more than 7 GPU nodes, in total.
-- SBATCH flags:
-
-```bash
-#SBATCH -A sens2025xxx
-#SBATCH -p node
-#SBATCH -N 1
-#SBATCH -C gpu
-#SBATCH --gpus-per-node=2   #number of GPUs per node
-#SBATCH -t 1:00:00
-
-nvidia-smi
-```
-
-You can also ask for 1 gpu per node and few cores in order to use 2 gpus for different jobs:
-
-```bash
-#SBATCH -A sens2025xxx
-#SBATCH -p core
-#SBATCH -n 8
-#SBATCH -C gpu
-#SBATCH --gpus-per-node=1
-#SBATCH -t 1:00:00
-```
-
-- Similarly for interactive session on GPU node, use the same `-C gpu --gpus-per-node=` flag.
-
-## News
-
-- Bianca will have 17 T4 GPU nodes with one GPU each. Those will be on old Haswell nodes.
-
-## GPU accessibility check
-
-- Sanity check if CUDA is loaded properly by checking CUDA environment variable:
-
-```bash
-env | grep CUDA
-CUDA_VISIBLE_DEVICES=0
-```
-
-OR
-
-```bash
-echo $CUDA_VISIBLE_DEVICES
-0
-```
-
-OR check by loading torch:
-
-```bash
-module load python_ML_packages/3.9.5-gpu
-python -c "import torch; print(torch.__version__); print(torch.version.cuda); print(torch.cuda.get_device_properties(0)); print(torch.randn(1).cuda())"
-```
-
-output:
-
-```bash
-1.9.0+cu111
-11.1
-_CudaDeviceProperties(name='NVIDIA A100-PCIE-40GB', major=8, minor=0, total_memory=40326MB, multi_processor_count=108)
-tensor([0.1014], device='cuda:0')
-```
-
-!!! tip "Get a view of the whole queue, including all projects"
-
-    - Use the command `bianca_combined_jobinfo` (queued jobs of all projects)
-        - That makes it easier to see how the resources are used and what the odds are that you can start your job soon!
-        - Slurm showing state as 'unkown' might mean that a VM has been booked on that node but no job is running.
-
-## Profiling
-
-- Monitor GPU utilization with nvidia-smi:
-
-    ```bash
-    nvidia-smi dmon -o DT
-    nvidia-smi --format=noheader,csv --query-compute-apps=timestamp,gpu_name,pid,name,used_memory --loop=1 -f sample_run.log
-    ```
-
-## Tips
-
-- If you book 1 GPU with `--gpus-per-node=1` flag, you block 1 full GPU node.
-    - You can get another GPU on the same node faster.
-- Use `--nv` flag while running your apptainer containers to use GPU on a GPU node
-- Correct CUDA modules gets automatically loaded if you use `python_ML_packages/3.9.5-gpu`
-- Various CUDA libraries are available in `module spider cuda`
