@@ -9,6 +9,14 @@ tags:
 
 # GPUs
 
+## What are GPUs?
+
+## Why use GPUs?
+
+
+```bash
+
+```
 
 
 ## GPU software modules on Bianca
@@ -349,9 +357,6 @@ Traceback (most recent call last):
 RuntimeError: Found no NVIDIA driver on your system. Please check that you have an NVIDIA GPU and installed a driver from http://www.nvidia.com/Download/index.aspx
 ```
 
-## What are GPUs?
-
-## Why use GPUs?
 
 
 
