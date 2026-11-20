@@ -404,7 +404,7 @@ is because it does not do what the goal states:
 > how much faster/slower a GPU can do a calculation.
 
 Compare the two sequence diagrams below
-to (try to) conclude why the GPU script needs to -unfairly!- do more work. 
+to (try to) conclude why the GPU script needs to -unfairly!- do more work.
 
 === "CPU"
 
@@ -554,7 +554,6 @@ Taking all this into account, one concludes
 
     Here we let Apptainer execute, from the container `my_container.sif`
     the program `python` that will run the Python script `my_scripy.py`.
-
 
 
 ## References
