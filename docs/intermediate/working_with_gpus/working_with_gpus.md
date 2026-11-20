@@ -9,17 +9,77 @@ tags:
 
 # GPUs
 
+!!! quote
+
+    Not our universe, not our ship. Something... parallel.
+
+    James T. Kirk, a fictional Star Trek character, episode 'Mirror, Mirror'
+
 ## What are GPUs?
+
+
 
 ## Why use GPUs?
 
+They have hard-wired operations
 
-```bash
 
+```mermaid
+graph TB
+  cpu[CPU]
+  gpu[GPU]
+  cpu_features[Any operations]
+  gpu_features[Parallel operations]
+  cpu <--> |data transfer| gpu
+  cpu -.- cpu_features
+  gpu -.- gpu_features
 ```
 
 
+- [Nvidia applications](https://marketplace.nvidia.com/en-us/enterprise/applications/)
+
+
+When working with GPUs, the computer's CPU is called the 'host CPU'.
+
+
+## Differences
+
+- GPU is specialized on floating point and array operations
+- Values must be copied to it
+- Results must be copied back
+
+- [Programming for GPU](https://docs.nvidia.com/cuda/cuda-programming-guide/part2.html)
+
+
+```mermaid
+sequenceDiagram
+    CPU->>GPU: send data
+    Note over GPU: Works on data 
+    GPU->>CPU: send results
+```
+
+!!! warning "Benchmarks may be misleading"
+
+    Benchmarks you find online may focus on code readability,
+    but these may be unfair due to this.
+
+    - CPU version uses a `for` loop: slowness is mostly caused by doing
+      this `for` loop in Python, instead of using a vectorized C version
+      like the GPU does
+    - Ignore warm-ups: both CPU and GPU need to allocate memory. A memory
+      allocation takes an indeterminate amount of time, hence this will be
+      a source of noise for both CPU and GPU
+    - Ignore copy of GPU: When you load a variable in Python, it is in CPU.
+      To make a GPU do something, these values must be copied to it,
+      and the results must be copied back. In naive benchmarks, this transfer
+      of the data is part of the timed GPU part.
+      
+
+
+
 ## GPU software modules on Bianca
+
+When on CPU and doing `module spider gpu`, these are all the hits:
 
 Module                         |Description
 -------------------------------|--------------------------------------------------------
@@ -317,6 +377,31 @@ The two `python_ML_packages` differ between CPU and GPU:
     zipp                         3.7.0
     zope.interface               5.4.0
     ```
+
+In the docu
+
+On CPU:
+
+```bash
+[richel@sens2025560-bianca richel]$ module spider numba
+Lmod has detected the following error:  Unable to find: "numba".
+
+
+
+[richel@sens2025560-bianca richel]$ module spider llvmlite
+Lmod has detected the following error:  Unable to find: "llvmlite".
+```
+
+On GPU:
+
+```bash
+[richel@sens2025560-b201 richel]$ module spider numba
+Lmod has detected the following error:  Unable to find: "numba".
+
+[richel@sens2025560-b201 richel]$ module spider llvmlite
+Lmod has detected the following error:  Unable to find: "llvmlite".
+```
+
 
 ## Scheduling GPUs
 

@@ -7,6 +7,7 @@ from numba import vectorize
 # the more accurate the measurement is
 NUM_ELEMENTS = 100000000
 
+# DONT: this is an unfair comparison: most time is spent in the for loop
 def vector_add_cpu(a, b):
   c = np.zeros(NUM_ELEMENTS, dtype=np.float32)
   for i in range(NUM_ELEMENTS):
