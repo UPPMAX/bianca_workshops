@@ -9,7 +9,7 @@ tags:
 !!! info "Learning outcomes"
 
     - This is a short overview of NAISS SENS projects in the context of NAISS
-    - To have heard about Bianca and Arrhenius, and expected changes that happening this autumn
+    - To have heard about Bianca and Arrhenius, and expected changes that is happening
 
 ## NAISS
 
