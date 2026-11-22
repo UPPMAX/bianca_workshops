@@ -54,4 +54,4 @@ NAISS projects on Bianca owned by Uppsala university researchers will remain ava
 
 !!! info "Quick start"
 
-    [Quick start to Arrhenius SENS](https://hpc.pages.naiss.se/user-documentation/support-docs/arrhenius_sens/quickstart/) under development)
+    [Quick start to Arrhenius SENS](https://hpc.pages.naiss.se/user-documentation/support-docs/arrhenius_sens/quickstart/) (under development)
