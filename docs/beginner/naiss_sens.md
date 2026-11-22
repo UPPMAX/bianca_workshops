@@ -13,9 +13,9 @@ tags:
 
 ## NAISS
 
-The National Academic Infrastructure for Supercomputing in Sweden (NAISS) is funded by the Swedish Research Council with the instruction to provide free-at-the-point-of-use compute and storage resources on a national level to satisfy all needs.
+The National Academic Infrastructure for Supercomputing in Sweden (NAISS) is **funded by the Swedish Research Council** with the instruction to **provide free-at-the-point-of-use compute and storage** resources on a national level to satisfy all needs.
 
-On a national level means that systems should be larger than what is reasonable for a single university to procure.
+On a national level means that **systems should be larger than what is reasonable for a single university** to procure.
 
 ## NAISS SENS service
 
@@ -25,7 +25,7 @@ The services appropriate for handling sensitive personal data are traditionally 
 
 Most universities have a general Data Processing Agreement with NAISS that covers the use of NAISS SENS. The [list of universities with an agreement](https://www.uu.se/en/centre/uppmax/get-started/apply-for-project-and-create-user-account/applying-for-naiss-sens-project/puba) is currently kept up to date on the UPPMAX web.
 
-### NAISS SENS in SUPR
+### Apply for NAISS SENS in SUPR
 
 Proposals for projects are submitted in the NAISS project and user portal, SUPR.
 
@@ -38,19 +38,31 @@ Doing so activates a few functions in SUPR:
 - It disables the checkbox asking the PI to affirm that no sensitive data will be placed in the project.
 
 
-Proposals for Bianca are submitted in local rounds depending on the funder. For Uppsala University projects, use the UPPMAX Local round. For SIMPLER, a health registry data infrastructure that uses Bianca to make its data available, use the SIMPLER round. For the Swedish University of Agricultural Sciences, use the SLU Local round.
+Proposals for Bianca are submitted in local rounds depending on the funder. 
+
+- For Uppsala University projects, use the UPPMAX Local round.
+- For SIMPLER, a health registry data infrastructure that uses Bianca to make its data available, use the SIMPLER round.
+- For the Swedish University of Agricultural Sciences, use the SLU Local round.
 
 ## Arrhenius SENS
 
 NAISS is currently building a new computer system for sensitive data in Linköping, Arrhenius SENS. At the time of this writing, it is not yet in production.
 
-Existing Bianca projects will be migrated to Arrhenius SENS during the autumn. Initial data migration will start any day now, with final migration happening during December.
+- **Latest plan is in December.**
 
-Current users of Bianca are invited and encouraged to fill out the following [form](https://nextcloud.naiss.se/apps/forms/s/LN2H6K3ALZ7CqkAXCGiJkWZy)
+### PIs not affiliated to UU.
 
-Only those projects that express a wish to be moved to Arrhenius SENS will be moved automatically.
+**Existing Bianca projects will be migrated to Arrhenius SENS**. Initial data migration will **start any day now**, with final migration happening during December.
 
-NAISS projects on Bianca owned by Uppsala university researchers will remain available on Bianca even after the end of the year. If you intend not to move to Arrhenius SENS, please also fill in the form and let us know.
+Current users of Bianca are invited and encouraged to fill out the following [**form**](https://nextcloud.naiss.se/apps/forms/s/LN2H6K3ALZ7CqkAXCGiJkWZy).
+
+Only those projects that **express a wish** to be moved to Arrhenius SENS will be moved **automatically**.
+
+### UU PIs
+
+NAISS projects on Bianca **owned by Uppsala University researchers** will **remain** available **on Bianca** even after the end of the year. 
+
+If you intend not to move to Arrhenius SENS, please also fill in the form and let us know.
 
 !!! info "Quick start"
 
