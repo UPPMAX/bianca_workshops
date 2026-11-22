@@ -36,7 +36,7 @@ Proposals for Arrhenius SENS are submitted in the **ordinary NAISS rounds (Small
 Doing so activates a few functions in SUPR:
 
 - It adds a text field asking you to provide information necessary for GDPR compliance.
-- It adds a requirement for the PI and proxy to enable Two Factor Authentication.
+- It adds a requirement for the Principal investigator (PI) and proxy to enable Two Factor Authentication.
 - It disables the checkbox asking the PI to affirm that no sensitive data will be placed in the project.
 
 #### Bianca
