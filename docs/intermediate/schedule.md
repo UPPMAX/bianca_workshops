@@ -14,7 +14,7 @@ tags:
 When | Who               | What
 -----|-------------------|-------------------------------------------
 9:00 | Richèl Bilderbeek | [Introduction](intro.md)
-9:15 | Björn Claremar    | [NAISS SENS](../beginner/naiss_sens.md), S[ensitive data](../beginner/sensitive_data.md)
+9:15 | Björn Claremar    | [NAISS SENS](../beginner/naiss_sens.md), [Sensitive data](../beginner/sensitive_data.md)
 9:30 | Richèl Bilderbeek | [Working with GPUs](working_with_gpus/working_with_gpus.md)
 10:00| .                 | Break
 10:15| Richèl Bilderbeek | [Efficient jobs](efficient_jobs/README.md)
