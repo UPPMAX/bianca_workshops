@@ -23,11 +23,11 @@ The services appropriate for handling sensitive personal data are traditionally 
 
 ### Data Processing Agreements
 
-Most universities have a general Data Processing Agreement with NAISS that covers the use of NAISS SENS. The [list of universities with an agreement](https://www.uu.se/en/centre/uppmax/get-started/apply-for-project-and-create-user-account/applying-for-naiss-sens-project/puba) is currently kept up to date on the UPPMAX web. 
+Most universities have a general Data Processing Agreement with NAISS that covers the use of NAISS SENS. The [list of universities with an agreement](https://www.uu.se/en/centre/uppmax/get-started/apply-for-project-and-create-user-account/applying-for-naiss-sens-project/puba) is currently kept up to date on the UPPMAX web.
 
 ### NAISS SENS in SUPR
 
-Proposals for projects are submitted in the NAISS project and user portal, SUPR. 
+Proposals for projects are submitted in the NAISS project and user portal, SUPR.
 
 Proposals for Arrhenius SENS are submitted in the ordinary NAISS rounds (Small, Medium, and Large).
 
@@ -42,13 +42,13 @@ Proposals for Bianca are submitted in local rounds depending on the funder. For 
 
 ## Arrhenius SENS
 
-NAISS is currently building a new computer system for sensitive data in Linköping, Arrhenius SENS. At the time of this writing, it is not yet in production. 
+NAISS is currently building a new computer system for sensitive data in Linköping, Arrhenius SENS. At the time of this writing, it is not yet in production.
 
-Existing Bianca projects will be migrated to Arrhenius SENS during the autumn. Initial data migration will start any day now, with final migration happening during December. 
+Existing Bianca projects will be migrated to Arrhenius SENS during the autumn. Initial data migration will start any day now, with final migration happening during December.
 
-Current users of Bianca are invited and encouraged to fill out the following form: https://nextcloud.naiss.se/apps/forms/s/LN2H6K3ALZ7CqkAXCGiJkWZy
+Current users of Bianca are invited and encouraged to fill out the following [form](https://nextcloud.naiss.se/apps/forms/s/LN2H6K3ALZ7CqkAXCGiJkWZy)
 
-Only those projects that express a wish to be moved to Arrhenius SENS will be moved automatically. 
+Only those projects that express a wish to be moved to Arrhenius SENS will be moved automatically.
 
 NAISS projects on Bianca owned by Uppsala university researchers will remain available on Bianca even after the end of the year. If you intend not to move to Arrhenius SENS, please also fill in the form and let us know.
 
