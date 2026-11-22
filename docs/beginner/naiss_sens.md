@@ -29,7 +29,9 @@ Most universities have a general Data Processing Agreement with NAISS that cover
 
 Proposals for projects are submitted in the NAISS project and user portal, SUPR.
 
-Proposals for Arrhenius SENS are submitted in the ordinary NAISS rounds (Small, Medium, and Large).
+#### Arrhenius SEN
+
+Proposals for Arrhenius SENS are submitted in the **ordinary NAISS rounds (Small, Medium, and Large)**.
 
 Doing so activates a few functions in SUPR:
 
@@ -37,20 +39,21 @@ Doing so activates a few functions in SUPR:
 - It adds a requirement for the PI and proxy to enable Two Factor Authentication.
 - It disables the checkbox asking the PI to affirm that no sensitive data will be placed in the project.
 
+#### Bianca
 
-Proposals for Bianca are submitted in local rounds depending on the funder. 
+Proposals for Bianca are submitted in **local rounds** depending on the funder.
 
-- For Uppsala University projects, use the UPPMAX Local round.
-- For SIMPLER, a health registry data infrastructure that uses Bianca to make its data available, use the SIMPLER round.
-- For the Swedish University of Agricultural Sciences, use the SLU Local round.
+- For Uppsala University projects, use the **UPPMAX** Local round.
+- For **SIMPLER**, a health registry data infrastructure that uses Bianca to make its data available, use the SIMPLER round.
+- For the Swedish University of Agricultural Sciences, use the **SLU** Local round.
 
 ## Arrhenius SENS
 
-NAISS is currently building a new computer system for sensitive data in Linköping, Arrhenius SENS. At the time of this writing, it is not yet in production.
+NAISS is currently building a **new computer system for sensitive data** in Linköping, Arrhenius SENS. At the time of this writing, it is not yet in production.
 
 - **Latest plan is in December.**
 
-### PIs not affiliated to UU.
+### PIs not affiliated to UU
 
 **Existing Bianca projects will be migrated to Arrhenius SENS**. Initial data migration will **start any day now**, with final migration happening during December.
 
@@ -60,9 +63,9 @@ Only those projects that **express a wish** to be moved to Arrhenius SENS will b
 
 ### UU PIs
 
-NAISS projects on Bianca **owned by Uppsala University researchers** will **remain** available **on Bianca** even after the end of the year. 
+NAISS projects on Bianca **owned by Uppsala University researchers** will **remain** available **on Bianca** even after the end of the year.
 
-If you intend not to move to Arrhenius SENS, please also fill in the form and let us know.
+If you intend not to move to Arrhenius SENS, please also fill in the [**form**](https://nextcloud.naiss.se/apps/forms/s/LN2H6K3ALZ7CqkAXCGiJkWZy) and let us know.
 
 !!! info "Quick start"
 
