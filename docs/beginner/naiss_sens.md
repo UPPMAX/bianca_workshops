@@ -9,7 +9,7 @@ tags:
 !!! info "Learning outcomes"
 
     - This is a short overview of NAISS SENS projects in the context of NAISS
-    - To have heard about Bianca and Arrhenius, and expected changes that will come under 2026
+    - To have heard about Bianca and Arrhenius, and expected changes that happening this autumn
 
 ## NAISS
 
@@ -23,15 +23,13 @@ The services appropriate for handling sensitive personal data are traditionally 
 
 ### Data Processing Agreements
 
-Most universities have a general Data Processing Agreement with NAISS that covers the use of NAISS SENS. The [list of universities with an agreement](https://www.uu.se/en/centre/uppmax/get-started/apply-for-project-and-create-user-account/applying-for-naiss-sens-project/puba) is currently kept up to date on the UPPMAX web.
+Most universities have a general Data Processing Agreement with NAISS that covers the use of NAISS SENS. The [list of universities with an agreement](https://www.uu.se/en/centre/uppmax/get-started/apply-for-project-and-create-user-account/applying-for-naiss-sens-project/puba) is currently kept up to date on the UPPMAX web. 
 
 ### NAISS SENS in SUPR
 
-Proposals for projects are submitted in the NAISS project and user portal, SUPR. Until the end of 2026, NAISS SENS proposals were submitted and handled separately from other proposals.
+Proposals for projects are submitted in the NAISS project and user portal, SUPR. 
 
-This is no longer the case. There are no more separate NAISS SENS rounds. However, SIMPLER, a health registry data infrastructure that uses Bianca to make its data available, has its own round in SUPR, because SIMPLER pays for these resources and handles the proposals itself.
-
-In order to get a Bianca project, a PI must now make a normal NAISS proposal and simply add Bianca to it as a resource.
+Proposals for Arrhenius SENS are submitted in the ordinary NAISS rounds (Small, Medium, and Large).
 
 Doing so activates a few functions in SUPR:
 
@@ -39,19 +37,20 @@ Doing so activates a few functions in SUPR:
 - It adds a requirement for the PI and proxy to enable Two Factor Authentication.
 - It disables the checkbox asking the PI to affirm that no sensitive data will be placed in the project.
 
-Currently, there is one computer system in NAISS SENS, hosted by UPPMAX in Uppsala, called Bianca. This system was inherited by NAISS from SNIC, and was originally set up in 2016 to enable genetic and protein sequencing research on samples from living human individuals. It was set up to mimic a system called Milou, which was set up to enable genetic and protein sequencing research on non-sensitive datasets.
 
-Although it has been renovated and extended in several stages, Bianca is now very old and has accrued a lot of technical debt.
+Proposals for Bianca are submitted in local rounds depending on the funder. For Uppsala University projects, use the UPPMAX Local round. For SIMPLER, a health registry data infrastructure that uses Bianca to make its data available, use the SIMPLER round. For the Swedish University of Agricultural Sciences, use the SLU Local round.
 
 ## Arrhenius SENS
 
-NAISS is currently building a new computer system in Linköping, Arrhenius. Part of this effort will result in a new system for sensitive data.
+NAISS is currently building a new computer system for sensitive data in Linköping, Arrhenius SENS. At the time of this writing, it is not yet in production. 
 
-We expect that Arrhenius SENS will become available for new projects around the middle of 2026.
+Existing Bianca projects will be migrated to Arrhenius SENS during the autumn. Initial data migration will start any day now, with final migration happening during December. 
 
-Existing Bianca projects will be migrated to Arrhenius SENS during the autumn. The details are yet to be worked out.
+Current users of Bianca are invited and encouraged to fill out the following form: https://nextcloud.naiss.se/apps/forms/s/LN2H6K3ALZ7CqkAXCGiJkWZy
 
-Project owners will be contacted with instructions during the spring. While it is likely that NAISS staff can move the actual data for you, you may have to apply for a change in your ethical permit and a few projects may need to sign a new data processing agreement. Until we contact you, please relax and trust that we value your work and will ensure that your data is well taken care of.
+Only those projects that express a wish to be moved to Arrhenius SENS will be moved automatically. 
+
+NAISS projects on Bianca owned by Uppsala university researchers will remain available on Bianca even after the end of the year. If you intend not to move to Arrhenius SENS, please also fill in the form and let us know.
 
 !!! info "Quick start"
 
