@@ -45,3 +45,24 @@ get_achievements <- function() {
   t
 }
 testthat::expect_no_error(get_achievements())
+
+get_feedback <- function() {
+  get_raw_data() |> dplyr::select(starts_with("Any")) |> dplyr::pull()
+}
+testthat::expect_no_error(get_feedback())
+
+readr::write_lines(get_feedback(), "any_feedback.txt")
+
+
+
+ggplot2::ggplot(get_confidences(), ggplot2::aes(x = confidence)) +
+  ggplot2::geom_histogram() +
+  ggplot2::facet_grid(learning_outcome ~ .) +
+  ggplot2::theme(strip.text.y = ggplot2::element_text(angle = 0))
+ggplot2::ggsave("confidences.svg", width = 7)
+
+ggplot2::ggplot(get_achievements(), ggplot2::aes(x = achieved)) +
+  ggplot2::geom_histogram(stat = "count") +
+  ggplot2::facet_grid(learning_outcome ~ .) +
+  ggplot2::theme(strip.text.y = ggplot2::element_text(angle = 0))
+ggplot2::ggsave("achievements.svg", width = 7)

@@ -16,7 +16,7 @@ tags:
 
     They are at [the 'Evaluation' page for the beginner course](../beginner/evaluation.md).
 
-Here is the evaluation form: [Evaluation form](https://docs.google.com/forms/d/e/1FAIpQLSdj8NO6zzyRscZVmuowYWm234yYtHxY80lKZIAlJfV1yZcyqA/viewform?usp=publish-editor)
+Here is the evaluation form: TODO
 
 Also those that need to leave early are encouraged to fill in the evaluation
 form to help us improve the course :+1:
