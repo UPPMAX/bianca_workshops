@@ -20,11 +20,11 @@ This section describes some common do's and don'ts when it comes to handling sen
 
 Generally, **you don't want to keep unencrypted sensitive personal data** on a normal, **unsecured laptop or USB drive or file server**.
 
-??? note "Caveat: Pseudonymised sensitive personal data"
+??? note "Caveat: **Pseudonymised** sensitive personal data"
 
     Pseudonymised sensitive personal data may be okay to keep in such a place, but not all data can be pseudonymised without destroying its value. Consult your university's information security department for assistance in making this determination.
 
-- Encrypted sensitive personal data may also be okay to keep in such a place.
+- **Encrypted** sensitive personal data may also be okay to keep in such a place.
 
 ## Encrypted files and encrypted volumes
 
