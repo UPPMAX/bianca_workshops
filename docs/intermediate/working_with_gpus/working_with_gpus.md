@@ -55,11 +55,10 @@ To start a 10-minute interactive session on 1 GPU:
 interactive -A sens2025560 -C gpu
 ```
 
-To be able to schedule longer than 15 minutes, add `--qos=interact`:
+To be able to schedule an hour, add `--qos=normal`:
 
 ```bash
-# 12 hours max
-interactive -A sens2025560 -C gpu --qos=interact
+interactive -A sens2025560 -C gpu --qos=normal
 ```
 
 ???- question "What does that look like?"
@@ -129,12 +128,29 @@ interactive -A sens2025560 -C gpu --qos=interact
     interactive -A sens2025560 -C gpu --gpus=1 --gpus-per-node=1 --qos=interact --time=12:00:00
     ```
 
+    However, with `--qos=interact` there is no access to a GPU.
+
 ???- question "What does the `--qos` flag mean?"
 
     `qos` is an abbreviation of 'Quality of Service'. Each possible value
     of `--qos` determines a Slurm scheduling priority. For example,
     `--qos=short` denotes a job that is short, but gets scheduled quicker.
 
+???- question "Why not use `--qos=interact`?"
+
+    Because you will not get a GPU.
+
+    The goal of `--qos=interact` is to be able to work interactively
+    quicker, for a maximum of 12 hours.
+
+    However, if you schedule the maximum 12 hour with `--qos=interact`
+    and GPUs, you will get **no access to GPUs** in practice.
+
+    For example:
+
+    ```bash
+    interactive -A sens2025560 -C gpu --gpus=1 --gpus-per-node=1 --qos=interact --time=12:00:00
+    ```
 
 ## How to search for modules that use GPUs on Bianca
 
