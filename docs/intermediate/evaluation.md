@@ -16,8 +16,7 @@ tags:
 
     They are at [the 'Evaluation' page for the beginner course](../beginner/evaluation.md).
 
-
-Here is the evaluation form: [TODO: Evaluation form](https://github.com/UPPMAX/bianca_workshops/issues/95)
+Here is the evaluation form: [Evaluation form](https://docs.google.com/forms/d/e/1FAIpQLSdj8NO6zzyRscZVmuowYWm234yYtHxY80lKZIAlJfV1yZcyqA/viewform?usp=publish-editor)
 
 Also those that need to leave early are encouraged to fill in the evaluation
 form to help us improve the course :+1:
@@ -31,13 +30,6 @@ form to help us improve the course :+1:
     The goals of these questions is, for you, to remind yourself
     what you've learned to day, and for us teachers, how successful
     the course is in achieving its teaching goals.
-
-    Have you achieved the following:
-
-    - I have scheduled a GPU job
-    - I have searched for the GPU software modules
-    - I have seen the CPU and memory usage of jobs
-    - I have reasoned on how to set up jobs efficiently
 
     Give you confidence levels of the following statements,
     using this scale:
@@ -55,6 +47,13 @@ form to help us improve the course :+1:
     - I understand the principles how to install software and packages myself
     - I can install a Julia/Python/R packages myself
     - I understand what containers are
+
+    Have you achieved the following:
+
+    - I have scheduled a GPU job
+    - I have searched for the GPU software modules
+    - I have seen the CPU and memory usage of jobs
+    - I have reasoned on how to set up jobs efficiently
 
     Any other feedback?
 
