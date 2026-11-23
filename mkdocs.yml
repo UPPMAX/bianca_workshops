@@ -29,11 +29,11 @@ nav:
       - Learning outcomes: intermediate/learning_outcomes.md
       - Course dates: intermediate/course_dates.md
       - Schedule: intermediate/schedule.md
-      - beginner/sensitive_data.md
       - beginner/naiss_sens.md
-      - Transferring files to/from Bianca: intermediate/transfer.md
+      - beginner/sensitive_data.md
       - intermediate/working_with_gpus/working_with_gpus.md
       - Efficient jobs: intermediate/efficient_jobs/README.md
+      - Transferring files to/from Bianca: intermediate/transfer.md
       - Packages and software installation: intermediate/install.md
       - Summary: intermediate/summary.md
       - Evaluation: intermediate/evaluation.md
