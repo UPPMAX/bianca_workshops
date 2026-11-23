@@ -8,7 +8,7 @@ tags:
 
 It is of course great to store and work with sensitive data on a platform built to satisfy the legal and information security requirements.
 
-But **you can't do everything on Bianca**. 
+But **you can't do everything on Bianca**.
 
 - You have to **collect the data and upload it to Bianca**.
 - Perhaps you need to do some **post-processing** with a Windows-only program.
@@ -42,6 +42,6 @@ In all cases, **store passwords and encrypted data on separate systems**, and ke
 
 - Always **pseudonymise data if possible**, making sure to adequately protect the various versions of the data.
 
-- Before working with sensitive data, **plan ahead**. If you need to put it on a **USB drive**, how will you ensure that it is** protected in case you lose the drive**?
+- Before working with sensitive data, **plan ahead**. If you need to put it on a **USB drive**, how will you ensure that it is**protected in case you lose the drive**?
 - Where will you work with the data **after you're done with Bianca**?
 
