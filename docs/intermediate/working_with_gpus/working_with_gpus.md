@@ -351,9 +351,13 @@ How many are there on Bianca? You should find at least two.
     The CUDA modules can be found [in this text file](cuda_modules_from_gpu.txt).
     There are many.
 
-## Exercise 3: an interactive session
+## (Optional) Exercise 3: an interactive session
+
+Working with GPUs in an interactive sessions can be finnicky.
+Here we do a way that works.
 
 Request an interactive session of ten minutes on Bianca.
+
 We are not going to wait until we actually get that session :+1:
 
 ???- question "How to do so again?"
@@ -361,7 +365,7 @@ We are not going to wait until we actually get that session :+1:
     From [the section 'How to schedule GPUs on Bianca](#how-to-schedule-gpus-on-bianca):
 
     ```bash
-    interactive -A sens2025560 -C gpu
+    interactive -A sens2025560 -C gpu --gpus=1 --gpus-per-node=1
     ```
 
 
@@ -378,7 +382,8 @@ What does the job scheduler show us directly?
     Here is some example screen output:
 
     ```bash
-    [maja@sens2025560-bianca maja]$ interactive -A sens2025560 -C gpu
+    [maja@sens2025560-bianca maja]$ interactive -A sens2025560 -C gpu --gpus=1 --gpus-per-node=1
+
     You may run for at most 12 hours.
     Please note that in 12 wallclock hours this interactive job will use 192 core hours.
 
