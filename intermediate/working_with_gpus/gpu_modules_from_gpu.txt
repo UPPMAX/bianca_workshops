@@ -1,0 +1,62 @@
+
+-------------------------------------------------------------------------------------------------------------------------------
+  Guppy:
+-------------------------------------------------------------------------------------------------------------------------------
+     Versions:
+        Guppy/5.0.16-cpu
+        Guppy/5.0.16-gpu
+        Guppy/6.0.6-cpu
+        Guppy/6.0.6-gpu
+        Guppy/6.3.7-cpu
+        Guppy/6.3.7-gpu
+        Guppy/6.4.2-cpu
+        Guppy/6.4.2-gpu
+        Guppy/6.5.7-cpu
+        Guppy/6.5.7-gpu
+
+-------------------------------------------------------------------------------------------------------------------------------
+  For detailed information about a specific "Guppy" package (including how to load the modules) use the module's full name.
+  Note that names that have a trailing (E) are extensions provided by other modules.
+  For example:
+
+     $ module spider Guppy/6.5.7-gpu
+-------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------
+  Megalodon: Megalodon/2.5.0-gpu
+-------------------------------------------------------------------------------------------------------------------------------
+
+    You will need to load all module(s) on any one of the lines below before the "Megalodon/2.5.0-gpu" module is available to load.
+
+      bioinfo-tools
+ 
+    Help:
+      Megalodon - use Megalodon 
+      
+      Description
+      
+      Megalodon is a research command line tool to extract high accuracy modified base and sequence variant calls from raw nanopore reads by anchoring the information rich basecalling neural network output to a reference genome/transcriptome.
+      
+      Version 2.5.0-gpu
+      
+      https://github.com/nanoporetech/megalodon
+      
+      Usage:
+      
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+  python_ML_packages: python_ML_packages/3.9.5-gpu
+-------------------------------------------------------------------------------------------------------------------------------
+
+    This module can be loaded directly: module load python_ML_packages/3.9.5-gpu
+
+    Help:
+      python_ML_packages - use python_ML_packages 
+      
+      Version 3.9.5-gpu
+      
+
+
+ 
+

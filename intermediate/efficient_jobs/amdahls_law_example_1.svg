@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="953" height="139" viewBox="0 0 953 139">
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#111111" />
+    </marker>
+  </defs>
+  <style>
+    .title-text { font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; fill: #000000; }
+    .annotation-text { font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-weight: bold; fill: #111111; text-anchor: middle; dominant-baseline: central; }
+    .annotation-arrow { stroke: #111111; stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="100%" height="100%" fill="#ffffff" />
+  <!-- Title -->
+  <text x="75.0" y="25" class="title-text">1 Core (16 Time Units)</text>
+  <g id="grid">
+    <rect x="75.00" y="45.00" width="53.00" height="29.00" fill="#FF4000" stroke="#000000" stroke-width="1" />
+    <rect x="128.00" y="45.00" width="53.00" height="29.00" fill="#FF4000" stroke="#000000" stroke-width="1" />
+    <rect x="181.00" y="45.00" width="53.00" height="29.00" fill="#BBE33D" stroke="#000000" stroke-width="1" />
+    <rect x="234.00" y="45.00" width="53.00" height="29.00" fill="#BBE33D" stroke="#000000" stroke-width="1" />
+    <rect x="287.00" y="45.00" width="53.00" height="29.00" fill="#BBE33D" stroke="#000000" stroke-width="1" />
+    <rect x="340.00" y="45.00" width="53.00" height="29.00" fill="#BBE33D" stroke="#000000" stroke-width="1" />
+    <rect x="393.00" y="45.00" width="53.00" height="29.00" fill="#BBE33D" stroke="#000000" stroke-width="1" />
+    <rect x="446.00" y="45.00" width="53.00" height="29.00" fill="#BBE33D" stroke="#000000" stroke-width="1" />
+    <rect x="499.00" y="45.00" width="53.00" height="29.00" fill="#BBE33D" stroke="#000000" stroke-width="1" />
+    <rect x="552.00" y="45.00" width="53.00" height="29.00" fill="#BBE33D" stroke="#000000" stroke-width="1" />
+    <rect x="605.00" y="45.00" width="53.00" height="29.00" fill="#BBE33D" stroke="#000000" stroke-width="1" />
+    <rect x="658.00" y="45.00" width="53.00" height="29.00" fill="#BBE33D" stroke="#000000" stroke-width="1" />
+    <rect x="711.00" y="45.00" width="53.00" height="29.00" fill="#BBE33D" stroke="#000000" stroke-width="1" />
+    <rect x="764.00" y="45.00" width="53.00" height="29.00" fill="#BBE33D" stroke="#000000" stroke-width="1" />
+    <rect x="817.00" y="45.00" width="53.00" height="29.00" fill="#FF4000" stroke="#000000" stroke-width="1" />
+    <rect x="870.00" y="45.00" width="53.00" height="29.00" fill="#FF4000" stroke="#000000" stroke-width="1" />
+  </g>
+  <!-- Vertical Arrow (Core) -->
+  <line x1="45.0" y1="45.0" x2="45.0" y2="74.0" class="annotation-arrow" marker-end="url(#arrowhead)" />
+  <text x="25.0" y="59.5" class="annotation-text" transform="rotate(-90, 25.0, 59.5)">Core</text>
+  <!-- Horizontal Arrow (Time) -->
+  <line x1="75.0" y1="94.0" x2="923.0" y2="94.0" class="annotation-arrow" marker-end="url(#arrowhead)" />
+  <text x="499.0" y="116.0" class="annotation-text">Time</text>
+</svg>

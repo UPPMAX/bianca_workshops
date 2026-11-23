@@ -1,0 +1,36 @@
+09:00:46 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshop/intermediate/intro/
+09:02:22 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://docs.google.com/forms/d/e/1FAIpQLScTfXNk0IUjQ4x9oumoE7kE3vFa5Ay_F5ttsVfqfWtAN50NDg/viewform
+09:03:26 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://docs.google.com/forms/d/e/1FAIpQLScTfXNk0IUjQ4x9oumoE7kE3vFa5Ay_F5ttsVfqfWtAN50NDg/viewform
+09:03:44 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://docs.google.com/forms/d/e/1FAIpQLScTfXNk0IUjQ4x9oumoE7kE3vFa5Ay_F5ttsVfqfWtAN50NDg/viewform
+09:06:22 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshop/intermediate/intro/
+09:12:59 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	This is the link:
+	
+	https://uppmax.github.io/bianca_workshop/intermediate/transfer/
+09:25:10 From Pavlin Mitev To Everyone:
+	https://docs.uppmax.uu.se/software/bianca_file_transfer_using_rsync/
+09:25:54 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	Course project: sens2025560
+10:21:01 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	ssh -X sven@rackham3.uppmax.uu.se
+10:26:48 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	cd /tmp
+10:27:16 From Pavlin Mitev To Everyone:
+	ls -l files2bianca
+10:47:29 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshop/intermediate/efficient_jobs/
+11:29:50 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshop/intermediate/replicate_jobs/
+14:29:26 From José Ramón BW To [Teacher] Richèl 'Rea-shell' Bilderbeek(direct message):
+	Thank you Richel!
+14:41:28 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://docs.uppmax.uu.se/software/ides_on_bianca/
+14:43:43 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://uppmax.github.io/bianca_workshop/intermediate/ides/
+15:15:33 From [Teacher] Richèl 'Rea-shell' Bilderbeek To Everyone:
+	https://docs.google.com/forms/d/e/1FAIpQLSeY3ma7YBGuHTFns8APeHh5K1BXTXBS9vtYpecTveskaf_UVw/viewform?usp=sf_link

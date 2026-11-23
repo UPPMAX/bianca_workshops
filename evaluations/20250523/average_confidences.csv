@@ -1,0 +1,12 @@
+question,mean
+I can build software from source,0.5
+I can can run an IDE on Bianca,4
+I can install a Julia/Python/R packages myself,2
+I can see the CPU and memory usage of jobs,4
+I can see the GPU and memory usage of jobs,3
+I can transfer files to/from Bianca using a smarter method,4
+I know the correct flags to utilize GPUs,2.5
+I understand how to set up jobs efficiently,4
+I understand the GPU configuration on Bianca,3
+I understand the principles how to install software and packages myself,4
+I understand what containers are,3

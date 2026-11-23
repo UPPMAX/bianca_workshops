@@ -1,0 +1,14 @@
+question,mean
+I can create a minimal executable bash script,4.363636363636363
+I can log in to Bianca via Rackham,2.8181818181818183
+I can log in to the Bianca console environment using SSH,4.545454545454546
+I can log in to the Bianca remote desktop using the website,4.7272727272727275
+I can manage my files and folders using a graphical file manager,4.4
+I can manage my files and folders using a terminal,4.181818181818182
+I can navigate to the wharf folder using a graphical file manager,4.2727272727272725
+I can navigate to the wharf folder using a terminal,3.8181818181818183
+I can start an interactive session,4
+I can submit jobs to the scheduler,4
+I can transfer files to/from Bianca using FileZilla,4.2727272727272725
+I can use modules,4.090909090909091
+I understand the legal aspects of sensitive data,4.545454545454546
