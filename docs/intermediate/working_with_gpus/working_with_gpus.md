@@ -52,13 +52,13 @@ graph TB
 To start a 10-minute interactive session on 1 GPU:
 
 ```bash
-interactive -A sens2025560 -C gpu
+interactive -A sens2025560 -C gpu --gpus=1 --gpus-per-node=1
 ```
 
 To be able to schedule an hour, add `--qos=normal`:
 
 ```bash
-interactive -A sens2025560 -C gpu --qos=normal
+interactive -A sens2025560 -C gpu --gpus=1 --gpus-per-node=1 --qos=normal
 ```
 
 ???- question "What does that look like?"
