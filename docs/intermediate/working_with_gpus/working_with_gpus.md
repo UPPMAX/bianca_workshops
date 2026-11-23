@@ -55,7 +55,12 @@ To start a 10-minute interactive session on 1 GPU:
 interactive -A sens2025560 -C gpu
 ```
 
-On Bianca, 1 GPU hour is booked as 16 CPU hours.
+To be able to schedule longer than 15 minutes, add `--qos=interact`:
+
+```bash
+# 12 hours max
+interactive -A sens2025560 -C gpu --qos=interact
+```
 
 ???- question "What does that look like?"
 
@@ -103,8 +108,33 @@ On Bianca, 1 GPU hour is booked as 16 CPU hours.
     is identical to:
 
     ```bash
-    interactive -A sens2025560 -C gpu --gpus=1 --gpus-per-node=1 --t=10:00:00
+    # 15 minutes max
+    interactive -A sens2025560 -C gpu --gpus=1 --gpus-per-node=1 --qos=short --time=0:10:00
     ```
+
+    Note that there is a catch here: with `--qos=short`, one can maximally
+    schedule 15 minutes.
+
+    To schedule 1 hour, add `--qos=normal`:
+
+    ```bash
+    # 1 hour max
+    interactive -A sens2025560 -C gpu --gpus=1 --gpus-per-node=1 --qos=normal --time=1:00:00
+    ```
+
+    To schedule 12 hour, add `--qos=interact`:
+
+    ```bash
+    # 12 hours max
+    interactive -A sens2025560 -C gpu --gpus=1 --gpus-per-node=1 --qos=interact --time=12:00:00
+    ```
+
+???- question "What does the `--qos` flag mean?"
+
+    `qos` is an abbreviation of 'Quality of Service'. Each possible value
+    of `--qos` determines a Slurm scheduling priority. For example,
+    `--qos=short` denotes a job that is short, but gets scheduled quicker.
+
 
 ## How to search for modules that use GPUs on Bianca
 
@@ -184,8 +214,8 @@ module --regexp spider '.*cuda.*'
         From a GPU node, I ran:
 
         ```bash
-        [richel@sens2025560-b201 richel]$ module --redirect -r spider '.*cuda.*' > cuda_modules_from_gpu.txt
-        [richel@sens2025560-b201 richel]$ module --redirect -r spider '.*gpu.*' > gpu_modules_from_gpu.txt
+        [maja@sens2025560-b201 maja]$ module --redirect -r spider '.*cuda.*' > cuda_modules_from_gpu.txt
+        [maja@sens2025560-b201 maja]$ module --redirect -r spider '.*gpu.*' > gpu_modules_from_gpu.txt
         ```
 
         and obtained:
@@ -257,6 +287,16 @@ When the job is finished, what does the output look like?
     -------------------------------------------------------------------------------
     ```
 
+    If CUDA is not available, this is how it will look like:
+
+    ```bash
+    Traceback (most recent call last):
+      File "/castor/project/home/maja/gpus_1.py", line 2, in <module>
+        assert torch.cuda.is_available(), "CUDA not available"
+    AssertionError: CUDA not available
+    ```
+
+
 ## Exercise 2: search for GPU modules
 
 Search for all software modules that have `gpu` in the name.
@@ -295,7 +335,170 @@ How many are there on Bianca? You should find at least two.
     The CUDA modules can be found [in this text file](cuda_modules_from_gpu.txt).
     There are many.
 
-## (optional) Exercise 3: When GPU is slower
+## Exercise 3: an interactive session
+
+Request an interactive session of one hour on Bianca.
+We are not going to wait until we actually get that session :+1:
+
+???- question "How to do so again?"
+
+    From [the section 'How to schedule GPUs on Bianca](#how-to-schedule-gpus-on-bianca):
+
+    ```bash
+    interactive -A sens2025560 -C gpu --qos=interact --time=1:00:00
+    ```
+
+What does the job scheduler show us directly?
+
+???- question "Answer"
+
+    When we schedule an interactive session, we directly see:
+
+    - the maximum amount of time we have
+    - the amount of core hours it will cost
+    - the maximum amount of RAM we should use
+
+    Here is some example screen output:
+
+    ```bash
+    [maja@sens2025560-bianca maja]$ interactive -A sens2025560 -C gpu --qos=interact --time=1:00:00
+    You may run for at most 12 hours.
+    Please note that in 12 wallclock hours this interactive job will use 192 core hours.
+
+    Please, use no more than 14 GB of RAM.
+
+    Waiting for job 704 to start...
+    ```
+
+The previous output shows how UPPMAX deals with GPU hours.
+
+At UPPMAX, unlike other HPC center, users do not apply for a CPU-only
+or a GPU-only project. Instead, users apply for an amount core hours,
+e.g. 10,000 core hours per month.
+
+How many CPU hours is that?
+And how many GPU hours?
+
+???- question "Answer"
+
+    10,000 core hours denotes 10,000 CPU core hours.
+
+    We can deduce from the output from `interactive` we can deduce
+    how GPU is booked:
+
+    > Please note that in 12 wallclock hours this interactive job
+    > will use 192 core hours.
+
+    If 192 core hours is 12 GPU hours, this means that 16 core hours is
+    1 GPU hour.
+
+    For 10,000 core hours, we need to divide by 16 to get 625 GPU hours.
+
+
+In an interactive session on a GPU node,
+we get access to all Nvidea tools,
+that all start with `nvidia-`.
+In the terminal, type `nvidia-` and press tab to activate auto-complete.
+
+How many Nvidia tools are available?
+
+???- question "Answer"
+
+    You output will look similar to:
+
+    ```bash
+    [maja@sens2025560-b201 maja]$ nvidia-
+    nvidia-bug-report.sh     nvidia-persistenced
+    nvidia-cuda-mps-control  nvidia-sleep.sh
+    nvidia-cuda-mps-server   nvidia-smi
+    nvidia-debugdump         nvidia-xconfig
+    nvidia-modprobe
+    ```
+
+    These are 9 different tools.
+
+The [Nvidia System Management Interface](https://developer.nvidia.com/system-management-interface)
+allows to meaure the state of your GPUs.
+
+Within an interactive sessions, run the following command:
+
+```bash
+nvidia-smi 
+```
+
+What is the output? What do we conclude from this?
+
+???- question "Answer"
+
+    In an interactive session, the output is:
+    
+    ```
+    [maja@sens2025560-b201 maja]$ nvidia-smi 
+    No devices were found
+    ```
+
+    We conclude that the GPUs are not completely available in interactive
+    mode.
+
+`nvidia-smi` does work from a batch script.
+Create a batch script that schedules a GPU node
+and runs `nvidia-smi`. Run the batch script.
+What is the output?
+
+???- question "Answer"
+
+    Here is an example batch script:
+
+    ```bash
+    #!/bin/bash
+    #SBATCH -A sens2025560
+    #SBATCH -C gpu
+    nvidia-smi
+    ```
+
+    Submitting it to the scheduler:
+
+    ```bash
+    [maja@sens2025560-bianca maja]$ sbatch gpus_3.sh 
+    Submitted batch job 708
+    ```
+
+    Viewing the output:
+
+    ```bash
+    maja@sens2025560-bianca maja]$ cat slurm-708.out 
+    Mon Nov 23 06:36:02 2026
+    +-----------------------------------------------------------------------------------------+
+    | NVIDIA-SMI 550.90.07              Driver Version: 550.90.07      CUDA Version: 12.4     |
+    |-----------------------------------------+------------------------+----------------------+
+    | GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+    | Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+    |                                         |                        |               MIG M. |
+    |=========================================+========================+======================|
+    |   0  NVIDIA A100-PCIE-40GB          Off |   00000000:00:08.0 Off |                    0 |
+    | N/A   37C    P0             40W /  250W |       1MiB /  40960MiB |      0%      Default |
+    |                                         |                        |             Disabled |
+    +-----------------------------------------+------------------------+----------------------+
+                                                                                             
+    +-----------------------------------------------------------------------------------------+
+    | Processes:                                                                              |
+    |  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+    |        ID   ID                                                               Usage      |
+    |=========================================================================================|
+    |  No running processes found                                                             |
+    +-----------------------------------------------------------------------------------------+
+    ```
+
+What is the name/type of your GPU, i.e. what name would you use when you
+search the web for its technical specifications?
+
+???- question "Answer"
+
+    The name of the GPU is the Nvidia `A100-PCIE` with 40GB memory,
+    as is used in [the Nvidia product brief](https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/a100/pdf/A100-PCIE-Prduct-Brief.pdf)
+
+
+## (optional) Exercise 4: When GPU is slower
 
 [The references](#references) of this session contains
 three papers that show **when** GPU is slower,
@@ -313,7 +516,7 @@ To have an idea when GPU is slower, what does
 
     The figure teaches us that GPUs are slower when the input is small.
 
-## (optional) Exercise 4: How hard it is to spot a misleading benchmark
+## (optional) Exercise 5: How hard it is to spot a misleading benchmark
 
 To determine if CPU or GPU is faster, one uses benchmarks.
 Benchmarks may be misleading (as discussed by, e.g.
@@ -382,7 +585,7 @@ Does it **look** fair to you? Why?
         This is the output I got:
 
         ```bash
-        [richel@sens2025560-bianca richel]$ cat slurm-687.out
+        [maja@sens2025560-bianca maja]$ cat slurm-687.out
         Lmod Warning:
         -------------------------------------------------------------------------------
         The following dependent module(s) are not currently loaded: CUDAcore/11.1.1
@@ -514,16 +717,16 @@ Taking all this into account, one concludes
         Because I tried from a CPU node:
 
         ```bash
-        [richel@sens2025560-bianca richel]$ gpuavail
+        [maja@sens2025560-bianca maja]$ gpuavail
         bash: gpuavail: command not found
         ```
 
         And I tried from a GPU node:
 
         ```bash
-        [richel@sens2025560-b201 richel]$ gpuavail
+        [maja@sens2025560-b201 maja]$ gpuavail
         bash: gpuavail: command not found
-        [richel@sens2025560-b201 richel]$ gp
+        [maja@sens2025560-b201 maja]$ gp
         gpasswd            gpgconf            gpgparsemail       gpg-zip
         gpg                gpg-connect-agent  gpgsplit           gpic
         gpg2               gpg-error          gpgv               gprof
@@ -555,6 +758,25 @@ Taking all this into account, one concludes
     Here we let Apptainer execute, from the container `my_container.sif`
     the program `python` that will run the Python script `my_scripy.py`.
 
+???- question "Does the path change on a GPU?"
+
+    No.
+
+    Here is the path on a login node:
+
+    ```bash
+    [maja@sens2025560-bianca maja]$ echo $PATH
+    /home/maja/bin:/bin:/usr/bin:/opt/thinlinc/bin:/usr/local/bin:/usr/bin/X11:/sbin:/usr/sbin:/usr/local/sbin:/opt/thinlinc/sbin:/sw/uppmax/bin:/sw/uppmax/bin:/sw/uppmax/bin
+    ```
+
+    Here is the path on a GPU:
+
+    ```
+    [maja@sens2025560-b201 maja]$ echo $PATH
+    /home/maja/bin:/home/maja/bin:/bin:/usr/bin:/opt/thinlinc/bin:/usr/local/bin:/usr/bin/X11:/sbin:/usr/sbin:/usr/local/sbin:/opt/thinlinc/sbin:/sw/uppmax/bin:/sw/uppmax/bin:/sw/uppmax/bin:/sw/uppmax/bin:/sw/uppmax/bin:/sw/uppmax/bin
+    ```
+
+    These are not substantially different.
 
 ## References
 
