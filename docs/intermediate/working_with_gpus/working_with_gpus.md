@@ -440,7 +440,7 @@ How many Nvidia tools are available?
     These are 9 different tools.
 
 The [Nvidia System Management Interface](https://developer.nvidia.com/system-management-interface)
-allows to meaure the state of your GPUs.
+allows to measure the state of your GPUs.
 
 Within an interactive sessions, run the following command:
 
