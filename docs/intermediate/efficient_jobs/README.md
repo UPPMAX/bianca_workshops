@@ -511,16 +511,21 @@ a multithreaded program.
 Below is a table of a worked-out example of
 a program that can be run in parallel:
 
-Program runtime                      |Number of cores|Time|Speedup|Efficiency
--------------------------------------|---------------|----|-------|----------
-![1 core](amdahls_law_example_1.png) |1              |16  |100%   |100%
-![2 cores](amdahls_law_example_2.png)|2              |10  |160%   |80%
-![3 cores](amdahls_law_example_3.png)|3              |8   |200%   |60%
-![4 cores](amdahls_law_example_4.png)|4              |7   |229%   |48%
-![6 cores](amdahls_law_example_6.png)|6              |6   |267%   |33%
-.                                    |12             |5   |320%   |18%
-.                                    |24             |4.5 |356%   |9%
-.                                    |48             |4.25|376%   |5%
+<!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
+
+Program runtime                         |Number of cores|Time |Speedup           |Efficiency
+----------------------------------------|---------------|-----|------------------|-----------------------------------------------
+![1 core](amdahls_law_example_1.svg)    |1              |16   |16 / 16 = 100%    |(10 + (0 x 12)) / 16 = 100%
+![2 cores](amdahls_law_example_2.svg)   |2              |10   |16 / 10 = 160%    |(10 + (1 x 6)) / (10 x 2) = 80%
+![3 cores](amdahls_law_example_3.svg)   |3              |8    |16 / 8 = 200%     |(10 + (2 x 4)) / (10 x 3) = 60%
+![4 cores](amdahls_law_example_4.svg)   |4              |7    |16 / 7 = 229%     |(10 + (3 x 3)) / (10 x 4) = 48%
+![6 cores](amdahls_law_example_6.svg)   |6              |6    |16 / 6 = 267%     |(10 + (5 x 2)) / (10 x 6) = 33%
+[Click here](amdahls_law_example_12.svg)|12             |5    |16 / 5 = 320%     |(10 + (11 x 1)) / (10 x 12) = 18%
+[Click here](amdahls_law_example_24.svg)|24             |4.5  |16 / 4.5 = 356%   |(10 + (23 x 0.5)) / (10 x 24) = 9%
+[Click here](amdahls_law_example_48.svg)|48             |4.25 |16 / 4.25 = 376%  |(10 + (47 x 0.25)) / (10 x 48) = 5%
+[Click here](amdahls_law_example_96.svg)|95             |4.125|16 / 4.125 = 388% |(10 + (47 x 0.125)) / (10 x 96) = 1.7%
+
+<!-- markdownlint-enable MD013 -->
 
 The legend of the table is:
 
