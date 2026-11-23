@@ -793,7 +793,7 @@ Taking all this into account, one concludes
     CPUs and GPUs have a similar throughput. Even though this is not visible,
     the authors state that the CPU throughput is higher.
 
-    ![Adapted from `[Barker et al., 2026]` figure 2a](barker_et_al_2026_fig_2a.svg)
+    ![Adapted from `[Barker et al., 2026]` figure 2a](barker_et_al_2026_fig_2a.png)
 
 
 - `[Fridman et al, 2025]`
