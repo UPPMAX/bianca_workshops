@@ -31,9 +31,9 @@ nav:
       - Schedule: intermediate/schedule.md
       - beginner/naiss_sens.md
       - beginner/sensitive_data.md
-      - Transferring files to/from Bianca: intermediate/transfer.md
       - intermediate/working_with_gpus/working_with_gpus.md
       - Efficient jobs: intermediate/efficient_jobs/README.md
+      - Transferring files to/from Bianca: intermediate/transfer.md
       - Packages and software installation: intermediate/install.md
       - Summary: intermediate/summary.md
       - Evaluation: intermediate/evaluation.md
