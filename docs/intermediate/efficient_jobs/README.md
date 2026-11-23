@@ -512,6 +512,7 @@ Below is a table of a worked-out example of
 a program that can be run in parallel:
 
 <!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
+<!-- markdownlint-disable MD059 --><!-- Allow 'Click here' for readability -->
 
 Program runtime                         |Number of cores|Time |Speedup           |Efficiency
 ----------------------------------------|---------------|-----|------------------|-----------------------------------------------
@@ -525,6 +526,7 @@ Program runtime                         |Number of cores|Time |Speedup          
 [Click here](amdahls_law_example_48.svg)|48             |4.25 |16 / 4.25 = 376%  |(10 + (47 x 0.25)) / (10 x 48) = 5%
 [Click here](amdahls_law_example_96.svg)|95             |4.125|16 / 4.125 = 388% |(10 + (47 x 0.125)) / (10 x 96) = 1.7%
 
+<!-- markdownlint-enable MD059 -->
 <!-- markdownlint-enable MD013 -->
 
 The legend of the table is:
