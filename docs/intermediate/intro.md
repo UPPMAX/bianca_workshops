@@ -123,53 +123,7 @@ flowchart TD
 
 ## Exercises
 
-### Exercise 1: what will we learn today?
-
-In this exercise, we will find out today's learning objectives.
-
-The goal of these questions is to introduce what is taught
-today, as well as measuring how much knowledge is gained at the end
-of the day.
-
-- Fill in [TODO: the 'What will we learn today?' form](https://github.com/UPPMAX/bianca_workshops/issues/95)
-
-???- question "What is in that form?"
-
-    Intermediate Bianca, 'What will we learn today?'
-
-    In this exercise, we will find out today's learning objectives.
-
-    The goal of these questions is to introduce what is taught today,
-    as well as measuring how much knowledge is gained at the end of the day.
-
-    Give you confidence levels of the following statements, using this scale:
-
-    - 0: I don't know even what this is about ...?
-    - 1: I have no confidence I can do this
-    - 2: I have low confidence I can do this
-    - 3: I have some confidence I can do this
-    - 4: I have good confidence I can do this
-    - 5: I absolutely can do this!
-
-    Give you confidence levels of the following statements below:
-
-    - I can transfer files to/from Bianca using `rsync`
-    - I can see the GPU and memory usage of jobs
-    - I know the correct flags to utilize GPUs
-    - I understand the GPU configuration on Bianca
-    - I can see the CPU and memory usage of jobs
-    - I understand how to set up jobs efficiently
-    - I understand the principles how to install software and packages myself
-    - I can install a Julia/Python/R packages myself
-    - I understand what containers are
-
-    Is there a learning outcome you think is missing? If yes, what is it?
-
-    ```code
-    [Free text paragraph]
-    ```
-
-## Exercise 2: where is what?
+## Exercise 1: where is what?
 
 Explore the website of the course. Where you can you find
 the things below?
