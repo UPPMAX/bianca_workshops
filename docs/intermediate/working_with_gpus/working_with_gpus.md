@@ -353,7 +353,7 @@ How many are there on Bianca? You should find at least two.
 
 ## Exercise 3: an interactive session
 
-Request an interactive session of one hour on Bianca.
+Request an interactive session of ten minutes on Bianca.
 We are not going to wait until we actually get that session :+1:
 
 ???- question "How to do so again?"
@@ -361,8 +361,9 @@ We are not going to wait until we actually get that session :+1:
     From [the section 'How to schedule GPUs on Bianca](#how-to-schedule-gpus-on-bianca):
 
     ```bash
-    interactive -A sens2025560 -C gpu --qos=interact --time=1:00:00
+    interactive -A sens2025560 -C gpu
     ```
+
 
 What does the job scheduler show us directly?
 
@@ -377,7 +378,7 @@ What does the job scheduler show us directly?
     Here is some example screen output:
 
     ```bash
-    [maja@sens2025560-bianca maja]$ interactive -A sens2025560 -C gpu --qos=interact --time=1:00:00
+    [maja@sens2025560-bianca maja]$ interactive -A sens2025560 -C gpu
     You may run for at most 12 hours.
     Please note that in 12 wallclock hours this interactive job will use 192 core hours.
 
@@ -412,7 +413,7 @@ And how many GPU hours?
 
 
 In an interactive session on a GPU node,
-we get access to all Nvidea tools,
+we get access to all Nvidia tools,
 that all start with `nvidia-`.
 In the terminal, type `nvidia-` and press tab to activate auto-complete.
 
@@ -447,39 +448,6 @@ What is the output? What do we conclude from this?
 ???- question "Answer"
 
     In an interactive session, the output is:
-    
-    ```
-    [maja@sens2025560-b201 maja]$ nvidia-smi 
-    No devices were found
-    ```
-
-    We conclude that the GPUs are not completely available in interactive
-    mode.
-
-`nvidia-smi` does work from a batch script.
-Create a batch script that schedules a GPU node
-and runs `nvidia-smi`. Run the batch script.
-What is the output?
-
-???- question "Answer"
-
-    Here is an example batch script:
-
-    ```bash
-    #!/bin/bash
-    #SBATCH -A sens2025560
-    #SBATCH -C gpu
-    nvidia-smi
-    ```
-
-    Submitting it to the scheduler:
-
-    ```bash
-    [maja@sens2025560-bianca maja]$ sbatch gpus_3.sh 
-    Submitted batch job 708
-    ```
-
-    Viewing the output:
 
     ```bash
     maja@sens2025560-bianca maja]$ cat slurm-708.out 
@@ -504,6 +472,18 @@ What is the output?
     |  No running processes found                                                             |
     +-----------------------------------------------------------------------------------------+
     ```
+
+    If you booked your session with `--qos=interact`, however,
+    you will see the following:
+    
+    ```
+    [maja@sens2025560-b201 maja]$ nvidia-smi 
+    No devices were found
+    ```
+
+    We conclude that, when using `--qos=interact` that the GPUs are not
+    completely available in interactive mode. To have GPUs available in an
+    interactive session, use `--qos=short` or `--qos=normal`.
 
 What is the name/type of your GPU, i.e. what name would you use when you
 search the web for its technical specifications?
