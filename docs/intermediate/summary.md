@@ -12,6 +12,8 @@ I can submit jobs that use a GPU.
 #SBATCH -p node
 #SBATCH -N 1
 #SBATCH -C gpu
+#SBATCH --gpus 1
+#SBATCH --gpus-per-node 1
 ```
 
 I can transfer files to/from Bianca using `rsync`.
